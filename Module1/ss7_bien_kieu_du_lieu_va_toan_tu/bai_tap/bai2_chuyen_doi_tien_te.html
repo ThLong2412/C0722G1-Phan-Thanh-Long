@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2 chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <label style="margin-left: 70px"><strong>Amount</strong></label>
+            <label style="margin-left: 100px"><strong>Form Curreny</strong></label>
+            <label style="margin-left: 70px"><strong>To Currenly</strong></label><br>
+        </tr>
+        <tr>
+            <input type="text" name="money" id="money">
+            <select style="margin-left: 50px" id="from">
+                <option value="USD">USD</option>
+                <option value="VNĐ">VNĐ</option>
+            </select>
+            <select style="margin-left: 120px" id="to">
+                <option value="VNĐ">VNĐ</option>
+                <option value="USD">USD</option>
+            </select>
+            <button type="button" style="margin-left: 50px" onclick="tinhToan()">Convert</button>
+            <br>
+        </tr>
+    </table>
+</form>
+<!--<input id="so1">-->
+<!--<input id="so2">-->
+<!--<button type="button" onclick="tinh()">Tính</button>-->
+<p id="ketQua"></p>
+<script>
+    // cách 1
+    // let n1 = +prompt("nhập số thứ nhất");
+    // let n2 = +prompt("nhập số thứ hai");
+    // let s = n1+n2;
+    // alert("tổng là :" + s);
+    // // function doi() {
+    // //     document.getElementById("dauvao").innerHTML=(Reslult)
+    // // }
+    // cách 2
+    function tinhToan() {
+        let money = +document.getElementById("money").value;
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let ketQua = 0;
+        if (from == "VNĐ" && to == "USD") {
+            ketQua = money / 23000;
+        }
+        if (from == "USD" && to == "VNĐ") {
+            ketQua = money * 23000
+        }
+        if (from == "VNĐ" && to == "VNĐ") {
+            ketQua = money
+        }
+        if (from == "USD" && to == "USD") {
+            ketQua = money
+        }
+        document.getElementById("ketQua").innerText = "Result : " + ketQua-;
+    }
+</script>
+</body>
+</html>
