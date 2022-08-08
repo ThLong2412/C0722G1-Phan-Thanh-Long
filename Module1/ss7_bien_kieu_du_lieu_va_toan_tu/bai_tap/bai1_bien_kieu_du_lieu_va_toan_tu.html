@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1 cụa Longg</title>
+</head>
+<body>
+<form>
+    <p> Điểm lý</p>
+    <input type="number" name="diemly" id="ly"> <br>
+    <p>Điểm hóa</p>
+    <input type="number" name="diemhoa" id="hoa"> <br>
+    <p>Điểm sinh</p>
+    <input type="number" name="diemsinh" id="sinh"><br>
+    <button type="button" onclick="tinhdiem()">Xem kết quả</button>
+</form>
+<label id="DiemTB">Điểm trung bình là: </label><br>
+<label id="Diemtong">Điểm tổng là: </label>
+<form>
+    <p> Nhiệt độ</p>
+    <input type="number" name="doC" id="C"> <br>
+    <button type="button" onclick="tinhdo()">Đổi</button>
+</form>
+<p id="doF">Độ F là: </p>
+<form>
+    <input type="number" name="bankinh" id="r">
+    <button type="button" onclick="tinh()">Tính</button>
+</form>
+<label id="s">Diện tích hình tròn là: </label> <br>
+<p id="c">Chu vi hình tròn là: </p>
+<script>
+    function tinhdiem() {
+        let diemly = +document.getElementById("ly").value;
+        let diemhoa = +document.getElementById("hoa").value;
+        let diemsinh = +document.getElementById("sinh").value;
+        let Diemtong = Number(diemly) + Number(diemhoa) + Number(diemsinh);
+        let DiemTB = Number(Diemtong) / 3;
+        document.getElementById("DiemTB").innerHTML = "Điểm trung bình là: " + DiemTB;
+        document.getElementById("Diemtong").innerHTML = "Điểm tổng là: " + Diemtong;
+    }
+
+    function tinhdo() {
+        let doC = +document.getElementById("C").value;
+        let doF = Number(doC) * 1.8 + 32;
+        document.getElementById("doF").innerHTML = "Độ F là: " + doF;
+    }
+
+    function tinh() {
+        let bankinh = +document.getElementById("r").value;
+        let s = Number(bankinh) * Number(bankinh) * 3.14;
+        let c = Number(bankinh) * 2 * 3.14;
+        document.getElementById("s").innerHTML = "Diện tích hình tròn là: " + s;
+        document.getElementById("c").innerHTML = "Chu vi hình tròn là: " + c;
+    }
+</script>
+</body>
+</html>

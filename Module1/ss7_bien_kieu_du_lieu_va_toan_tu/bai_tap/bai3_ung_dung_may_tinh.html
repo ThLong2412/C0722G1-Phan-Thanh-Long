@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập ứng dụng máy tính của Thanh Long</title>
+</head>
+<body>
+<form>
+    <input type="number" name="number1" placeholder="Nhập số thứ nhất" id="num1">
+    <input type="number" name="number2" placeholder="Nhập số thứ hai" id="num2">
+    <button type="button" onclick="cong()">Cộng</button>
+    <button type="button" onclick="tru()">Trừ</button>
+    <button type="button" onclick="nhan()">Nhân</button>
+    <button type="button" onclick="chia()">Chia</button>
+</form>
+<p id="Ketqua"></p>
+<script>
+    function cong() {
+        let number1 = +document.getElementById("num1").value;
+        let number2 = +document.getElementById("num2").value;
+        let Ketqua = Number(number1) + Number(number2);
+        document.getElementById("Ketqua").innerHTML = "Result:" + Ketqua;
+    }
+    function tru() {
+        let number1 = +document.getElementById("num1").value;
+        let number2 = +document.getElementById("num2").value;
+        let Ketqua = Number(number1) - Number(number2);
+        document.getElementById("Ketqua").innerHTML = "Result:" + Ketqua;
+    }
+    function nhan() {
+        let number1 = +document.getElementById("num1").value;
+        let number2 = +document.getElementById("num2").value;
+        let Ketqua = Number(number1) * Number(number2);
+        document.getElementById("Ketqua").innerHTML = "Result:" + Ketqua;
+    }
+    function chia() {
+        let number1 = +document.getElementById("num1").value;
+        let number2 = +document.getElementById("num2").value;
+        let Ketqua = Number(number1) / Number(number2);
+        document.getElementById("Ketqua").innerHTML = "Result:" + Ketqua;
+    }
+</script>
+</body>
+</html>
