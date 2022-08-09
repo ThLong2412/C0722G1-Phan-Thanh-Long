@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 1 bài 5</title>
+</head>
+<body>
+<script>
+    let kt = parseInt(prompt("nhập điểm bài kiểm tra"));
+    let gk = parseInt(prompt("nhập điểm thi giữa kỳ"));
+    let ck = parseInt(prompt("nhập điểm thi cuối kỳ"));
+    let Tong = kt + gk + ck * 2;
+    let TB = Tong / 4;
+    if (TB >= 8) {
+        alert("Học lực giỏi");
+    } else if (TB >= 6) {
+        alert("Học lực khá");
+    } else if (TB >= 5) {
+        alert("Học lực tb");
+    } else {
+        alert("Học lực yếu");
+    }
+</script>
+</body>
+</html>
