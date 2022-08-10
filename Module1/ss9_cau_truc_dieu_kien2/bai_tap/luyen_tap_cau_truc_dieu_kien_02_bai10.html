@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyenj tập 2 bài 10</title>
+</head>
+<body>
+<script>
+    let chuDien = parseInt(prompt("Nhập số chữ điện"));
+    let bac1 = 1678;
+    let bac2 = 1734;
+    let bac3 = 2014;
+    let bac4 = 2536;
+    let bac5 = 2834;
+    let bac6 = 2927;
+    let tien=0;
+    if (chuDien <0) {
+        alert("Vui lòng nhập lại, số chữ điện phải lớn hơn 0.");
+    } else if ( chuDien<= 50) {
+       tien=chuDien*bac1
+    } else if (chuDien<=100) {
+        tien= 50*bac1 + (chuDien-50)*bac2
+    } else if (chuDien <=200) {
+        tien= 50*bac1 + 50*bac2 + (chuDien-100)*bac3
+    } else if  (chuDien<=300) {
+        tien= 50*bac1 + 50*bac2 + 100*bac3 + (chuDien-200)*bac4
+    } else if (chuDien<=400) {
+        tien= 50*bac1 + 50*bac2 + 100*bac3 + 100*bac4 + (chuDien-300)*bac5
+    } else {
+        tien = 50 * bac1 + 50 * bac2 + 100 * bac3 + 100 * bac4 + 100 * bac5 + (chuDien - 400) * bac6
+    }
+    alert("Số tiền phải trả là: " + tien + " đồng");
+</script>
+</body>
+</html>

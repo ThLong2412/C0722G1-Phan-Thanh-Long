@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 2 bài 7</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập hệ số a:");
+    let b = +prompt("Nhập hệ số b:");
+    let c = +prompt("Nhập hệ số c:");
+    let denta = (b * b) - (4 * a * c);
+    let x1 = ((-b) + Math.sqrt(denta)) / (2 * a);
+    let x2 = ((-b) - Math.sqrt(denta)) / (2 * a);
+    let x3 = (-b) / (2 * a);
+    if (a == 0) {
+        alert("PT vô nghiệm.");
+    } else
+        if (denta < 0) {
+            alert("PT vô nghiệm");
+        } else if (denta == 0) {
+            alert("PT có nghiệm kép là:" + x3);
+        } else {
+            alert("PT có 2 nghiệm phân, biệt thứ nhất là:" + x1 );
+            alert("PT có 2 nghiệm phân, biệt thứ hai là:" + x2 );
+        }
+</script>
+</body>
+</html>

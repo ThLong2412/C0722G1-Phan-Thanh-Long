@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 2 bài 9</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Nhập cạnh a"));
+    let b = parseFloat(prompt("Nhập cạnh b"));
+    let c = parseFloat(prompt("Nhập cạnh c"));
+    let d = a+b;
+    let e = b+c;
+    let f = a+c;
+    if ( a<0 || b<0 || c<0) {
+        alert("Đây không phải các cạnh của một tam giác.");
+    } else if ( d>c && e>a && f>b) {
+        alert("Đây là cách cạnh của một tam giác.");
+    } else {
+        alert("Đây không phải các cạnh của một tam giác.");
+    }
+</script>
+</body>
+</html>
