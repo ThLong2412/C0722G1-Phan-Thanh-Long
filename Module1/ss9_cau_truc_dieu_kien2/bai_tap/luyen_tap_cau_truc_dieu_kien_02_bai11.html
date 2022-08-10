@@ -6,9 +6,24 @@
 </head>
 <body>
 <script>
-    let TNTT = parseInt(prompt("Nhập thu nhập tính thuế:"));
-    let thueTNCN = 0;
-    
+    let luong = parseInt(prompt("Nhập lương của bạn:"))
+    let thueNop = 0;
+    if (luong <= 5000000 && luong >0 ) {
+        thueNop = luong * 5 / 100
+    } else if (luong < 10000000) {
+        thueNop = luong * 10 / 100 + 250000
+    } else if (luong <= 18000000) {
+        thueNop = luong * 15 / 100 + 750000
+    } else if (luong <= 32000000) {
+        thueNop = luong * 20 / 100 + 1650000
+    } else if (luong <= 52000000) {
+        thueNop = luong * 25 / 100 + 3250000
+    } else if (luong <= 80000000) {
+        thueNop = luong * 30 / 100 + 5850000
+    } else {
+        thueNop = luong * 35 / 100 + 9850000
+    }
+    alert("Số tiền thuế TNCN phải nộp là: "  + thueNop + "đồng");
 </script>
 </body>
 </html>

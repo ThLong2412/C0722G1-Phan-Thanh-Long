@@ -6,9 +6,10 @@
 </head>
 <body>
 <script>
-    let a = parseInt(prompt("Số tiền cho vay:"));
-    let sothang = parseInt(prompt("Số tháng cho vay:;"));
-    let ls = 7.3/100;
+    let a = parseFloat(prompt("Số tiền gửi"));
+    let sothang = parseFloat(prompt("Số tháng gửi:"));
+    let LS = (a * 7.3 / 100) * 12 / sothang;
+    alert(LS);
 </script>
 </body>
 </html>
