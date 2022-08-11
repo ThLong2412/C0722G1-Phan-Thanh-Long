@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 1 bài 8</title>
+</head>
+<body>
+<button type="button" onclick="doanSo()">Bắt đầu</button>
+<script>
+    function doanSo() {
+        let number = parseInt(prompt("Nhập số bạn muốn đoán trong khoảng nào đó:"));
+        let ngauNhien = Math.floor(Math.random() * number);
+        let numberDoan = parseInt(prompt("Số bạn đoán là"));
+        let soLanDoan = 0;
+       if (numberDoan = ngauNhien) {
+           alert("Chúc mừng bạn đã đoán đúng.");
+       } else {
+           soLanDoan++;
+           soLanDoan == 4;
+           if (numberDoan < ngauNhien) {
+               alert("Số nạm đoán nhỏ ho")
+           }
+       }
+    }
+</script>
+</body>
+</html>

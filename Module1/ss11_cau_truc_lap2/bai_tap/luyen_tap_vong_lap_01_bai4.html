@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 1 bài 4</title>
+</head>
+<body>
+<script>
+    let n1 = 0;
+    let n2 = 1;
+    let so = 0;
+    let chia5;
+    document.write("dãy fibonacci: ");
+    for (i = 1; i < 30; i++) {
+        so = n1 + n2;
+        n1 = n2;
+        n2 = so;
+        if (so % 5 == 0) {
+            chia5 = so;
+            break;
+        }
+    }
+    document.write("Số đầu tiên trong dãy fibonacci chia hết cho 5 là :" + chia5);
+</script>
+</body>
+</html>

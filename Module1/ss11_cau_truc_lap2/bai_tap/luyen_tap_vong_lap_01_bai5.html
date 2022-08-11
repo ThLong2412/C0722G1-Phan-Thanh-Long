@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 1 bài 5</title>
+</head>
+<body>
+<script>
+    let n1=0;
+    let n2=1;
+    let so;
+    let tong=n1+n2;
+    document.write(n1 + "<br>");
+    document.write(n2 + "<br>");
+    for (let i=2;i<=20;i++) {
+        so = n1 + n2;
+        document.write(so + "<br>");
+        n1 = n2;
+        n2 = so;
+        tong +=so;
+    }
+    document.write("Tổng là: " +tong);
+</script>
+</body>
+</html>
