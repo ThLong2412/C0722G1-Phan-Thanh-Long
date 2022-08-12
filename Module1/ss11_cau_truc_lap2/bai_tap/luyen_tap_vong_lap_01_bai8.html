@@ -7,23 +7,26 @@
 <body>
 <button type="button" onclick="doanSo()">Bắt đầu</button>
 <script>
-let a=+prompt("Nhập số:");
-let ngauNhien=Math.floor(Math.random() *a);
-let soDoan=+prompt("Nhập số bạn đoán:");
-let i;
-    if (soDoan == ngauNhien) {
-        alert("Bạn đã đoán đúng.");
-    } else {
-        for ( i = 1; i <4 ; i++) {
-            if (soDoan<ngauNhien) {
-                alert("Số bạn đoán nhỏ hơn.");
-                let soDoan=+prompt("Nhập số bạn đoán:");
-            } else {
-                alert("Số bạn đoán lớn hơn.");
-                let soDoan=+prompt("Nhập số bạn đoán:");
-            }
-        } alert("Bạn đã hết số lần đoán.");
+    function doanSo() {
+        let a=+prompt("Nhập số:");
+        let ngauNhien=Math.floor(Math.random() *a);
+        let soDoan=+prompt("Nhập số bạn đoán:");
+        let i;
+        if (soDoan == ngauNhien) {
+            alert("Bạn đã đoán đúng.");
+        } else {
+            for ( i = 1; i <4 ; i++) {
+                if (soDoan<ngauNhien) {
+                    alert("Số bạn đoán nhỏ hơn.");
+                    let soDoan=+prompt("Nhập số bạn đoán:");
+                } else {
+                    alert("Số bạn đoán lớn hơn.");
+                    let soDoan=+prompt("Nhập số bạn đoán:");
+                }
+            } alert("Bạn đã hết số lần đoán.");
+        }
     }
+
 </script>
 </body>
 </html>
