@@ -6,8 +6,38 @@
 </head>
 <body>
 <script>
-    let n = parseInt(prompt ("Nhập số lượng số nguyên tố cần in:"));
+    let n = parseInt(prompt("Nhập số lượng số nguyên tố cần in:"));
 
+    for (let i = 1; i <= n; i++) {
+        let dem = 0;
+        for (let j = 1; j <= i; j++) {
+
+            if (i % j === 0) {
+                dem++;
+            }
+        }
+        if (dem === 2) {
+            document.write(" " + i);
+        }
+    }
+    // let n = parseInt(prompt("Nhập số lượng số nguyên tố cần in:"));
+    // let snt = 2;
+    // let dem = 0;
+    // let checkCount = 0;
+    // while (dem < n) {
+    //     for (let j = 1; j <= snt; j++) {
+    //         if (snt % j === 0) {
+    //             checkCount++;
+    //             continue;
+    //         }
+    //     }
+    //     if (checkCount == 2) {
+    //         document.write(snt + ', ');
+    //         dem++;
+    //     }
+    //     snt++;
+    //     checkCount = 0;
+    // }
 </script>
 </body>
 </html>
