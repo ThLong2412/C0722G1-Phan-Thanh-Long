@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 2 bài 5</title>
+</head>
+<body>
+<script>
+    let tienGui= parseInt(prompt("Nhập số tiền gửi"));
+    let soThang= parseInt(prompt("Nhập số tháng"));
+    let laiSuat = parseInt(prompt("Nhập lãi suất"));
+    let tongTien=tienGui;
+    for (let i = 0; i <soThang ; i++) {
+        tongTien = tongTien + (tongTien * (laiSuat/100));
+    } document.write(tongTien);
+</script>
+</body>
+</html>

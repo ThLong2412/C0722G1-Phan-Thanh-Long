@@ -7,20 +7,22 @@
 <body>
 <button type="button" onclick="doanSo()">Bắt đầu</button>
 <script>
-    function doanSo() {
-        let number = parseInt(prompt("Nhập số bạn muốn đoán trong khoảng nào đó:"));
-        let ngauNhien = Math.floor(Math.random() * number);
-        let numberDoan = parseInt(prompt("Số bạn đoán là"));
-        let soLanDoan = 0;
-       if (numberDoan = ngauNhien) {
-           alert("Chúc mừng bạn đã đoán đúng.");
-       } else {
-           soLanDoan++;
-           soLanDoan == 4;
-           if (numberDoan < ngauNhien) {
-               alert("Số nạm đoán nhỏ ho")
-           }
-       }
+let a=+prompt("Nhập số:");
+let ngauNhien=Math.floor(Math.random() *a);
+let soDoan=+prompt("Nhập số bạn đoán:");
+let i;
+    if (soDoan == ngauNhien) {
+        alert("Bạn đã đoán đúng.");
+    } else {
+        for ( i = 1; i <4 ; i++) {
+            if (soDoan<ngauNhien) {
+                alert("Số bạn đoán nhỏ hơn.");
+                let soDoan=+prompt("Nhập số bạn đoán:");
+            } else {
+                alert("Số bạn đoán lớn hơn.");
+                let soDoan=+prompt("Nhập số bạn đoán:");
+            }
+        } alert("Bạn đã hết số lần đoán.");
     }
 </script>
 </body>
