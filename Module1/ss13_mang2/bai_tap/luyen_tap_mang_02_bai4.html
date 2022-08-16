@@ -6,12 +6,13 @@
 </head>
 <body>
 <script>
-    let mang = [];
-    for (let i = 0; i < 10; i++) {
-        mang[i] = prompt("Nhập các kí tự của mảng: ");
-    }
-    let str = mang.toString();
-    document.write("Số từ trong chuỗi là: " + str.length);
+    let str = prompt("nhập vào một chuỗi");
+    let count=0;
+    for (let i = 0; i < str.length ; i++) {
+        if(str[i] === " "){
+            count+=1;
+        }
+    } document.write("chuỗi vừa nhập có: " + (count+1) + "từ");
 </script>
 </body>
 </html>
