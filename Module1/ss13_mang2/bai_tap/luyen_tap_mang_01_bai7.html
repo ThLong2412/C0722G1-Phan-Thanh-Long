@@ -16,7 +16,7 @@
         if (v === soNguyen[i]) {
             indexv = i;
         }
-    } for (i=indexv;i<soNguyen.length;i++) {
+    } for (let i=indexv;i<soNguyen.length;i++) {
         soNguyen[i] = soNguyen[i+1]
     } soNguyen[soNguyen.length-1] = 0;
     document.write(soNguyen.toString());
