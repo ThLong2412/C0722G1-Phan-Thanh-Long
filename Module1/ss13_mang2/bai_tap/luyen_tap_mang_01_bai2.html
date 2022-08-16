@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 1 bài 2</title>
+</head>
+<body>
+<script>
+    let arrName = [11, 3, 22, 5, 99, 15, 87, 23, 1];
+    let max = arrName[0];
+    let max_index = 0;
+    for (let i = 1; i < arrName.length; i++) {
+        if (max < arrName[i]) {
+            max = arrName[i];
+            max_index = i;
+        }
+    }
+    document.write("Số lớn nhất trong mảng là: " + max + "ở vị trí: " + max_index);
+</script>
+</body>
+</html>

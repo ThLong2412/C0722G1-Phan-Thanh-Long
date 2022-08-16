@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 1 bài 3</title>
+</head>
+<body>
+<script>
+    let soNguyen = [25,36,14,3,22,1,5];
+    let tong=0;
+    let trungBinh;
+    let max = soNguyen[0];
+    for (let i = 0; i < soNguyen.length ; i++) {
+        if (max < soNguyen[i]) {
+            max = soNguyen[i];
+        }
+    } document.write("số lớn nhất là: " + max);
+    for (let i = 0; i <soNguyen.length ; i++) {
+        tong += soNguyen[i];
+        trungBinh = tong / soNguyen.length;
+    } document.write("Trung bình tổng là: " + trungBinh);
+</script>
+</body>
+</html>

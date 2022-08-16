@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập một bài8</title>
+</head>
+<body>
+<script>
+    let mangSo = [];
+    for (let i = 0; i < 10; i++) {
+        mangSo [i] = prompt("Nhập các số vào mảng:");
+    }
+    let min = 0;
+    for (let i = 0; i < mangSo.length; i++) {
+            if (mangSo[i] < mangSo[i+1]) {
+                min = mangSo[i];
+                mangSo[i]= mangSo[i+1];
+            }
+    } document.write(mangSo);
+</script>
+</body>
+</html>

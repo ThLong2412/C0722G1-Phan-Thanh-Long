@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 1 bài 6</title>
+</head>
+<body> <p id="kq"></p>
+<script>
+    let soNguyen = [];
+    for (let i = 0; i < 5; i++) {
+        soNguyen[i] = +prompt("Nhập vào mảng");
+    }
+    let v = +prompt("Nhập số nguyên V");
+    for (let i = 0; i < soNguyen.length; i++) {
+        if (v === soNguyen[i]) {
+            document.getElementById("kq").innerHTML = "V is in the array";
+            break;
+        } else {
+            document.getElementById("kq").innerHTML="V is not in the array";
+        }
+    }
+</script>
+</body>
+</html>

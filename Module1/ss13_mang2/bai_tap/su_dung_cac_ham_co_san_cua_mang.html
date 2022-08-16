@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thanh Long</title>
+</head>
+<body>
+<script>
+    // bài 1
+    // myColor = ["Red", "Greeen","White","Black"];
+    // myColor.join();
+    // document.write(myColor);
+    // bài 2
+    // const num = +prompt("Nhập vào một số:");
+    // const str = num.toString();
+    // const result = [str [0]];
+    // for (let i = 1; i < str.length; i++) {
+    //     if ((str[i - 1] % 2 === 0) && (str[i] % 2 === 0)) {
+    //         result.push("-", str[i]) ;
+    //     } else {
+    //         result.push(str[i]);
+    //     }
+    // }
+    // document.write(result.join(""));
+    // bài 3
+    let dayKiTu = prompt("Nhập vào một dãy kí tự:");
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+    for (let i = 0; i < dayKiTu.length; i++) {
+        if (UPPER.includes(dayKiTu[i])) {
+            result.push(dayKiTu[i].toLowerCase());
+        } else if (LOWER.includes(dayKiTu[i])) {
+            result.push(dayKiTu[i].toUpperCase());
+        } else {
+            result.push(dayKiTu[i]);
+        }
+    }
+    document.write(result.join(" "));
+</script>
+</body>
+</html>

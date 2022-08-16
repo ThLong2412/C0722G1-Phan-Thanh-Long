@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 1 bài 5</title>
+</head>
+<body>
+<script>
+    let mangSo = [];
+    let dem=0;
+    let kq = "";
+    for (let i = 0; i < 10; i++) {
+        mangSo[i] = +prompt("Nhập số vào mảng");
+    }
+    for (let i = 0; i <mangSo.length ; i++) {
+        if (mangSo[i]<0) {
+            dem++;
+            kq += mangSo[i] + ",";
+        } else {
+            dem +=0;
+        }
+    } document.write("số nguyên âm trong chuỗi là: " + dem +" , các số đó là: " + kq);
+</script>
+</body>
+</html>

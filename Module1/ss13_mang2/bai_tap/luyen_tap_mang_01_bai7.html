@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 1 bài 7</title>
+</head>
+<body>
+<script>
+    let soNguyen = [];
+    for (let i = 0; i < 10; i++) {
+        soNguyen[i] = +prompt("Nhập số vào mảng");
+    }
+    let v = +prompt("Nhập số nguyên V");
+    let indexv = 0;
+    for (let i = 0; i < soNguyen.length; i++) {
+        if (v === soNguyen[i]) {
+            indexv = i;
+        }
+    } for (i=indexv;i<soNguyen.length;i++) {
+        soNguyen[i] = soNguyen[i+1]
+    } soNguyen[soNguyen.length-1] = 0;
+    document.write(soNguyen.toString());
+</script>
+</body>
+</html>

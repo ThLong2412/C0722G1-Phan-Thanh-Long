@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<p>Nhập từ:</p>
+<input type="text" name="" id="string">
+<button onclick="dich()">Dịch</button>
+<p id="result"></p>
+<script>
+    function dich() {
+        tiengAnh = ["color", "apple", "school", "people", "animal", "life"];
+        tiengViet = ["màu sắc", "táo", "trường học", "người", " động vật", "cuộc sống"];
+        let nhapTiengAnh = document.getElementById("string").value;
+        for (let i = 0; i < tiengAnh.length; i++) {
+            if (nhapTiengAnh === tiengAnh[i]) {
+                document.getElementById("result").innerHTML = tiengViet[i];
+                break;
+            } if (nhapTiengAnh !== tiengAnh[i]){
+                document.getElementById("result").innerHTML = "no";
+            }
+        }
+    }
+</script>
+</body>
+</html>

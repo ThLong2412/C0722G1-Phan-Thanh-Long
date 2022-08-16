@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 2 bài 3</title>
+</head>
+<body>
+<script>
+    let mangKiTu = [];
+    for (let i = 0; i < 3; i++) {
+        mangKiTu[i] = prompt("Nhập kí tự của mảng");
+    }
+    let dem = 0;
+    for (let i = 0; i < mangKiTu.length; i++) {
+        if (mangKiTu[i] == 1 || mangKiTu[i] == 2 || mangKiTu[i] == 3 || mangKiTu[i] == 4 || mangKiTu[i] == 5 || mangKiTu[i] == 6 || mangKiTu[i] == 7 || mangKiTu[i] == 8 || mangKiTu[i] == 9 || mangKiTu[i] == 0) {
+            dem++;
+        } else {
+            dem += 0;
+        }
+    }
+    document.write("Số kí tự số trong mảng là: " + dem);
+</script>
+</body>
+</html>
