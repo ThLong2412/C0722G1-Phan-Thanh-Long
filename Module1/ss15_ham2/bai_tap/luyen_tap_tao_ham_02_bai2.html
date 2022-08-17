@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 2 bài 2</title>
+</head>
+<body>
+<script>
+    let kq;
+
+    function dienTich(r1) {
+        kq = 3.141592653589 * r1 * r1;
+        return kq;
+    }
+
+    function chuVi(r2) {
+        kq = 2 * 3.141592653589 * r2;
+        return kq;
+    }
+
+    let r1 = +prompt("Nhập bán kính: ");
+    let r2 = +prompt("Nhập bán kính: ");
+    let result = dienTich(r1);
+    let result2 = chuVi(r2);
+    document.write("Diện tích là: " + result + "<br>");
+    document.write("Chu vi là: " + result2);
+</script>
+</body>
+</html>

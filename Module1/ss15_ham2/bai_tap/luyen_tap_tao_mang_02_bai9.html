@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 2 bài 9</title>
+</head>
+<body>
+</body>
+<script>
+    let mang = ["a", "b", "c", "d", "e", 1, 2, 3, 4, 5, "a", "b", "c", "d", "e", 1, 2, 3, 4, 5];
+
+    // let kyTu = prompt("Nhập ký tự bất kỳ: ");
+
+    function kiemTraKyTu(kyTu) {
+        let dem = 0;
+        for (let i = 0; i < mang.length; i++) {
+            if (kyTu == mang[i]) {
+                dem++;
+            }
+        }
+        return dem;
+    }
+
+    let a = prompt("nhập ký tự bất kỳ");
+    if (kiemTraKyTu(a) > 0) {
+        document.write(kiemTraKyTu(a));
+    } else {
+        document.write("-1");
+    }
+</script>
+</html>

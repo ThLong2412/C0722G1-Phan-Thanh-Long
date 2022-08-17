@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 2 bài 5</title>
+</head>
+<body>
+<script>
+    let result;
+
+    function soSanh(a, b, c) {
+        // if (a > b) {
+        //     if (b > c) {
+        //         result = c;
+        //     } else if (b < c) {
+        //         result = b;
+        //     }
+        // } else if (a < b) {
+        //     if (a < c) {
+        //         result = a;
+        //     } else if (a > c) {
+        //         result = c;
+        //     }
+        // }
+        // if (a == b) {
+        //     if (a < c) {
+        //         result = a;
+        //     }
+        //     if (a > c) {
+        //         result = c;
+        //     }
+        // }
+        // if (b == c) {
+        //     if (a < b) {
+        //         result = a;
+        //     }
+        //     if (a > b) {
+        //         result = b;
+        //     }
+        // }
+        // if (a == c) {
+        //     if (a < b) {
+        //         result = a;
+        //     }
+        //     if (a > b) {
+        //         result = b;
+        //     }
+        // }
+        if (a <= b && a <= c) {
+            result = a;
+        } else if (b<=c){
+            result = b;
+        } else {
+            result = c;
+        }
+        return result;
+    }
+
+    let a = +prompt("nhập a");
+    let b = +prompt("nhập b");
+    let c = +prompt("nhập c");
+    let kq = soSanh(a, b, c);
+    document.write(kq + "là số nhỏ nhất.");
+</script>
+</body>
+</html>
