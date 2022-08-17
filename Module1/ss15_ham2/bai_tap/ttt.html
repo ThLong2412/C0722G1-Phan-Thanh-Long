@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function solution(arr) {
+        let count = 0;
+        let countS = [];
+        for (let j = 0; j< arr.length; j++){
+            for (let i = 0; i < arr.length; i++){
+
+                if (arr[j] === arr[i]){
+                    count ++;
+                }
+            }countS.push(count);
+            count = 0;
+        }
+        for(let a = 0; a < countS.length; a++){
+            if (countS[0]!=countS[a]){
+                return false;
+            }
+        }
+        return true;
+    }
+    alert(solution([1,2,3]));
+    alert(solution([1,1,1]));
+</script>
+</body>
+</html>
