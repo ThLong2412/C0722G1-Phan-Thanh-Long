@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Circle = function () {
+        this.setradius = function (radius) {
+            this.r = radius;
+        }
+        this.getCircle = function () {
+            return Math.PI * this.r * this.r;
+        }
+    }
+    let circle = new Circle();
+    circle.setradius(+prompt("nhập bán kính: "));
+    let result = circle.getCircle();
+    document.write(result);
+</script>
+</body>
+</html>
