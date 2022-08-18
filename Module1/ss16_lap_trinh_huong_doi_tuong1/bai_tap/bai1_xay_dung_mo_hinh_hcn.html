@@ -5,13 +5,42 @@
     <title>xây dựng mô hình hình chữ nhật</title>
 </head>
 <body>
+<canvas id="demo" width="200" height="100"  ></canvas>
+<p id="mot"></p>
+<p id="hai"></p>
 </body>
 <script>
-    let hinhChuNhat = function (cDai, cRong, dienTich, chuVi) {
-        this.cDai = cDai;
-        this.cRong = cRong;
-        this.dienTich = dienTich;
-        this.chuVi= chuVi;
-    } let hcn = new hinhChuNhat(prompt("Nhập chiều dài")),prompt("Nhập chiều rộng"),)
+    let hinhChuNhat = function (dai, rong,) {
+        this.chieuDai = dai;
+        this.chieuRong = rong;
+        this.setchieuDai = function (dai) {
+            this.chieuDai = dai;
+        }
+        this.setchieuRong = function (rong) {
+            this.chieuRong = rong
+        }
+        this.getdienTich = function () {
+            return this.chieuDai * this.chieuRong;
+        }
+        this.getchuVi = function () {
+            return ((this.chieuRong + this.chieuDai) * 2)
+        }
+        this.paint =function () {
+            var c= document.getElementById("demo");
+            var ctx = c.getContext("2d");
+            ctx.fillRect(0,0,this.chieuDai,this.chieuRong);
+        }
+    }
+    let HCN = new hinhChuNhat();
+    HCN.setchieuDai(+prompt("nhập chiều dài: "));
+    HCN.setchieuRong(+prompt("nhập chiều rộng: "));
+    let dienTich = HCN.getdienTich();
+    let chuVi =  HCN.getchuVi();
+    let paint = HCN.paint();
+    document.write("diện tích là: " + dienTich + "<br>");
+    document.write("chu vi là: " + chuVi + "<br>" );
+   // var c= document.getElementById("demo");
+   // var ctx = c.getContext("2d");
+   //  ctx.fillRect(0,0,150,75);
 </script>
 </html>
