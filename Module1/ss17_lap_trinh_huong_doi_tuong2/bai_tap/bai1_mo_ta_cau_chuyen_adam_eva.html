@@ -5,6 +5,110 @@
     <title>Title</title>
 </head>
 <body>
-<p id="result"></p>
 </body>
+<script>
+    // let Tao = function (Trongluong) {
+    //     this.Trongluong = Trongluong;
+    //     this.getTrongluongTao = function () {
+    //         return this.Trongluong;
+    //     }
+    //     this.Soluong = function () {
+    //         if (this.Soluong > 0) {
+    //             this.Soluong--;
+    //         }
+    //     }
+    // }
+    // let Nguoi = function () {
+    //     this.setTao = function (tao) {
+    //         this.tao = tao;
+    //     }
+    //     this.getTao = function () {
+    //         return this.tao.Soluong()
+    //     }
+    //     this.demTao = function () {
+    //         for (let i = 0; i <this.Soluong() ; i--) {
+    //             if (this.demTao <= 0) {
+    //                 return false;
+    //             }
+    //             return true;
+    //         }
+    //     }
+    //     this.Antao = function () {
+    //         if (this.demTao() == false) {
+    //             document.write("Đã ăn hết táo.");
+    //         } else {
+    //             this.Tao.Soluong();
+    //             document.write("Đã ăn táo còn " + this.getTao() + "đv" + "<br>");
+    //         }
+    //     }
+    //     this.setTen = function (ten) {
+    //         this.ten = ten;
+    //     }
+    //     this.setGioitinh = function (gioitinh) {
+    //         this.gioitinh = gioitinh;
+    //     }
+    //     this.setCan = function (can) {
+    //         this.can = can;
+    //     }
+    //     this.getTen = function () {
+    //         return this.ten;
+    //     }
+    //     this.isMale = function () {
+    //         if (this.gioitinh == true) {
+    //             return "Nam";
+    //         }
+    //         return "Nữ";
+    //     }
+    //     this.getCan = function () {
+    //         return this.can;
+    //     }
+    // }
+    // let tao = new Tao(10);
+    // let nguoi = new Nguoi();
+    // nguoi.setTen("Adam");
+    // nguoi.setCan("65");
+    // nguoi.setGioitinh("Nam");
+    // document.write(nguoi.ten +" ăn táo" + "<br>" + "Quả táo còn: " + "<br>" + this.Soluong + "quả"  )
+    // nguoi.setTao(tao);
+    // for (let i=0; i<15;i++){
+    //     nguoi.Antao();
+    // }
+    class Tao {
+        constructor(trongluong) {
+            this.trongluong = trongluong;
+        }
+        get getTrongLuong() {
+            return this.trongluong;
+        }
+    }
+    class Nguoi {
+        constructor(ten,gioitinh,can) {
+            this.ten = ten;
+            this.gioitinh = gioitinh;
+            this.can = can;
+        }
+        get getTen (){
+            return this.ten;
+        }
+        get getGioiTinh (){
+            return this.gioitinh;
+        }
+        get getCan(){
+            return this.can;
+        }
+    }
+let tao = new Tao(10);
+   let nguoi1 = new  Nguoi("Adam","Nam",65);
+   let nguoi2 = new Nguoi("Eva","Nữ",50);
+   let a =1;
+   for (i=tao.getTrongLuong;i>0;i--) {
+       if(i%2==0) {
+           document.write(nguoi1.ten + " ăn táo" + "<br>" + "Quả táo còn: " + (i-1) + "đơn vị" + "<br>" + "Cân nặng của Adam là " + (nguoi1.can + a) + "<br>");
+       }
+       else {
+           document.write(nguoi2.ten + " ăn táo" + "<br>" + "Quả táo còn: " + (i-1) + "đơn vị" + "<br>" + "Cân nặng của Eva là " + (nguoi2.can + --a) + "<br>");
+       }
+       a++;
+   }
+</script>
 </html>

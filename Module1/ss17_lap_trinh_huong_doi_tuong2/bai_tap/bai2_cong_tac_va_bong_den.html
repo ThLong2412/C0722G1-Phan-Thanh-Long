@@ -9,28 +9,28 @@
 </body>
 <script>
     let ElectricLamp = function () {
-        this.turnOn = function () {
-            this.status = true;
-            return this.status;
-        }
-        this.turnOff = function () {
-            this.status = false;
-            return this.status;
+                this.turnOn = function () {
+                    this.status = true;
+                    return this.status;
+                }
+                this.turnOff = function () {
+                    this.status = false;
+                    return this.status;
         }
     }
     let SwitchButton = function () {
         this.connectToLamp = function (electric) {
             this.electric = electric;
         }
-        // if (this.status === true && this.electric === true) {
-        //     document.write("Đã bật điện và đèn sáng <br>");
-        // } else if (this.status === false && this.electric === true) {
-        //     document.write("Chưa cắm ổ điện <br>");
-        // } else if (this.status === true && this.electric === false) {
-        //     document.write("Chưa bật công tắc đèn <br>");
-        // } else {
-        //     document.write("Chưa bật công tắc đèn và chưa cắm điện <br>");
-        // }
+        if (this.status === true && this.electric === true) {
+            document.write("Đã bật điện và đèn sáng <br>");
+        } else if (this.status === false && this.electric === true) {
+            document.write("Chưa cắm ổ điện <br>");
+        } else if (this.status === true && this.electric === false) {
+            document.write("Chưa bật công tắc đèn <br>");
+        } else {
+            document.write("Chưa bật công tắc đèn và chưa cắm điện <br>");
+        }
     }
     this.switchOff = function () {
         this.status = false;
@@ -40,6 +40,47 @@
         this.status = true;
         return this.status;
     }
+
+// class ElectricLamp{
+//     constructor() {
+//         this.status = false;
+//     }
+//     getStatus(){
+//         return this.status;
+//     }
+//     turnOff(){
+//         this.status = false;
+//     }
+//     turnOn(){
+//         this.status = true;
+//     }
+// }
+// class SwitchButton {
+//     constructor() {
+//         this.status = false;
+//         this.Lamp = null;
+//     }
+//     connectToLamp(ElectricLamp) {
+//         this.lamp = ElectricLamp;
+//     }
+//
+//     switchOn() {
+//         if (this.lamp != null) {
+//             this.status = "Đèn đã sáng.";
+//             this.lamp.turnOn();
+//         }
+//     }
+//     switchOff() {
+//         this.status = false;
+//         this.lamp.turnOn();
+//     }
+// }
+//
+//     let electricLamp = new ElectricLamp();
+//     let switchButton = new SwitchButton();
+//     switchButton.connectToLamp(electricLamp);
+//     switchButton.switchOn();
+//     alert(electricLamp.getStatus());
 
 </script>
 </html>
