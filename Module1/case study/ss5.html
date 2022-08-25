@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // bài 1
+    // let size = +prompt("nhập độ dài mảng lớn");
+    // let array = [];
+    // let sizeN = +prompt("nhập độ dài mảng nhỏ");
+    // let sum=0;
+    // for (let i = 1; i <= size; i++) {
+    //     array[i]= [];
+    //     for (j = 1; j <=sizeN ; j++) {
+    //         array[i][j] = +prompt("nhập vào mảng " + i);
+    //         if (array[i][j] % 2 == 0) {
+    //             sum += array[i][j];
+    //         }
+    //     }
+    // }document.write("tổng là: " + sum);
+
+    //bài 2 Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều, đếm các số nguyên tố có trong mảng đó:
+   //  let mang = [[4, 6, 7, 9],[1, 5, 8, 13],[6, 11, 15, 19]];
+   //  let hienThi = "";
+   //  let dem = 0;
+   //  function kiemTra(mang) {
+   //      let check = 0;
+   //      if (mang < 2) {
+   //          return false;
+   //      }
+   //      if (mang >= 2) {
+   //          for (let k = 1; k <= mang; k++) {
+   //              if (mang % k === 0) {
+   //                  check++;
+   //              }
+   //          }
+   //          if (check === 2) {
+   //              return true;
+   //          } else if (check > 2) {
+   //              return false;
+   //          }
+   //      }
+   //  }
+   //  for (let i = 0; i < mang.length; i++) {
+   //      for (let j = 0; j < mang[i].length; j++) {
+   //          if (kiemTra(mang[i][j])) {
+   //              dem++;
+   //              hienThi += mang[i][j] + ", ";
+   //          }
+   //      }
+   //  }
+   // document.write("Các số nguyên tố là:" + hienThi + "<br>" + "Số lượng số nguyên tố là: " + dem );
+   //
+    //bài 3 viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng hai chiều
+
+    // bài 3
+    let arr = [[12,25,46,55],[23,58,61,14],[22,58,63,1]];
+    function timSoLonNhat(arr) {
+        max = arr;
+        if(arr > max) {
+            max = arr;
+        }
+    }
+    function timSoNhoNhat(arr) {
+        min = arr;
+        if (arr < min) {
+            min = arr;
+        }
+    }
+    for (let i = 0; i <arr.length ; i++) {
+        for (let j=0;j<arr[i].length;j++) {
+            if(timSoLonNhat(arr[i][j])) {
+                max = arr[i][j];
+            }
+            if (timSoNhoNhat(arr[i][j])){
+                min = arr[i][j];
+            }
+        }
+    }
+    alert(max);
+    alert(min);
+</script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phần 3</title>
+</head>
+<body>
+<p id="demo"></p>
+</body>
+<script>
+    // bài 1
+    // let mangA = [];
+    // let mangB = [];
+    // let size = +prompt("Nhập độ dài mảng");
+    // for (let i = 0; i < size; i++) {
+    //     mangA[i] = +prompt("Nhập phần tử của mảng");
+    //     mangB[0] = mangA[0];
+    //     mangB[i] = mangB[i - 1] + mangA[i];
+    // }
+    // document.write("Mảng A: " + mangA + "<br>");
+    // document.write("Mảng B: " + mangB);
+
+    //bài 2
+    // let mangA = [1,3,5,7,9];
+    // let mangB = [1,2,3,4,5,6,7,8,9];
+    // for (let i = 0; i <mangB.length ; i++) {
+    //     for (let j = 0; j < mangA.length; j++) {
+    //         if (mangB[i] === mangA[j]) {
+    //             mangB.splice(j,1);
+    //         }
+    //     }
+    // }
+    // document.write(mangB);
+
+    // bài 3
+    // let numerators = [5, 3, 7, 8, 2, 4];
+    // let denominators = [9, 5, 9, 9, 5, 6];
+    // max = numerators[0] / denominators[0];
+    // max_index = 0;
+    // for (let i = 0; i < numerators.length; i++) {
+    //     if ((numerators[i] / denominators[i]) > max) {
+    //         max = numerators[i] / denominators[i];
+    //         max_index = i;
+    //         document.getElementById("demo").innerHTML = numerators[i] + "/" + denominators[i] + " là phân số lớn nhất. Vị trí ở " + i;
+    //     }
+    // }
+
+    // bài 4
+    // let mangKyTu = ["không","một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"];
+    // let nhap = prompt("nhập số");
+    // for (let i = 0; i < nhap.length; i++) {
+    //     document.write(mangKyTu[nhap[i]] + " ");
+    // }
+
+    // bài 5 menu
+    let soluongMon = +prompt("Nhập số lượng món cần chọn: ");
+
+    let stt = [1,2,3,4,5,6,7];
+    let mon = ["Cafe","Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa",];
+    let gia = [12000,15000,20000,20000,5000,25000];
+    let keDon=0;
+    let tinhTien = 0;
+    for (let j = 1;j <= soluongMon; j++) {
+        let chonMon = +prompt("nhập số thứ tự của món muốn chọn: ");
+        for (let i = 0; i <stt.length ; i++) {
+                if (chonMon === stt[i]) {
+                    alert( "Giá món " + mon[i] + " là: " + gia[i]);
+                    let soLuong = +prompt("nhập số lượng món");
+                    keDon = soLuong * gia[i];
+                }
+            }tinhTien +=keDon;
+    }
+        document.write("tổng bill's là: " + tinhTien);
+</script>
+
+
+</html>

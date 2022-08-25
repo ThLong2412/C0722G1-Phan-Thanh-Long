@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phần 4</title>
+</head>
+<body>
+</body>
+<script>
+    // // bài 1
+    // function KiemTra(text) {
+    //     let sentence = text.toLowerCase().split(" ");
+    //     for(let i = 0; i< sentence.length; i++){
+    //         sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+    //     }
+    //     return sentence.join(" ");
+    // }
+    // let kiTu=prompt("nhập các kí tự");
+    // KiemTra(kiTu);
+    // document.write(KiemTra(kiTu));
+
+     // bài 2
+//     let str = prompt("Nhập chuỗi: ");
+//     function check(string) {
+//         string = string.split("");
+//         for (let i = 0; i < string.length; i++) {
+//             for (let j = i + 1; j < string.length; j++)
+//                 if (string[i] === string[j]) {
+//                     string.splice(j, 1);
+//                     i--;
+//                 }
+//         }
+//         return string;
+//     }
+//     let kq = check(str);
+// alert("Các kí tự khác nhau là: " + kq);
+
+    // bài 3
+    let str1 = prompt("nhập chuỗi 1");
+    let str2 = prompt("nhập chuỗi 2");
+    // str1.toString();
+    // str2.toString();
+    let str = [];
+    function check(str) {
+        for (let i = 0; i <str1.length ; i++) {
+            for (let j = 0; j <str2.length ; j++) {
+                if(str1[i] ===str2[j]) {
+                    str.push(str1[i]);
+                }
+            }
+        }
+        return str;
+    }
+    alert(check(str));
+</script>
+</html>
