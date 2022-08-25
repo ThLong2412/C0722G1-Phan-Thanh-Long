@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let str1 = prompt("nhập chuỗi 1");
+    let str2 = prompt("nhập chuỗi 2");
+    function check(str1,str2) {
+        arr1 = str1.split("");
+        arr2 = str2.split("");
+        let str= [];
+        for (let i = 0; i <arr1.length ; i++) {
+            for (let j = 0; j <arr2.length ; j++) {
+                if(arr1[i] ===arr2[j]) {
+                    str.push(arr1[i]);
+                    arr2.splice(j,1);
+                    arr1.splice(i,1);
+                    j--;
+                    i--;
+                }
+            }
+        }
+        return str;
+    }
+    alert(check(str1,str2));
+</script>
+</html>

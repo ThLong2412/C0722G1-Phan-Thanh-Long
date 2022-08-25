@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let mangA = [];
+    let mangB = [];
+    let size = +prompt("Nhập độ dài mảng");
+    for (let i = 0; i < size; i++) {
+        mangA[i] = +prompt("Nhập phần tử của mảng");
+        mangB[0] = mangA[0];
+        mangB[i] = mangB[i - 1] + mangA[i];
+    }
+    document.write("Mảng A: " + mangA + "<br>");
+    document.write("Mảng B: " + mangB);
+</script>
+</html>

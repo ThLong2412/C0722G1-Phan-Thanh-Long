@@ -53,24 +53,24 @@
     // }
 
     // bài 5 menu
-    let soluongMon = +prompt("Nhập số lượng món cần chọn: ");
-
-    let stt = [1,2,3,4,5,6,7];
-    let mon = ["Cafe","Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa",];
-    let gia = [12000,15000,20000,20000,5000,25000];
-    let keDon=0;
-    let tinhTien = 0;
-    for (let j = 1;j <= soluongMon; j++) {
-        let chonMon = +prompt("nhập số thứ tự của món muốn chọn: ");
-        for (let i = 0; i <stt.length ; i++) {
-                if (chonMon === stt[i]) {
-                    alert( "Giá món " + mon[i] + " là: " + gia[i]);
-                    let soLuong = +prompt("nhập số lượng món");
-                    keDon = soLuong * gia[i];
-                }
-            }tinhTien +=keDon;
-    }
-        document.write("tổng bill's là: " + tinhTien);
+    // let soluongMon = +prompt("Nhập số lượng món cần chọn: ");
+    //
+    // let stt = [1,2,3,4,5,6,7];
+    // let mon = ["Cafe","Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa",];
+    // let gia = [12000,15000,20000,20000,5000,25000];
+    // let keDon=0;
+    // let tinhTien = 0;
+    // for (let j = 1;j <= soluongMon; j++) {
+    //     let chonMon = +prompt("nhập số thứ tự của món muốn chọn: ");
+    //     for (let i = 0; i <stt.length ; i++) {
+    //             if (chonMon === stt[i]) {
+    //                 alert( "Giá món " + mon[i] + " là: " + gia[i]);
+    //                 let soLuong = +prompt("nhập số lượng món");
+    //                 keDon = soLuong * gia[i];
+    //             }
+    //         }tinhTien +=keDon;
+    // }
+    //     document.write("tổng bill's là: " + tinhTien);
 </script>
 
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên tố</title>
+</head>
+<body>
+</body>
+<script>
+    let mang = [[4, 6, 7, 9],[1, 5, 8, 13],[6, 11, 15, 19]];
+    let hienThi = "";
+    let dem = 0;
+    function kiemTra(mang) {
+        let check = 0;
+        if (mang < 2) {
+            return false;
+        }
+        if (mang >= 2) {
+            for (let k = 1; k <= mang; k++) {
+                if (mang % k === 0) {
+                    check++;
+                }
+            }
+            if (check === 2) {
+                return true;
+            } else if (check > 2) {
+                return false;
+            }
+        }
+    }
+    for (let i = 0; i < mang.length; i++) {
+        for (let j = 0; j < mang[i].length; j++) {
+            if (kiemTra(mang[i][j])) {
+                dem++;
+                hienThi += mang[i][j] + ", ";
+            }
+        }
+    }
+    document.write("Các số nguyên tố là:" + hienThi + "<br>" + "Số lượng số nguyên tố là: " + dem );
+</script>
+</html>

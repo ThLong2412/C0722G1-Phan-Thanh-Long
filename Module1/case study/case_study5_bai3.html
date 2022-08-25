@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>min max</title>
+</head>
+<body>
+</body>
+<script>
+    let arr = [[12,25,46,55],[23,47,61,11],[22,58,63,19]];
+    function timSoLonNhat(arr) {
+        max = arr;
+        if(arr > max) {
+            max = arr;
+            return true;
+        }
+    }
+    function timSoNhoNhat(arr) {
+        min = arr;
+        if (arr < min) {
+            min = arr;
+            return true;
+        }
+    }
+    for (let i = 0; i <arr.length ; i++) {
+        for (let j = 0; j <arr[i].length; j++) {
+            if(timSoLonNhat(arr[i][j])) {
+                max = arr[i][j];
+            }
+            if (timSoNhoNhat(arr[i][j])){
+                min = arr[i][j];
+            }
+        }
+    }
+    alert(max);
+    alert(min);
+</script>
+</html>

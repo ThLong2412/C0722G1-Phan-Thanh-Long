@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính lương và thuế</title>
+</head>
+<body>
+</body>
+<script>
+    let luong = +prompt("Nhập lương của bạn");
+    let luongThucSu;
+    let thue;
+    if (luong > 15000000) {
+        thue = luong * 20 / 100;
+        luongThucSu = luong - thue;
+    } else if (luong > 7000000) {
+        thue = luong * 10 / 100;
+        luongThucSu = luong - thue;
+    } else {
+        thue = luong * 5 / 100;
+        luongThucSu = luong - thue;
+    }
+    alert("Thuế đã nộp " + thue + "đ");
+    alert("Tiền nhận được " + luongThucSu + "đ");
+</script>
+</html>
