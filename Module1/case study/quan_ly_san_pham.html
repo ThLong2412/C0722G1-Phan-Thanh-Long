@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="ten" placeholder="nhập tên">
+<input type="text" id="gia" placeholder="nhập giá">
+<input type="text" id="soLuong" placeholder="nhập số lượng">
+<input type="button" onclick="them()" value="thêm">
+<p id="display"></p>
+<script>
+    class SanPham {
+        constructor(ten, gia, soLuong) {
+            this.ten = ten;
+            this.gia = gia;
+            this.soLuong = soLuong;
+        }
+
+        setTen(ten) {
+            this.ten = ten;
+        }
+
+        setGia(gia) {
+            this.gia = gia;
+        }
+
+        setSoLuong(soLuong) {
+            this.soLuong = soLuong;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        getSoLuong() {
+            return this.soLuong;
+        }
+    }
+
+    let sanPham1 = new SanPham("Serum", 100000, 3);
+    let sanPham2 = new SanPham("SRM", 40000, 5);
+    let sanPham3 = new SanPham("Mặt nạ", 10000, 30);
+    let SP = [sanPham1, sanPham2, sanPham3];
+    display(SP);
+
+    function display(nhap) {
+        let table = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>stt</th>\n' +
+            '        <th>tên</th>\n' +
+            '        <th>giá</th>\n' +
+            '        <th>số lượng</th>\n' +
+            '        <th>edit</th>\n' +
+            '        <th>xóa</th>\n' +
+            '    </tr>'
+        for (let i = 0; i < nhap.length; i++) {
+            table += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + nhap[i].getTen() + '</td>\n' +
+                '        <td>' + nhap[i].getGia() + '</td>\n' +
+                '        <td>' + nhap[i].getSoLuong() + '</td>\n' +
+                '        <td> <input type="button" onclick="xoa(' + i + ' )"value="Xóa"></td>\n' +
+                '        <td><input type="button" onclick="sua(' + i + ' )" value="Sửa"></td>\n' +
+                '    </tr>'
+        }
+        table += '</table>';
+        document.getElementById("display").innerHTML = table;
+    }
+
+    function xoa(index) {
+        let conf = confirm("Bạn muốn xóa sản phẩm tên: " + SP[index].getTen());
+        if (conf) {
+            SP.splice(index, 1);
+        }
+        display(SP);
+    }
+
+    function sua(index) {
+        let suaTen = prompt("Nhập tên mới: " + SP[index].getTen());
+        let suaGia = prompt("Nhập giá mới");
+        let suaSoLuong = prompt("Nhập số lượng mới");
+        SP[index].setTen(suaTen);
+        SP[index].setGia(suaGia);
+        SP[index].setSoLuong(suaSoLuong);
+        display(SP);
+    }
+    function them() {
+        let ten = document.getElementById("ten").value;
+        let gia = document.getElementById("gia").value;
+        let soLuong = document.getElementById("soLuong").value;
+        let sanPhamMoi = new SanPham(ten, gia, soLuong);
+        SP.push(sanPhamMoi);
+        display(SP);
+        document.getElementById("ten").value = "";
+        document.getElementById("gia").value = "";
+        document.getElementById("soLuong").value = "";
+    }
+</script>
+</body>
+</html>
