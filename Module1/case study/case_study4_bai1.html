@@ -7,15 +7,22 @@
 <body>
 </body>
 <script>
-    function KiemTra(text) {
-        let sentence = text.toLowerCase().split(" ");
+    function kiemTra(text) {
+        let sentence = text.toLowerCase();
+        sentence=sentence.split(" ");
+        let arr=[];
         for(let i = 0; i< sentence.length; i++){
-            sentence[i] = sentence[i][0].toUpperCase() + sentence[i].slice(1);
+           if (sentence[i]!==""){
+               arr.push(sentence[i]);
+           }
         }
-        return sentence.join(" ");
+        for(let i = 0; i< arr.length; i++){
+            arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+        }
+        return arr.join(" ");
     }
     let kiTu=prompt("nhập các kí tự");
-    KiemTra(kiTu);
-    document.write(KiemTra(kiTu));
+
+    document.write(kiemTra(kiTu));
 </script>
 </html>

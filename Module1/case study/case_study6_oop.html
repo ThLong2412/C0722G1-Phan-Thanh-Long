@@ -5,6 +5,112 @@
     <title>xổ số vietlot</title>
 </head>
 <body>
+<h1>Xổ số CODEGYM 2022</h1>
+<p id="demo"></p> <br>
+<p id="in"></p> <br>
+<p id="kq"></p>
+<button type="button" onclick="chon()">Chọn vé</button>
+<input type="text" onclick="tuChonVe()" id="chonSo1">
+<input type="text" onclick="tuChonVe()" id="chonSo2">
+<input type="text" onclick="tuChonVe()" id="chonSo3">
+<input type="text" onclick="tuChonVe()" id="chonSo4">
+<input type="text" onclick="tuChonVe()" id="chonSo5">
+<input type="text" onclick="tuChonVe()" id="chonSo6">
+<button type="button" onclick="ketQua()">Kiểm tra kết quả</button>
+<script>
+    let arr1 = [];
 
+    function tuChonVe() {
+        let num1 = +prompt("nhập số bạn muốn chọn");
+        document.getElementById("chonSo1").value = num1;
+        let num2 = +prompt("nhập số bạn muốn chọn");
+        document.getElementById("chonSo2").value = num2;
+        let num3 = +prompt("nhập số bạn muốn chọn");
+        document.getElementById("chonSo3").value = num3;
+        let num4 = +prompt("nhập số bạn muốn chọn");
+        document.getElementById("chonSo4").value = num4;
+        let num5 = +prompt("nhập số bạn muốn chọn");
+        document.getElementById("chonSo5").value = num5;
+        let num6 = +prompt("nhập số bạn muốn chọn");
+        document.getElementById("chonSo6").value = num6;
+        arr1.push(num1);
+        arr1.push(num2);
+        arr1.push(num3);
+        arr1.push(num4);
+        arr1.push(num5);
+        arr1.push(num6);
+        document.getElementById("demo").innerHTML = " Số bạn tự chọn là " + arr1.toString();
+        return arr1;
+    }
+
+    let arr2 = [];
+
+    function random() {
+        let so1 = Math.floor(Math.random() * 100);
+        document.getElementById("chonSo1").value = so1;
+        let so2 = Math.floor(Math.random() * 100);
+        document.getElementById("chonSo2").value = so2;
+        let so3 = Math.floor(Math.random() * 100);
+        document.getElementById("chonSo3").value = so3;
+        let so4 = Math.floor(Math.random() * 100);
+        document.getElementById("chonSo4").value = so4;
+        let so5 = Math.floor(Math.random() * 100);
+        document.getElementById("chonSo5").value = so5;
+        let so6 = Math.floor(Math.random() * 100);
+        document.getElementById("chonSo6").value = so6;
+        arr2.push(so1);
+        arr2.push(so2);
+        arr2.push(so3);
+        arr2.push(so4);
+        arr2.push(so5);
+        arr2.push(so6);
+        document.getElementById("in").innerHTML = "Số hệ thống random là " + arr2.toString();
+        return arr2;
+    }
+
+    function chon() {
+        let chonVe = prompt("Bạn có 2 lựa chon: \n 1.Bạn muốn tự chọn vé. \n 2.Hệ thống tự random.");
+        if (chonVe == 1) {
+            tuChonVe();
+        }
+        if (chonVe == 2) {
+            random();
+        }
+    }
+
+    function ketQua() {
+        let dem = 0;
+        for (let i = arr3.length; i > 0; i--) {
+            if (arr1[i] == arr3 [i] || arr2[i] == arr3 [i]) {
+                dem++;
+            } else {
+                dem += 0;
+            }
+        }
+        switch (dem) {
+            case 6:
+                alert("giải nhất");
+                break;
+            case  5:
+                alert("giải nhì");
+                break;
+            case 4:
+                alert("giải ba");
+                break;
+            case 3:
+                alert("giải kk");
+                break;
+            default :
+                alert("chúc mừng bạn đã bị bịp");
+                break;
+        }
+    }
+    let arr3 = [];
+    for (let i = 0; i < 6; i++) {
+        let kq = Math.floor(Math.random() * 100);
+        arr3.push(kq);
+    }
+    document.getElementById("kq").innerHTML = "Kết quả là: " + arr3.toString();
+</script>
 </body>
 </html>
