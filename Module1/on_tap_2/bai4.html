@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="ma" placeholder="nhập mã">
+<input type="text" id="ten" placeholder="nhập tên máy">
+<input type="text" id="hang" placeholder="nhập hãng">
+<input type="text" id="gia" placeholder="nhập giá">
+<button type="button" onclick="them()">Thêm </button>
+<p id="display"></p>
+</body>
+<script>
+    class MayTinh {
+        constructor(ma, ten, hang, gia) {
+            this.ma = ma;
+            this.ten = ten;
+            this.hang = hang;
+            this.gia = gia;
+        }
+
+        setMa(ma) {
+            this.ma = ma;
+        }
+
+        setTen(ten) {
+            this.ten = ten;
+        }
+
+        setHang(hang) {
+            this.hang = hang;
+        }
+
+        setGia(gia) {
+            this.gia = gia;
+        }
+
+        getMa(){
+            return this.ma;
+        }
+        getTen(){
+            return this.ten;
+        }
+        getHang(){
+            return this.hang;
+        }
+        getGia(){
+            return this.gia;
+        }
+    }
+    let may1 = new MayTinh("VN1","abc","hp",20000000);
+    let may2 = new MayTinh("VN2","sdf","dell",22000000);
+    let may3 = new MayTinh("VN3","hml","lenovo",25000000);
+    let may = [may1,may2,may3];
+    display(may);
+    function display(nhap) {
+        let table = '<table border="1">\n' +
+            '    <tr>\n' +
+            '         <th>Stt</th>\n'   +
+            '        <th>Mã máy</th>\n' +
+            '        <th>Tên máy</th>\n' +
+            '        <th>Hãng máy</th>\n' +
+            '        <th>Giá máy</th>\n' +
+            '    </tr>'
+        for (let i = 0; i < nhap.length ; i++) {
+            table += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + nhap[i].getMa() +'</td>\n' +
+                '        <td>' + nhap[i].getTen() + '</td>\n' +
+                '        <td>' + nhap[i].getHang() + '</td>\n' +
+                '        <td>' + nhap[i].getGia() + '</td>\n' +
+                '    </tr>'
+        }
+        table += '</table>';
+        document.getElementById("display").innerHTML = table;
+    }
+    function them() {
+        let ma = document.getElementById("ma").value;
+        let ten = document.getElementById("ten").value;
+        let hang = document.getElementById("hang").value;
+        let gia = document.getElementById("gia").value;
+        let mayMoi = new MayTinh(ma, ten, hang, gia);
+        may.push(mayMoi);
+        display(may);
+        document.getElementById("ma").value;
+        document.getElementById("ten").value;
+        document.getElementById("hang").value;
+        document.getElementById("gia").value;
+    }
+</script>
+</html>

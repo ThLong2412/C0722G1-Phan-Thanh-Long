@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    function kiemTra(text) {
+        let chuoi = text.toLowerCase();
+        chuoi = chuoi.split(" ");
+        let mang = [];
+        for (let i = 0; i <chuoi.length ; i++) {
+            if(chuoi[i] !== "") {
+                mang.push(chuoi[i]);
+            }
+        }
+        for (let i = 0; i <mang.length ; i++) {
+            mang[i] = mang[i][0].toUpperCase();
+        }
+        return mang.join(" ");
+    }
+    let kyTu = prompt("nhập các ký tự:");
+    document.write(kiemTra(kyTu));
+</script>
+</html>

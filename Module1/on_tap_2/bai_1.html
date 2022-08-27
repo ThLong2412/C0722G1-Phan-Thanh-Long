@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<p id="demo"></p> <br>
+<p id="demo2"></p>
+<script>
+    let sum = 0;
+    let trungBinh = 0;
+    let count = 0;
+    let size = +prompt("nhập độ dài mảng: ");
+    let arr = [];
+    let arr2 =[];
+    for (let i = 0; i < size; i++) {
+        arr[i] = +prompt("nhập các phần tử vào mảng");
+    }
+    document.getElementById("demo").innerHTML = "Mảng bạn vừa nhập là: " + arr.toString() + "<br>" + "Số lượng phần tử của mảng là: " + arr.length;
+    for (let i = 3; i < arr.length; i += 3) {
+        if (arr[i] % 5 === 0) {
+            sum += arr[i];
+            count+=1;
+            arr2.push(arr[i]);
+        }
+    } trungBinh = sum / count ;
+    document.getElementById("demo2").innerHTML ="Trung bình tổng các số chia hết cho 5 ở vị trí cchia hết cho 3 là: " +"(" + arr2 + ")" +  "/" + count + "=" +trungBinh;
+</script>
+</html>
