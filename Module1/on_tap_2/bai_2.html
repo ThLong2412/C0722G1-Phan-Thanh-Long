@@ -19,14 +19,13 @@
         if (mang.length == 1) {
             alert("Chuỗi chỉ có một kí tự nên không cần viết tắc.");
         } else {
-
+            let mang1 = [];
             for (let i = 0; i < mang.length; i++) {
                 mang[i] = mang[i][0].toUpperCase();
+                mang1.push(mang[i]);
             }
-        }
-        return mang.join("");
+        }return mang1.join("");
     }
-
     let kyTu = prompt("nhập các ký tự:");
     document.write(kiemTra(kyTu));
 </script>
