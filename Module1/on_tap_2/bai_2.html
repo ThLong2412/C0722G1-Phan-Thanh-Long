@@ -11,16 +11,22 @@
         let chuoi = text.toLowerCase();
         chuoi = chuoi.split(" ");
         let mang = [];
-        for (let i = 0; i <chuoi.length ; i++) {
-            if(chuoi[i] !== "") {
+        for (let i = 0; i < chuoi.length; i++) {
+            if (chuoi[i] !== "") {
                 mang.push(chuoi[i]);
             }
         }
-        for (let i = 0; i <mang.length ; i++) {
-            mang[i] = mang[i][0].toUpperCase();
+        if (mang.length == 1) {
+            alert("Chuỗi chỉ có một kí tự nên không cần viết tắc.");
+        } else {
+
+            for (let i = 0; i < mang.length; i++) {
+                mang[i] = mang[i][0].toUpperCase();
+            }
         }
-        return mang.join(" ");
+        return mang.join("");
     }
+
     let kyTu = prompt("nhập các ký tự:");
     document.write(kiemTra(kyTu));
 </script>
