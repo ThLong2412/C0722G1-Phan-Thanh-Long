@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    function fibonacci() {
+        let number1 = 0;
+        let number2 = 1;
+        let so;
+        let array = [0, 1];
+        for (let i = 1; i <= 20; i++) {
+            so = number1 + number2;
+            array.push(so);
+            number1 = number2;
+            number2 = so;
+        }
+        return array;
+    }
+
+    document.write("Dãy fibonacci: " + fibonacci() + "<br>");
+
+    function soNguyenTo(num) {
+        let check = 0;
+        if (num < 2) {
+            return false;
+        }
+        if (num >= 2) {
+            for (let k = 1; k <= num; k++) {
+                if (num % k === 0) {
+                    check++;
+                }
+            }
+            if (check === 2) {
+                return true;
+            } else if (check > 2) {
+                return false;
+            }
+        }
+    }
+
+    function inSo(number) {
+        let arr = [];
+        let arr1 = fibonacci(number);
+        for (let i = 0; i <= number; i++) {
+            for (let j = 0; j < arr1.length; j++) {
+                if (i === arr1[j] && soNguyenTo(i) === true) {
+                    arr.push(i);
+                }
+            }
+        }  return "Các số vừa là số fibonacci vừa là số nguyên tố: " +  arr;
+    }
+    let num = +prompt("nhập số bất kỳ: ");
+   document.write(inSo(num));
+</script>
+</html>

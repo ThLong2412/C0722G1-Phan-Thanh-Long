@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let size = +prompt("nhập độ dài mảng: ");
+    let arr = [];
+    for (let i = 0; i < size; i++) {
+        arr[i] = +prompt("nhập phần tử của mảng: ");
+    }
+    let count = 1;
+    let arrCount = [];
+    function Check(array) {
+        for (let i = 0; i < array.length; i++) {
+            for (let j = i + 1; j < array.length; j++) {
+                if (array[i] === array[j]) {
+                    array.splice(j, 1);
+                    j--;
+                    count++;
+                }
+            }
+            arrCount.push(count);
+            count = 1;
+        }
+        for (let i = 0; i < array.length; i++) {
+            document.write("Phần tử " + array[i] + " xuất hiện " + arrCount[i] + " lần" + "<br>");
+        }
+    }
+    Check(arr);
+</script>
+</html>

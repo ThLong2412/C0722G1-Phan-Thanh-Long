@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="1"></p> <br>
+<p id="2"></p> <br>
+<p id="3"></p>
+</body>
+<script>
+    function text(arr, num) {
+        for (let j = 0; j < arr.length; j++) {
+            if (num === arr[j]) {
+                arr[j] = -1;
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (num % 2 === 1) {
+                for (let j = 0; j < arr.length; j++) {
+                    if (arr[j] % 2 === 0) {
+                        arr[j]++;
+                    }
+                }
+            }
+            if (num % 2 === 0) {
+                for (let j = 0; j < arr.length; j++) {
+                    if (arr[i] % 2 === 1) {
+                        arr[i]++;
+                    }
+                }
+            }
+
+        }
+        return arr;
+    }
+
+    let array = [5, 6, 2, 8, 7, 1, 9, 4, 3];
+    document.getElementById("1").innerHTML = "Mảng trước khi thay đổi: " + array;
+    let number = +prompt("nhập số bất kỳ: ");
+    text(array, number);
+    document.getElementById("2").innerHTML ="Số nhập vào: " + number;
+    document.getElementById("3").innerHTML ="Mảng mới là: " + array;
+</script>
+</html>

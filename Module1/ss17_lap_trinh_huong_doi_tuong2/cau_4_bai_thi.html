@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu 4</title>
+</head>
+<body>
+<h1><center>Danh sách bệnh nhân</center></h1> <br>
+<p id="display"></p>
+</body>
+<script>
+    class BenhNhan {
+        constructor(ten, tuoi, diaChi, sdt) {
+            this.ten = ten;
+            this.tuoi = tuoi;
+            this.diaChi = diaChi;
+            this.sdt = sdt;
+        }
+
+        setTen(ten) {
+            this.ten = ten;
+        }
+
+        setTuoi(tuoi) {
+            this.tuoi = tuoi;
+        }
+
+        setDiaChi(diaChi) {
+            this.diaChi = diaChi;
+        }
+
+        setSoDienThoai(sdt) {
+            this.sdt = sdt;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        getTuoi() {
+            return this.tuoi;
+        }
+
+        getDiaChi() {
+            return this.diaChi;
+        }
+
+        getSoDienThoai() {
+            return this.sdt;
+        }
+    }
+
+    let benhNhan1 = new BenhNhan(" Toàng Thanh Hùng ", 15, " Quảng Nam ", " 0923434564 ");
+    let benhNhan2 = new BenhNhan(" Nguyễn Trần Cảnh ", 30, " Quảng Nam ", " 0943246364 ");
+    let benhNhan3 = new BenhNhan(" Aguyễn Lê Hoàng Anh ", 20, " Quảng Nam ", " 0954236484 ");
+    let benhNhan4 = new BenhNhan(" Trần Lệ Quyên ", 19, " Quảng Nam ", " 0978633144 ");
+    let BN = [benhNhan1, benhNhan2, benhNhan3, benhNhan4];
+    BN.sort(function (a,b) {
+        return a.ten>b.ten;
+    })
+    display(BN);
+
+    function display(nhap) {
+        let table = ' <center><table border="1" style="border-collapse: collapse">\n ' +
+            '    <tr>\n ' +
+            '        <th>STT</th>\n ' +
+            '        <th>Họ và tên</th>\n ' +
+            '        <th>Tuổi</th>\n ' +
+            '        <th>Địa Chỉ</th>\n ' +
+            '        <th>Số điện Thoại</th>\n ' +
+            '    </tr> '
+        for (let i = 0; i < nhap.length; i++) {
+            table += '<tr>\n ' +
+                '        <td> ' + (i + 1) + ' </td>\n ' +
+                '        <td> ' + nhap[i].getTen() + ' </td>\n ' +
+                '        <td> ' + nhap[i].getTuoi() + ' </td>\n ' +
+                '        <td> ' + nhap[i].getDiaChi() + ' </td>\n ' +
+                '        <td> ' + nhap[i].getSoDienThoai() + ' </td>\n ' +
+                '    </tr> '
+        }
+        table += ' </table></center> ';
+        document.getElementById("display").innerHTML = table;
+    }
+    function f() {
+
+    }
+</script>
+</html>

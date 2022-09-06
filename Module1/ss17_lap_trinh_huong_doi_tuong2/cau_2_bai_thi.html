@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu 2</title>
+</head>
+<body>
+</body>
+<script>
+    let size = +prompt("nhập độ dài mảng: ");
+    let array = [];
+    let array2 = [];
+    for (let i = 0; i < size; i++) {
+        array[i] = +prompt("nhập phần tử của mảng: ");
+    }
+    function findMin(array){
+        let min = array[0];
+        let index_min = 0;
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+                index_min = i;
+            }
+        }
+        array2.push(index_min);
+        return array2;
+    }
+    function findMax(array){
+        let max = array[0];
+        let index_max = 0;
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+                index_max = i;
+            }
+        }
+        array2.push(index_max);
+        return array2;
+    }
+    findMin(array);
+    findMax(array);
+    document.write("Mảng bạn vừa nhập là: " + array + "<br>");
+    document.write("["+ array2 + "]");
+</script>
+</html>

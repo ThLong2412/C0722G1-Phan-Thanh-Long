@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // viết hàm nhận một số nguyên bất kì. Hiển thị tất cả các số không phải số nguyên tố đến số đó.
+    function hienThi(number) {
+        let arr = [];
+        for (let i = 0; i <= number ; i++) {
+            if(kiemTra(i) == false) {
+                arr.push(i);
+            }
+        }
+        return arr;
+    }
+    function kiemTra(num) {
+        let check = 0;
+        if (num < 2) {
+            return false;
+        }
+        if (num >= 2) {
+            for (let k = 1; k <= num; k++) {
+                if (num % k === 0) {
+                    check++;
+                }
+            }
+            if (check === 2) {
+                return true;
+            } else if (check > 2) {
+                return false;
+            }
+        }
+    }
+    let num1 = +prompt("nhập một số bất kỳ:");
+    document.write(hienThi(num1));
+</script>
+</html>

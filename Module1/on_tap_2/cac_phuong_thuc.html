@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const myAwesomeArray = [1, 2, 3, 4, 5]
+
+    myAwesomeArray.reduce((total, value) => total * value)
+    // 1 * 2 * 3 * 4 * 5
+    //-------> Kết quả = 120
+    const myAwesomeArray = ["a", "b", "c", "d", "e"]
+
+    myAwesomeArray.some(test => test === "d")
+    //-------> Kết quả : true
+    const myAwesomeArray = ["a", "b", "c", "d", "e"]
+
+    myAwesomeArray.every(test => test === "d")
+    //-------> Kết quả : false
+
+
+    const myAwesomeArray2 = ["a", "a", "a", "a", "a"]
+
+    myAwesomeArray2.every(test => test === "a")
+    //-------> Kết quả : true
+    const myAwesomeArray = [5, 4, 3, 2, 1]
+    myAwesomeArray.map(x => x * x)
+
+    //-------> Kết quả : 25
+    //                   16
+    //                   9
+    //                   4
+    //                   1
+    let words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+    let result = words.filter(function(word) {
+        return word.length > 6;
+    });
+
+    console.log(result); // > Array ["exuberant", "destruction", "present"]
+    console.log(words);  // > Array ["spray", "limit", "elite", "exuberant", "destruction", "present"]
+
+
+</script>
+</body>
+</html>

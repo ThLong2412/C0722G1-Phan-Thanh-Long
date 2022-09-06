@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let size = +prompt("nhập độ dài mảng: ");
+    if (size > 50) {
+        for (; size > 50;) {
+            size = +prompt("nhập lại độ dài mảng")
+        }
+    } let array = [];
+    if (size < 50) {
+        for (let i = 0; i < size; i++) {
+            array[i] = +prompt("nhập phần tử");
+        }
+    }
+    let tong = 0;
+    let trungBinh = 0;
+    let dem = 0;
+    for (let i = 1; i < array.length; i = i + 2) {
+        if (array[i] % 2 === 0) {
+            dem+=1;
+            tong += array[i];
+        }
+    }
+    trungBinh = tong / dem;
+    document.write("Mảng nhập vào là: " + array + "<br>");
+    document.write("Trung bình cộng các số chẵn tại vị trí lẻ là: " + trungBinh);
+</script>
+</html>

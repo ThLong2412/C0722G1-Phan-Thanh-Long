@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module1/on_tap_2/cac_phuong_thuc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module2/src/ss1_introduction_to_java/practice/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module2/src/ss1_introduction_to_java/practice/SolveTheEquation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module2/src/ss1_introduction_to_java/practice/SystemTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Codegym.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/case study/case_study1_bai1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/case study/case_study1_bai1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/case study/case_study1_bai3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/case study/case_study1_bai3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/case study/case_study7_tao_dao_dien.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/case study/case_study7_tao_dao_dien.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/case study/quan_ly_san_pham.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/case study/quan_ly_san_pham.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/on_tap_2/bai_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/on_tap_2/bai_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/on_tap_2/bai_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/on_tap_2/bai_3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/on_tap_2/bai_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/on_tap_2/bai_4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/ss11_cau_truc_lap2/bai_tap/luyen_tap_vong_lap_01_bai4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/ss11_cau_truc_lap2/bai_tap/luyen_tap_vong_lap_01_bai4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/ss16_lap_trinh_huong_doi_tuong1/bai_tap/bai1_xay_dung_mo_hinh_hcn.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/ss16_lap_trinh_huong_doi_tuong1/bai_tap/bai1_xay_dung_mo_hinh_hcn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/ss6_tong_quan_javascript/thuc_hanh/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/ss6_tong_quan_javascript/.idea/test.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2EL6NJ4Kh3qLjfDPPmDSDULiB9K" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Module1" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="" />
+      <created>1662362475410</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662362475410</updated>
+      <workItem from="1662362480508" duration="87000" />
+      <workItem from="1662436536467" duration="40000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1662436574773">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1662436574773" />
+    <state x="209" y="29" key="new project wizard" timestamp="1662362565768">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="209" y="29" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1662362565768" />
+  </component>
+</project>

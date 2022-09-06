@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu 1</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("nhập vào một số nguyên"));
+    let result = "";
+    if (num < 0 || isNaN(num)) {
+        for (; num < 0 || isNaN(num);) {
+            num = parseInt(prompt("nhập lại một số nguyên"));
+        }
+    }
+    if (num > 0) {
+        for (let i = 1; i <= num; i++) {
+            if (num % i === 0) {
+                result += i + " ";
+            }
+        }
+    }
+    document.write("Ước của " + num + " là: " + result);
+</script>
+</body>
+</html>

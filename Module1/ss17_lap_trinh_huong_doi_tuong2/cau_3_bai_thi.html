@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu 3</title>
+</head>
+<body>
+</body>
+<script>
+    function myFunction(array, number) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % number === 0) {
+                count += 1;
+                for (let j = 0; j < array.length; j++) {
+                    if (array[i] === array[j]) {
+                        array.splice(j, 1);
+                    }
+                }
+            }
+        }
+        return "Số lượng phần tử khác nhau trong mảng chia hết cho " + number + " là: " + count;
+    }
+
+    let size = +prompt("nhập độ dài mảng");
+    let arr = [];
+    for (let i = 0; i < size; i++) {
+        arr[i] = +prompt("nhập phần tử thứ " + i);
+    }
+    let num = +prompt("nhập số nguyên");
+    document.write("Mảng bạn vừa nhập là: " + arr + "<br>");
+    document.write(myFunction(arr, num));
+</script>
+</html>
