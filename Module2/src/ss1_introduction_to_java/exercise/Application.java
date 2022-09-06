@@ -45,40 +45,40 @@ public class Application {
             }
         }
         else if (number < 20) {
-            String numberToWord3;
+//            String numberToWord3;
             switch (number) {
                 case 10:
-                    numberToWord3 = "ten";
+                    System.out.println("ten");
                     break;
                 case 11:
-                    numberToWord3 ="eleven";
+                    System.out.println("eleven");
                     break;
                 case 12:
-                    numberToWord3 ="twelve";
+                    System.out.println("twelve");
                     break;
                 case 13:
-                    numberToWord3 ="thireen";
+                    System.out.println("thireen");
                     break;
                 case 14:
-                    numberToWord3 ="fourteen";
+                    System.out.println("fourteen");
                     break;
                 case 15:
-                    numberToWord3 ="fifteen";
+                    System.out.println("fifteen");
                     break;
                 case 20:
-                    numberToWord3 ="twenty";
+                    System.out.println("twenty");
                     break;
                 case 16:
-                    numberToWord3 ="sixteen";
+                    System.out.println("sixteen");
                     break;
                 case 17:
-                    numberToWord3 ="seventeen";
+                    System.out.println("seventeen");
                     break;
                 case 18:
-                    numberToWord3 ="eightteen";
+                    System.out.println("eightteen");
                     break;
                 case 19:
-                    numberToWord3 ="nineteen";
+                    System.out.println("nineteen");
                     break;
             }
         }
@@ -120,14 +120,6 @@ public class Application {
             }
             String numberToWord1;
             switch (tens) {
-                case 0:
-                    if (tens == 0) {
-                        numberToWord1 = " ";
-                        break;
-                    } else {
-                        numberToWord1 = " ";
-                        break;
-                    }
                 case 1:
                     numberToWord1 = "ten";
                     break;
@@ -160,14 +152,6 @@ public class Application {
             }
             String numberToWord2;
             switch (ones) {
-                case 0:
-                    if (ones == 0) {
-                        numberToWord2 = " ";
-                        break;
-                    } else {
-                        numberToWord2 = " ";
-                        break;
-                    }
                 case 1:
                     numberToWord2 = "one";
                     break;
@@ -198,7 +182,39 @@ public class Application {
                 default:
                     numberToWord2 = " ";
             }
-            if (!numberToWord.equals(" ") || !numberToWord1.equals(" ")||!numberToWord2.equals(" ")){
+            if(number < 120 && number > 110) {
+//                String numberToWord3;
+                switch (number) {
+                    case 111:
+                        System.out.println("one hundred eleven");
+                        break;
+                    case 112:
+                        System.out.println("one hundred twelve");
+                        break;
+                    case 113:
+                        System.out.println("one hundred thirteen ");
+                        break;
+                    case 114:
+                        System.out.println("one hundred fourteen");
+                        break;
+                    case 115:
+                        System.out.println("one hundred fifteen");
+                        break;
+                    case 116:
+                        System.out.println("one hundred sixteen");
+                        break;
+                    case 117:
+                        System.out.println("one hundred seventeen");
+                        break;
+                    case 118:
+                        System.out.println("one hundred eighteen");
+                        break;
+                    case 119:
+                        System.out.println("one hundred nineteen");
+                        break;
+                }
+            }
+            if (!numberToWord.equals(" ") || !numberToWord1.equals(" ")||!numberToWord2.equals(" ") ){
                 System.out.printf("The number '%d' to words: %s !",number,numberToWord+" "+numberToWord1+" "+numberToWord2);
             }else{
                 System.out.print("Invalid input!");
