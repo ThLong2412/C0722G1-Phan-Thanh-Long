@@ -27,6 +27,7 @@ public class Remove {
                 for (int k = j; k < array.length -1 ; k++) {
                     array[k] = array [(k+1)];
                 } array[array.length - 1 ] = 0;
+                j--;
                 System.out.println(" array new: " + Arrays.toString(array));
             }
         }
