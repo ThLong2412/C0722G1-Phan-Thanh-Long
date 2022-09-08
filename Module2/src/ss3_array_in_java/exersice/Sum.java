@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Sum {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int [][] array;
+        int[][] array;
         System.out.println("large array number: ");
         int sizeGreat = Integer.parseInt(scanner.nextLine());
         System.out.println("small array number: ");
@@ -20,18 +20,14 @@ public class Sum {
             }
             i++;
         }
-        for (int j = 0; j < sizeGreat ; j++) {
+        for (int j = 0; j < sizeGreat; j++) {
             System.out.println(Arrays.toString(array[j]));
         }
         int sum = 0;
         System.out.println("enter the column you want to sum: ");
         int numberColumn = Integer.parseInt(scanner.nextLine());
-        for (int j = 0; j < array[i-1].length ; j++) {
-            if (numberColumn == array[i-1][j]) {
-                for (int k = 0; k <array.length ; k++) {
-                    sum += array[k][numberColumn];
-                }
-            }
+        for (int k = 0; k < array.length; k++) {
+            sum += array[k][numberColumn - 1];
         }
         System.out.println("sum of osos in column " + numberColumn + " is a: " + sum);
     }
