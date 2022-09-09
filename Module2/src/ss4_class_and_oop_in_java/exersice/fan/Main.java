@@ -14,14 +14,21 @@ public class Main {
             if (number == 1) {
                 fan.on = true;
                 fan.speed = fan.FAST;
-                fan.color = "yellow";
-                fan.radius = 10;
+                System.out.println("Enter color");
+                fan.color = scanner.nextLine();
+                System.out.println("Enter radius");
+                fan.radius = scanner.nextInt();
                 System.out.println(fan.display1());
-
+                break;
             }
             if (number == 2) {
                 fan.on = false;
+                System.out.println("Enter color");
+                fan.color = scanner.nextLine();
+                System.out.println("Enter radius");
+                fan.radius = scanner.nextInt();
                 System.out.println(fan.display2());
+                break;
             }
         }
     }

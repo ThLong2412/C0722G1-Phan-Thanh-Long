@@ -17,6 +17,7 @@ public class Fan {
         this.color = color;
     }
     public int getSpeed() {
+
         return this.speed;
     }
     public boolean getOn() {
