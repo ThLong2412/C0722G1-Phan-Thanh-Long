@@ -5,7 +5,7 @@ public class Fan {
     final int MEDIUM = 2;
     final int FAST = 3;
     int speed = SLOW;
-    boolean on = false;
+    boolean on;
     double radius = 5;
     String color = "blue";
     public Fan () {
