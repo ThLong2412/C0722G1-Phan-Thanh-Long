@@ -8,7 +8,7 @@ public class Main {
         Fan fan = new Fan();
         Scanner scanner = new Scanner(System.in);
         System.out.println("1. Enter on");
-        System.out.println("2. Enter on");
+        System.out.println("2. Enter off");
         for (int i = 0; i < 999 ; i++) {
             int number = Integer.parseInt(scanner.nextLine());
             if (number == 1) {
