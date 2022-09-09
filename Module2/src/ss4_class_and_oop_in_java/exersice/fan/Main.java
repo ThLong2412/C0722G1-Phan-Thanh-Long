@@ -25,7 +25,9 @@ public class Main {
                 fan.on = false;
                 System.out.println("Enter color");
                 fan.color = scanner.nextLine();
+
                 System.out.println("Enter radius");
+
                 fan.radius = scanner.nextInt();
                 System.out.println(fan.display2());
                 break;
