@@ -29,9 +29,9 @@ public class Fan {
         return this.color;
     }
     public String display1() {
-        return "the state of the fan is: " + getSpeed() + ", " + getColor() + ", " + getRadius() + ", " + "fan is on.";
+        return "the state of the is: " + getSpeed() + ", " + getColor() + ", " + getRadius() + ", " + "fan is on.";
     }
     public String display2() {
-        return "the state of the fan is: " + getColor() + ", " + getRadius() + ", " + "fan is on.";
+        return "the state of the fan is: " + getColor() + ", " + getRadius() + ", " + "fan is off.";
     }
 }
