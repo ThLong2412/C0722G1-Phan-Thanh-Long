@@ -28,11 +28,6 @@ public class SumAtDiagonal {
             sum += array[k][k];
             k++;
         }
-        k = array.length - 1;
-        while (k >= 0) {
-            sum += array[k][k];
-            k--;
-        }
         System.out.println("Your sum is a: " + sum);
     }
 }
