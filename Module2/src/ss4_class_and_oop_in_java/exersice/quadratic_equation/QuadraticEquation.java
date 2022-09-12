@@ -38,6 +38,6 @@ public class QuadraticEquation {
         if (getDiscriminant() < 0) {
             result = "the equation has no solution.";
         }
-        return  result;
+        return result;
     }
 }
