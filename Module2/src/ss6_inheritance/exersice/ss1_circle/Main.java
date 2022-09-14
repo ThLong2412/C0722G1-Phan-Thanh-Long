@@ -1,7 +1,5 @@
 package ss6_inheritance.exersice.ss1_circle;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         Circle circle =new Circle();

@@ -1,17 +1,19 @@
 package ss6_inheritance.practice;
 
-public class Circle extends Shape {
+import ss7_interface_and_abstract_class.exersice.ss1_resizeable.Resizeable;
+
+public  class Circle2 extends Shape  {
     private double radius;
 
-    public Circle() {
+    public Circle2() {
         radius = 1.0;
     }
 
-    public Circle(double radius) {
+    public Circle2(double radius) {
         this.radius = radius;
     }
 
-    public Circle(double radius, String color, boolean filled) {
+    public Circle2(double radius, String color, boolean filled) {
         super(color, filled);
         this.radius = radius;
     }

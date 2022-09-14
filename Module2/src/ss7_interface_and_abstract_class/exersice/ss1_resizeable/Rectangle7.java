@@ -1,14 +1,16 @@
-package ss6_inheritance.practice;
+package ss7_interface_and_abstract_class.exersice.ss1_resizeable;
 
-import ss7_interface_and_abstract_class.exersice.ss1_resizeable.Resizeable;
+import ss6_inheritance.practice.Shape;
 
-public  class Rectangle extends Shape {
+public class Rectangle7 extends Shape implements Resizeable {
     private double width = 1.0;
     private double height = 1.0;
-    public Rectangle() {
+
+    public Rectangle7() {
     }
-    public Rectangle (double width, double height, String color, boolean filled) {
-        super(color,filled);
+
+    public Rectangle7(double width, double height, String color, boolean filled) {
+        super(color, filled);
         this.width = width;
         this.height = height;
     }
@@ -25,14 +27,21 @@ public  class Rectangle extends Shape {
         return height;
     }
 
+
     public void setHeight(double height) {
         this.height = height;
     }
+
     public double getArea() {
         return this.height * this.width;
     }
+
     public double getPerimeter() {
         return (this.height + this.width) * 2;
+    }
+    public void resize(double percent) {
+        setWidth(getWidth() + percent*getWidth()/100);
+        setHeight(getHeight() + percent*getHeight()/100);
     }
     @Override
     public String toString() {

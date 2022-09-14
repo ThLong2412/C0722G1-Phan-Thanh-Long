@@ -1,14 +1,18 @@
-package ss6_inheritance.exersice.ss1_circle;
+package ss7_interface_and_abstract_class.exersice.ss1_resizeable;
 
-public class Circle {
+public class Circle7 implements Resizeable {
     private double radius;
     private String color;
-    public Circle() {
+
+    public Circle7() {
     }
-    public Circle(double radius, String color) {
-        this.radius =radius;
+
+    public Circle7(double radius, String color) {
+        this.radius = radius;
         this.color = color;
     }
+
+
 
     public double getRadius() {
         return radius;
@@ -25,8 +29,12 @@ public class Circle {
     public void setColor(String color) {
         this.color = color;
     }
+
     public double getArea() {
-        return Math.pow(radius,2) * Math.PI;
+        return Math.pow(radius, 2) * Math.PI;
+    }
+    public void resize(double percent) {
+        setRadius(getRadius() + percent*getRadius()/100);
     }
     @Override
     public String toString( ) {
