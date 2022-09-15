@@ -1,7 +1,6 @@
 package ss7_interface_and_abstract_class.exersice.ss2_colorable;
 
 import ss7_interface_and_abstract_class.exersice.ss1_resizeable.Rectangle7;
-import ss7_interface_and_abstract_class.exersice.ss1_resizeable.Square7;
 
 public class Square72 extends Rectangle7 implements Colorable {
     public void howToColor() {
