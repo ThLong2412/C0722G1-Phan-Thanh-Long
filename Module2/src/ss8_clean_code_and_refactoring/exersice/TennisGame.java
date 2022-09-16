@@ -20,20 +20,20 @@ public class TennisGame {
     public static String scoreObtained(int player1Score) {
         String result;
         final int ZERO = 0;
-        final int APOINT = 1;
-        final int TWOPOINT = 2;
-        final int THREEPOINT = 3;
+        final int A_POINT = 1;
+        final int TWO_POINT = 2;
+        final int THREE_POINT = 3;
         switch (player1Score) {
             case ZERO:
                 result = "Love-All";
                 break;
-            case APOINT:
+            case A_POINT:
                 result = "Fifteen-All";
                 break;
-            case TWOPOINT:
+            case TWO_POINT:
                 result = "Thirty-All";
                 break;
-            case THREEPOINT:
+            case THREE_POINT:
                 result = "Forty-All";
                 break;
             default:
