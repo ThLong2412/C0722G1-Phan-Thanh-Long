@@ -5,7 +5,7 @@ import test.mvc.service.impl.StudentService;
 
 import java.util.Scanner;
 
-public class StudentController {
+public class StudentController  {
     private static IStudentService iStudentService = new StudentService();
     private static Scanner scanner = new Scanner(System.in);
 

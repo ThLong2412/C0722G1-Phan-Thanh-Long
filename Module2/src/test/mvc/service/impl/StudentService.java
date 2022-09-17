@@ -12,11 +12,6 @@ public class StudentService implements IStudentService {
     private static Scanner scanner = new Scanner(System.in);
     private static List<Student> studentList = new ArrayList<>();
 
-    public void addStudent() {
-        Student student = this.displayStudent();
-        studentList.add(student);
-        System.out.println("ĐÃ thêm mới học sinh thành công.");
-    }
 
     public Student displayStudent() {
         System.out.print("Mời bạn nhập mã học sinh: ");
@@ -33,6 +28,12 @@ public class StudentService implements IStudentService {
         double score = Double.parseDouble(scanner.nextLine());
         Student student = new Student(code, name, pattern, gender, classes, score);
         return student;
+    }
+
+    public void addStudent() {
+        Student student = this.displayStudent();
+        studentList.add(student);
+        System.out.println("Đã thêm mới học sinh thành công.");
     }
 
     @Override
@@ -63,6 +64,4 @@ public class StudentService implements IStudentService {
             System.out.println("Không tìm thấy đối tượng cần xóa.");
         }
     }
-
-
 }

@@ -18,4 +18,9 @@ public class Teacher extends Person {
     public static void setSpecializes(String specializes) {
         Teacher.specializes = specializes;
     }
+
+    @Override
+    public String toString() {
+        return "Teacher{" + getCode() +", " + getName() +", " +getPattern() +", " + getGender() +", " + getSpecializes() +"}";
+    }
 }

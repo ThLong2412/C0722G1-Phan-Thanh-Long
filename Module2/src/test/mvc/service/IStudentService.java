@@ -1,7 +1,7 @@
 package test.mvc.service;
 
 public interface IStudentService {
-    void addStudent();
+  void addStudent();
 
     void displayAllStudent();
 
