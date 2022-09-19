@@ -47,7 +47,7 @@ public class MyArrayList<E> {
         return true;
     }
     public void add(E element,int index) throws IllegalAccessException {
-        if (index>elements.length){
+        if (index>elements.length || index < 0){
             throw new IllegalAccessException("index: "+index);
         }else if (elements.length==size){
             this.ensureCapacity(5);
@@ -83,6 +83,9 @@ public class MyArrayList<E> {
      * @return
      */
     public E get(int index){
+        if (index < 0 || index > size) {
+            System.out.println("kiểm tra lại index");
+        }
         return (E) elements[index];
     }
     public int indexOf(E element){
