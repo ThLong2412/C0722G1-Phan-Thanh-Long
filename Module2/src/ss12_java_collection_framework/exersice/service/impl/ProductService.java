@@ -86,12 +86,15 @@ public class ProductService implements IProductService {
     public void findProduct() {
         System.out.println("nhập tên sản phẩm muốn tìm");
         String nameFind = scanner.nextLine();
+        boolean flag = false;
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getName().equals(nameFind)) {
                 System.out.println(productList.get(i));
+                flag =true;
+                break;
             }
-            if (!productList.get(i).getName().equals(nameFind)) {
-                System.out.println("không tìm thấy sản phẩm đó");
+            if (!flag) {
+                System.out.println("không tìm thấy sản phẩm đó.");
             }
         }
     }

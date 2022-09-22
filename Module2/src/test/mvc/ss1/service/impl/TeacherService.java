@@ -58,4 +58,46 @@ public class TeacherService implements ITeacherService {
             System.out.println("Không tìm thấy đối tượng cần xóa.");
         }
     }
+
+    public void findTeacher() {
+        System.out.println("1. tìm kiếm theo tên giảng viên");
+        System.out.println("2. tìm kiếm theo mã giảng viên");
+        System.out.println("mời bạn lựa chọn");
+        int choice = Integer.parseInt(scanner.nextLine());
+
+        switch (choice) {
+            case 1:
+                System.out.println("nhập tên giảng viên muốn tìm");
+                String nameFind = scanner.nextLine();
+
+                boolean flag = false;
+                for (int i = 0; i < teacherList.size(); i++) {
+                    if (teacherList.get(i).getName().contains(nameFind)) {
+                        System.out.println(teacherList.get(i));
+                        flag = true;
+                        break;
+                    }
+                    if (!flag) {
+                        System.out.println("không tìm thấy giảng viên");
+                    }
+                }
+                break;
+            case 2:
+                System.out.println("nhập mã giảng viên muốn tìm");
+                String codeFind = scanner.nextLine();
+
+                boolean flag2 = false;
+                for (int i = 0; i < teacherList.size(); i++) {
+                    if (teacherList.get(i).getCode().equals(codeFind)) {
+                        System.out.println(teacherList.get(i));
+                        flag2 = true;
+                        break;
+                    }
+                    if (!flag2) {
+                        System.out.println("không tìm thấy giảng viên");
+                    }
+                }
+                break;
+        }
+    }
 }

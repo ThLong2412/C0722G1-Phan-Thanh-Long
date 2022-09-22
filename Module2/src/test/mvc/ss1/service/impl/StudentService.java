@@ -64,4 +64,44 @@ public class StudentService implements IStudentService {
             System.out.println("Không tìm thấy đối tượng cần xóa.");
         }
     }
+
+    public void findStudent() {
+        System.out.println("1. Tìm kiếm theo tên");
+        System.out.println("2. Tìm kiếm theo mã");
+        System.out.println("mời bạn lựa chọn");
+
+        int choice = Integer.parseInt(scanner.nextLine());
+        switch (choice) {
+            case 1:
+                System.out.println("nhập tên học sinh muốn tìm");
+                String nameFind = scanner.nextLine();
+                boolean flag = false;
+                for (int i = 0; i < studentList.size() ; i++) {
+                    if (studentList.get(i).getName().contains(nameFind)) {
+                        System.out.println(studentList.get(i));
+                        flag = true;
+                        break;
+                    }
+                    if (!flag) {
+                        System.out.println("không tìm thấy học sinh");
+                    }
+                }
+                break;
+            case 2:
+                System.out.println("nhập mã muốn tìm");
+                String codeFind = scanner.nextLine();
+                boolean flag2 = false;
+                for (int i = 0; i < studentList.size(); i++) {
+                    if (studentList.get(i).getCode().equals(codeFind)) {
+                        System.out.println(studentList.get(i));
+                        flag2 = true;
+                        break;
+                    }
+                    if (!flag2) {
+                        System.out.println("không tìm thấy học sinh");
+                    }
+                }
+                break;
+        }
+    }
 }

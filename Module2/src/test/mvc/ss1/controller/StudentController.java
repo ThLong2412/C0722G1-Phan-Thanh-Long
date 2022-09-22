@@ -12,11 +12,12 @@ public class StudentController  {
     public static void menuStudent() {
         while (true) {
             System.out.println("-----------------------------------------------------------");
-            System.out.println("Chào mừng bạn đến với chương trình quản lý CodeGym");
+            System.out.println("Chào mừng bạn đến với chương trình quản lý học sinh CodeGym");
             System.out.println("1. Thêm mới học sinh");
             System.out.println("2. Hiển thị danh sách học sinh");
             System.out.println("3. Xóa học sinh");
-            System.out.println("4. Thoát");
+            System.out.println("4. Tìm kiếm học sinh");
+            System.out.println("5. Thoát");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
@@ -29,6 +30,9 @@ public class StudentController  {
                     iStudentService.removeStudent();
                     break;
                 case 4:
+                    iStudentService.findStudent();
+                    break;
+                case 5:
                     System.exit(0);
                     return;
             }
