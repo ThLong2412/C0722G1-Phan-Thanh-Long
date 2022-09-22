@@ -35,6 +35,9 @@ public class StudentController  {
                 case 5:
                     System.exit(0);
                     return;
+                default:
+                    System.out.println("vui longf chonj laij");
+                    break;
             }
         }
     }

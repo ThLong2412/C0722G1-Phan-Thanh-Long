@@ -1,10 +1,10 @@
 package test.mvc.ss1.model;
 
 public class Person {
-    private static String code;
-    private static String name;
-    private static String pattern;
-    private static String gender;
+    private  String code;
+    private  String name;
+    private  String pattern;
+    private  String gender;
 
     public Person(){
     }
@@ -16,37 +16,35 @@ public class Person {
         this.gender = gender;
     }
 
-    public static String getCode() {
+    public String getCode() {
         return code;
     }
 
-    public static void setCode(String code) {
-        Person.code = code;
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    public static String getName() {
+    public String getName() {
         return name;
     }
 
-    public static void setName(String name) {
-        Person.name = name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public static String getPattern() {
+    public String getPattern() {
         return pattern;
     }
 
-    public static void setPattern(String pattern) {
-        Person.pattern = pattern;
+    public void setPattern(String pattern) {
+        this.pattern = pattern;
     }
 
-    public static String getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public static void setGender(String gender) {
-        Person.gender = gender;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
-
-
 }

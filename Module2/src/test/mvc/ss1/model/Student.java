@@ -2,8 +2,8 @@ package test.mvc.ss1.model;
 
 
 public class Student extends Person{
-    private static String classes;
-    private static  double score;
+    private  String classes;
+    private   double score;
 
     public Student() {
     }
@@ -14,20 +14,20 @@ public class Student extends Person{
         this.score = score;
     }
 
-    public static String getClasses() {
+    public String getClasses() {
         return classes;
     }
 
-    public static void setClasses(String classes) {
-        Student.classes = classes;
+    public void setClasses(String classes) {
+        this.classes = classes;
     }
 
-    public static double getScore() {
+    public double getScore() {
         return score;
     }
 
-    public static void setScore(double score) {
-        Student.score = score;
+    public void setScore(double score) {
+        this.score = score;
     }
 
     @Override

@@ -35,6 +35,9 @@ public class TeacherController {
                 case 5:
                     System.exit(0);
                     return;
+                default:
+                    System.out.println("vui long chon lai nha cau iuu");
+                    break;
             }
             }
     }

@@ -5,6 +5,7 @@ import test.mvc.ss1.model.Student;
 import test.mvc.ss1.service.IStudentService;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -38,9 +39,10 @@ public class StudentService implements IStudentService {
 
     @Override
     public void displayAllStudent() {
-        for (Student student : studentList) {
-            System.out.println(student);
+        for (Student ch : studentList) {
+            System.out.println(ch);
         }
+//        System.out.println(studentList);
     }
 
     @Override

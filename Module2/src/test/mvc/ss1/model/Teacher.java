@@ -1,7 +1,7 @@
 package test.mvc.ss1.model;
 
 public class Teacher extends Person {
-    private static String specializes;
+    private String specializes;
 
     public Teacher() {
     }
@@ -11,12 +11,12 @@ public class Teacher extends Person {
         this.specializes = specializes;
     }
 
-    public static String getSpecializes() {
+    public String getSpecializes() {
         return specializes;
     }
 
-    public static void setSpecializes(String specializes) {
-        Teacher.specializes = specializes;
+    public void setSpecializes(String specializes) {
+        this.specializes = specializes;
     }
 
     @Override
