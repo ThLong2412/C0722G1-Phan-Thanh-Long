@@ -8,4 +8,6 @@ public interface ITeacherService {
     void removeTeacher();
 
     void findTeacher();
+
+    void sortTeacher();
 }

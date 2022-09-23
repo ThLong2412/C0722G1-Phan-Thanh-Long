@@ -1,5 +1,6 @@
 package test.mvc.ss1.service.impl;
 
+import test.mvc.ss1.model.Student;
 import test.mvc.ss1.model.Teacher;
 import test.mvc.ss1.service.ITeacherService;
 
@@ -99,5 +100,26 @@ public class TeacherService implements ITeacherService {
                 }
                 break;
         }
+    }
+    public void sortTeacher(){
+        if (teacherList.size() <=0) {
+            System.out.println("Không có danh sách để sắp xếp");
+            return;
+        }
+        boolean isSwap = true;
+        for (int i = 0; i < teacherList.size() -1; i++) {
+            isSwap = false;
+            for (int j = i + 1; j < teacherList.size() - i -1; j++) {
+                if (teacherList.get(j).compareTo(teacherList.get(j+1) ) > 0) {
+                    isSwap = true;
+                    Teacher temp = teacherList.get(j+1);
+                    teacherList.set(j+1, teacherList.get(j));
+                    teacherList.set(j, temp);
+                }
+
+            }
+
+        }
+        System.out.println("Đã sắp xếp thành công \n Danh sách sau khi sắp xếp là: ");
     }
 }

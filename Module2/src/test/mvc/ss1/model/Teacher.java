@@ -1,6 +1,6 @@
 package test.mvc.ss1.model;
 
-public class Teacher extends Person {
+public class Teacher extends Person implements Comparable<Teacher> {
     private String specializes;
 
     public Teacher() {
@@ -22,5 +22,13 @@ public class Teacher extends Person {
     @Override
     public String toString() {
         return "Teacher{" + getCode() +", " + getName() +", " +getPattern() +", " + getGender() +", " + getSpecializes() +"}";
+    }
+
+    @Override
+    public int compareTo(Teacher o) {
+        if (this.getName().compareTo(o.getName()) != 0) {
+            return this.getName().compareTo(o.getName());
+        }
+        return this.getCode().compareTo(o.getCode());
     }
 }

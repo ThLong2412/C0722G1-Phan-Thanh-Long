@@ -4,10 +4,7 @@ package test.mvc.ss1.service.impl;
 import test.mvc.ss1.model.Student;
 import test.mvc.ss1.service.IStudentService;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class StudentService implements IStudentService {
     private static Scanner scanner = new Scanner(System.in);
@@ -105,5 +102,25 @@ public class StudentService implements IStudentService {
                 }
                 break;
         }
+    }
+
+    public  void sortStudent() {
+        if (studentList.size() <= 0) {
+            System.out.println("Không có danh sách để sắp xếp");
+            return;
+        }
+        boolean isSwap = true;
+        for (int i = 0; i < studentList.size() - 1 && isSwap; i++) {
+            isSwap = false;
+            for (int j = 0; j < studentList.size() - 1 - i; j++) {
+                if (studentList.get(j).compareTo(studentList.get(j + 1)) > 0) {
+                    isSwap = true;
+                    Student temp = studentList.get(j + 1);
+                    studentList.set(j + 1, studentList.get(j));
+                    studentList.set(j, temp);
+                }
+            }
+        }
+        System.out.println("Đã sắp xếp thành công");
     }
 }
