@@ -4,6 +4,9 @@ package test.mvc.ss1_haiTT.service.impl;
 import test.mvc.ss1_haiTT.model.Student;
 import test.mvc.ss1_haiTT.service.IStudentService;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class StudentService implements IStudentService {
@@ -17,9 +20,10 @@ public class StudentService implements IStudentService {
         String name;
         while (true) {
             System.out.print("Mời bạn nhập tên học sinh: ");
-             name = scanner.nextLine();
+            name = scanner.nextLine();
             try {
                 checkName(name);
+                System.out.println("Tên đúng định đạng");
                 break;
             } catch (Check e) {
                 System.out.println(e.getMessage());
@@ -27,7 +31,19 @@ public class StudentService implements IStudentService {
         }
 
         System.out.println("Mời bạn nhập ngày sinh học sinh: ");
-        String pattern = scanner.nextLine();
+        String pattern;
+        while (true) {
+            pattern = scanner.nextLine();
+            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            try {
+                dateFormat.parse(pattern);
+                System.out.println("Định dạng ngày tháng năm đúng");
+                break;
+            } catch (ParseException e) {
+                System.out.println("Định dạng ngày tháng năm bị lỗi \n Vui lòng nhập lại");
+            }
+        }
+        
         String gender;
         while (true) {
             System.out.println("Mời bạn nhập giới tính học sinh: ");
@@ -104,7 +120,7 @@ public class StudentService implements IStudentService {
                 System.out.println("nhập tên học sinh muốn tìm");
                 String nameFind = scanner.nextLine();
                 boolean flag = false;
-                for (int i = 0; i < studentList.size() ; i++) {
+                for (int i = 0; i < studentList.size(); i++) {
                     if (studentList.get(i).getName().contains(nameFind)) {
                         System.out.println(studentList.get(i));
                         flag = true;
@@ -133,7 +149,7 @@ public class StudentService implements IStudentService {
         }
     }
 
-    public  void sortStudent() {
+    public void sortStudent() {
         if (studentList.size() <= 0) {
             System.out.println("Không có danh sách để sắp xếp");
             return;
@@ -152,22 +168,25 @@ public class StudentService implements IStudentService {
         }
         System.out.println("Đã sắp xếp thành công");
     }
-    public void checkName(String name)  throws Check {
-        char [] chars = name.toCharArray();
-            for (int i = 0; i < chars.length; i++){
-                if (chars[i] <= '9' && chars[i] >= '0') {
-                    throw new Check("Lỗi: tên không được tồn tại ký tự số");
-                }
+
+    public void checkName(String name) throws Check {
+        char[] chars = name.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] <= '9' && chars[i] >= '0') {
+                throw new Check("Lỗi: tên không được tồn tại ký tự số");
             }
+        }
     }
-    public void checkGender (String gender) throws Check {
+
+    public void checkGender(String gender) throws Check {
         if (!gender.equals("Nam") && !gender.equals("Nữ")) {
             throw new Check("Giới tính chỉ có Nam hoặc Nữ ");
         } else {
             System.out.println("Giới tính đã đúng");
         }
     }
-    public void checkScore (double score) throws Check {
+
+    public void checkScore(double score) throws Check {
         if (score > 10 || score < 0) {
             throw new Check("Điểm số cần bé hơn 10 và lớn hơn 0: ");
         } else {

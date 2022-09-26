@@ -20,28 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e37b8cac-9b84-4e61-869a-b5d9f76a53ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ss15_exception_and_debug/exersice/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/controller/StudentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/controller/TeacherController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/model/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/model/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/model/Teacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/service/IStudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/service/ITeacherService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/service/impl/StudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/service/impl/TeacherService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/view/View.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/model/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/IStudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/service/ITeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/ITeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/service/impl/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/impl/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/service/impl/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/impl/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1_haiTT/service/impl/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1_haiTT/service/impl/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/impl/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/impl/StudentService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +157,7 @@
       <workItem from="1664163211640" duration="4472000" />
       <workItem from="1664169021649" duration="84000" />
       <workItem from="1664171247102" duration="7832000" />
-      <workItem from="1664180308385" duration="2897000" />
+      <workItem from="1664180308385" duration="6752000" />
     </task>
     <servers />
   </component>
@@ -204,22 +185,22 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1664182191138" />
-    <state width="1493" height="238" key="GridCell.Tab.0.bottom" timestamp="1664183191263">
+    <state width="1493" height="240" key="GridCell.Tab.0.bottom" timestamp="1664187098548">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664183191263" />
-    <state width="1493" height="238" key="GridCell.Tab.0.center" timestamp="1664183191262">
+    <state width="1493" height="240" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664187098548" />
+    <state width="1493" height="240" key="GridCell.Tab.0.center" timestamp="1664187098548">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664183191262" />
-    <state width="1493" height="238" key="GridCell.Tab.0.left" timestamp="1664183191262">
+    <state width="1493" height="240" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664187098548" />
+    <state width="1493" height="240" key="GridCell.Tab.0.left" timestamp="1664187098548">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664183191262" />
-    <state width="1493" height="238" key="GridCell.Tab.0.right" timestamp="1664183191263">
+    <state width="1493" height="240" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664187098548" />
+    <state width="1493" height="240" key="GridCell.Tab.0.right" timestamp="1664187098548">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664183191263" />
+    <state width="1493" height="240" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664187098548" />
     <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1663841620549">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
