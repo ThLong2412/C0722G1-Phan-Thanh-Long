@@ -20,21 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e37b8cac-9b84-4e61-869a-b5d9f76a53ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ss14_sort_algorithm/practice/pr1/BubbleSortSetting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss15_exception_and_debug/exersice/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/ss14_sort_algorithm/practice/pr1/BubbleSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/service/IStudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/service/IStudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/service/impl/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/service/impl/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss14_sort_algorithm/practice/pr1/BubbleSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1/model/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1/service/IStudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/service/ITeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1/service/ITeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/service/impl/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1/service/impl/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/service/impl/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1/service/impl/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/controller/StudentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/controller/TeacherController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/model/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/model/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/model/Teacher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/service/IStudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/service/ITeacherService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/service/impl/StudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/service/impl/TeacherService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1/view/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/controller/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/model/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/IStudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/service/ITeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/ITeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/service/impl/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/impl/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/service/impl/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/impl/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,12 +78,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager" selected="Application.View">
-    <configuration name="BubbleSortByStep" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss14_sort_algorithm.practice.pr2.BubbleSortByStep" />
+    <configuration name="ArrayExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss15_exception_and_debug.practice.ArrayExample" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss14_sort_algorithm.practice.pr2.*" />
+          <option name="PATTERN" value="ss15_exception_and_debug.practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InsertionSortIllustration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss14_sort_algorithm.exersice.InsertionSortIllustration" />
+    <configuration name="CalculationExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss15_exception_and_debug.practice.CalculationExample" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss14_sort_algorithm.exersice.*" />
+          <option name="PATTERN" value="ss15_exception_and_debug.practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InsertionSortSetting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss14_sort_algorithm.exersice.InsertionSortSetting" />
+    <configuration name="IllegalTriangleException" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss15_exception_and_debug.exersice.IllegalTriangleException" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss14_sort_algorithm.exersice.*" />
+          <option name="PATTERN" value="ss15_exception_and_debug.exersice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SelectionSortSetting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss14_sort_algorithm.practice.pr3.SelectionSortSetting" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss15_exception_and_debug.exersice.Main" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss14_sort_algorithm.practice.pr3.*" />
+          <option name="PATTERN" value="ss15_exception_and_debug.exersice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,11 +131,11 @@
       </method>
     </configuration>
     <configuration name="View" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.mvc.ss1.view.View" />
+      <option name="MAIN_CLASS_NAME" value="test.mvc.ss1_haiTT.view.View" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.mvc.ss1.view.*" />
+          <option name="PATTERN" value="test.mvc.ss1_haiTT.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,10 +146,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.View" />
-        <item itemvalue="Application.SelectionSortSetting" />
-        <item itemvalue="Application.InsertionSortIllustration" />
-        <item itemvalue="Application.BubbleSortByStep" />
-        <item itemvalue="Application.InsertionSortSetting" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.IllegalTriangleException" />
+        <item itemvalue="Application.ArrayExample" />
+        <item itemvalue="Application.CalculationExample" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +170,13 @@
       <workItem from="1663895872576" duration="768000" />
       <workItem from="1663903999876" duration="4444000" />
       <workItem from="1663914824008" duration="54000" />
-      <workItem from="1663919685372" duration="6163000" />
+      <workItem from="1663919685372" duration="7266000" />
+      <workItem from="1664112843468" duration="225000" />
+      <workItem from="1664154201649" duration="2040000" />
+      <workItem from="1664163211640" duration="4472000" />
+      <workItem from="1664169021649" duration="84000" />
+      <workItem from="1664171247102" duration="7832000" />
+      <workItem from="1664180308385" duration="2897000" />
     </task>
     <servers />
   </component>
@@ -187,22 +200,26 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1663924527640" />
-    <state width="1493" height="491" key="GridCell.Tab.0.bottom" timestamp="1663926285459">
+    <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1664182191138">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="491" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1663926285459" />
-    <state width="1493" height="491" key="GridCell.Tab.0.center" timestamp="1663926285459">
+    <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1664182191138" />
+    <state width="1493" height="238" key="GridCell.Tab.0.bottom" timestamp="1664183191263">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="491" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1663926285459" />
-    <state width="1493" height="491" key="GridCell.Tab.0.left" timestamp="1663926285459">
+    <state width="1493" height="238" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664183191263" />
+    <state width="1493" height="238" key="GridCell.Tab.0.center" timestamp="1664183191262">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="491" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1663926285459" />
-    <state width="1493" height="491" key="GridCell.Tab.0.right" timestamp="1663926285459">
+    <state width="1493" height="238" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664183191262" />
+    <state width="1493" height="238" key="GridCell.Tab.0.left" timestamp="1664183191262">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="491" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1663926285459" />
+    <state width="1493" height="238" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664183191262" />
+    <state width="1493" height="238" key="GridCell.Tab.0.right" timestamp="1664183191263">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="238" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664183191263" />
     <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1663841620549">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -219,6 +236,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1663841620549" />
+    <state x="425" y="185" key="run.anything.popup" timestamp="1664181474659">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="425" y="185" key="run.anything.popup/0.0.1536.816@0.0.1536.816" timestamp="1664181474659" />
     <state x="431" y="137" key="search.everywhere.popup" timestamp="1663821433127">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
