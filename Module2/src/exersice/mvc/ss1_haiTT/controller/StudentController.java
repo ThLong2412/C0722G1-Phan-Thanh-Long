@@ -3,13 +3,24 @@ package exersice.mvc.ss1_haiTT.controller;
 import exersice.mvc.ss1_haiTT.service.IStudentService;
 import exersice.mvc.ss1_haiTT.service.impl.StudentService;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class StudentController  {
-    private static IStudentService iStudentService = new StudentService();
+    private static IStudentService iStudentService;
+
+    static {
+        try {
+            iStudentService = new StudentService();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     private static Scanner scanner = new Scanner(System.in);
 
-    public static void menuStudent() {
+    public static void menuStudent() throws IOException {
         while (true) {
             System.out.println("-----------------------------------------------------------");
             System.out.println("Chào mừng bạn đến với chương trình quản lý học sinh CodeGym");
@@ -18,7 +29,9 @@ public class StudentController  {
             System.out.println("3. Xóa học sinh");
             System.out.println("4. Tìm kiếm học sinh");
             System.out.println("5. Sắp xếp");
-            System.out.println("6. Thoát");
+            System.out.println("6. Đọc học sinh từ file");
+            System.out.println("7. Ghi học sinh từ file");
+            System.out.println("8. Thoát");
             System.out.println("Chọn đê bạn êiiiii");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
@@ -38,11 +51,16 @@ public class StudentController  {
                     iStudentService.sortStudent();
                     break;
                 case 6:
+                    iStudentService.readStudent();
+                    break;
+                case 7:
+                    iStudentService.writeStudent();
+                    break;
+                case 8:
                     System.exit(0);
-                    return;
                 default:
                     System.out.println("chọn lại nha mạyyyy");
-                    break;
+                    return;
             }
         }
     }

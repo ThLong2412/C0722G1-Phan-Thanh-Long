@@ -24,6 +24,9 @@ public class Teacher extends Person implements Comparable<Teacher> {
         return "Teacher{" + getCode() +", " + getName() +", " +getPattern() +", " + getGender() +", " + getSpecializes() +"}";
     }
 
+    public String getInfo() {
+        return String.format("%s,%s,%s,%s,%s",this.getCode(), this.getName(), this.getPattern(),this.getGender(),this.getSpecializes());
+    }
     @Override
     public int compareTo(Teacher o) {
         if (this.getName().compareTo(o.getName()) != 0) {

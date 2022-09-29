@@ -36,6 +36,10 @@ public class Student extends Person implements  Comparable<Student >{
                 + getClasses() +", " + getScore() + "}";
     }
 
+    public String getInfo() {
+        return String.format("%s,%s,%s,%s,%s,%s",this.getCode(),this.getName(),this.getPattern(),this.getGender(),this.getClasses(),this.getScore());
+    }
+
     @Override
     public int compareTo(Student o) {
         if (this.getName().compareTo(o.getName()) != 0){

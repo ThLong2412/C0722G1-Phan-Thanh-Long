@@ -20,53 +20,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e37b8cac-9b84-4e61-869a-b5d9f76a53ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/Check.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss1_coppy_file/data/source.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss2_read_file/data/nation.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss16_IO_text_file/practice/ss2_max/controller/FindMaxValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss16_IO_text_file/practice/ss2_max/controller/ReadAndWriteFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss16_IO_text_file/practice/ss2_max/data/testmax.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/studentread.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/studentwrite.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/teacherread.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/teacherwrite.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1_haiTT/controller/StudentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1_haiTT/controller/TeacherController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1_haiTT/model/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1_haiTT/model/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1_haiTT/model/Teacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1_haiTT/service/IStudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1_haiTT/service/ITeacherService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1_haiTT/service/impl/Check.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1_haiTT/service/impl/StudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1_haiTT/service/impl/TeacherService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss1_haiTT/view/View.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss2/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss2/controller/CarController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss2/model/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss2/model/CarOto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss2/model/MainCar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss2/model/Manufacture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss2/model/Motorcycle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss2/model/Truck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/mvc/ss2/view/View.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/model/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/IStudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/ITeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/ITeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/impl/Check.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/impl/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/service/impl/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss1_haiTT/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss2/controller/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss2/controller/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss2/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss2/model/CarOto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/CarOto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss2/model/MainCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/MainCar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss2/model/Manufacture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/Manufacture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss2/model/Motorcycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/Motorcycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss2/model/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/Truck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/mvc/ss2/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss2/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/model/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/IStudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/IStudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/impl/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/impl/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/view/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/controller/CarController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/model/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/model/CarOto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/model/MainCar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/model/Manufacture.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/model/Motorcycle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/model/Truck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/view/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss1_coppy_file/data/target.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss1_coppy_file/data/target.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss2_read_file/controller/ReadAndWriteFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss2_read_file/controller/ReadAndWriteFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/controller/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/model/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/IStudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/ITeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/ITeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/controller/CarController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/CarOto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/MainCar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/Manufacture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/Motorcycle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/Truck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/view/View.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss2_read_file/controller/ReadAndWriteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss2_read_file/controller/ReadAndWriteFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +97,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Application.CopyFile">
+  <component name="RunManager" selected="Application.View (1)">
     <configuration name="CopyFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ss16_IO_text_file.exersice.ss1_coppy_file.controller.CopyFile" />
       <module name="Module2" />
@@ -155,12 +150,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="View" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.mvc.ss1_haiTT.view.View" />
+    <configuration name="View (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exersice.mvc.ss1_haiTT.view.View" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.mvc.ss1_haiTT.view.*" />
+          <option name="PATTERN" value="exersice.mvc.ss1_haiTT.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -170,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CopyFile" />
+        <item itemvalue="Application.View (1)" />
         <item itemvalue="Application.ReadAndWriteFile" />
+        <item itemvalue="Application.CopyFile" />
         <item itemvalue="Application.FindMaxValue" />
         <item itemvalue="Application.ReadFileExample" />
-        <item itemvalue="Application.View" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +200,10 @@
       <workItem from="1664377814537" duration="2438000" />
       <workItem from="1664413087699" duration="6605000" />
       <workItem from="1664426925294" duration="36000" />
-      <workItem from="1664431783033" duration="217000" />
+      <workItem from="1664431783033" duration="2159000" />
+      <workItem from="1664433973928" duration="2985000" />
+      <workItem from="1664436995681" duration="398000" />
+      <workItem from="1664437795770" duration="1484000" />
     </task>
     <servers />
   </component>
@@ -229,30 +227,30 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="543" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1664421760076" />
-    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser" timestamp="1664425093393">
+    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser" timestamp="1664438312070">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1664425093393" />
+    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1664438312070" />
     <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1664182191138">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1664182191138" />
-    <state width="1493" height="240" key="GridCell.Tab.0.bottom" timestamp="1664431996154">
+    <state width="1493" height="239" key="GridCell.Tab.0.bottom" timestamp="1664439291966">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664431996154" />
-    <state width="1493" height="240" key="GridCell.Tab.0.center" timestamp="1664431996154">
+    <state width="1493" height="239" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664439291966" />
+    <state width="1493" height="239" key="GridCell.Tab.0.center" timestamp="1664439291966">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664431996154" />
-    <state width="1493" height="240" key="GridCell.Tab.0.left" timestamp="1664431996154">
+    <state width="1493" height="239" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664439291966" />
+    <state width="1493" height="239" key="GridCell.Tab.0.left" timestamp="1664439291966">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664431996154" />
-    <state width="1493" height="240" key="GridCell.Tab.0.right" timestamp="1664431996154">
+    <state width="1493" height="239" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664439291966" />
+    <state width="1493" height="239" key="GridCell.Tab.0.right" timestamp="1664439291966">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664431996154" />
+    <state width="1493" height="239" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664439291966" />
     <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1664426867029">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

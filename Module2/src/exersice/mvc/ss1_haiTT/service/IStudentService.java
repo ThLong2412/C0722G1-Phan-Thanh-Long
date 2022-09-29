@@ -1,5 +1,7 @@
 package exersice.mvc.ss1_haiTT.service;
 
+import java.io.IOException;
+
 public interface IStudentService {
     void addStudent();
 
@@ -10,4 +12,8 @@ public interface IStudentService {
     void findStudent();
 
     void sortStudent();
+
+    void readStudent() throws IOException;
+
+    void writeStudent() throws IOException;
 }

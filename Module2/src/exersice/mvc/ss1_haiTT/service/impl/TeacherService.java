@@ -2,7 +2,9 @@ package exersice.mvc.ss1_haiTT.service.impl;
 
 import exersice.mvc.ss1_haiTT.service.ITeacherService;
 import exersice.mvc.ss1_haiTT.model.Teacher;
+import ss15_exception_and_debug.exersice.TriangleEdgesCheck;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -141,6 +143,41 @@ public class TeacherService implements ITeacherService {
         }
         System.out.println("Đã sắp xếp thành công \n Danh sách sau khi sắp xếp là: ");
     }
+
+    @Override
+    public void readTeacher() throws IOException {
+        File file = new File("src\\exersice\\mvc\\ss1_haiTT\\data\\teacherread.csv");
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+
+        List<Teacher> teachers = new ArrayList<>();
+        String line;
+        String[] info;
+        Teacher teacher;
+        while ((line = bufferedReader.readLine()) != null) {
+            info = line.split(",");
+            teacher = new Teacher(info[0],info[1],info[2],info[3],info[4]);
+            teachers.add(teacher);
+        }
+        bufferedReader.close();
+
+        for (Teacher t : teachers) {
+            System.out.println(t.getInfo());
+        }
+    }
+
+    @Override
+    public void writeTeacher() throws IOException {
+    File file = new File("src\\exersice\\mvc\\ss1_haiTT\\data\\teacherwrite.csv");
+    BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < teacherList.size(); i++) {
+            bufferedWriter.write(String.valueOf(teacherList.get(i).getInfo()));
+            bufferedWriter.newLine();
+        }
+        bufferedWriter.close();
+        System.out.println("Đã ghi giảng viên thành công");
+    }
+
     public void checkName(String name)  throws Check {
         char [] chars = name.toCharArray();
         for (int i = 0; i < chars.length; i++){

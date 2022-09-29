@@ -4,6 +4,7 @@ package exersice.mvc.ss1_haiTT.service.impl;
 import exersice.mvc.ss1_haiTT.service.IStudentService;
 import exersice.mvc.ss1_haiTT.model.Student;
 
+import java.io.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -13,6 +14,41 @@ public class StudentService implements IStudentService {
     private static Scanner scanner = new Scanner(System.in);
     private static List<Student> studentList = new ArrayList<>();
 
+    public void readStudent() throws IOException {
+        File file = new File("src\\exersice\\mvc\\ss1_haiTT\\data\\studentread.csv");
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+
+        String line;
+        List <Student> students = new ArrayList<>();
+        String [] info;
+        Student student;
+        while ((line = bufferedReader.readLine()) != null) {
+            info = line.split(",");
+            student = new Student(info[0],info[1],info[2],info[3],info[4], Double.parseDouble(info[5]));
+            students.add(student);
+        }
+        bufferedReader.close();
+        for (Student s : students) {
+            System.out.println(s.getInfo());
+        }
+    }
+
+    @Override
+    public void writeStudent() throws IOException {
+        File file = new File("src\\exersice\\mvc\\ss1_haiTT\\data\\studentwrite.csv");
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
+
+        for (int i = 0; i < studentList.size(); i++) {
+            bufferedWriter.write(String.valueOf(studentList.get(i).getInfo()));
+            bufferedWriter.newLine();
+        }
+        bufferedWriter.close();
+        System.out.println("Đã ghi vào file thành công");
+    }
+
+
+    public StudentService() throws FileNotFoundException {
+    }
 
     public Student displayStudent() {
         System.out.print("Mời bạn nhập mã học sinh: ");
