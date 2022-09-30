@@ -47,8 +47,6 @@ public class StudentService implements IStudentService {
     }
 
 
-    public StudentService() throws FileNotFoundException {
-    }
 
     public Student displayStudent() {
         System.out.print("Mời bạn nhập mã học sinh: ");

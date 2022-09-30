@@ -11,11 +11,7 @@ public class StudentController  {
     private static IStudentService iStudentService;
 
     static {
-        try {
-            iStudentService = new StudentService();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        iStudentService = new StudentService();
     }
 
     private static Scanner scanner = new Scanner(System.in);
@@ -30,7 +26,7 @@ public class StudentController  {
             System.out.println("4. Tìm kiếm học sinh");
             System.out.println("5. Sắp xếp");
             System.out.println("6. Đọc học sinh từ file");
-            System.out.println("7. Ghi học sinh từ file");
+            System.out.println("7. Ghi học sinh ra file");
             System.out.println("8. Thoát");
             System.out.println("Chọn đê bạn êiiiii");
             int choice = Integer.parseInt(scanner.nextLine());

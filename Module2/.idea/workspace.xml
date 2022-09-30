@@ -20,48 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e37b8cac-9b84-4e61-869a-b5d9f76a53ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/studentread.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/studentwrite.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/teacherread.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/teacherwrite.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss17_IO_binary_file_and_serialization/exersice/ss1_product_management/data/fileProduct.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss17_IO_binary_file_and_serialization/exersice/ss1_product_management/view/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss17_IO_binary_file_and_serialization/exersice/ss2_optional/data/source.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss17_IO_binary_file_and_serialization/exersice/ss2_optional/data/target.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss17_IO_binary_file_and_serialization/practice/ss1_copy/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/model/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/IStudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/IStudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/data/studentread.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/data/studentread.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/data/studentwrite.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/data/studentwrite.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/impl/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/impl/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/view/View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/controller/CarController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/model/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/model/CarOto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/model/MainCar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/model/Manufacture.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/model/Motorcycle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/model/Truck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss2/view/View.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss1_coppy_file/data/target.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss1_coppy_file/data/target.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss2_read_file/controller/ReadAndWriteFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss2_read_file/controller/ReadAndWriteFile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/model/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/IStudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/ITeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/ITeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/studentread.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/studentread.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/studentwrite.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/studentwrite.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/controller/CarController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/CarOto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/MainCar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/Manufacture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/Motorcycle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/model/Truck.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss2/view/View.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss2_read_file/controller/ReadAndWriteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss2_read_file/controller/ReadAndWriteFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +44,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -96,14 +71,15 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.View (1)">
-    <configuration name="CopyFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss16_IO_text_file.exersice.ss1_coppy_file.controller.CopyFile" />
+  <component name="RunManager" selected="Application.CopyFile (1)">
+    <configuration name="CopyFile (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss17_IO_binary_file_and_serialization.exersice.ss2_optional.controller.CopyFile" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss16_IO_text_file.exersice.ss1_coppy_file.controller.*" />
+          <option name="PATTERN" value="ss17_IO_binary_file_and_serialization.exersice.ss2_optional.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,12 +87,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindMaxValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss16_IO_text_file.practice.ss2_max.controller.FindMaxValue" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss17_IO_binary_file_and_serialization.practice.ss1_copy.Main" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss16_IO_text_file.practice.ss2_max.controller.*" />
+          <option name="PATTERN" value="ss17_IO_binary_file_and_serialization.practice.ss1_copy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,25 +100,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReadAndWriteFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss16_IO_text_file.exersice.ss2_read_file.controller.ReadAndWriteFile" />
+    <configuration name="ProductController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss17_IO_binary_file_and_serialization.exersice.ss1_product_management.controller.ProductController" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss16_IO_text_file.exersice.ss2_read_file.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReadFileExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss16_IO_text_file.practice.ss1_sum.controller.ReadFileExample" />
-      <module name="Module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ss16_IO_text_file.practice.ss1_sum.controller.*" />
+          <option name="PATTERN" value="ss17_IO_binary_file_and_serialization.exersice.ss1_product_management.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,13 +126,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="View" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss17_IO_binary_file_and_serialization.exersice.ss1_product_management.view.View" />
+      <module name="Module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss17_IO_binary_file_and_serialization.exersice.ss1_product_management.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CopyFile (1)" />
+        <item itemvalue="Application.View" />
+        <item itemvalue="Application.ProductController" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.View (1)" />
-        <item itemvalue="Application.ReadAndWriteFile" />
-        <item itemvalue="Application.CopyFile" />
-        <item itemvalue="Application.FindMaxValue" />
-        <item itemvalue="Application.ReadFileExample" />
       </list>
     </recent_temporary>
   </component>
@@ -204,6 +180,18 @@
       <workItem from="1664433973928" duration="2985000" />
       <workItem from="1664436995681" duration="398000" />
       <workItem from="1664437795770" duration="1484000" />
+      <workItem from="1664439342532" duration="892000" />
+      <workItem from="1664440324255" duration="3723000" />
+      <workItem from="1664445988027" duration="641000" />
+      <workItem from="1664500073661" duration="711000" />
+      <workItem from="1664500803693" duration="917000" />
+      <workItem from="1664508629190" duration="1836000" />
+      <workItem from="1664510513130" duration="2769000" />
+      <workItem from="1664518410987" duration="1460000" />
+      <workItem from="1664526882921" duration="4059000" />
+      <workItem from="1664530987414" duration="1845000" />
+      <workItem from="1664532860903" duration="395000" />
+      <workItem from="1664536143902" duration="479000" />
     </task>
     <servers />
   </component>
@@ -223,34 +211,34 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="543" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1664421760076">
+    <state x="543" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1664518596378">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="543" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1664421760076" />
-    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser" timestamp="1664438312070">
+    <state x="543" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1664518596378" />
+    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser" timestamp="1664512598739">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1664438312070" />
+    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1664512598739" />
     <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1664182191138">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1664182191138" />
-    <state width="1493" height="239" key="GridCell.Tab.0.bottom" timestamp="1664439291966">
+    <state width="1493" height="239" key="GridCell.Tab.0.bottom" timestamp="1664536626134">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664439291966" />
-    <state width="1493" height="239" key="GridCell.Tab.0.center" timestamp="1664439291966">
+    <state width="1493" height="239" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664536626134" />
+    <state width="1493" height="239" key="GridCell.Tab.0.center" timestamp="1664536626134">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664439291966" />
-    <state width="1493" height="239" key="GridCell.Tab.0.left" timestamp="1664439291966">
+    <state width="1493" height="239" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664536626134" />
+    <state width="1493" height="239" key="GridCell.Tab.0.left" timestamp="1664536626134">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664439291966" />
-    <state width="1493" height="239" key="GridCell.Tab.0.right" timestamp="1664439291966">
+    <state width="1493" height="239" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664536626134" />
+    <state width="1493" height="239" key="GridCell.Tab.0.right" timestamp="1664536626134">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664439291966" />
+    <state width="1493" height="239" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664536626134" />
     <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1664426867029">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -267,6 +255,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1664426867029" />
+    <state x="277" y="53" key="SettingsEditor" timestamp="1664531450447">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="277" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1664531450447" />
     <state x="425" y="185" key="run.anything.popup" timestamp="1664181474659">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -286,6 +278,11 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ss17_IO_binary_file_and_serialization/exersice/ss1_product_management/view/View.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
