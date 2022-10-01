@@ -24,18 +24,19 @@ public class TeacherService implements ITeacherService {
     public Teacher displayTeacher()  {
         String code;
         while (true) {
+            boolean flag = true;
                 System.out.println("nhap ma giang vien");
                 code = scanner.nextLine();
                 for (int i = 0; i < teacherList.size(); i++) {
                     if (!teacherList.get(i).getCode().equals(code)) {
-                        System.out.println("id không trùng");
-                        break;
-                    } else {
                         System.out.println("id bị trùng vui lòng nhập lại");
+                        flag = false;
+                        break;
                     }
                 }
-            break;
-
+            if (flag) {
+                break;
+            }
         }
 
         String name;
@@ -44,7 +45,7 @@ public class TeacherService implements ITeacherService {
             name = scanner.nextLine();
             try {
                 checkName(name);
-                if (name.matches("^([A-Z][a-z]*[\\s])*([A-Z][a-z]*)$")) {
+                if (name.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
                     System.out.println("Tên đúng định đạng");
                     break;
                 } else {

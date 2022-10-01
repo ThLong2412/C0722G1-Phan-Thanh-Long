@@ -72,7 +72,7 @@ public class StudentService implements IStudentService {
             name = scanner.nextLine();
             try {
                 checkName(name);
-                if (name.matches("^([A-Z][a-z]*[\\s])*([A-Z][a-z]*)$")) {
+                if (name.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
                     System.out.println("Tên đúng định đạng");
                     break;
                 } else {
