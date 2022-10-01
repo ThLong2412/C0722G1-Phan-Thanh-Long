@@ -48,8 +48,24 @@ public class StudentService implements IStudentService {
 
 
     public Student displayStudent() {
-        System.out.print("Mời bạn nhập mã học sinh: ");
-        String code = scanner.nextLine();
+
+        String code ;
+        while (true) {
+            System.out.print("Mời bạn nhập mã học sinh: ");
+            code = scanner.nextLine();
+            boolean flag = true;
+            for (int i = 0; i < studentList.size() ; i++) {
+                if (studentList.get(i).getCode().equals(code)) {
+                    System.out.println("id trùng vui lòng nhập lại");
+                    flag = false;
+                    break;
+                }
+            }
+            if(flag) {
+                break;
+            }
+
+        }
         String name;
         while (true) {
             System.out.print("Mời bạn nhập tên học sinh: ");

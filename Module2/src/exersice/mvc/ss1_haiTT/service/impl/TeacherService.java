@@ -21,9 +21,23 @@ public class TeacherService implements ITeacherService {
         System.out.println("Da them moi giang vien thanh cong");
     }
 
-    public Teacher displayTeacher() {
-        System.out.println("nhap ma giang vien");
-        String code = scanner.nextLine();
+    public Teacher displayTeacher()  {
+        String code;
+        while (true) {
+                System.out.println("nhap ma giang vien");
+                code = scanner.nextLine();
+                for (int i = 0; i < teacherList.size(); i++) {
+                    if (!teacherList.get(i).getCode().equals(code)) {
+                        System.out.println("id không trùng");
+                        break;
+                    } else {
+                        System.out.println("id bị trùng vui lòng nhập lại");
+                    }
+                }
+            break;
+
+        }
+
         String name;
         while (true) {
             System.out.println("nhap ten giang vien");
@@ -45,7 +59,7 @@ public class TeacherService implements ITeacherService {
         String pattern;
         while (true) {
             pattern = scanner.nextLine();
-            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+//            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 //            try {
 //                dateFormat.parse(pattern);
 //                System.out.println("Định dạng ngày tháng năm đúng");
@@ -56,8 +70,7 @@ public class TeacherService implements ITeacherService {
             if (pattern.matches("([0-2][0-9] | [3][01])[/]([0][1-9] | [1][0-2])[/][0-9]{4}")) {
                 System.out.println("Ngày sinh đúng định dạng");
                 break;
-            }
-            else {
+            } else {
                 System.out.println("Ngày sinh sai định dạng");
             }
         }
@@ -147,19 +160,20 @@ public class TeacherService implements ITeacherService {
                 break;
         }
     }
-    public void sortTeacher(){
-        if (teacherList.size() <=0) {
+
+    public void sortTeacher() {
+        if (teacherList.size() <= 0) {
             System.out.println("Không có danh sách để sắp xếp");
             return;
         }
         boolean isSwap = true;
-        for (int i = 0; i < teacherList.size() -1; i++) {
+        for (int i = 0; i < teacherList.size() - 1; i++) {
             isSwap = false;
-            for (int j = i + 1; j < teacherList.size() - i -1; j++) {
-                if (teacherList.get(j).compareTo(teacherList.get(j+1) ) > 0) {
+            for (int j = i + 1; j < teacherList.size() - i - 1; j++) {
+                if (teacherList.get(j).compareTo(teacherList.get(j + 1)) > 0) {
                     isSwap = true;
-                    Teacher temp = teacherList.get(j+1);
-                    teacherList.set(j+1, teacherList.get(j));
+                    Teacher temp = teacherList.get(j + 1);
+                    teacherList.set(j + 1, teacherList.get(j));
                     teacherList.set(j, temp);
                 }
 
@@ -180,7 +194,7 @@ public class TeacherService implements ITeacherService {
         Teacher teacher;
         while ((line = bufferedReader.readLine()) != null) {
             info = line.split(",");
-            teacher = new Teacher(info[0],info[1],info[2],info[3],info[4]);
+            teacher = new Teacher(info[0], info[1], info[2], info[3], info[4]);
             teachers.add(teacher);
         }
         bufferedReader.close();
@@ -192,8 +206,8 @@ public class TeacherService implements ITeacherService {
 
     @Override
     public void writeTeacher() throws IOException {
-    File file = new File("src\\exersice\\mvc\\ss1_haiTT\\data\\teacherwrite.csv");
-    BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
+        File file = new File("src\\exersice\\mvc\\ss1_haiTT\\data\\teacherwrite.csv");
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
 
         for (int i = 0; i < teacherList.size(); i++) {
             bufferedWriter.write(String.valueOf(teacherList.get(i).getInfo()));
@@ -203,22 +217,24 @@ public class TeacherService implements ITeacherService {
         System.out.println("Đã ghi giảng viên thành công");
     }
 
-    public void checkName(String name)  throws Check {
-        char [] chars = name.toCharArray();
-        for (int i = 0; i < chars.length; i++){
+    public void checkName(String name) throws Check {
+        char[] chars = name.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
             if (chars[i] <= '9' && chars[i] >= '0') {
                 throw new Check("Lỗi: tên không được tồn tại ký tự số");
             }
         }
     }
-    public void checkGender (String gender) throws Check {
+
+    public void checkGender(String gender) throws Check {
         if (!gender.equals("Nam") && !gender.equals("Nữ")) {
             throw new Check("Giới tính chỉ có Nam hoặc Nữ ");
         } else {
             System.out.println("Giới tính đã đúng");
         }
     }
-    public void checkScore (double score) throws Check {
+
+    public void checkScore(double score) throws Check {
         if (score > 10 || score < 0) {
             throw new Check("Điểm số cần bé hơn 10 và lớn hơn 0: ");
         } else {
