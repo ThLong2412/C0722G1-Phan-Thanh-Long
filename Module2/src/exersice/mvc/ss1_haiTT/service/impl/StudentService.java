@@ -19,12 +19,12 @@ public class StudentService implements IStudentService {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 
         String line;
-        List <Student> students = new ArrayList<>();
-        String [] info;
+        List<Student> students = new ArrayList<>();
+        String[] info;
         Student student;
         while ((line = bufferedReader.readLine()) != null) {
             info = line.split(",");
-            student = new Student(info[0],info[1],info[2],info[3],info[4], Double.parseDouble(info[5]));
+            student = new Student(info[0], info[1], info[2], info[3], info[4], Double.parseDouble(info[5]));
             students.add(student);
         }
         bufferedReader.close();
@@ -47,7 +47,6 @@ public class StudentService implements IStudentService {
     }
 
 
-
     public Student displayStudent() {
         System.out.print("Mời bạn nhập mã học sinh: ");
         String code = scanner.nextLine();
@@ -57,8 +56,12 @@ public class StudentService implements IStudentService {
             name = scanner.nextLine();
             try {
                 checkName(name);
-                System.out.println("Tên đúng định đạng");
-                break;
+                if (name.matches("^([A-Z][a-z]*[\\s])*([A-Z][a-z]*)$")) {
+                    System.out.println("Tên đúng định đạng");
+                    break;
+                } else {
+                    System.out.println("Tên sai định dạng");
+                }
             } catch (Check e) {
                 System.out.println(e.getMessage());
             }
@@ -68,16 +71,23 @@ public class StudentService implements IStudentService {
         String pattern;
         while (true) {
             pattern = scanner.nextLine();
-            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-            try {
-                dateFormat.parse(pattern);
-                System.out.println("Định dạng ngày tháng năm đúng");
+//            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+//            try {
+//                dateFormat.parse(pattern);
+//                System.out.println("Định dạng ngày tháng năm đúng");
+//                break;
+//            } catch (ParseException e) {
+//                System.out.println("Định dạng ngày tháng năm bị lỗi \nVui lòng nhập lại");
+//            }
+            if (pattern.matches("([0-2][0-9] | [3][01])[/]([0][1-9] | [1][0-2])[/][0-9]{4}")) {
+                System.out.println("Ngày sinh đúng định dạng");
                 break;
-            } catch (ParseException e) {
-                System.out.println("Định dạng ngày tháng năm bị lỗi \n Vui lòng nhập lại");
+            }
+            else {
+                System.out.println("Ngày sinh sai định dạng");
             }
         }
-        
+
         String gender;
         while (true) {
             System.out.println("Mời bạn nhập giới tính học sinh: ");
@@ -207,7 +217,7 @@ public class StudentService implements IStudentService {
         char[] chars = name.toCharArray();
         for (int i = 0; i < chars.length; i++) {
             if (chars[i] <= '9' && chars[i] >= '0') {
-                throw new Check("Lỗi: tên không được tồn tại ký tự số");
+                throw new Check("Lỗi: tên không được tồn tại ký tự số và chữ cái đầu phải ghi hoa");
             }
         }
     }

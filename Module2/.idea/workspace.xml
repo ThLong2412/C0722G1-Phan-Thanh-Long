@@ -20,21 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e37b8cac-9b84-4e61-869a-b5d9f76a53ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss17_IO_binary_file_and_serialization/exersice/ss1_product_management/data/fileProduct.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss17_IO_binary_file_and_serialization/exersice/ss1_product_management/view/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss17_IO_binary_file_and_serialization/exersice/ss2_optional/data/source.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss17_IO_binary_file_and_serialization/exersice/ss2_optional/data/target.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss17_IO_binary_file_and_serialization/practice/ss1_copy/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss19_string_and_amp_regex/exercise/ss2_validate_phone_numbers/RegularExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/data/studentread.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/data/studentread.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/data/studentwrite.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/data/studentwrite.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/impl/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/impl/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/studentread.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/studentread.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/studentwrite.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/data/studentwrite.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/TeacherService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +64,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.CopyFile (1)">
+  <component name="RunManager" selected="Application.View (1)">
     <configuration name="CopyFile (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ss17_IO_binary_file_and_serialization.exersice.ss2_optional.controller.CopyFile" />
       <module name="Module2" />
@@ -88,11 +79,11 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss17_IO_binary_file_and_serialization.practice.ss1_copy.Main" />
+      <option name="MAIN_CLASS_NAME" value="test.Main" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss17_IO_binary_file_and_serialization.practice.ss1_copy.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,12 +91,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss17_IO_binary_file_and_serialization.exersice.ss1_product_management.controller.ProductController" />
+    <configuration name="RegularExpression (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss19_string_and_amp_regex.exercise.ss2_validate_phone_numbers.RegularExpression" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss17_IO_binary_file_and_serialization.exersice.ss1_product_management.controller.*" />
+          <option name="PATTERN" value="ss19_string_and_amp_regex.exercise.ss2_validate_phone_numbers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegularExpression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss19_string_and_amp_regex.exercise.ss1_validate_name_class.RegularExpression" />
+      <module name="Module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss19_string_and_amp_regex.exercise.ss1_validate_name_class.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,26 +130,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="View" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss17_IO_binary_file_and_serialization.exersice.ss1_product_management.view.View" />
-      <module name="Module2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ss17_IO_binary_file_and_serialization.exersice.ss1_product_management.view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CopyFile (1)" />
-        <item itemvalue="Application.View" />
-        <item itemvalue="Application.ProductController" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.View (1)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.RegularExpression" />
+        <item itemvalue="Application.RegularExpression (1)" />
+        <item itemvalue="Application.CopyFile (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -192,6 +183,11 @@
       <workItem from="1664530987414" duration="1845000" />
       <workItem from="1664532860903" duration="395000" />
       <workItem from="1664536143902" duration="479000" />
+      <workItem from="1664536725675" duration="162000" />
+      <workItem from="1664549542105" duration="1431000" />
+      <workItem from="1664587083136" duration="1335000" />
+      <workItem from="1664594872447" duration="6546000" />
+      <workItem from="1664606320802" duration="1240000" />
     </task>
     <servers />
   </component>
@@ -223,22 +219,22 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1664182191138" />
-    <state width="1493" height="239" key="GridCell.Tab.0.bottom" timestamp="1664536626134">
+    <state width="1493" height="239" key="GridCell.Tab.0.bottom" timestamp="1664599429229">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664536626134" />
-    <state width="1493" height="239" key="GridCell.Tab.0.center" timestamp="1664536626134">
+    <state width="1493" height="239" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664599429229" />
+    <state width="1493" height="239" key="GridCell.Tab.0.center" timestamp="1664599429229">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664536626134" />
-    <state width="1493" height="239" key="GridCell.Tab.0.left" timestamp="1664536626134">
+    <state width="1493" height="239" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664599429229" />
+    <state width="1493" height="239" key="GridCell.Tab.0.left" timestamp="1664599429229">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664536626134" />
-    <state width="1493" height="239" key="GridCell.Tab.0.right" timestamp="1664536626134">
+    <state width="1493" height="239" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664599429229" />
+    <state width="1493" height="239" key="GridCell.Tab.0.right" timestamp="1664599429229">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664536626134" />
+    <state width="1493" height="239" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664599429229" />
     <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1664426867029">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

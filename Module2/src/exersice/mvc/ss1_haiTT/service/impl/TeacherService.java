@@ -28,7 +28,12 @@ public class TeacherService implements ITeacherService {
             name = scanner.nextLine();
             try {
                 checkName(name);
-                break;
+                if (name.matches("^([A-Z][a-z]*[\\s])*([A-Z][a-z]*)$")) {
+                    System.out.println("Tên đúng định đạng");
+                    break;
+                } else {
+                    System.out.println("Tên sai định dạng");
+                }
             } catch (Check e) {
                 System.out.println(e.getMessage());
             }

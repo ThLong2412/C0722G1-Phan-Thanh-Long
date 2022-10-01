@@ -10,6 +10,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\exersice\mvc\ss1_haiTT\data\studentread.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\exersice\mvc\ss1_haiTT\data\studentwrite.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\ss16_IO_text_file\exersice\ss2_read_file\data\nation.csv">
           <value>
             <Attribute>
