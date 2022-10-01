@@ -71,14 +71,14 @@ public class StudentService implements IStudentService {
         String pattern;
         while (true) {
             pattern = scanner.nextLine();
-//            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-//            try {
-//                dateFormat.parse(pattern);
-//                System.out.println("Định dạng ngày tháng năm đúng");
-//                break;
-//            } catch (ParseException e) {
-//                System.out.println("Định dạng ngày tháng năm bị lỗi \nVui lòng nhập lại");
-//            }
+            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            try {
+                dateFormat.parse(pattern);
+                System.out.println("Định dạng ngày tháng năm đúng");
+                break;
+            } catch (ParseException e) {
+                System.out.println("Định dạng ngày tháng năm bị lỗi \nVui lòng nhập lại");
+            }
             if (pattern.matches("([0-2][0-9] | [3][01])[/]([0][1-9] | [1][0-2])[/][0-9]{4}")) {
                 System.out.println("Ngày sinh đúng định dạng");
                 break;

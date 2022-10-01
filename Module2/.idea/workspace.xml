@@ -20,10 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e37b8cac-9b84-4e61-869a-b5d9f76a53ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ss19_string_and_amp_regex/exercise/ss2_validate_phone_numbers/RegularExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/impl/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/impl/StudentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/TeacherService.java" afterDir="false" />
     </list>
@@ -187,7 +183,7 @@
       <workItem from="1664549542105" duration="1431000" />
       <workItem from="1664587083136" duration="1335000" />
       <workItem from="1664594872447" duration="6546000" />
-      <workItem from="1664606320802" duration="1240000" />
+      <workItem from="1664606320802" duration="1525000" />
     </task>
     <servers />
   </component>

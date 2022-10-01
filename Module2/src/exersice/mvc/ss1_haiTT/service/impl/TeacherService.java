@@ -5,6 +5,8 @@ import exersice.mvc.ss1_haiTT.model.Teacher;
 import ss15_exception_and_debug.exersice.TriangleEdgesCheck;
 
 import java.io.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -40,7 +42,25 @@ public class TeacherService implements ITeacherService {
         }
 
         System.out.println("nhap ngay sinh giang vien");
-        String pattern = scanner.nextLine();
+        String pattern;
+        while (true) {
+            pattern = scanner.nextLine();
+            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+//            try {
+//                dateFormat.parse(pattern);
+//                System.out.println("Định dạng ngày tháng năm đúng");
+//                break;
+//            } catch (ParseException e) {
+//                System.out.println("Định dạng ngày tháng năm bị lỗi \nVui lòng nhập lại");
+//            }
+            if (pattern.matches("([0-2][0-9] | [3][01])[/]([0][1-9] | [1][0-2])[/][0-9]{4}")) {
+                System.out.println("Ngày sinh đúng định dạng");
+                break;
+            }
+            else {
+                System.out.println("Ngày sinh sai định dạng");
+            }
+        }
         String gender;
         while (true) {
             System.out.println("nhap gioi tinh giang vien");
