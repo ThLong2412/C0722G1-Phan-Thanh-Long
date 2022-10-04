@@ -69,7 +69,7 @@ public class ProductService implements IProductService {
         }
     }
 
-    public static void readFile() throws IOException {
+    public static void readFile(){
 
         try {
             File  file = new File("src\\ss17_IO_binary_file_and_serialization\\exersice\\ss1_product_management\\data\\fileProduct.csv");

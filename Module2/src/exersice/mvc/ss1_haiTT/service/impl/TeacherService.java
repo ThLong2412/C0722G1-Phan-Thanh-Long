@@ -1,5 +1,6 @@
 package exersice.mvc.ss1_haiTT.service.impl;
 
+import exersice.mvc.ss1_haiTT.model.Student;
 import exersice.mvc.ss1_haiTT.service.ITeacherService;
 import exersice.mvc.ss1_haiTT.model.Teacher;
 import ss15_exception_and_debug.exersice.TriangleEdgesCheck;
@@ -15,25 +16,32 @@ public class TeacherService implements ITeacherService {
     private static Scanner scanner = new Scanner(System.in);
     private static List<Teacher> teacherList = new ArrayList<>();
 
+
     public void addTeacher() {
-        Teacher teacher = this.displayTeacher();
-        teacherList.add(teacher);
-        System.out.println("Da them moi giang vien thanh cong");
+        try {
+            readTeacher();
+            Teacher teacher = this.displayTeacher();
+            teacherList.add(teacher);
+            System.out.println("Da them moi giang vien thanh cong");
+        } catch (IOException e) {
+            e.getMessage();
+        }
+
     }
 
-    public Teacher displayTeacher()  {
+    public Teacher displayTeacher() {
         String code;
         while (true) {
             boolean flag = true;
-                System.out.println("nhap ma giang vien");
-                code = scanner.nextLine();
-                for (int i = 0; i < teacherList.size(); i++) {
-                    if (!teacherList.get(i).getCode().equals(code)) {
-                        System.out.println("id bị trùng vui lòng nhập lại");
-                        flag = false;
-                        break;
-                    }
+            System.out.println("nhap ma giang vien");
+            code = scanner.nextLine();
+            for (int i = 0; i < teacherList.size(); i++) {
+                if (!teacherList.get(i).getCode().equals(code)) {
+                    System.out.println("id bị trùng vui lòng nhập lại");
+                    flag = false;
+                    break;
                 }
+            }
             if (flag) {
                 break;
             }
@@ -94,12 +102,20 @@ public class TeacherService implements ITeacherService {
     }
 
     public void displayAllTeacher() {
-        for (Teacher teacher : teacherList) {
-            System.out.println(teacher);
+
+        try {
+            readTeacher();
+            for (Teacher teacher : teacherList) {
+                System.out.println(teacher);
+            }
+        } catch (IOException e) {
+            e.getMessage();
         }
+
     }
 
-    public void removeTeacher() {
+    public void removeTeacher() throws IOException {
+        readTeacher();
         System.out.println("nhap ma GV can xoa");
         String code = scanner.nextLine();
         boolean flagDelete = false;
@@ -120,7 +136,8 @@ public class TeacherService implements ITeacherService {
         }
     }
 
-    public void findTeacher() {
+    public void findTeacher() throws IOException {
+        readTeacher();
         System.out.println("1. tìm kiếm theo tên giảng viên");
         System.out.println("2. tìm kiếm theo mã giảng viên");
         System.out.println("mời bạn lựa chọn");
@@ -162,7 +179,8 @@ public class TeacherService implements ITeacherService {
         }
     }
 
-    public void sortTeacher() {
+    public void sortTeacher() throws IOException {
+        readTeacher();
         if (teacherList.size() <= 0) {
             System.out.println("Không có danh sách để sắp xếp");
             return;

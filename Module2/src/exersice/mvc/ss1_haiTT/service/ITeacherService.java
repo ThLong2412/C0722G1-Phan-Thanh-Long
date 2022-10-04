@@ -3,15 +3,15 @@ package exersice.mvc.ss1_haiTT.service;
 import java.io.IOException;
 
 public interface ITeacherService {
-    void addTeacher();
+    void addTeacher() throws IOException;
 
-    void displayAllTeacher();
+    void displayAllTeacher() throws IOException;
 
-    void removeTeacher();
+    void removeTeacher() throws IOException;
 
-    void findTeacher();
+    void findTeacher() throws IOException;
 
-    void sortTeacher();
+    void sortTeacher() throws IOException;
 
     void readTeacher() throws IOException;
 

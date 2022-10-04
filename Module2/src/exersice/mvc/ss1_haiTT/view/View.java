@@ -18,7 +18,7 @@ public class View {
         while (true) {
             switch (choice) {
                 case 1:
-                    StudentController.menuStudent ();
+                    StudentController.menuStudent();
                     break;
                 case 2:
                     TeacherController.menuTeacher();

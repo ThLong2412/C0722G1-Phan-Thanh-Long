@@ -10,6 +10,55 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\case_study\data\booking.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\case_study\data\contract.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\case_study\data\customer.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\case_study\data\employee.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\case_study\data\house.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\case_study\data\room.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\case_study\data\villa.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\exersice\mvc\ss1_haiTT\data\studentread.csv">
           <value>
             <Attribute>
@@ -18,6 +67,13 @@
           </value>
         </entry>
         <entry key="\src\exersice\mvc\ss1_haiTT\data\studentwrite.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\exersice\mvc\ss1_haiTT\data\teacherread.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
