@@ -17,9 +17,10 @@ public class CustomerServiceImpl implements ICustomerService {
 
     private static Scanner scanner = new Scanner(System.in);
     private static List<Customer> customerList = new ArrayList<>();
-    final String [] typeCustomerArray = {"Diamond", "Platinium", "Gold", "Silver", "Member"};
+    final String[] typeCustomerArray = {"Diamond", "Platinium", "Gold", "Silver", "Member"};
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-    public static void readFileCustomer() {
+
+    public static List<Customer> readFileCustomer() {
         customerList = new ArrayList<>();
         try {
             File file = new File("src\\case_study\\data\\customer.csv");
@@ -37,6 +38,7 @@ public class CustomerServiceImpl implements ICustomerService {
         } catch (IOException e) {
             System.out.println("File không có gì hãy tiếp tục chương trình");
         }
+        return customerList;
     }
 
     public static void writeFileCustomer() {
@@ -53,170 +55,57 @@ public class CustomerServiceImpl implements ICustomerService {
             e.getMessage();
         }
     }
+
     @Override
     public void editCustomer() {
         readFileCustomer();
         System.out.println("nhập mã khách hàng muốn sửa");
         String codeEdit = scanner.nextLine();
-        boolean flag = true;
+        boolean flag = false;
         for (int i = 0; i < customerList.size(); i++) {
             if (customerList.get(i).getCode().equals(codeEdit)) {
-
-                System.out.println("nhập mã khách hàng mới");
-                String code = scanner.nextLine();
-                customerList.get(i).setCode(code);
-                flag = false;
-                String name;
-                while (true) {
-                    try {
-                        System.out.println("nhập tên khách hàng mới");
-                        name = scanner.nextLine();
-                        if (name.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
-                            System.out.println("Tên đúng định đạng");
-                            break;
-                        }else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Tên sai định dạng. Hãy nhập lại");
-                    }
-                }
-                customerList.get(i).setName(name);
-
-                LocalDate dayOfBirth;
-                while (true) {
-                    System.out.println("nhập ngày sinh khách hàng mới");
-                    dayOfBirth = LocalDate.parse(scanner.nextLine(),formatter);
-                    try {
-                        LocalDate date = LocalDate.now();
-                        long day = dayOfBirth.until(date, ChronoUnit.DAYS);
-                        double old = day/365.5;
-                        if (old > 18 && old < 100)  {
-                            break;
-                        } else  {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Ngày sinh sai định dạng. Hãy nhập lại");
-                    }
-                }
-                customerList.get(i).setDayOffBirth(dayOfBirth);
-
-                String gender;
-                while (true) {
-                    System.out.println("nhập giới tính khách hàng mới");
-                    gender = scanner.nextLine();
-                    try {
-                        if (gender.equals("Nam")|| gender.equals("Nữ")) {
-                            System.out.println("Giới tính đã đúng ");
-                            break;
-                        }else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Giới tính không phù hợp. Hãy nhập lại");
-                    }
-                }
-                customerList.get(i).setGender(gender);
-                String idNumbers;
-                while (true) {
-                    System.out.println("nhập số CMND/CCCD của khách hàng mới");
-                    idNumbers = scanner.nextLine();
-                    try {
-                        if (idNumbers.matches("^[0-9]{12}$")) {
-                            System.out.println("Định dạng số CMND/CCCD đã đúng");
-                            break;
-                        }else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Định dạng số CMND/CCCD đã sai. Hãy nhập lại");
-                    }
-                }
-                customerList.get(i).setIdNumbers(idNumbers);
-
-                String phoneNumbers;
-                while (true) {
-                    System.out.println("nhập số điện thoại khách hàng mới");
-                    phoneNumbers = scanner.nextLine();
-                    try {
-                        if (phoneNumbers.matches("^[0][0-9]{9}$")) {
-                            System.out.println("Định dạng số điện thoại đã đúng");
-                            break;
-                        }else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Định dạng số điện thoại sai. Hãy nhập lại");
-                    }
-                }
-                customerList.get(i).setPhoneNumbers(phoneNumbers);
-                String email;
-                while (true) {
-                    System.out.println("nhập email khách hàng mới");
-                    email = scanner.nextLine();
-                    try {
-                        if (email.matches("^[A-Za-z0-9]*[@][A-Za-z0-9]+[.][A-Za-z0-9]+$")) {
-                            System.out.println("Định dạng email phù hợp");
-                            break;
-                        }else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Định dạng email sai hãy nhập lại");
-                    }
-                }
-                customerList.get(i).setEmail(email);
-                System.out.println("nhập loại khách hàng mới (Diamond, Platinium, Gold, Silver, Member)");
-                String typeCustomer;
-                while (true) {
-                    typeCustomer = scanner.nextLine();
-                    boolean flagTypeCustomer = true;
-                    try {
-                        for (int j = 0; j < typeCustomerArray.length; j++) {
-                            if (typeCustomerArray[j].equals(typeCustomer)) {
-                                flagTypeCustomer = false;
-                                System.out.println("Loại khách hàng hợp lệ");
-                                break;
-                            }
-                        }
-                        if (flagTypeCustomer) {
-                            break;
-                        }else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Loại khách hàng bị lỗi");
-                    }
-                }
-                customerList.get(i).setTypeCustomer(typeCustomer);
-                System.out.println("nhập địa chỉ khách hàng mới");
-                String address = scanner.nextLine();
-                customerList.get(i).setAddress(address);
+                flag = true;
+                customerList.set(i, infoCustomer());
+                System.out.println("Ddax suwar thanhf coong");
             }
+        }
+        if (!flag) {
+            System.out.println("Không tìm thấy nhân viên có id: " + codeEdit);
         }
     }
 
     @Override
     public void add() {
         readFileCustomer();
-    Customer customer = this.infoCustomer();
-    customerList.add(customer);
+        Customer customer = this.infoCustomer();
+        customerList.add(customer);
         System.out.println("thêm mới khách hàng thành công");
         writeFileCustomer();
     }
 
     @Override
     public void display() {
-        readFileCustomer();
-    for (Customer c : customerList) {
-        System.out.println("Thông tin khách hàng là: " + c);
-    }
+        customerList = readFileCustomer();
+        for (Customer c : customerList) {
+            System.out.println("Thông tin khách hàng là: " + c);
+        }
     }
 
     public Customer infoCustomer() {
         System.out.println("nhập mã khách hàng");
-        String code = scanner.nextLine();
+        String code;
+        while (true) {
+            code = scanner.nextLine();
+            try {
+                if (code.matches("^[K][H][0-9]+$")) {
+                    break;
+                } else {
+                    throw new Exception();
+                }
+            } catch (Exception e) {
+                System.out.println("Mã sai định dạng. Hãy nhập lại");
+            }
+        }
         System.out.println("nhập tên khách hàng");
         String name;
         while (true) {
@@ -226,7 +115,7 @@ public class CustomerServiceImpl implements ICustomerService {
                 if (name.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
                     System.out.println("Tên đúng định đạng");
                     break;
-                }else {
+                } else {
                     throw new Exception();
                 }
             } catch (Exception e) {
@@ -236,14 +125,14 @@ public class CustomerServiceImpl implements ICustomerService {
         System.out.println("nhập ngày sinh khách hàng");
         LocalDate dayOfBirth;
         while (true) {
-            dayOfBirth =LocalDate.parse( scanner.nextLine(),formatter);
+            dayOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
             try {
                 LocalDate date = LocalDate.now();
                 long day = dayOfBirth.until(date, ChronoUnit.DAYS);
-                double old = day/365.5;
-                if (old > 18 && old < 100)  {
+                double old = day / 365.5;
+                if (old > 18 && old < 100) {
                     break;
-                } else  {
+                } else {
                     throw new Exception();
                 }
             } catch (Exception e) {
@@ -258,7 +147,7 @@ public class CustomerServiceImpl implements ICustomerService {
                 if (gender.equals("Nam") || gender.equals("Nữ")) {
                     System.out.println("Giới tính đã đúng ");
                     break;
-                }else {
+                } else {
                     throw new Exception();
                 }
             } catch (Exception e) {
@@ -273,7 +162,7 @@ public class CustomerServiceImpl implements ICustomerService {
                 if (idNumbers.matches("^[0-9]{12}$")) {
                     System.out.println("Định dạng số CMND/CCCD đã đúng");
                     break;
-                }else {
+                } else {
                     throw new Exception();
                 }
             } catch (Exception e) {
@@ -288,7 +177,7 @@ public class CustomerServiceImpl implements ICustomerService {
                 if (phoneNumbers.matches("^[0][0-9]{9}$")) {
                     System.out.println("Định dạng số điện thoại đã đúng");
                     break;
-                }else {
+                } else {
                     throw new Exception();
                 }
             } catch (Exception e) {
@@ -303,7 +192,7 @@ public class CustomerServiceImpl implements ICustomerService {
                 if (email.matches("^[A-Za-z0-9]*[@][A-Za-z0-9]+[.][A-Za-z0-9]+$")) {
                     System.out.println("Định dạng email phù hợp");
                     break;
-                }else {
+                } else {
                     throw new Exception();
                 }
             } catch (Exception e) {
@@ -315,18 +204,18 @@ public class CustomerServiceImpl implements ICustomerService {
         String typeCustomer;
         while (true) {
             typeCustomer = scanner.nextLine();
-            boolean flagTypeCustomer = true;
+            boolean flagTypeCustomer = false;
             try {
                 for (int i = 0; i < typeCustomerArray.length; i++) {
                     if (typeCustomerArray[i].equals(typeCustomer)) {
-                        flagTypeCustomer = false;
+                        flagTypeCustomer = true;
                         System.out.println("Loại khách hàng hợp lệ");
                         break;
                     }
                 }
                 if (flagTypeCustomer) {
                     break;
-                }else {
+                } else {
                     throw new Exception();
                 }
             } catch (Exception e) {
@@ -336,7 +225,7 @@ public class CustomerServiceImpl implements ICustomerService {
         System.out.println("nhập địa chỉ khách hàng");
         String address = scanner.nextLine();
 
-        Customer customer = new Customer(code,name,dayOfBirth,gender, idNumbers,phoneNumbers,email,typeCustomer,address);
+        Customer customer = new Customer(code, name, dayOfBirth, gender, idNumbers, phoneNumbers, email, typeCustomer, address);
         return customer;
     }
 }

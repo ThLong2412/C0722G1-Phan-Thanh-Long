@@ -2,26 +2,112 @@ package case_study.service.impl;
 
 
 import case_study.controller.FuramaController;
+import case_study.model.Booking;
+import case_study.model.facility.Facility;
 import case_study.model.facility.House;
 import case_study.model.facility.Room;
 import case_study.model.facility.Villa;
+import case_study.service.IBookingService;
 import case_study.service.IFacilityService;
 
 import java.io.*;
-import java.time.format.DateTimeFormatter;
+import java.time.LocalDate;
 import java.util.*;
 
 public class FacilityServiceImpl implements IFacilityService {
 
     private static Scanner scanner = new Scanner(System.in);
-    private static Map<String, Integer> map = new LinkedHashMap<>();
     private static List<Villa> villaList = new ArrayList<>();
     private static List<House> houseList = new ArrayList<>();
     private static List<Room> roomList = new ArrayList<>();
+    private static Map<Facility, Integer> facilityList = new LinkedHashMap<>();
+    private static List<Facility> list = new ArrayList<>();
+    private static IBookingService bookingService = new BookingServiceImpl();
+    private static List<Facility> maintenanceMap = new ArrayList<>();
 
     @Override
     public void maintenanceDisplay() {
+        facilityList = new LinkedHashMap<>();
+        List<Booking> bookingList = readFileBookingFromList();
+        for (Villa villa : villaList) {
+            facilityList.put(villa, 0);
+        }
+        for (House house : houseList) {
+            facilityList.put(house, 0);
+        }
+        for (Room room : roomList) {
+            facilityList.put(room, 0);
+        }
+        for (int i = 0; i < bookingList.size(); i++) {
+            for (Facility key : facilityList.keySet()) {
+                if (bookingList.get(i).getCodeService().equals(key.getCodeService())) {
+                    facilityList.replace(key, facilityList.get(key) + 1);
+                    if (facilityList.get(key) >= 5) {
+                        maintenanceMap.add(key);
+                    }
+                    writeFileMaintenance();
+                    if (key instanceof Villa) {
+                        for (int j = 0; j < villaList.size(); j++) {
+                            if (villaList.get(j).equals(key)) {
+                                villaList.remove(j);
+                            }
+                        }
+                    } else if (key instanceof  House) {
+                        for (int j = 0; j < houseList.size(); j++) {
+                            if (houseList.get(j).equals(key)) {
+                                houseList.remove(j);
+                            }
+                        }
+                    } else {
+                        for (int j = 0; j < roomList.size(); j++) {
+                            if (roomList.get(j).equals(key)) {
+                                roomList.remove(j);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        System.out.println("danh sách cơ sở bảo trì là");
+        for (Facility facility: maintenanceMap) {
+            System.out.println(facility);
+        }
+    }
 
+    public List<Booking> readFileBookingFromList() {
+        List<Booking> list = new ArrayList<>();
+        try {
+            File file = new File("src\\case_study\\data\\booking.csv");
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line;
+            String[] info;
+            Booking booking;
+            while ((line = bufferedReader.readLine()) != null) {
+                info = line.split(",");
+                booking = new Booking(info[0], LocalDate.parse(info[1]), LocalDate.parse(info[2]), info[3], info[4], info[5]);
+                list.add(booking);
+            }
+            bufferedReader.close();
+        } catch (IOException e) {
+            e.getMessage();
+        }
+        return list;
+    }
+
+    public void writeFileMaintenance() {
+        try {
+            File file = new File("src\\case_study\\data\\maintenance.csv");
+            FileWriter fileWriter = new FileWriter(file);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            for (Facility facility : maintenanceMap) {
+                bufferedWriter.write(facility.toString());
+                bufferedWriter.newLine();
+            }
+            bufferedWriter.close();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
@@ -37,6 +123,7 @@ public class FacilityServiceImpl implements IFacilityService {
                     villaList.add(villa);
                     System.out.println("thêm mới villa thành công");
                     writeFileVilla();
+                    facilityList.put(villa, 0);
                     break;
                 case 2:
                     readFileHouse();
@@ -44,6 +131,7 @@ public class FacilityServiceImpl implements IFacilityService {
                     houseList.add(house);
                     System.out.println("thêm mới house thành công");
                     writeFileHouse();
+                    facilityList.put(house, 0);
                     break;
                 case 3:
                     readFileRoom();
@@ -51,6 +139,7 @@ public class FacilityServiceImpl implements IFacilityService {
                     roomList.add(room);
                     System.out.println("Thêm mới room thành công");
                     writeFileRoom();
+                    facilityList.put(room, 0);
                     break;
                 case 4:
                     FuramaController.displayMainMenu();
@@ -65,18 +154,18 @@ public class FacilityServiceImpl implements IFacilityService {
 
     @Override
     public void display() {
-        readFileVilla();
         System.out.println("Danh sách Villa");
+        villaList = readFileVilla();
         for (Villa villa : villaList) {
             System.out.println(villa);
         }
-        readFileHouse();
         System.out.println("Danh sách House");
-        for(House house : houseList) {
+        houseList = readFileHouse();
+        for (House house : houseList) {
             System.out.println(house);
         }
-        readFileRoom();
         System.out.println("Danh sách Room");
+        roomList = readFileRoom();
         for (Room room : roomList) {
             System.out.println(room);
         }
@@ -89,7 +178,7 @@ public class FacilityServiceImpl implements IFacilityService {
         while (true) {
             name = scanner.nextLine();
             try {
-                if (name.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
+                if (name.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
                     System.out.println("Tên đúng định đạng");
                     break;
                 } else {
@@ -154,6 +243,8 @@ public class FacilityServiceImpl implements IFacilityService {
                 } else {
                     throw new Exception();
                 }
+            } catch (NumberFormatException e) {
+                System.out.println("số người phải là số");
             } catch (Exception e) {
                 System.out.println("Số người không hợp lệ, hãy nhập lại");
             }
@@ -163,7 +254,7 @@ public class FacilityServiceImpl implements IFacilityService {
         while (true) {
             time = scanner.nextLine();
             try {
-                if (time.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
+                if (time.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
                     break;
                 } else {
                     throw new Exception();
@@ -177,7 +268,7 @@ public class FacilityServiceImpl implements IFacilityService {
         while (true) {
             villaStandard = scanner.nextLine();
             try {
-                if (villaStandard.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
+                if (villaStandard.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
                     break;
                 } else {
                     throw new Exception();
@@ -208,15 +299,17 @@ public class FacilityServiceImpl implements IFacilityService {
             try {
                 if (numberRoom > 0) {
                     break;
-                } else  {
+                } else {
                     throw new Exception();
                 }
+            } catch (NumberFormatException e) {
+                System.out.println("Số tầng phải là một số");
             } catch (Exception e) {
                 System.out.println("số tầng phải là số dương");
             }
         }
 
-        Villa villa = new Villa(name,codeService, usableArea, cost, maxNumberOfPeople, time, villaStandard, pollArea, numberRoom);
+        Villa villa = new Villa(name, codeService, usableArea, cost, maxNumberOfPeople, time, villaStandard, pollArea, numberRoom);
         return villa;
     }
 
@@ -226,7 +319,7 @@ public class FacilityServiceImpl implements IFacilityService {
         while (true) {
             name = scanner.nextLine();
             try {
-                if (name.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
+                if (name.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
                     System.out.println("Tên đúng định đạng");
                     break;
                 } else {
@@ -292,6 +385,8 @@ public class FacilityServiceImpl implements IFacilityService {
                 } else {
                     throw new Exception();
                 }
+            } catch (NumberFormatException e) {
+                System.out.println("Số người phải là một số");
             } catch (Exception e) {
                 System.out.println("Số người không hợp lệ, hãy nhập lại");
             }
@@ -301,7 +396,7 @@ public class FacilityServiceImpl implements IFacilityService {
         while (true) {
             time = scanner.nextLine();
             try {
-                if (time.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
+                if (time.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
                     break;
                 } else {
                     throw new Exception();
@@ -315,7 +410,7 @@ public class FacilityServiceImpl implements IFacilityService {
         while (true) {
             houseStandard = scanner.nextLine();
             try {
-                if (houseStandard.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
+                if (houseStandard.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
                     break;
                 } else {
                     throw new Exception();
@@ -331,24 +426,26 @@ public class FacilityServiceImpl implements IFacilityService {
             try {
                 if (numberFloor > 0) {
                     break;
-                } else  {
+                } else {
                     throw new Exception();
                 }
+            } catch (NumberFormatException e) {
+                System.out.println("Số tầng phải là một số");
             } catch (Exception e) {
                 System.out.println("số tầng phải là số dương");
             }
         }
-        House house = new House(name,codeService, usableArea, cost, maxNumberOfPeople, time, houseStandard, numberFloor);
+        House house = new House(name, codeService, usableArea, cost, maxNumberOfPeople, time, houseStandard, numberFloor);
         return house;
     }
 
     public Room infoRoom() {
-        System.out.println("Mời bạn nhập tên House");
+        System.out.println("Mời bạn nhập tên Room");
         String name;
         while (true) {
             name = scanner.nextLine();
             try {
-                if (name.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
+                if (name.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
                     System.out.println("Tên đúng định đạng");
                     break;
                 } else {
@@ -405,17 +502,17 @@ public class FacilityServiceImpl implements IFacilityService {
         int maxNumberOfPeople;
         while (true) {
             System.out.println("mời bạn nhập số người tối đa");
-             maxNumberOfPeople = Integer.parseInt(scanner.nextLine());
-             try {
-                 if (maxNumberOfPeople > 0 && maxNumberOfPeople < 20) {
-                     System.out.println("số người hợp lệ");
-                     break;
-                 } else {
-                     throw new Exception();
-                 }
-             } catch (Exception e) {
-                 System.out.println("Số người không hợp lệ, hãy nhập lại");
-             }
+            maxNumberOfPeople = Integer.parseInt(scanner.nextLine());
+            try {
+                if (maxNumberOfPeople > 0 && maxNumberOfPeople < 20) {
+                    System.out.println("số người hợp lệ");
+                    break;
+                } else {
+                    throw new Exception();
+                }
+            } catch (Exception e) {
+                System.out.println("Số người không hợp lệ, hãy nhập lại");
+            }
         }
 
         System.out.println("Mời bạn nhập kiểu thuê (theo giờ, ngày, tháng, năm)");
@@ -423,7 +520,7 @@ public class FacilityServiceImpl implements IFacilityService {
         while (true) {
             time = scanner.nextLine();
             try {
-                if (time.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
+                if (time.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
                     break;
                 } else {
                     throw new Exception();
@@ -450,71 +547,111 @@ public class FacilityServiceImpl implements IFacilityService {
         return room;
     }
 
-    public static void readFileVilla() {
+    public static List<Villa> readFileVilla() {
+        villaList = new ArrayList<>();
         try {
             File file = new File("src\\case_study\\data\\villa.csv");
-            FileInputStream fileInputStream = new FileInputStream(file);
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-
-            villaList = (List<Villa>) objectInputStream.readObject();
-            objectInputStream.close();
-        } catch (IOException | ClassNotFoundException e) {
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line;
+            String[] info;
+            Villa villa;
+            while ((line = bufferedReader.readLine()) != null) {
+                info = line.split(",");
+                villa = new Villa(info[0], info[1], info[2], info[3], Integer.parseInt(info[4]), info[5], info[6], info[7], Integer.parseInt(info[8]));
+                villaList.add(villa);
+            }
+            bufferedReader.close();
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
+        } catch (IOException e) {
             e.getMessage();
         }
+        return villaList;
     }
-    public static void readFileHouse() {
+
+    public static List<House> readFileHouse() {
+        houseList = new ArrayList<>();
         try {
             File file = new File("src\\case_study\\data\\house.csv");
-            FileInputStream fileInputStream = new FileInputStream(file);
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-
-            villaList = (List<Villa>) objectInputStream.readObject();
-            objectInputStream.close();
-        } catch (IOException | ClassNotFoundException e) {
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line;
+            String[] info;
+            House house;
+            while ((line = bufferedReader.readLine()) != null) {
+                info = line.split(",");
+                house = new House(info[0], info[1], info[2], info[3], Integer.parseInt(info[4]), info[5], info[6], Integer.parseInt(info[7]));
+                houseList.add(house);
+            }
+            bufferedReader.close();
+        } catch (IOException e) {
             e.getMessage();
         }
+        return houseList;
     }
-    public static void readFileRoom() {
+
+    public static List<Room> readFileRoom() {
+        roomList = new ArrayList<>();
         try {
             File file = new File("src\\case_study\\data\\room.csv");
-            FileInputStream fileInputStream = new FileInputStream(file);
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-
-            villaList = (List<Villa>) objectInputStream.readObject();
-            objectInputStream.close();
-        } catch (IOException | ClassNotFoundException e) {
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line;
+            String[] info;
+            Room room;
+            while ((line = bufferedReader.readLine()) != null) {
+                info = line.split(",");
+                room = new Room(info[0], info[1], info[2], info[3], Integer.parseInt(info[4]), info[5], info[6]);
+                roomList.add(room);
+            }
+            bufferedReader.close();
+        } catch (IOException e) {
             e.getMessage();
         }
+        return roomList;
     }
+
     public static void writeFileVilla() {
         try {
             File file = new File("src\\case_study\\data\\villa.csv");
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(villaList);
-            objectOutputStream.close();
+            FileWriter fileWriter = new FileWriter(file);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            for (Villa villa : villaList) {
+                bufferedWriter.write(villa.getInfo());
+                bufferedWriter.newLine();
+            }
+            bufferedWriter.close();
         } catch (IOException e) {
             e.getMessage();
         }
     }
+
     public static void writeFileHouse() {
         try {
             File file = new File("src\\case_study\\data\\house.csv");
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(houseList);
-            objectOutputStream.close();
+            FileWriter fileWriter = new FileWriter(file);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            for (House house : houseList) {
+                bufferedWriter.write(house.getInfo());
+                bufferedWriter.newLine();
+            }
+            bufferedWriter.close();
         } catch (IOException e) {
             e.getMessage();
         }
     }
+
     public static void writeFileRoom() {
         try {
             File file = new File("src\\case_study\\data\\room.csv");
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(roomList);
-            objectOutputStream.close();
+            FileWriter fileWriter = new FileWriter(file);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            for (Room room : roomList) {
+                bufferedWriter.write(room.getInfo());
+                bufferedWriter.newLine();
+            }
+            bufferedWriter.close();
         } catch (IOException e) {
             e.getMessage();
         }

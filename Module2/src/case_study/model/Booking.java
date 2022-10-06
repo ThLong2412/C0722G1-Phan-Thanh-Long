@@ -1,21 +1,23 @@
 package case_study.model;
 
+import java.time.LocalDate;
+
 public class Booking {
     private String codeBooking;
-    private String dayStart;
-    private String dayEnd;
+    private LocalDate dayStart;
+    private LocalDate dayEnd;
     private String codeCustomer;
-    private String nameService;
+    private String codeService;
     private String typeOfService;
 
     public Booking( ){}
 
-    public Booking(String codeBooking, String dayStart, String dayEnd, String codeCustomer, String nameService, String typeOfService) {
+    public Booking(String codeBooking, LocalDate dayStart, LocalDate dayEnd, String codeCustomer, String codeService, String typeOfService) {
         this.codeBooking = codeBooking;
         this.dayStart = dayStart;
         this.dayEnd = dayEnd;
         this.codeCustomer = codeCustomer;
-        this.nameService = nameService;
+        this.codeService = codeService;
         this.typeOfService = typeOfService;
     }
 
@@ -27,19 +29,19 @@ public class Booking {
         this.codeBooking = codeBooking;
     }
 
-    public String getDayStart() {
+    public LocalDate getDayStart() {
         return dayStart;
     }
 
-    public void setDayStart(String dayStart) {
+    public void setDayStart(LocalDate dayStart) {
         this.dayStart = dayStart;
     }
 
-    public String getDayEnd() {
+    public LocalDate getDayEnd() {
         return dayEnd;
     }
 
-    public void setDayEnd(String dayEnd) {
+    public void setDayEnd(LocalDate dayEnd) {
         this.dayEnd = dayEnd;
     }
 
@@ -51,12 +53,12 @@ public class Booking {
         this.codeCustomer = codeCustomer;
     }
 
-    public String getNameService() {
-        return nameService;
+    public String getCodeService() {
+        return codeService;
     }
 
-    public void setNameService(String nameService) {
-        this.nameService = nameService;
+    public void setCodeService(String codeService) {
+        this.codeService = codeService;
     }
 
     public String getTypeOfService() {
@@ -74,8 +76,12 @@ public class Booking {
                 ", dayStart='" + dayStart + '\'' +
                 ", dayEnd='" + dayEnd + '\'' +
                 ", codeCustomer='" + codeCustomer + '\'' +
-                ", nameService='" + nameService + '\'' +
+                ", codeService='" + codeService + '\'' +
                 ", typeOfService='" + typeOfService + '\'' +
                 '}';
+    }
+
+    public String getInfo() {
+        return String.format("%s,%s,%s,%s,%s,%s",getCodeBooking(),getDayStart(),getDayEnd(),getCodeCustomer(),getCodeService(),getTypeOfService());
     }
 }

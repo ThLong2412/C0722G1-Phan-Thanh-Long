@@ -45,6 +45,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\case_study\data\maintenance.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\case_study\data\room.csv">
           <value>
             <Attribute>
@@ -74,6 +81,20 @@
           </value>
         </entry>
         <entry key="\src\exersice\mvc\ss1_haiTT\data\teacherread.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\furama_resort\data\customer.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\furama_resort\data\employee.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

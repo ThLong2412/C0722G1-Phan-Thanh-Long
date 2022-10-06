@@ -25,7 +25,10 @@ public class Room extends Facility implements Serializable {
     @Override
     public String toString() {
         return "Room{" +super.toString() +
-                "freeServiceIncluded='" + freeServiceIncluded +
+                ", freeServiceIncluded='" + freeServiceIncluded +
                 '}';
+    }
+    public String getInfo() {
+        return String.format("%s,%s,%s,%s,%s,%s,%s",getName(),getCodeService(),getUsableArea(),getCost(),getMaxNumberOfPeople(),getTime(),getFreeServiceIncluded());
     }
 }

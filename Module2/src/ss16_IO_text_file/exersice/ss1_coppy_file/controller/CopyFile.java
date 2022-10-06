@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CopyFile {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
 
         try {
             File file = new File("src\\ss16_IO_text_file\\exersice\\ss1_coppy_file\\data\\source.csv");

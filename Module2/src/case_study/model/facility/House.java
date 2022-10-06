@@ -37,4 +37,8 @@ public class House  extends Facility implements Serializable {
                 ", numberFloor=" + numberFloor +
                 '}';
     }
+
+    public String getInfo() {
+        return String.format("%s,%s,%s,%s,%s,%s,%s,%s",getName(),getCodeService(),getUsableArea(),getCost(),getMaxNumberOfPeople(),getTime(),getStandard(),getNumberFloor());
+    }
 }

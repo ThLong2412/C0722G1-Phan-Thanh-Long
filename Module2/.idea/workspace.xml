@@ -20,35 +20,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e37b8cac-9b84-4e61-869a-b5d9f76a53ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/case_study/controller/FuramaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/data/booking.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/data/customer.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/data/employee.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/data/house.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/data/room.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/data/villa.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/model/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/model/facility/House.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/service/IBookingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/service/IContractService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/service/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/service/IFacilityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/service/IService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/service/impl/BookingServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/service/impl/ContractServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/case_study/view/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/case_study/data/maintenance.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/META-INF/Module2.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/ITeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/ITeacherService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/impl/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/exersice/mvc/ss1_haiTT/service/impl/TeacherService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/ss17_IO_binary_file_and_serialization/exersice/ss1_product_management/service/impl/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/ss17_IO_binary_file_and_serialization/exersice/ss1_product_management/service/impl/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/ITeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/ITeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/service/impl/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exersice/mvc/ss1_haiTT/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss17_IO_binary_file_and_serialization/exersice/ss1_product_management/service/impl/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss17_IO_binary_file_and_serialization/exersice/ss1_product_management/service/impl/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/controller/FuramaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/controller/FuramaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/booking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/booking.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/contract.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/contract.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/customer.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/employee.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/house.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/house.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/room.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/room.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/villa.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/model/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/model/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/model/Contract.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/model/Contract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/Facility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/Facility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/House.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/Villa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/BookingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/BookingServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/CustomerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/EmployeeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/FacilityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/FacilityServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/view/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/controller/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/controller/FuramaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/data/booking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/booking.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/data/contract.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/contract.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/data/customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/customer.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/data/employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/employee.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/data/house.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/house.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/data/room.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/room.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/data/villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/villa.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/model/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/model/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/model/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/model/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/model/facility/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/model/facility/Facility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/model/facility/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/model/facility/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/model/facility/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/model/facility/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/model/facility/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/model/facility/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/service/impl/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/service/impl/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/service/impl/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/service/impl/FacilityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +102,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Codegym\Module2\src.quoc_trung" />
+      <recent name="D:\Codegym\Module2\src" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.View">
     <configuration name="FuramaController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="case_study.controller.FuramaController" />
@@ -102,12 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.Main" />
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="furama_resort.views.Main" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="case_study.*" />
+          <option name="PATTERN" value="furama_resort.views.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,12 +135,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegularExpression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss19_string_and_amp_regex.exercise.ss1_validate_name_class.RegularExpression" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Main" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss19_string_and_amp_regex.exercise.ss1_validate_name_class.*" />
+          <option name="PATTERN" value="case_study.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -157,10 +177,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.View" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.FuramaController" />
         <item itemvalue="Application.View (1)" />
-        <item itemvalue="Application.RegularExpression" />
       </list>
     </recent_temporary>
   </component>
@@ -224,6 +244,15 @@
       <workItem from="1664850515093" duration="2557000" />
       <workItem from="1664873126956" duration="144000" />
       <workItem from="1664873285633" duration="4910000" />
+      <workItem from="1664885754579" duration="6482000" />
+      <workItem from="1664932255989" duration="7457000" />
+      <workItem from="1664948101249" duration="356000" />
+      <workItem from="1664951311128" duration="1342000" />
+      <workItem from="1664952824846" duration="88000" />
+      <workItem from="1664953025193" duration="11633000" />
+      <workItem from="1664981170855" duration="550000" />
+      <workItem from="1665018028056" duration="13203000" />
+      <workItem from="1665037991985" duration="9090000" />
     </task>
     <servers />
   </component>
@@ -243,14 +272,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="543" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1664518596378">
+    <state x="543" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1665031580703">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="543" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1664518596378" />
-    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser" timestamp="1664876488208">
+    <state x="543" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1665031580703" />
+    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser" timestamp="1665038337391">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1664876488208" />
+    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1665038337391" />
     <state x="102" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1664800364665">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -259,38 +288,38 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1664182191138" />
-    <state width="1493" height="173" key="GridCell.Tab.0.bottom" timestamp="1664878881779">
+    <state width="1493" height="258" key="GridCell.Tab.0.bottom" timestamp="1665047868738">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="173" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664878881779" />
-    <state width="1493" height="173" key="GridCell.Tab.0.center" timestamp="1664878881779">
+    <state width="1493" height="258" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
+    <state width="1493" height="258" key="GridCell.Tab.0.center" timestamp="1665047868738">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="173" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1664878881779" />
-    <state width="1493" height="173" key="GridCell.Tab.0.left" timestamp="1664878881779">
+    <state width="1493" height="258" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
+    <state width="1493" height="258" key="GridCell.Tab.0.left" timestamp="1665047868738">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="173" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1664878881779" />
-    <state width="1493" height="173" key="GridCell.Tab.0.right" timestamp="1664878881779">
+    <state width="1493" height="258" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
+    <state width="1493" height="258" key="GridCell.Tab.0.right" timestamp="1665047868738">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="173" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1664878881779" />
-    <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1664853129748">
+    <state width="1493" height="258" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
+    <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1665047868738">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1664853129748" />
-    <state width="1493" height="258" key="GridCell.Tab.1.center" timestamp="1664853129748">
+    <state width="1493" height="258" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
+    <state width="1493" height="258" key="GridCell.Tab.1.center" timestamp="1665047868738">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1664853129748" />
-    <state width="1493" height="258" key="GridCell.Tab.1.left" timestamp="1664853129748">
+    <state width="1493" height="258" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
+    <state width="1493" height="258" key="GridCell.Tab.1.left" timestamp="1665047868738">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1664853129748" />
-    <state width="1493" height="258" key="GridCell.Tab.1.right" timestamp="1664853129748">
+    <state width="1493" height="258" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
+    <state width="1493" height="258" key="GridCell.Tab.1.right" timestamp="1665047868738">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1664853129748" />
+    <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
     <state x="277" y="53" key="SettingsEditor" timestamp="1664878637387">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -307,10 +336,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="425" y="185" key="run.anything.popup/0.0.1536.816@0.0.1536.816" timestamp="1664181474659" />
-    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1664791549594">
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1664887576467">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1664791549594" />
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1664887576467" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

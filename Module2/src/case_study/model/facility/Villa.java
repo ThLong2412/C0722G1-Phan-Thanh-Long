@@ -11,11 +11,11 @@ public class Villa extends Facility implements Serializable {
 
     public Villa() {}
 
-    public Villa( String name,String codeService, String usableArea, String cost, int maxNumberOfPeople, String time,String villaStandard, String poolArea, int numberRoom) {
+    public Villa( String name,String codeService, String usableArea, String cost, int maxNumberOfPeople, String time,String villaStandard, String poolArea, int numberFloor) {
         super(name,codeService,usableArea,cost,maxNumberOfPeople,time);
         this.villaStandard = villaStandard;
         this.poolArea = poolArea;
-        this.numberFloor = numberRoom;
+        this.numberFloor = numberFloor;
     }
 
     public String getVillaStandard() {
@@ -49,5 +49,8 @@ public class Villa extends Facility implements Serializable {
                 ", poolArea='" + poolArea +
                 ", numberRoom=" + numberFloor +
                 '}';
+    }
+    public String getInfo() {
+        return String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s",getName(),getCodeService(),getUsableArea(),getCost(),getMaxNumberOfPeople(),getTime(),getVillaStandard(),getPoolArea(),getNumberFloor());
     }
 }

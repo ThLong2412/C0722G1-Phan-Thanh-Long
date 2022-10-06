@@ -23,7 +23,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
     final String[] locationArray = {"Lễ tân", "Phục vụ", "chuyên viên", "Giám sát", "Quản lý", "Giám đốc"};
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-    public static void readFileEmployee() {
+    public static List<Employee> readFileEmployee() {
         employeeList = new ArrayList<>();
         try {
             File file = new File("src\\case_study\\data\\employee.csv");
@@ -41,6 +41,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         } catch (IOException e) {
             System.out.println("File không có gì hãy tiếp tục chương trình");
         }
+        return employeeList;
     }
 
     public static void writeFileEmployee() {
@@ -63,185 +64,17 @@ public class EmployeeServiceImpl implements IEmployeeService {
         readFileEmployee();
         System.out.println("nhập mã nhân viên muốn sửa");
         String codeEdit = scanner.nextLine();
-        boolean flag = true;
+        boolean flag = false;
         for (int i = 0; i < employeeList.size(); i++) {
             if (employeeList.get(i).getCode().equals(codeEdit)) {
-                flag = false;
-                System.out.println("nhập mã nhân viên mới");
-                String code = scanner.nextLine();
-                employeeList.get(i).setCode(code);
-
-                String name;
-                while (true) {
-                    try {
-                        System.out.println("nhập tên nhân viên mới");
-                        name = scanner.nextLine();
-                        if (name.matches("^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$")) {
-                            System.out.println("Tên đúng định đạng");
-                            break;
-                        } else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Tên sai định dạng. Hãy nhập lại");
-                    }
-                }
-                employeeList.get(i).setName(name);
-
-                LocalDate dayOfBirth;
-                while (true) {
-                    System.out.println("nhập ngày sinh nhân viên mới");
-                    dayOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
-                    try {
-                        LocalDate date = LocalDate.now();
-                        long day = dayOfBirth.until(date, ChronoUnit.DAYS);
-                        double old = day / 365.5;
-                        if (old > 18 && old < 100) {
-                            break;
-                        } else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Ngày sinh sai định dạng. Hãy nhập lại");
-                    }
-                }
-                employeeList.get(i).setDayOffBirth(dayOfBirth);
-
-                String gender;
-                while (true) {
-                    System.out.println("nhập giới tính nhân viên mới");
-                    gender = scanner.nextLine();
-                    try {
-                        if (gender.equals("Nam") || gender.equals("Nữ")) {
-                            System.out.println("Giới tính đã đúng ");
-                            break;
-                        } else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Giới tính không phù hợp. Hãy nhập lại");
-                    }
-                }
-                employeeList.get(i).setGender(gender);
-                String idNumbers;
-                while (true) {
-                    System.out.println("nhập số CMND/CCCD của nhân viên mới");
-                    idNumbers = scanner.nextLine();
-                    try {
-                        if (idNumbers.matches("^[0-9]{12}$")) {
-                            System.out.println("Định dạng số CMND/CCCD đã đúng");
-                            break;
-                        } else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Định dạng số CMND/CCCD đã sai. Hãy nhập lại");
-                    }
-                }
-                employeeList.get(i).setIdNumbers(idNumbers);
-
-                String phoneNumbers;
-                while (true) {
-                    System.out.println("nhập số điện thoại nhân viên mới");
-                    phoneNumbers = scanner.nextLine();
-                    try {
-                        if (phoneNumbers.matches("^[0][0-9]{9}$")) {
-                            System.out.println("Định dạng số điện thoại đã đúng");
-                            break;
-                        } else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Định dạng số điện thoại sai. Hãy nhập lại");
-                    }
-                }
-                employeeList.get(i).setPhoneNumbers(phoneNumbers);
-                String email;
-                while (true) {
-                    System.out.println("nhập email nhân viên mới");
-                    email = scanner.nextLine();
-                    try {
-                        if (email.matches("^[A-Za-z0-9]+[@][A-Za-z0-9]+[.][A-Za-z0-9]+$")) {
-                            System.out.println("Định dạng email phù hợp");
-                            break;
-                        } else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Định dạng email sai hãy nhập lại");
-                    }
-                }
-                employeeList.get(i).setEmail(email);
-                String level;
-                while (true) {
-                    System.out.println("nhập trình độ nhân viên mới");
-                    level = scanner.nextLine();
-                    boolean flagEmail = true;
-                    try {
-                        for (int j = 0; j < levelArray.length; j++) {
-                            if (levelArray[j].equals(level)) {
-                                System.out.println("Trình độ đã có trong tiêu chuẩn");
-                                flagEmail = false;
-                                break;
-                            }
-                        }
-                        if (flagEmail) {
-                            break;
-                        } else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Trình độ chưa phù hợp");
-                    }
-                }
-                employeeList.get(i).setLevel(level);
-                String location;
-                while (true) {
-                    System.out.println("nhập vị trí nhân viên mới");
-                    location = scanner.nextLine();
-                    boolean flagLocation = true;
-                    try {
-                        for (int j = 0; j < locationArray.length; j++) {
-                            if (locationArray[j].equals(location)) {
-                                System.out.println("Vị trí hợp lệ");
-                                flagLocation = false;
-                                break;
-                            }
-                        }
-                        if (flagLocation) {
-                            break;
-                        } else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Vị trí chưa hợp lệ");
-                    }
-                }
-                employeeList.get(i).setLocation(location);
-
-                String wage;
-                while (true) {
-                    System.out.println("nhập lương nhân viên mới");
-                    wage = scanner.nextLine();
-                    try {
-                        if (wage.matches("^[0-9]+[0]{3}")) {
-                            System.out.println("Lương đã đúng định dạng");
-                            break;
-                        } else {
-                            throw new Exception();
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Lương chưa đúng định dạng");
-                    }
-                }
-                employeeList.get(i).setWage(wage);
-
+                flag = true;
+                employeeList.set(i,infoEmployee());
                 System.out.println("Đã sửa thành công.");
                 break;
             }
-            if (flag) {
-                System.out.println("Không tìm thấy nhân viên có id: " + codeEdit);
-            }
+
+        }if (!flag) {
+            System.out.println("Không tìm thấy nhân viên có id: " + codeEdit);
         }
 
     }
@@ -257,7 +90,19 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     public Employee infoEmployee() {
         System.out.println("nhập mã nhân viên");
-        String code = scanner.nextLine();
+        String code ;
+        while (true) {
+            code = scanner.nextLine();
+            try {
+                if (code.matches("^[K][H][0-9]+$")) {
+                    break;
+                } else {
+                    throw new Exception();
+                }
+            } catch (Exception e) {
+                System.out.println("Mã sai định dạng. Hãy nhập lại");
+            }
+        }
         System.out.println("nhập tên nhân viên");
         String name;
         while (true) {
@@ -277,8 +122,9 @@ public class EmployeeServiceImpl implements IEmployeeService {
         System.out.println("nhập ngày sinh nhân viên");
         LocalDate dayOfBirth;
         while (true) {
-            dayOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
+
             try {
+                dayOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
                 LocalDate date = LocalDate.now();
                 long day = dayOfBirth.until(date, ChronoUnit.DAYS);
                 double old = day / 365.5;
@@ -287,8 +133,9 @@ public class EmployeeServiceImpl implements IEmployeeService {
                 } else {
                     throw new Exception();
                 }
-            } catch (Exception e) {
-                System.out.println("Ngày sinh sai định dạng. Hãy nhập lại");
+            }
+            catch (Exception e) {
+                System.out.println("Ngày sinh sai định dạng hoặc tuổi không hượp lý. Hãy nhập lại");
             }
         }
         System.out.println("nhập giới tính nhân viên");
@@ -417,7 +264,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     @Override
     public void display() {
-        readFileEmployee();
+       employeeList = readFileEmployee();
         for (Employee employee : employeeList) {
             System.out.println("Thông tin nhân viên là: " + employee);
         }
