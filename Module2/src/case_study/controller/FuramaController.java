@@ -1,13 +1,7 @@
 package case_study.controller;
 
-import case_study.service.IBookingService;
-import case_study.service.ICustomerService;
-import case_study.service.IEmployeeService;
-import case_study.service.IFacilityService;
-import case_study.service.impl.BookingServiceImpl;
-import case_study.service.impl.CustomerServiceImpl;
-import case_study.service.impl.EmployeeServiceImpl;
-import case_study.service.impl.FacilityServiceImpl;
+import case_study.service.*;
+import case_study.service.impl.*;
 
 import java.util.Scanner;
 
@@ -17,6 +11,7 @@ public class FuramaController {
     private static ICustomerService iCustomerService = new CustomerServiceImpl();
     private static IFacilityService iFacilityService = new FacilityServiceImpl();
     private static IBookingService iBookingService = new BookingServiceImpl();
+    private static IPromotionService iPromotionService = new PromotionServiceImpl();
 
     public static void displayMainMenu() {
         System.out.println("Chào mừng bạn đến với chương trình quản lý khu nghỉ dưỡng FURAMA");
@@ -229,8 +224,10 @@ public class FuramaController {
                     }
                     switch (choice5) {
                         case "1":
+                            iPromotionService.displayCustomerUsingService();
                             break;
                         case "2":
+                            iPromotionService.displayCustomerVoucher();
                             break;
                         case "3":
                             FuramaController.displayMainMenu();

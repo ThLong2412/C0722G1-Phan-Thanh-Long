@@ -94,7 +94,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         while (true) {
             code = scanner.nextLine();
             try {
-                if (code.matches("^[K][H][0-9]+$")) {
+                if (code.matches("^[N][V][0-9]+$")) {
                     break;
                 } else {
                     throw new Exception();

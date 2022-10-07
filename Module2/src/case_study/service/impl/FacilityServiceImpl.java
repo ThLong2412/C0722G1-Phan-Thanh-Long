@@ -101,7 +101,7 @@ public class FacilityServiceImpl implements IFacilityService {
             FileWriter fileWriter = new FileWriter(file);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             for (Facility facility : maintenanceMap) {
-                bufferedWriter.write(facility.toString());
+                bufferedWriter.write(String.valueOf(facility));
                 bufferedWriter.newLine();
             }
             bufferedWriter.close();

@@ -20,49 +20,84 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e37b8cac-9b84-4e61-869a-b5d9f76a53ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/case_study/data/maintenance.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/case_study/service/IPromotionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/case_study/service/impl/PromotionServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/controller/FuramaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/controller/FuramaController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/booking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/booking.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/contract.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/contract.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/customer.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/employee.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/house.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/house.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/room.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/room.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/maintenance.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/maintenance.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/data/villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/data/villa.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/model/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/model/Booking.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/model/Contract.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/model/Contract.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/Facility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/Facility.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/House.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/model/facility/Villa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/BookingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/BookingServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/CustomerServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/EmployeeServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/FacilityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/service/impl/FacilityServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Module2/case_study/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/case_study/view/View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/controller/FuramaController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/data/customer.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/data/employee.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/model/Booking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/model/Contract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/model/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/model/Facility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/model/House.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/model/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/model/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/model/Villa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/service/IBookingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/service/ICustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/service/IEmployeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/service/IFacilityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/service/IPromotionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/service/impl/BookingServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/service/impl/CustomerServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/service/impl/EmployeeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/service/impl/FacilityServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/service/impl/PromotionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/utils/checks/Check.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/utils/checks/CheckException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/utils/checks/CheckRegexFacility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/utils/write_and_read/ReadFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/utils/write_and_read/WriteFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/furama_resort/views/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/test/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/test/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/case_study/controller/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/controller/FuramaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/case_study/data/booking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/booking.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case_study/data/contract.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/contract.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case_study/data/customer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/customer.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/case_study/data/employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/employee.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case_study/data/house.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/house.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case_study/data/room.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/room.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study/data/maintenance.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/maintenance.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/case_study/data/villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/data/villa.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case_study/model/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/model/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case_study/model/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/model/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case_study/model/facility/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/model/facility/Facility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case_study/model/facility/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/model/facility/House.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case_study/model/facility/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/model/facility/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case_study/model/facility/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/model/facility/Villa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case_study/service/impl/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/service/impl/BookingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case_study/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/service/impl/CustomerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/case_study/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/service/impl/EmployeeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/case_study/service/impl/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/service/impl/FacilityServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/case_study/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss16_IO_text_file/exersice/ss1_coppy_file/controller/CopyFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/controller/FuramaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/data/customer.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/data/employee.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/model/Booking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/model/Contract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/model/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/model/Facility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/model/House.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/model/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/model/Room.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/model/Villa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/service/IBookingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/service/ICustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/service/IEmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/service/IFacilityService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/service/IPromotionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/service/impl/BookingServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/service/impl/CustomerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/service/impl/EmployeeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/service/impl/FacilityServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/service/impl/PromotionServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/utils/checks/Check.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/utils/checks/CheckException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/utils/checks/CheckRegexFacility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/utils/write_and_read/ReadFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/utils/write_and_read/WriteFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/furama_resort/views/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,8 +212,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.View" />
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.FuramaController" />
         <item itemvalue="Application.View (1)" />
       </list>
@@ -253,6 +288,11 @@
       <workItem from="1664981170855" duration="550000" />
       <workItem from="1665018028056" duration="13203000" />
       <workItem from="1665037991985" duration="9090000" />
+      <workItem from="1665066414336" duration="594000" />
+      <workItem from="1665067223049" duration="128000" />
+      <workItem from="1665103638035" duration="11425000" />
+      <workItem from="1665124943526" duration="523000" />
+      <workItem from="1665130667482" duration="4106000" />
     </task>
     <servers />
   </component>
@@ -276,10 +316,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="543" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1665031580703" />
-    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser" timestamp="1665038337391">
+    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser" timestamp="1665125035096">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1665038337391" />
+    <state x="574" y="109" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1665125035096" />
     <state x="102" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1664800364665">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -288,38 +328,38 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1664182191138" />
-    <state width="1493" height="258" key="GridCell.Tab.0.bottom" timestamp="1665047868738">
+    <state width="1493" height="182" key="GridCell.Tab.0.bottom" timestamp="1665134278183">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
-    <state width="1493" height="258" key="GridCell.Tab.0.center" timestamp="1665047868738">
+    <state width="1493" height="182" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1665134278183" />
+    <state width="1493" height="182" key="GridCell.Tab.0.center" timestamp="1665134278183">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
-    <state width="1493" height="258" key="GridCell.Tab.0.left" timestamp="1665047868738">
+    <state width="1493" height="182" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1665134278183" />
+    <state width="1493" height="182" key="GridCell.Tab.0.left" timestamp="1665134278183">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
-    <state width="1493" height="258" key="GridCell.Tab.0.right" timestamp="1665047868738">
+    <state width="1493" height="182" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1665134278183" />
+    <state width="1493" height="182" key="GridCell.Tab.0.right" timestamp="1665134278183">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
-    <state width="1493" height="258" key="GridCell.Tab.1.bottom" timestamp="1665047868738">
+    <state width="1493" height="182" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1665134278183" />
+    <state width="1493" height="9" key="GridCell.Tab.1.bottom" timestamp="1665133118402">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
-    <state width="1493" height="258" key="GridCell.Tab.1.center" timestamp="1665047868738">
+    <state width="1493" height="9" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1665133118402" />
+    <state width="1493" height="9" key="GridCell.Tab.1.center" timestamp="1665133118402">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
-    <state width="1493" height="258" key="GridCell.Tab.1.left" timestamp="1665047868738">
+    <state width="1493" height="9" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1665133118402" />
+    <state width="1493" height="9" key="GridCell.Tab.1.left" timestamp="1665133118402">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
-    <state width="1493" height="258" key="GridCell.Tab.1.right" timestamp="1665047868738">
+    <state width="1493" height="9" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1665133118402" />
+    <state width="1493" height="9" key="GridCell.Tab.1.right" timestamp="1665133118402">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="258" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1665047868738" />
+    <state width="1493" height="9" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1665133118402" />
     <state x="277" y="53" key="SettingsEditor" timestamp="1664878637387">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

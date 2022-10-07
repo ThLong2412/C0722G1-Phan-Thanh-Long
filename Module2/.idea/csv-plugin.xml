@@ -87,20 +87,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\src\furama_resort\data\customer.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\src\furama_resort\data\employee.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\src\ss16_IO_text_file\exersice\ss2_read_file\data\nation.csv">
           <value>
             <Attribute>
