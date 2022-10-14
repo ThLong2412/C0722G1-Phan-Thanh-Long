@@ -45,7 +45,7 @@ public class Villa extends Facility implements Serializable {
     @Override
     public String toString() {
         return "Villa{" +super.toString() +
-                "villaStandard='" + villaStandard +
+                ", villaStandard='" + villaStandard +
                 ", poolArea='" + poolArea +
                 ", numberRoom=" + numberFloor +
                 '}';

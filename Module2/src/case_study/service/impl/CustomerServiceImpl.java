@@ -66,6 +66,7 @@ public class CustomerServiceImpl implements ICustomerService {
             if (customerList.get(i).getCode().equals(codeEdit)) {
                 flag = true;
                 customerList.set(i, infoCustomer());
+                writeFileCustomer();
                 System.out.println("Ddax suwar thanhf coong");
             }
         }

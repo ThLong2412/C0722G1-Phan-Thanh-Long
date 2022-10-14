@@ -210,8 +210,8 @@ public class BookingServiceImpl implements IBookingService {
         List<Customer> list = CustomerServiceImpl.readFileCustomer();
         String codeCustomer;
         while (true) {
-            codeCustomer = scanner.nextLine();
             try {
+                codeCustomer = scanner.nextLine();
                 boolean flag = false;
                 for (int i = 0; i < list.size(); i++) {
                     if (list.get(i).getCode().equals(codeCustomer)) {
@@ -491,6 +491,7 @@ public class BookingServiceImpl implements IBookingService {
                     if (contractList.get(i).getNumberContract().equals(codeContractEdit)) {
                         contractList.set(i, infoContract());
                         flag = true;
+                        writeFileContract();
                         break;
                     }
                 }

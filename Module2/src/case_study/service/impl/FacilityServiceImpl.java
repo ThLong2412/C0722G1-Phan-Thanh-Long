@@ -42,17 +42,13 @@ public class FacilityServiceImpl implements IFacilityService {
             for (Facility key : facilityList.keySet()) {
                 if (bookingList.get(i).getCodeService().equals(key.getCodeService())) {
                     facilityList.replace(key, facilityList.get(key) + 1);
-                    if (facilityList.get(key) >= 5) {
-                        maintenanceMap.add(key);
-                    }
-                    writeFileMaintenance();
                     if (key instanceof Villa) {
                         for (int j = 0; j < villaList.size(); j++) {
                             if (villaList.get(j).equals(key)) {
                                 villaList.remove(j);
                             }
                         }
-                    } else if (key instanceof  House) {
+                    } else if (key instanceof House) {
                         for (int j = 0; j < houseList.size(); j++) {
                             if (houseList.get(j).equals(key)) {
                                 houseList.remove(j);
@@ -64,12 +60,18 @@ public class FacilityServiceImpl implements IFacilityService {
                                 roomList.remove(j);
                             }
                         }
+
                     }
                 }
+                if (facilityList.get(key) >= 5) {
+                    maintenanceMap.add(key);
+                    break;
+                }
+                writeFileMaintenance();
             }
         }
         System.out.println("danh sách cơ sở bảo trì là");
-        for (Facility facility: maintenanceMap) {
+        for (Facility facility : maintenanceMap) {
             System.out.println(facility);
         }
     }
@@ -98,6 +100,9 @@ public class FacilityServiceImpl implements IFacilityService {
     public void writeFileMaintenance() {
         try {
             File file = new File("src\\case_study\\data\\maintenance.csv");
+            if (!file.exists()) {
+                System.out.println("File lỗi hoặc không tồn tại");
+            }
             FileWriter fileWriter = new FileWriter(file);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             for (Facility facility : maintenanceMap) {

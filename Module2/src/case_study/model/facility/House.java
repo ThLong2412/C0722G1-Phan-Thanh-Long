@@ -33,7 +33,7 @@ public class House  extends Facility implements Serializable {
     @Override
     public String toString() {
         return "House{" +super.toString() +
-                "houseStandard='" + standard + '\'' +
+                ", houseStandard='" + standard + '\'' +
                 ", numberFloor=" + numberFloor +
                 '}';
     }

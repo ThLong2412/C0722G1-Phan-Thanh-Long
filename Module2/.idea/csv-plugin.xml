@@ -66,6 +66,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\exam\data\tai_khoan_thanh_toan.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\exam\data\tai_khoan_tiet_kiem.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\exersice\mvc\ss1_haiTT\data\studentread.csv">
           <value>
             <Attribute>

@@ -78,7 +78,6 @@ public class FuramaController {
                             System.out.println("vui lòng chọn đúng với các thao tác đã quy sẵn");
                             return;
                     }
-                    break;
                 }
             case "2":
                 while (true) {
@@ -149,7 +148,9 @@ public class FuramaController {
                             break;
                         case "3":
                             iFacilityService.maintenanceDisplay();
-                            continue;
+                            break;
+                        case "4":
+                            System.exit(0);
                         default:
                             System.out.println("vui lòng chọn đúng với các thao tác đã quy sẵn");
                             return;

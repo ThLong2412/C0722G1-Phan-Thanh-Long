@@ -62,7 +62,7 @@ public class PromotionServiceImpl implements IPromotionService {
         int sizeStack = stack.size();
         if (stack.size() == stackVoucher.size()) {
             for (int j = 0; j < sizeStack; j++) {
-                System.out.println("Khách hàng có mã: " + stack.pop().getCodeBooking() + " nhận được voucher giảm giá: " + stackVoucher.pop());
+                System.out.println("Khách hàng có mã: " + stack.peek().getCodeBooking() + " nhận được voucher giảm giá: " + stackVoucher.pop() + "(Ngày booking: " + stack.pop().getDayStart() +")");
             }
         } else {
             System.out.println("số lượng khách hàng trong tháng chưa đủ để thực hiên tặng voucher");

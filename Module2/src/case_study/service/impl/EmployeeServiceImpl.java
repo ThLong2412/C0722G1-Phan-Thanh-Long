@@ -70,9 +70,9 @@ public class EmployeeServiceImpl implements IEmployeeService {
                 flag = true;
                 employeeList.set(i,infoEmployee());
                 System.out.println("Đã sửa thành công.");
+                writeFileEmployee();
                 break;
             }
-
         }if (!flag) {
             System.out.println("Không tìm thấy nhân viên có id: " + codeEdit);
         }
