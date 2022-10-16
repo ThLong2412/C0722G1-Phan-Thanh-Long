@@ -1,0 +1,1 @@
+CREATE DATABASE case_study_module3_insert_data;
