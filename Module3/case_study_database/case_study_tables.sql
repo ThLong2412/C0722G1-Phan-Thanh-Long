@@ -1,6 +1,5 @@
 CREATE DATABASE case_study_module3_tables;
 -- SELECT * [except columnA] FROM tableA (HIỂN THỊ Loại TRỪ CỘT columnA)
-USE case_study_module3;
 CREATE TABLE vi_tri (
 ma_vi_tri INT PRIMARY KEY,
 ten_vi_tri VARCHAR(45));
@@ -36,13 +35,12 @@ ho_ten VARCHAR(45),
 ngay_sinh DATE,
 gioi_tinh BIT(1),
 so_cccd VARCHAR(45),
-luong DOUBLE,
  so_dien_thoai  VARCHAR(45),
  email  VARCHAR(45),
  dia_chi  VARCHAR(45));
  CREATE TABLE loai_dich_vu (
  ma_loai_dich_vu INT PRIMARY KEY,
- ten_loai_dic_vu VARCHAR(45));
+ ten_loai_dich_vu VARCHAR(45));
  CREATE TABLE kieu_thue(
  ma_kieu_thue INT PRIMARY KEY,
  ten_kieu_thue VARCHAR(45));
@@ -57,6 +55,7 @@ luong DOUBLE,
  ma_loai_dich_vu INT,
  FOREIGN KEY (ma_loai_dich_vu) REFERENCES loai_dich_vu(ma_loai_dich_vu),
  tieu_chuan_phong VARCHAR(45),
+ mo_ta_tien_nghi_khac VARCHAR(45),
  dien_tich_ho_boi DOUBLE,
  so_tang INT,
  dich_vu_mien_phi_di_kem TEXT);
