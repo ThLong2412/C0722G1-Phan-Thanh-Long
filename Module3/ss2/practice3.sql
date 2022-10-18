@@ -72,6 +72,25 @@ where student_name = 'Hung';
 select student.student_name , subject.sub_name, mark.mark 
 from student join mark on student.student_id = mark.student_id join subject on mark.sub_id = subject.sub_id
 order by mark desc , student_name desc;
+-- Hiển thị số lượng sinh viên ở từng nơi
+select address , count(student_id) as 'số lượng học viên'
+from student
+group by address;
+-- Tính điểm trung bình các môn học của mỗi học viên
+select s.student_id, s.student_name,avg(mark)
+ from student s join mark on s.student_id = mark.student_id
+group by s.student_id, s.student_name;
+-- Hiển thị những bạn học viên co điểm trung bình các môn học lớn hơn 15
+select s.student_id, s.student_name,avg(mark)
+ from student s join mark on s.student_id = mark.student_id
+group by s.student_id, s.student_name
+having avg(mark) > 15;
+-- Hiển thị thông tin các học viên có điểm trung bình lớn nhất.
+ select s.student_id, s.student_name,avg(mark)
+ from student s join mark on s.student_id = mark.student_id
+group by s.student_id, s.student_name
+having avg(mark) >= all (select avg(mark) from mark group by mark.student_id);
+
 -- Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.
 select *, max(credit) from subject;
 -- Hiển thị các thông tin môn học có điểm thi lớn nhất.
