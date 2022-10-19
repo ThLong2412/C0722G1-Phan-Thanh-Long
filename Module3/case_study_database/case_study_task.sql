@@ -53,12 +53,19 @@ where (year(hop_dong.ngay_lam_hop_dong) = 2021)) and year(hop_dong.ngay_lam_hop_
 group by dich_vu.ma_dich_vu;
 
 -- TASK 8
- -- cách 1
+ -- cách 1 dùng distinct (khách hàng đặt 1 lần)
 select distinct khach_hang.ho_ten
 from khach_hang join hop_dong on hop_dong.ma_khach_hang = khach_hang.ma_khach_hang
 having count(hop_dong.ma_khach_hang);
--- cách 2
--- cách 3
+-- cách 2 dùng union
+SELECT ho_ten
+FROM khach_hang
+UNION
+SELECT ho_ten
+FROM khach_hang;
+-- cách 3 dùng goup by
+select khach_hang.ho_ten
+from khach_hang group by ho_ten;
 
 -- TASK 9
 select month(hop_dong.ngay_lam_hop_dong) as month, count(hop_dong.ma_hop_dong) as so_luong_khach_hang 
@@ -75,5 +82,11 @@ group by hd.ma_hop_dong
 order by hd.ma_hop_dong;
  
  -- TAASK 11
- 
+select dvdk.ma_dich_vu_di_kem, dvdk.ten_dich_vu_di_kem
+from khach_hang kh 
+left join loai_khach lk on lk.ma_loai_khach = kh.ma_loai_khach
+left join hop_dong hd on hd.ma_khach_hang = kh.ma_khach_hang
+left join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong
+left join dich_vu_di_kem dvdk on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+where lk.ten_loai_khach = 'Diamond' and ((kh.dia_chi like '%Vinh%') or (kh.dia_chi like '%Quảng Trị%'));
  
