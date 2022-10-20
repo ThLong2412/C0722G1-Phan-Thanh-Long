@@ -91,4 +91,47 @@ left join dich_vu_di_kem dvdk on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
 where lk.ten_loai_khach = 'Diamond' and ((kh.dia_chi like '%Vinh%') or (kh.dia_chi like '%Quảng Trị%'));
  
  -- TASK 12
+ create view w_task12 
+ as select hd.ma_hop_dong 	
+ from hop_dong hd 
+ where year(hd.ngay_lam_hop_dong) = 2021 and month(hd.ngay_lam_hop_dong) between 1 and 6;
+ select hd.ma_hop_dong, nv.ho_ten,kh.ho_ten,kh.so_dien_thoai,dv.ten_dich_vu,sum(hdct.so_luong) as so_luong_dich_vu_di_kem,hd.tien_dat_coc
+ from hop_dong hd left join khach_hang kh on hd.ma_khach_hang = kh.ma_khach_hang 
+ left join nhan_vien nv on hd.ma_nhan_vien = nv.ma_nhan_vien 
+ left join dich_vu dv on hd.ma_dich_vu = dv.ma_dich_vu 
+ left join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong
+ where hd.ma_hop_dong not in (
+ select * from w_task12) 
+ and (year(hd.ngay_lam_hop_dong) = 2020 and month(hd.ngay_lam_hop_dong) in (11,12,13))
+ group by hd.ma_hop_dong;
  
+ -- TASK 13	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng.
+create view w_task13 as
+select dvdk.ma_dich_vu_di_kem, dvdk.ten_dich_vu_di_kem, sum(hdct.so_luong) as so_luong_dich_vu_di_kem from dich_vu_di_kem dvdk
+join hop_dong_chi_tiet hdct on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem 
+join hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong
+group by ma_dich_vu_di_kem
+order by sum(hdct.so_luong) desc;
+select * from w_task13
+where so_luong_dich_vu_di_kem = (select max(so_luong_dich_vu_di_kem) from w_task13) ;
+
+-- TASK 14
+select hd.ma_hop_dong, ldv.ten_loai_dich_vu, dvdk.ten_dich_vu_di_kem, count(dvdk.ma_dich_vu_di_kem) as so_lan_su_dung
+from hop_dong hd
+ join dich_vu dv on hd.ma_dich_vu = dv.ma_dich_vu
+ join loai_dich_vu ldv on ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu
+ join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong
+ join dich_vu_di_kem dvdk on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
+ group by dvdk.ma_dich_vu_di_kem
+having count(dvdk.ma_dich_vu_di_kem) = 1
+order by hd.ma_hop_dong;
+
+-- TASK 15
+select nhan_vien.ma_nhan_vien, nhan_vien.ho_ten, trinh_do.ten_trinh_do, bo_phan.ten_bo_phan, nhan_vien.so_dien_thoai, nhan_vien.dia_chi, count(hop_dong.ma_nhan_vien) as so_lan_lam_hop_dong
+from nhan_vien join hop_dong on nhan_vien.ma_nhan_vien = hop_dong.ma_nhan_vien 
+join trinh_do on trinh_do.ma_trinh_do = nhan_vien.ma_trinh_do
+join bo_phan on bo_phan.ma_bo_phan = nhan_vien.ma_bo_phan
+where year(hop_dong.ngay_lam_hop_dong) in (2020,2021)
+group by hop_dong.ma_nhan_vien
+having count(hop_dong.ma_nhan_vien) <= 3
+order by nhan_vien.ma_nhan_vien;
