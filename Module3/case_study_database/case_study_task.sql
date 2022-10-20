@@ -90,3 +90,5 @@ left join hop_dong_chi_tiet hdct on hdct.ma_hop_dong = hd.ma_hop_dong
 left join dich_vu_di_kem dvdk on dvdk.ma_dich_vu_di_kem = hdct.ma_dich_vu_di_kem
 where lk.ten_loai_khach = 'Diamond' and ((kh.dia_chi like '%Vinh%') or (kh.dia_chi like '%Quảng Trị%'));
  
+ -- TASK 12
+ 
