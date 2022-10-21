@@ -135,3 +135,68 @@ where year(hop_dong.ngay_lam_hop_dong) in (2020,2021)
 group by hop_dong.ma_nhan_vien
 having count(hop_dong.ma_nhan_vien) <= 3
 order by nhan_vien.ma_nhan_vien;
+
+-- TASK 16 Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
+create view w_task16 as
+select nhan_vien.ma_nhan_vien, nhan_vien.ho_ten from nhan_vien join hop_dong on hop_dong.ma_nhan_vien = nhan_vien.ma_nhan_vien
+where year(hop_dong.ngay_lam_hop_dong) in (2019,2021)
+group by nhan_vien.ma_nhan_vien;
+delete from nhan_vien
+where nhan_vien.ma_nhan_vien not in (
+select w_task16.ma_nhan_vien from w_task16);
+
+-- TASK 17
+create view tong_thanh_toan_2021 as
+select kh.ma_khach_hang,kh.ho_ten,lk.ten_loai_khach,hd.ma_hop_dong,dv.ten_dich_vu,hd.ngay_lam_hop_dong,hd.ngay_ket_thuc,
+    (ifnull(dv.chi_phi_thue,0) + ifnull(hdct.so_luong,0)  * ifnull(dvdk.gia,0)) as tong_tien
+	from khach_hang kh 
+	left join loai_khach lk on lk.ma_loai_khach = kh.ma_loai_khach 
+	left join hop_dong hd on kh.ma_khach_hang = hd.ma_khach_hang
+	left join hop_dong_chi_tiet hdct on hd.ma_hop_dong = hdct.ma_hop_dong
+	left join dich_vu dv on hd.ma_dich_vu = dv.ma_dich_vu 
+	left join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+    where year(hd.ngay_lam_hop_dong) = 2021 and  (ifnull(dv.chi_phi_thue,0) + ifnull(hdct.so_luong,0)  * ifnull(dvdk.gia,0))  > 10000000
+	group by  hd.ma_hop_dong, kh.ma_khach_hang
+	order by ma_khach_hang ;
+create view w_task17 as
+select khach_hang.ma_khach_hang, loai_khach.ten_loai_khach from 
+khach_hang join loai_khach on khach_hang.ma_loai_khach = loai_khach.ma_loai_khach;
+SET SQL_SAFE_UPDATES = 0; -- tắt chế độ an toàn
+SET SQL_SAFE_UPDATES = 1; -- bật chế độ an toàn
+update w_task17
+set w_task17.ten_loai_khach = 'Diamond'
+where w_task17.ten_loai_khach = 'Platinum'
+and (w_task17.ma_khach_hang in (select tong_thanh_toan_2021.ma_khach_hang from tong_thanh_toan_2021));
+-- TASK 18 (00-11)
+create view w_task18 as
+select khach_hang.ma_khach_hang, khach_hang.ho_ten, hop_dong.ngay_lam_hop_dong 
+from khach_hang join hop_dong on khach_hang.ma_khach_hang = hop_dong.ma_khach_hang
+where year(hop_dong.ngay_lam_hop_dong) < 2021 
+group by khach_hang.ma_khach_hang;
+SET foreign_key_checks = 0; 
+SET foreign_key_checks = 1; 
+delete from khach_hang 
+where khach_hang.ma_khach_hang in (select w_task18.ma_khach_hang from w_task18);
+
+-- TASK 19
+create view w_task19 as
+select dvdk.ma_dich_vu_di_kem
+from dich_vu_di_kem dvdk 
+join hop_dong_chi_tiet hdct on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem 
+join hop_dong hd on hd.ma_hop_dong = hdct.ma_hop_dong
+where year(hd.ngay_lam_hop_dong) = 2020
+group by dvdk.ten_dich_vu_di_kem
+having sum(hdct.so_luong) > 10;
+SET SQL_SAFE_UPDATES = 0;
+update dich_vu_di_kem
+set gia = gia * 2
+where ma_dich_vu_di_kem in (
+select * from w_task19
+);
+
+-- TASK 20
+select nhan_vien.ma_nhan_vien, nhan_vien.ho_ten, nhan_vien.email,nhan_vien.so_dien_thoai, nhan_vien.ngay_sinh, nhan_vien.dia_chi 
+from nhan_vien
+union all
+select khach_hang.ma_khach_hang, khach_hang.ho_ten,khach_hang.email, khach_hang.so_dien_thoai, khach_hang.ngay_sinh, khach_hang.dia_chi
+from khach_hang;

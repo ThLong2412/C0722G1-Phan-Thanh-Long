@@ -86,3 +86,4 @@ so_cccd VARCHAR(45),
   FOREIGN KEY (ma_dich_vu_di_kem) REFERENCES dich_vu_di_kem(ma_dich_vu_di_kem)
  );
  
+ 
