@@ -200,3 +200,55 @@ from nhan_vien
 union all
 select khach_hang.ma_khach_hang, khach_hang.ho_ten,khach_hang.email, khach_hang.so_dien_thoai, khach_hang.ngay_sinh, khach_hang.dia_chi
 from khach_hang;
+
+-- TASK 21
+create view v_nhan_vien as
+select * from nhan_vien 
+where dia_chi like '%Đà Nẵng%';
+-- TASK 22
+SET SQL_SAFE_UPDATES = 1;
+update v_nhan_vien 
+set dia_chi = 'Liên Chiểu';
+-- TASK 23
+Delimiter //
+create procedure sp_xoa_khach_hang (p_id int)
+    begin
+    delete from khach_hang
+    where khach_hang.ma_khach_hang = p_id;
+   end //
+DELIMITER ;
+ call sp_xoa_khach_hang(2);
+-- TASK 24
+Delimiter //
+create procedure sp_them_moi_hop_dong(id int, ngay_lam_hop_dong datetime, ngay_ket_thuc datetime, tien_dat_coc double, ma_nhan_vien int, ma_khach_hang int, ma_dich_vu int)
+    begin
+    insert into hop_dong
+    value (id,ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc,ma_nhan_vien,ma_khach_hang, ma_dich_vu);
+   end //
+DELIMITER ;
+call sp_them_moi_hop_dong(13,'2021-12-15','2022-01-01',150000,3,5,1);
+
+-- TASK 25
+create table so_luong_hop_dong_sau_khi_xoa (
+so_luong int);
+Delimiter //
+create trigger tr_xoa_hop_dong 
+after delete on hop_dong
+for each row 
+begin
+ insert into so_luong_hop_dong_sau_khi_xoa 
+ value (count(hop_dong.ma_hop_dong));
+end // 
+Delimiter ;
+select * from so_luong_hop_dong_sau_khi_xoa;
+SET SQL_SAFE_UPDATES = 0;
+delete from hop_dong 
+where ma_hop_dong = 13;
+Delimiter //
+create procedure sp_xoa_hop_dong (p_id int)
+    begin
+    delete from hop_dong
+    where hop_dong.ma_hop_dong = p_id;
+   end //
+DELIMITER ;
+ call sp_xoa_hop_dong(13);

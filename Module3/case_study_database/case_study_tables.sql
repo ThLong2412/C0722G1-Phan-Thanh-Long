@@ -1,4 +1,5 @@
 CREATE DATABASE case_study_module3_tables;
+
 -- SELECT * [except columnA] FROM tableA (HIỂN THỊ Loại TRỪ CỘT columnA)
 CREATE TABLE vi_tri (
 ma_vi_tri INT PRIMARY KEY,
@@ -85,5 +86,4 @@ so_cccd VARCHAR(45),
  ma_dich_vu_di_kem INT,
   FOREIGN KEY (ma_dich_vu_di_kem) REFERENCES dich_vu_di_kem(ma_dich_vu_di_kem)
  );
- 
  
