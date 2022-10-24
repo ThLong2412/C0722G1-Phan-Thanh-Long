@@ -240,7 +240,7 @@ for each row
 begin
  declare count1 int;
  select count(hop_dong.ma_hop_dong) into count1 from hop_dong;
- insert into so_luong_hop_dong_sau_khi_xoa
+ insert into so_luong_hop_dong_sau_khi_xoa (so_luong, thoi_diem)
  value (count1, now());
 end // 
 Delimiter ;
@@ -255,3 +255,73 @@ create procedure sp_xoa_hop_dong (p_id int)
    end //
 DELIMITER ;
  call sp_xoa_hop_dong(13);
+ 
+ -- TASK 26 Tạo Trigger có tên tr_cap_nhat_hop_dong khi cập nhật ngày kết thúc hợp đồng, cần kiểm tra xem thời gian cập nhật có phù hợp hay không,
+ -- với quy tắc sau: Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày. Nếu dữ liệu hợp lệ thì cho phép cập nhật
+ -- nếu dữ liệu không hợp lệ thì in ra thông báo “Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày” trên console của database.
+ Delimiter //
+create trigger tr_cap_nhat_hop_dong 
+before update on hop_dong
+for each row
+begin 
+if new.ngay_lam_hop_dong is null then
+SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Ngày làm hợp đồng không được trống';
+elseif new.ngay_ket_thuc is null then
+SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Ngày kết thúc không được trống';
+elseif datediff(new.ngay_lam_hop_dong,new.ngay_ket_thuc) < 2 then
+SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày.';
+end if;
+end //
+Delimiter ;
+-- TASK 27
+-- câu A
+create view w_task27 as
+select kh.ma_khach_hang,kh.ho_ten,lk.ten_loai_khach,hd.ma_hop_dong,dv.ten_dich_vu,hd.ngay_lam_hop_dong,hd.ngay_ket_thuc,
+    (ifnull(dv.chi_phi_thue,0) + ifnull(hdct.so_luong,0)  * ifnull(dvdk.gia,0)) as tong_tien
+	from khach_hang kh 
+	left join loai_khach lk on lk.ma_loai_khach = kh.ma_loai_khach 
+	join hop_dong hd on kh.ma_khach_hang = hd.ma_khach_hang
+	left join hop_dong_chi_tiet hdct on hd.ma_hop_dong = hdct.ma_hop_dong
+	left join dich_vu dv on hd.ma_dich_vu = dv.ma_dich_vu 
+	left join dich_vu_di_kem dvdk on hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+	group by dv.ten_dich_vu
+    having tong_tien > 2000000
+	order by ma_khach_hang;
+delimiter //
+create function func_dem_dich_vu()
+returns int
+deterministic
+begin
+declare so_luong int;
+select count(*) into so_luong from w_task27;
+return so_luong;
+end //
+delimiter ;
+select func_dem_dich_vu();
+-- câu B
+delimiter //
+create function func_tinh_thoi_gian_hop_dong(id_hd int)
+returns int
+deterministic
+begin
+return (select (max(datediff(ngay_lam_hop_dong, ngay_ket_thuc))) from hop_dong where ma_hop_dong = id_hd);
+end //
+delimiter ;
+select func_tinh_thoi_gian_hop_dong();
+
+-- TASK 28
+create view v_hop_dong_va_hd_room as
+select hd.ma_hop_dong, hd.ngay_lam_hop_dong, dv.ma_loai_dich_vu
+from hop_dong hd join dich_vu dv 
+on hd.ma_dich_vu = dv.ma_dich_vu 
+where dv.ma_loai_dich_vu = 3 and year(hd.ngay_lam_hop_dong) in (2019,2020);	
+
+Delimiter //
+create procedure sp_xoa_dich_vu_va_hd_room()
+    begin
+    delete from hop_dong
+    where hop_dong.ma_hop_dong in (select v_hop_dong_va_hd_room.ma_hop_dong from v_hop_dong_va_hd_room);  
+    delete from dich_vu
+    where dich_vu.ma_dich_vu in (select v_hop_dong_va_hd_room.ma_dich_vu from v_hop_dong_va_hd_room);
+   end //
+DELIMITER ;
