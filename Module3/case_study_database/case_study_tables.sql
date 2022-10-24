@@ -1,4 +1,5 @@
 CREATE DATABASE case_study_module3_tables;
+drop DATABASE case_study_module3_tables;
 
 -- SELECT * [except columnA] FROM tableA (HIỂN THỊ Loại TRỪ CỘT columnA)
 CREATE TABLE vi_tri (

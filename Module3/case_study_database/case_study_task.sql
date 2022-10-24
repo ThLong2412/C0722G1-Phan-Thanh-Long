@@ -203,12 +203,14 @@ from khach_hang;
 
 -- TASK 21
 create view v_nhan_vien as
-select * from nhan_vien 
-where dia_chi like '%Đà Nẵng%';
+select nhan_vien.ma_nhan_vien, nhan_vien.ho_ten, nhan_vien.so_dien_thoai
+from nhan_vien join hop_dong on hop_dong.ma_nhan_vien = nhan_vien.ma_nhan_vien
+where (nhan_vien.dia_chi like '% Đà Nẵng%') and (year(hop_dong.ngay_lam_hop_dong) = 2021) and (month(hop_dong.ngay_lam_hop_dong) = 4);
 -- TASK 22
-SET SQL_SAFE_UPDATES = 1;
-update v_nhan_vien 
-set dia_chi = 'Liên Chiểu';
+SET SQL_SAFE_UPDATES = 0;
+update nhan_vien 
+set nhan_vien.dia_chi = 'Liên Chiểu'
+where nhan_vien.ma_nhan_vien in (select * from (select v_nhan_vien.ma_nhan_vien from v_nhan_vien) as tb);
 -- TASK 23
 Delimiter //
 create procedure sp_xoa_khach_hang (p_id int)
@@ -230,20 +232,21 @@ call sp_them_moi_hop_dong(13,'2021-12-15','2022-01-01',150000,3,5,1);
 
 -- TASK 25
 create table so_luong_hop_dong_sau_khi_xoa (
-so_luong int);
+so_luong int, thoi_diem datetime);
 Delimiter //
 create trigger tr_xoa_hop_dong 
 after delete on hop_dong
 for each row 
 begin
- insert into so_luong_hop_dong_sau_khi_xoa 
- value (count(hop_dong.ma_hop_dong));
+ declare count1 int;
+ select count(hop_dong.ma_hop_dong) into count1 from hop_dong;
+ insert into so_luong_hop_dong_sau_khi_xoa
+ value (count1, now());
 end // 
 Delimiter ;
+drop trigger tr_xoa_hop_dong ;
 select * from so_luong_hop_dong_sau_khi_xoa;
 SET SQL_SAFE_UPDATES = 0;
-delete from hop_dong 
-where ma_hop_dong = 13;
 Delimiter //
 create procedure sp_xoa_hop_dong (p_id int)
     begin

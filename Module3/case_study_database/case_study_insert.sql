@@ -1,4 +1,5 @@
 CREATE DATABASE case_study_module3_insert_data;
+drop DATABASE case_study_module3_insert_data;
 
 USE case_study_module3_tables;
 INSERT INTO vi_tri (ma_vi_tri, ten_vi_tri)
