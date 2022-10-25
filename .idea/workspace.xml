@@ -20,47 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Module2/src/exam/controller/TaiKhoanController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/exam/controller/TaiKhoanThanhToanController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/exam/controller/TaiKhoanTietKiemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/exam/data/tai_khoan_thanh_toan.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/exam/data/tai_khoan_tiet_kiem.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/exam/model/TaiKhoanNganHang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/exam/model/TaiKhoanThanhToan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/exam/model/TaiKhoanTietKiem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/exam/service/ITaiKhoanThanhToanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/exam/service/ITaiKhoanTietKiemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/exam/service/impl/TaiKhoanThanhToanService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module2/src/exam/service/impl/TaiKhoanTietKiemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/.idea/csv-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/controller/FuramaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/controller/FuramaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/data/booking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/data/booking.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/data/employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/data/employee.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/data/maintenance.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/data/maintenance.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/model/facility/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/model/facility/House.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/model/facility/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/model/facility/Villa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/service/impl/BookingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/service/impl/BookingServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/service/impl/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/service/impl/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/service/impl/FacilityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/service/impl/FacilityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/service/impl/PromotionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/out/production/Module2/case_study/service/impl/PromotionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/src/case_study/controller/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/src/case_study/controller/FuramaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/src/case_study/data/booking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/src/case_study/data/booking.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/src/case_study/data/employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/src/case_study/data/employee.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/src/case_study/data/maintenance.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/src/case_study/data/maintenance.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/src/case_study/model/facility/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/src/case_study/model/facility/House.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/src/case_study/model/facility/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/src/case_study/model/facility/Villa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/src/case_study/service/impl/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/src/case_study/service/impl/BookingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/src/case_study/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/src/case_study/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/src/case_study/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/src/case_study/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/src/case_study/service/impl/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/src/case_study/service/impl/FacilityServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/src/case_study/service/impl/PromotionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/src/case_study/service/impl/PromotionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/.idea/Module3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss6_css/.idea/ss6_css.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/bai_tap_1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/bai_tap_2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/bai_tap_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/bai_tap_3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/chuyen_xe_dac_biet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/mot_kiep_nguoi.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/nhan_tam_truyen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module1/ss5_html_form_&amp;_table/bai_tap/bai3_tao_form_lay_sur_khach_hang.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/ss5_html_form_&amp;_table/bai_tap/bai3_tao_form_lay_sur_khach_hang.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,12 +55,20 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Module1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -92,6 +84,8 @@
       <workItem from="1662436536467" duration="40000" />
       <workItem from="1663818790052" duration="31000" />
       <workItem from="1665549553442" duration="2000" />
+      <workItem from="1666596862251" duration="2472000" />
+      <workItem from="1666660635635" duration="5630000" />
     </task>
     <servers />
   </component>
@@ -119,5 +113,9 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="209" y="29" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1662362565768" />
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1666664893869">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="431" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1666664893869" />
   </component>
 </project>

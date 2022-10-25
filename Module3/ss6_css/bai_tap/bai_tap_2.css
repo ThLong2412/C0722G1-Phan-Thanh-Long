@@ -1,0 +1,12 @@
+h1 {
+    border-bottom: 2px
+    solid greenyellow;
+    text-align: center;
+}
+p{
+    text-indent: 50px;
+    font-size: 25px;
+}
+#the1 {color: blue}
+#the2{color: red}
+.the3{font-weight: bold;}

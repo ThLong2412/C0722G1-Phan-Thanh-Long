@@ -1,0 +1,15 @@
+
+h2{style : "text-align: center";
+color: red;
+    border-bottom: 3px
+    solid cornflowerblue;}
+h1{style : "text-align: center";
+    color: red;
+    border-bottom: 3px
+    solid cornflowerblue;}
+p{
+    text-indent: 50px;
+    font-size: 20px;
+}
+h5{color: chartreuse;
+}
