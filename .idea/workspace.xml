@@ -20,15 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/bai_tap_1.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_1/bai_tap_1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/bai_tap_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_1/bai_tap_1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/bai_tap_2.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_2/bai_tap_2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/bai_tap_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_2/bai_tap_2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/bai_tap_3.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_3/bai_tap_3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/bai_tap_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_3/bai_tap_3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/chuyen_xe_dac_biet.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_3/chuyen_xe_dac_biet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/mot_kiep_nguoi.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_3/mot_kiep_nguoi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/ss6_css/bai_tap/nhan_tam_truyen.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_3/nhan_tam_truyen.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_2/bai_tap_2.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_2/bai_tap_2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_2/bai_tap_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_2/bai_tap_2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +82,7 @@
       <workItem from="1663818790052" duration="31000" />
       <workItem from="1665549553442" duration="2000" />
       <workItem from="1666596862251" duration="2472000" />
-      <workItem from="1666660635635" duration="5876000" />
+      <workItem from="1666660635635" duration="7815000" />
     </task>
     <servers />
   </component>
