@@ -1,0 +1,95 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#header, #header ul, #header li {
+    padding: 0;
+    margin: 0;
+}
+
+#header li {
+    list-style: none;
+    position: relative;
+    padding: 10px;
+    background-color: black;
+    line-height: 30px;
+    cursor: pointer;
+    display: inline;
+    color: white;
+    float: left;
+}
+
+#header ul ul {
+    position: absolute;
+    display: inline;
+    visibility: hidden;
+    top: 50px;
+}
+
+#header li:hover {
+    background-color: aqua
+}
+#header {
+    background-color: black;
+    position: fixed;
+    height: 50px;
+    top: 0;
+    width: 100%;
+}
+
+#content1 {
+    background-color: gainsboro;
+    top: 50px;
+    width: 15%;
+    height: 600px;
+    float: left;
+    position: relative;
+}
+
+#content1 ul li {
+    list-style: none;
+    margin-top: 15px;
+}
+
+#content2 {
+    background-color: white;
+    top: 50px;
+    width: 70%;
+    height: 600px;
+    float: left;
+    position: relative;
+}
+
+#content3 {
+    background-color: gainsboro;
+    top: 50px;
+    width: 15%;
+    height: 600px;
+    float: left;
+    position: relative;
+    display: inline;
+}
+
+#footer {
+    top: 650px;
+    background-color: dimgrey;
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+
+.cls {
+    height: 75px;
+    width: 120px;
+    border-style: groove;
+    list-style: none;
+    left: 20px;
+    text-align: center;
+    line-height: 75px;
+    margin: 20px;
+}
+.cls:hover{
+    background-color: aqua;
+}
+

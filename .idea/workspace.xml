@@ -20,9 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Module3/demo_layout/drid_view.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss7_rwd/bai_tap/bai_tap_3/bai_tap_3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss7_rwd/bai_tap/bai_tap_3/bai_tap_3_tao_layout_voi_rwd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss7_rwd/bai_tap/bai_tap_4/phim_hoat_hinh.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss7_rwd/bai_tap/bai_tap_4/ung_dung_xem_hoat_hinh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss7_rwd/thuc_hanh/menu_ngang.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_2/bai_tap_2.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_2/bai_tap_2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_2/bai_tap_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss6_css/bai_tap_2/bai_tap_2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -63,6 +67,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Codegym\Module3\ss7_rwd\bai_tap\bai_tap_3" />
+      <recent name="D:\Codegym\Module3" />
       <recent name="D:\Codegym\Module3\ss6_css\bai_tap_11" />
       <recent name="D:\Codegym\Module3\ss6_css\bai_tap_2" />
     </key>
@@ -82,7 +88,14 @@
       <workItem from="1663818790052" duration="31000" />
       <workItem from="1665549553442" duration="2000" />
       <workItem from="1666596862251" duration="2472000" />
-      <workItem from="1666660635635" duration="7815000" />
+      <workItem from="1666660635635" duration="10690000" />
+      <workItem from="1666748021556" duration="285000" />
+      <workItem from="1666755169650" duration="4474000" />
+      <workItem from="1666765895563" duration="12109000" />
+      <workItem from="1666842021795" duration="969000" />
+      <workItem from="1666843016839" duration="3264000" />
+      <workItem from="1666852351763" duration="125000" />
+      <workItem from="1666852493781" duration="2038000" />
     </task>
     <servers />
   </component>
