@@ -2,33 +2,22 @@ CREATE DATABASE case_study_module3_insert_data;
 drop DATABASE case_study_module3_insert_data;
 
 USE case_study_module3_tables;
-INSERT INTO vi_tri (ma_vi_tri, ten_vi_tri)
+INSERT INTO position
 VALUE (1,'Quản Lý'), (2,'Nhân Viên');
-INSERT INTO trinh_do(ma_trinh_do,ten_trinh_do)
+INSERT INTO education_degree
 VALUE(1,"Trung Cấp"),
 	(2,"Cao Đẳng"),
 	(3,"Đại Học"),
 	(4,"Sau Đại Học");
 
-INSERT INTO bo_phan(ma_bo_phan,ten_bo_phan)
+INSERT INTO division
 VALUE(1,"Sale-Marketing"),
 (2,"Hành chính"),
 (3,"Phục vụ"),
 (4,"Quản lý");
 
-INSERT INTO nhan_vien(
-ma_nhan_vien,
-ho_ten,
-ngay_sinh,
-so_cccd,
-luong,
-so_dien_thoai,
-email,
-dia_chi,
-ma_vi_tri,
-ma_trinh_do,
-ma_bo_phan
-)VALUE
+INSERT INTO employee 
+VALUE
 (1,"Nguyễn Văn An",'1970-11-07',"456231786",
 10000000,"0901234121","annguyen@gmail.com",
 "295 Nguyễn Tất Thành,Đà Nẵng",1,3,1),
@@ -67,16 +56,16 @@ ma_bo_phan
 '6 Hoà Khánh, Đồng Nai',2,3,2
 );
 
-INSERT INTO loai_khach(ma_loai_khach,ten_loai_khach)
+INSERT INTO customer_type
 VALUE(1,'Diamond'),
 	(2,'Platinium'),
 	(3,'Gold'),
 	(4,'Silver'),
 	(5,'Member');
     
-INSERT INTO khach_hang(ma_khach_hang,
-ho_ten,ngay_sinh,gioi_tinh,so_cccd,so_dien_thoai,
-email,dia_chi,ma_loai_khach)VALUE
+INSERT INTO customer(id,
+name,day_of_birth,gender,id_card,phone_number,
+email,address,customer_type_id)VALUE
 (1,'Nguyễn Thị Hào','1970-11-07',0,'643431213',
 '0945423362','thihao07@gmail.com',
 '23 Nguyễn Hoàng, Đà Nẵng',5
@@ -117,29 +106,29 @@ email,dia_chi,ma_loai_khach)VALUE
 '0987654321','dactam@gmail.com',
 '22 Ngô Quyền, Đà Nẵng',2
 );
-INSERT INTO kieu_thue(ma_kieu_thue,ten_kieu_thue)
+INSERT INTO rent_type
 VALUE(1,"year"),
 (2,"month"),
 (3,"day"),
 (4,"hour");
-INSERT INTO loai_dich_vu(ma_loai_dich_vu,ten_loai_dich_vu)
+INSERT INTO facility_type
 VALUE(1,"Villa"),
 (2,"House"),
 (3,"Room");
 
-INSERT INTO dich_vu(
-ma_dich_vu,
-ten_dich_vu,
-dien_tich,
-chi_phi_thue,
-so_nguoi_toi_da,
-tieu_chuan_phong,
-mo_ta_tien_nghi_khac,
-dien_tich_ho_boi,
-so_tang,
-dich_vu_mien_phi_di_kem,
-ma_kieu_thue,
-ma_loai_dich_vu
+INSERT INTO facility(
+id,
+name,
+area,
+cost,
+max_people,
+standard_room,
+descriiption_other_convenience,
+pool_area,
+number_of_floors,
+facility_free,
+rent_type_id,
+facility_type_id
 ) VALUE
 (1,"Villa Beach Front",25000,10000000,10,"vip",
 "Có hồ bơi",500,4,null,3,1),
@@ -153,8 +142,7 @@ ma_loai_dich_vu
 "Có thêm bếp nướng",null,2,null,3,2),
 (6,"Room Twin 02",3000,900000,2,"normal",
 "Có tivi",null,null,"1 xe máy",4,3);
-INSERT INTO dich_vu_di_kem(ma_dich_vu_di_kem,
-ten_dich_vu_di_kem,gia,don_vi,trang_thai)
+INSERT INTO attach_facility
 VALUE
 (1,"Karaoke",10000,"giờ","tiện nghi,hiện đại"),
 (2,"Thuê xe máy",10000,"chiếc","hỏng 1 xe"),
@@ -163,15 +151,7 @@ VALUE
 (5,"Buffet buổi trưa",90000,"suất","đầy đủ đồ ăn,tráng miệng"),
 (6,"Buffet buổi tối",16000,"suất","đầy đủ đồ ăn,tráng miệng");
 
-INSERT INTO hop_dong(
-ma_hop_dong,
-ngay_lam_hop_dong,
-ngay_ket_thuc,
-tien_dat_coc,
-ma_nhan_vien,
-ma_khach_hang,
-ma_dich_vu
-)VALUE
+INSERT INTO contract VALUE
 (1,'2020-12-08','2020-12-08',0,3,1,3),
 (2,'2020-07-014','2020-07-021',200000,7,3,1),
 (3,'2021-03-015','2021-03-17',50000,3,4,2),
@@ -184,12 +164,7 @@ ma_dich_vu
 (10,'2021-04-12','2021-04-14',0,10,3,5),
 (11,'2021-04-25','2021-04-25',0,2,2,1),
 (12,'2021-05-25','2021-05-27',0,7,10,1);
-INSERT INTO hop_dong_chi_tiet(
-ma_hop_dong_chi_tiet,
-so_luong,
-ma_hop_dong,
-ma_dich_vu_di_kem
-) VALUE
+INSERT INTO contract_detail VALUE
 (1,5,2,4),
 (2,8,2,5),
 (3,15,2,6),
