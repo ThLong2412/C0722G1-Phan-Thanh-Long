@@ -20,6 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/case_study.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/case_study.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/case_study.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/case_study.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module3/ss8_bootstrap/bai_tap/bai_tap_2/bai_tap_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss8_bootstrap/bai_tap/bai_tap_2/bai_tap_2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +98,8 @@
       <workItem from="1667184691986" duration="6109000" />
       <workItem from="1667197895063" duration="7409000" />
       <workItem from="1667227102582" duration="1012000" />
-      <workItem from="1667228718561" duration="659000" />
+      <workItem from="1667228718561" duration="892000" />
+      <workItem from="1667266083940" duration="8480000" />
     </task>
     <servers />
   </component>

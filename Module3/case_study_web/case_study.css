@@ -1,16 +1,17 @@
 *{
     box-sizing: border-box;
-    margin: 0;
+    margin: 0!important;
     padding: 0;
 }
 .header {
     width: 100%;
     height: 70px;
     background-color: darkgrey;
+    margin: 0;
 }
-img {
-    width: 3%;
-    height: 35%;
+#img1 {
+    width: 50px;
+    height: 50px;
     border-radius:30%;
     -moz-border-radius:30%;
     -webkit-border-radius:30%;
@@ -45,14 +46,14 @@ img {
     flex-wrap: wrap;
 
 }
-.footer {
-    height: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aqua;
-}
+/*.footer {*/
+/*    height: 50px;*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    background-color: aqua;*/
+/*}*/
 /*màn hình điện thoai*/
 @media only screen and (max-width:740px ){
     .col-s-1 {width: 8.33333%;}
