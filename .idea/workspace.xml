@@ -21,9 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/case_study.css" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/case_study.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module3/case_study_web/case_study.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/case_study.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/ss8_bootstrap/bai_tap/bai_tap_2/bai_tap_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss8_bootstrap/bai_tap/bai_tap_2/bai_tap_2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +99,11 @@
       <workItem from="1667197895063" duration="7409000" />
       <workItem from="1667227102582" duration="1012000" />
       <workItem from="1667228718561" duration="892000" />
-      <workItem from="1667266083940" duration="8480000" />
+      <workItem from="1667266083940" duration="12530000" />
+      <workItem from="1667352174002" duration="41000" />
+      <workItem from="1667352235962" duration="181000" />
+      <workItem from="1667353133648" duration="196000" />
+      <workItem from="1667360580607" duration="151000" />
     </task>
     <servers />
   </component>
@@ -119,14 +123,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1662436574773">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1667360706926">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1662436574773" />
-    <state x="209" y="29" key="new project wizard" timestamp="1662362565768">
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1667360706926" />
+    <state x="209" y="29" key="new project wizard" timestamp="1667360731526">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="209" y="29" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1662362565768" />
+    <state x="209" y="29" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1667360731526" />
     <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1666664893869">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
