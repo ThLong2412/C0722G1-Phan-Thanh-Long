@@ -20,10 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Module3/case_study_web/service/service_and_edit_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case_study_web/service/service_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss9_web/tu_dien/src/main/java/TranslationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Module2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module3/case_study_web/case_study.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/case_study.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss9_web/bai_tap/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss9_web/bai_tap/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss9_web/bai_tap/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss9_web/bai_tap/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss9_web/bai_tap/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss9_web/bai_tap/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -64,6 +68,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Codegym\Module3\case_study_web\service" />
       <recent name="D:\Codegym\Module3\ss7_rwd\bai_tap\bai_tap_3" />
       <recent name="D:\Codegym\Module3" />
       <recent name="D:\Codegym\Module3\ss6_css\bai_tap_11" />
@@ -104,6 +109,9 @@
       <workItem from="1667352235962" duration="181000" />
       <workItem from="1667353133648" duration="196000" />
       <workItem from="1667360580607" duration="151000" />
+      <workItem from="1667372003611" duration="113000" />
+      <workItem from="1667375353563" duration="2067000" />
+      <workItem from="1667379183630" duration="3927000" />
     </task>
     <servers />
   </component>
@@ -123,14 +131,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1667360706926">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1667372115768">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1667360706926" />
-    <state x="209" y="29" key="new project wizard" timestamp="1667360731526">
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1667372115768" />
+    <state x="209" y="29" key="new project wizard" timestamp="1667378911547">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="209" y="29" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1667360731526" />
+    <state x="209" y="29" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1667378911547" />
     <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1666664893869">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

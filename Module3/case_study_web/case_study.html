@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="D:\Codegym\Module3\case_study_web\case_study.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Employee</a>
@@ -42,9 +42,45 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Customer</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Service</a>
-                    </li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            Service
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item"
+                                   href="file:///D:/Codegym/Module3/case_study_web/service/service_list.html">Service
+                                List</a></li>
+                            <li><a class="dropdown-item"
+                                   href="file:///D:/Codegym/Module3/case_study_web/service/service_and_edit_create.html">Create
+                                Service</a></li>
+                            <li><a class="dropdown-item"
+                                   href="file:///D:/Codegym/Module3/case_study_web/service/service_and_edit_create.html">Edit
+                                Service</a></li>
+                            <li><a class="dropdown-item">Remove Service</a>
+                                <div class="modal" tabindex="-1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Bạn chăc chắn xóa dịch vụ này????</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Hãy cân nhắc khi thực hiện xóa.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                    Close
+                                                </button>
+                                                <button type="button" class="btn btn-primary">Remove</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contract</a>
                     </li>
