@@ -2,19 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>KHU NGHỈ DƯỠNG FURAMA</title>
+    <title>Danh sách khách hàng</title>
     <style>
         #header1 {
             background-image: url("https://dichoinhatrang.net/wp-content/uploads/2022/04/Banner-Sayhi-1.gif");
         }
-
-        #img2 {
-            background-image: url("https://img.freepik.com/free-photo/beautiful-luxury-outdoor-swimming-pool-hotel-resort_74190-7433.jpg?w=2000");
-        }
     </style>
-    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="case_study.css">
-    <script src="../bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../case_study.css">
+    <script src="../../bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 </head>
 <body>
 <div class="header row" id="header1">
@@ -110,68 +107,141 @@
         </div>
     </nav>
 </div>
-<div class="row" style=" margin: 0; padding: 0; ">
-    <div class=" col-lg-2 " style=" margin: 0; padding: 0;">
-        <div class="list-group">
-            <a href="https://furamavietnam.com/vi/furama-special-offers/" class="list-group-item list-group-item-action"
-               aria-current="true" style="background-color: aquamarine">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">ƯU ĐÃI FURAMA</h5>
-                    <small>3 days ago</small>
-                </div>
-                <p class="mb-1">Some placeholder content in a paragraph.</p>
-                <small>And some small print.</small>
-            </a>
-            <a href="https://furamavietnam.com/vi/culinary/" class="list-group-item list-group-item-action"
-               style="background-color: aquamarine">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">ẨM THỰC ĐA DẠNG</h5>
-                    <small class="text-muted">3 days ago</small>
-                </div>
-                <p class="mb-1">Some placeholder content in a paragraph.</p>
-                <small class="text-muted">And some muted small print.</small>
-            </a>
-            <a href="https://furamavietnam.com/vi/meeting-and-events/" class="list-group-item list-group-item-action"
-               style="background-color: aquamarine">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">HỘI NGHỊ VÀ SỰ KIỆN CAO CẤP</h5>
-                    <small class="text-muted">3 days ago</small>
-                </div>
-                <p class="mb-1">Some placeholder content in a paragraph.</p>
-                <small class="text-muted">And some muted small print.</small>
-            </a>
-            <a href="https://furamavietnam.com/vi/our-rooms/" class="list-group-item list-group-item-action"
-               style="background-color: aquamarine">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">LOẠI PHÒNG</h5>
-                    <small class="text-muted">3 days ago</small>
-                </div>
-                <p class="mb-1">Some placeholder content in a paragraph.</p>
-                <small class="text-muted">And some muted small print.</small>
-            </a>
-            <a href="https://furamavietnam.com/vi/spa-and-fitness/" class="list-group-item list-group-item-action"
-               style="background-color: aquamarine">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">DỊCH VỤ SPA VÀ THỂ THAO</h5>
-                    <small class="text-muted">3 days ago</small>
-                </div>
-                <p class="mb-1">Some placeholder content in a paragraph.</p>
-                <small class="text-muted">And some muted small print.</small>
-            </a>
-            <a href="https://furamavietnam.com/vi/recreation/" class="list-group-item list-group-item-action"
-               style="background-color: aquamarine">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">GIẢI TRÍ</h5>
-                    <small class="text-muted">3 days ago</small>
-                </div>
-                <p class="mb-1">Some placeholder content in a paragraph.</p>
-                <small class="text-muted">And some muted small print.</small>
-            </a>
-        </div>
-    </div>
-    <div class=" col-lg-10" style=" margin: 0; padding: 0;" id="img2">
 
-    </div>
+
+<div class="row" style=" margin: 0; padding:0; overflow: auto">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th class="col-lg-1">Service id</th>
+            <th class="col-lg-1">Service name</th>
+            <th class="col-lg-1">Area</th>
+            <th class="col-lg-1">Cost</th>
+            <th class="col-lg-1">Max people</th>
+            <th class="col-lg-1">Standard room</th>
+            <th class="col-lg-1">Description other convenience</th>
+            <th class="col-lg-1">Pool area</th>
+            <th class="col-lg-1">Floors number</th>
+            <th class="col-lg-1">Attach free</th>
+            <th class="col-lg-1">Rent type id</th>
+            <th class="col-lg-1">Facility type id</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td><!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary text-black" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Xoá
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-black" id="exampleModalLabel">Yêu Cầu Xoá Dịch Vụ</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-black">
+                                Bạn có chắc chắn muốn xoá
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary text-black" data-bs-dismiss="modal">Quay Lại</button>
+                                <button type="button" class="btn btn-primary text-black">Xoá</button>
+                            </div>
+                        </div>
+                    </div>
+                </div></td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td><!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary text-black" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Xoá
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalt" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-black" id="exampleModalLabelt">Yêu Cầu Xoá Dịch Vụ</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-black">
+                                Bạn có chắc chắn muốn xoá
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary text-black" data-bs-dismiss="modal">Quay Lại</button>
+                                <button type="button" class="btn btn-primary text-black">Xoá</button>
+                            </div>
+                        </div>
+                    </div>
+                </div></td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td><!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary text-black" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Xoá
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalth" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-black" id="exampleModalLabelth">Yêu Cầu Xoá Dịch Vụ</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-black">
+                                Bạn có chắc chắn muốn xoá
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary text-black" data-bs-dismiss="modal">Quay Lại</button>
+                                <button type="button" class="btn btn-primary text-black">Xoá</button>
+                            </div>
+                        </div>
+                    </div>
+                </div></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </div>
 
 <div class="footer" style="background-color: aqua; display: flex;

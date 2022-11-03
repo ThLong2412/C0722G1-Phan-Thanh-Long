@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Thêm mới và Chỉnh sửa dịch vụ</title>
-    <link rel="stylesheet" href="../case_study.css">
-    <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.css">
 
+    <link rel="stylesheet" href="../../bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../case_study.css">
     <style>
         .csscs {
             display: flex;
             justify-content: center;
             align-items: center
         }
+
         #header1 {
             background-image: url("https://dichoinhatrang.net/wp-content/uploads/2022/04/Banner-Sayhi-1.gif");
         }
     </style>
+    <script src="../../bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 
 </head>
 <body>
@@ -31,20 +33,48 @@
     <div class="col-lg-8"></div>
     <div class="col-lg-2 left-header"><p>Phan Thanh Long</p></div>
 </div>
-<div class="container-fluid" style="padding: 0;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
-        <div class="container-fluid" >
+<div class="container-fluid sticky-top" style="padding: 0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="D:\Codegym\Module3\case_study_web\case_study.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Employee</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Customer</a>
-                    </li>
+                    <a class="btn btn-primary" href="file:///D:/Codegym/Module3/case_study_web/case_study.html" role="button">Home</a>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Employee
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item"
+                                   href="file:///D:/Codegym/Module3/case_study_web/employee/list_employee.html">Employee
+                                List</a></li>
+                            <li><a class="dropdown-item"
+                                   href="file:///D:/Codegym/Module3/case_study_web/employee/create_employee.html">Create
+                                Employee</a></li>
+                            <li><a class="dropdown-item"
+                                   href="file:///D:/Codegym/Module3/case_study_web/employee/edit_employee.html">Edit
+                                Employee</a></li>
+                            <li><a class="dropdown-item" href="#">Remove Employee</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Customer
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item"
+                                   href="file:///D:/Codegym/Module3/case_study_web/customer/customer_list.html">Customer
+                                List</a></li>
+                            <li><a class="dropdown-item"
+                                   href="file:///D:/Codegym/Module3/case_study_web/customer/create_customer.html">Create
+                                Customer</a></li>
+                            <li><a class="dropdown-item"
+                                   href="file:///D:/Codegym/Module3/case_study_web/customer/edit_customer.html">Edit
+                                Customer</a></li>
+                            <li><a class="dropdown-item" href="#">Remove Customer</a></li>
+                        </ul>
+                    </div>
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -61,32 +91,24 @@
                                    href="file:///D:/Codegym/Module3/case_study_web/service/service_and_edit_create.html">Edit
                                 Service</a></li>
                             <li><a class="dropdown-item">Remove Service</a>
-                                <div class="modal" tabindex="-1">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Bạn chăc chắn xóa dịch vụ này????</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Hãy cân nhắc khi thực hiện xóa.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                                    Close
-                                                </button>
-                                                <button type="button" class="btn btn-primary">Remove</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </li>
                         </ul>
                     </div>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contract</a>
-                    </li>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Contract
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item"
+                                   href="file:///D:/Codegym/Module3/case_study_web/contract/list_contract.html">Contract
+                                List</a></li>
+                            <li><a class="dropdown-item"
+                                   href="file:///D:/Codegym/Module3/case_study_web/contract/create_contract.html">Create
+                                Contract</a></li>
+                        </ul>
+                    </div>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -96,6 +118,7 @@
         </div>
     </nav>
 </div>
+
 <div class="row" style=" margin: 0; padding: 0; ">
     <div class=" col-lg-2 " style=" margin: 0; padding: 0;">
         <div class="list-group">
@@ -108,7 +131,8 @@
                 <p class="mb-1">Some placeholder content in a paragraph.</p>
                 <small>And some small print.</small>
             </a>
-            <a href="https://furamavietnam.com/vi/culinary/" class="list-group-item list-group-item-action" style="background-color: aquamarine">
+            <a href="https://furamavietnam.com/vi/culinary/" class="list-group-item list-group-item-action"
+               style="background-color: aquamarine">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">ẨM THỰC ĐA DẠNG</h5>
                     <small class="text-muted">3 days ago</small>
@@ -116,7 +140,8 @@
                 <p class="mb-1">Some placeholder content in a paragraph.</p>
                 <small class="text-muted">And some muted small print.</small>
             </a>
-            <a href="https://furamavietnam.com/vi/meeting-and-events/" class="list-group-item list-group-item-action" style="background-color: aquamarine">
+            <a href="https://furamavietnam.com/vi/meeting-and-events/" class="list-group-item list-group-item-action"
+               style="background-color: aquamarine">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">HỘI NGHỊ VÀ SỰ KIỆN CAO CẤP</h5>
                     <small class="text-muted">3 days ago</small>
@@ -124,7 +149,8 @@
                 <p class="mb-1">Some placeholder content in a paragraph.</p>
                 <small class="text-muted">And some muted small print.</small>
             </a>
-            <a href="https://furamavietnam.com/vi/our-rooms/" class="list-group-item list-group-item-action" style="background-color: aquamarine">
+            <a href="https://furamavietnam.com/vi/our-rooms/" class="list-group-item list-group-item-action"
+               style="background-color: aquamarine">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">LOẠI PHÒNG</h5>
                     <small class="text-muted">3 days ago</small>
@@ -132,7 +158,8 @@
                 <p class="mb-1">Some placeholder content in a paragraph.</p>
                 <small class="text-muted">And some muted small print.</small>
             </a>
-            <a href="https://furamavietnam.com/vi/spa-and-fitness/" class="list-group-item list-group-item-action" style="background-color: aquamarine">
+            <a href="https://furamavietnam.com/vi/spa-and-fitness/" class="list-group-item list-group-item-action"
+               style="background-color: aquamarine">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">DỊCH VỤ SPA VÀ THỂ THAO</h5>
                     <small class="text-muted">3 days ago</small>
@@ -140,7 +167,8 @@
                 <p class="mb-1">Some placeholder content in a paragraph.</p>
                 <small class="text-muted">And some muted small print.</small>
             </a>
-            <a href="https://furamavietnam.com/vi/recreation/" class="list-group-item list-group-item-action" style="background-color: aquamarine">
+            <a href="https://furamavietnam.com/vi/recreation/" class="list-group-item list-group-item-action"
+               style="background-color: aquamarine">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">GIẢI TRÍ</h5>
                     <small class="text-muted">3 days ago</small>
@@ -153,75 +181,76 @@
     <div class=" col-lg-10" style=" margin: 0; padding: 0;">
         <div class="col-lg-12 left-header" style="color: red; font-size: 70px">DANH SÁCH DỊCH VỤ</div>
         <div class="col-lg-12 left-header" style="background-color: cadetblue">
-        <form class="row g-3" style="background-color: bisque; padding: 0; margin: 0; width: 60%">
-            
-            <div class="col-md-1">
-                <label>Id service</label>
-                <input class="form-control csscs">
-            </div>
-            <div class="col-md-11"></div>
-            <div class="col-md-5">
-                <labal>Name service</labal>
-                <input class="form-control csscs">
-            </div>
-            <div class="col-md-7"></div>
-            <div class="col-md-2">
-                <labal>Area</labal>
-                <input class="form-control csscs">
-            </div>
-            <div class="col-md-10"></div>
-            <div class="col-md-3">
-                <labal>Cost</labal>
-                <input class="form-control csscs">
-            </div>
-            <div class="col-md-9"></div>
-            <div class="col-md-1">
-                <labal>Max people</labal>
-                <input class="form-control csscs">
-            </div>
-            <div class="col-md-11"></div>
-            <div class="col-md-5">
-                <label>Standard room</label>
-                <input class="form-control csscs">
-            </div>
-            <div class="col-md-7"></div>
-            <div class="col-md-5">
-                <lable>Description other convenience</lable>
-                <input class="form-control csscs">
-            </div>
-            <div class="col-md-7"></div>
-            <div class="col-md-2">
-                <lable>Pool area</lable>
-                <input class="form-control csscs">
-            </div>
-            <div class="col-md-10"></div>
-            <div class="col-md-1">
-                <lable>Floors number</lable>
-                <input class="form-control csscs">
-            </div>
-            <div class="col-md-11"></div>
-            <div class="col-md-5">
-                <lable>Attach free</lable>
-                <input class="form-control csscs">
-            </div>
-            <div class="col-md-7"></div>
-            <div class="col-md-2">
-                <lable>Rent type id</lable>
-                <input class="form-control csscs">
-            </div>
-            <div class="col-md-2">
-                <lable>Facility type id</lable>
-                <input class="form-control csscs">
-            </div>
-            <div class="col-md-8"></div>
-            <div class="col-md-5"></div>
-            <div class="col-md-2">
-                <button type="submit">Save</button>
-            </div>
-            <div class="col-md-5"></div>
-        </form>
+            <form class="row g-3" style="background-color: bisque; padding: 0; margin: 0; width: 60%">
+
+                <div class="col-md-1">
+                    <label>Id service</label>
+                    <input class="form-control csscs">
+                </div>
+                <div class="col-md-11"></div>
+                <div class="col-md-5">
+                    <labal>Name service</labal>
+                    <input class="form-control csscs">
+                </div>
+                <div class="col-md-7"></div>
+                <div class="col-md-2">
+                    <labal>Area</labal>
+                    <input class="form-control csscs">
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-3">
+                    <labal>Cost</labal>
+                    <input class="form-control csscs">
+                </div>
+                <div class="col-md-9"></div>
+                <div class="col-md-1">
+                    <labal>Max people</labal>
+                    <input class="form-control csscs">
+                </div>
+                <div class="col-md-11"></div>
+                <div class="col-md-5">
+                    <label>Standard room</label>
+                    <input class="form-control csscs">
+                </div>
+                <div class="col-md-7"></div>
+                <div class="col-md-5">
+                    <lable>Description other convenience</lable>
+                    <input class="form-control csscs">
+                </div>
+                <div class="col-md-7"></div>
+                <div class="col-md-2">
+                    <lable>Pool area</lable>
+                    <input class="form-control csscs">
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <lable>Floors number</lable>
+                    <input class="form-control csscs">
+                </div>
+                <div class="col-md-11"></div>
+                <div class="col-md-5">
+                    <lable>Attach free</lable>
+                    <input class="form-control csscs">
+                </div>
+                <div class="col-md-7"></div>
+                <div class="col-md-2">
+                    <lable>Rent type id</lable>
+                    <input class="form-control csscs">
+                </div>
+                <div class="col-md-2">
+                    <lable>Facility type id</lable>
+                    <input class="form-control csscs">
+                </div>
+                <div class="col-md-8"></div>
+                <div class="col-md-5"></div>
+                <div class="col-md-2">
+                    <button type="submit">Save</button>
+                </div>
+                <div class="col-md-5"></div>
+            </form>
+        </div>
     </div>
-    </div>
+</div>
 </div>
 
 <div class="footer" style="background-color: aqua; display: flex;
@@ -347,6 +376,5 @@ justify-content: center; align-items: center">
     </div>
 </div>
 
-<script src="../../bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 </body>
 </html>
