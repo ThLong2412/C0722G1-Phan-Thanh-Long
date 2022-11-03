@@ -20,14 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Module3/ss10_jstl/exersice_list_customer/src/main/java/servlet/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss10_jstl/exersice_list_customer/src/main/java/servlet/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss10_jstl/exersice_list_customer/src/main/webapp/list_customer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss10_jstl/exersice_calculator/src/main/java/servlet/CalculatorServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/case_study.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/case_study.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/service/service_and_edit_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/service/service_and_edit_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/service/service_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/service/service_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/ss9_web/bai_tap/src/main/java/ProductDiscountCalculatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss9_web/bai_tap/src/main/java/ProductDiscountCalculatorServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +108,8 @@
       <workItem from="1667379183630" duration="3990000" />
       <workItem from="1667437915065" duration="1834000" />
       <workItem from="1667446752033" duration="125000" />
-      <workItem from="1667456087885" duration="93000" />
+      <workItem from="1667456087885" duration="221000" />
+      <workItem from="1667457312420" duration="70000" />
     </task>
     <servers />
   </component>
@@ -134,14 +129,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1667446853090">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1667456291666">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1667446853090" />
-    <state x="209" y="29" key="new project wizard" timestamp="1667446877371">
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1667456291666" />
+    <state x="209" y="29" key="new project wizard" timestamp="1667456308999">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="209" y="29" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1667446877371" />
+    <state x="209" y="29" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1667456308999" />
     <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1666664893869">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
