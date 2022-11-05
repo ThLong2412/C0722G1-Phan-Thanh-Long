@@ -20,18 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Module3/case_study_web/contract/create_contract.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/case_study_web/contract/list_contract.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/case_study_web/customer/create_customer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/case_study_web/customer/customer_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/case_study_web/customer/edit_customer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/case_study_web/employee/create_employee.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/case_study_web/employee/edit_employee.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/case_study_web/employee/list_employee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/java/com/codegym/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/java/com/codegym/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/java/com/codegym/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/webapp/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/webapp/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/webapp/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/webapp/error-404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/webapp/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/webapp/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/java/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/java/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/java/repository/impl/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/java/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/java/service/impl/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/webapp/view/add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/case_study.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/case_study.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module3/case_study_web/service/service_and_edit_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/service/service_and_edit_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/service/service_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/service/service_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +68,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Module3/case_study_web/customer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -125,7 +132,11 @@
       <workItem from="1667457312420" duration="70000" />
       <workItem from="1667460446388" duration="1290000" />
       <workItem from="1667461859406" duration="4191000" />
-      <workItem from="1667466439237" duration="3024000" />
+      <workItem from="1667466439237" duration="3709000" />
+      <workItem from="1667482987390" duration="104000" />
+      <workItem from="1667483306166" duration="74000" />
+      <workItem from="1667525098618" duration="797000" />
+      <workItem from="1667546270920" duration="275000" />
     </task>
     <servers />
   </component>
@@ -145,14 +156,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1667456291666">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1667483345939">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1667456291666" />
-    <state x="209" y="29" key="new project wizard" timestamp="1667456308999">
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1667483345939" />
+    <state x="209" y="29" key="new project wizard" timestamp="1667483378634">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="209" y="29" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1667456308999" />
+    <state x="209" y="29" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1667483378634" />
     <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1666664893869">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
