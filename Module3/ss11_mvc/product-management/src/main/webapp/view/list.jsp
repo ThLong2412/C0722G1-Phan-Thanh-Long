@@ -17,6 +17,7 @@
 <a href="/product?action=add">Thêm mới</a>
 <table class="table table-dark">
     <tr>
+        <th>STT</th>
         <th>ID</th>
         <th>Name</th>
         <th>Price</th>
@@ -24,7 +25,7 @@
         <th>Producer</th>
         <th colspan="3">Function</th>
     </tr>
-    <c:forEach var="product" items="${prodcutList}" varStatus="stt">
+    <c:forEach var="product" items="${productList}" varStatus="stt">
         <tr>
             <td>${stt.count}</td>
             <td>${product.getId()}</td>
@@ -32,7 +33,7 @@
             <td>${product.getPrice()}</td>
             <td>${product.getDescribe()}</td>
             <td>${product.getProducer()}</td>
-            <td><a href="/product?action=edit&id=${product.getId()}"><button >Update</button></a></td>
+            <td><a href="/product?action=update&id=${product.getId()}"><button >Update</button></a></td>
             <td><a href="/product?action=remove&id=${product.getId()}"><button >Remove</button></a></td>
             <td><a href="/product?action=view&id=${product.getId()}"><button >View</button></a></td>
         </tr>

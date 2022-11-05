@@ -12,12 +12,7 @@
     <title>Trang xóa sản phẩm</title>
 </head>
 <body>
-<h1>Delete customer</h1>
-<p>
-    <a href="/product">Quay lại trang danh sách</a>
-</p>
 <form action="/product?action=remove" method="post">
-    <fieldset>
         <table>
             <tr>
                 <td>ID: </td>
@@ -37,13 +32,12 @@
             </tr>
             <tr>
                 <td>Producer: </td>
-                <td>${requestScope["product"].getProcuder()}</td>
+                <td>${requestScope["product"].getProducer()}</td>
             </tr>
             <tr>
                 <td><a href="/product">Quay lại trang chủ</a></td>
             </tr>
         </table>
-    </fieldset>
 </form>
 </body>
 </html>

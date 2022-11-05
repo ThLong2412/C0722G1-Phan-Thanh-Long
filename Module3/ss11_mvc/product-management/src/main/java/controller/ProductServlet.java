@@ -176,7 +176,7 @@ public class ProductServlet extends HttpServlet {
         productService.update(id, product);
         request.setAttribute("product", product);
         request.setAttribute("mess", "Update thành công");
-        request.getRequestDispatcher("view/update.jsp").forward(request, response);
+        request.getRequestDispatcher("/view/update.jsp").forward(request, response);
     }
 
     private void remove(HttpServletRequest request, HttpServletResponse response) throws IOException {
