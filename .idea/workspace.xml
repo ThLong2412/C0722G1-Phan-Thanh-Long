@@ -20,25 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/java/com/codegym/controller/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/java/com/codegym/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/java/com/codegym/service/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/webapp/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/webapp/delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/webapp/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/webapp/error-404.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/webapp/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/customer-management/src/main/webapp/view.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/java/controller/ProductServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/java/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/java/repository/IProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/java/repository/impl/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/java/service/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/java/service/impl/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss11_mvc/product-management/src/main/webapp/view/add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/service/service_and_edit_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/service/service_and_edit_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/contract/create_contract.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/contract/create_contract.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/contract/list_contract.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/contract/list_contract.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/customer/create_customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/customer/create_customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/customer/customer_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/customer/customer_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/customer/edit_customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/customer/edit_customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/employee/create_employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/employee/create_employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/employee/edit_employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/employee/edit_employee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/employee/list_employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/employee/list_employee.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +127,7 @@
       <workItem from="1667483306166" duration="74000" />
       <workItem from="1667525098618" duration="797000" />
       <workItem from="1667546270920" duration="275000" />
+      <workItem from="1667705442824" duration="6046000" />
     </task>
     <servers />
   </component>
