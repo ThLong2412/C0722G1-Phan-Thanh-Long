@@ -49,13 +49,44 @@
                 <td><c:out value="${user.country}"/></td>
                 <td>
                     <a href="/users?action=edit&id=${user.id}">Edit</a>
+<%--                    <a>--%>
+<%--                        <!-- Button trigger modal -->--%>
+<%--                        <button onclick="infoDelete('${user.getId()}', '${user.getName()}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">--%>
+<%--                            Delete--%>
+<%--                        </button>--%>
+<%--                    </a>--%>
                     <a href="/users?action=delete&id=${user.id}">Delete</a>
                 </td>
             </tr>
         </c:forEach>
     </table>
+<%--    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">--%>
+<%--        <div class="modal-dialog">--%>
+<%--            <div class="modal-content">--%>
+<%--                <div class="modal-header">--%>
+<%--                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>--%>
+<%--                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--%>
+<%--                </div>--%>
+<%--                <form action="/user?action=delete" method="get">--%>
+<%--                    <div class="modal-body">--%>
+<%--                        &lt;%&ndash;                    <input type="text" hidden name="action" value="delete">&ndash;%&gt;--%>
+<%--                        <input type="text" hidden id="deleteId" name="deleteId">--%>
+<%--                        <span>Bạn có muốn xóa sinh viên</span> <span style="color: red" id="deleteName"></span>--%>
+<%--                    </div>--%>
+<%--                    <div class="modal-footer">--%>
+<%--                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>--%>
+<%--                        <button type="submit" class="btn btn-primary">Delete</button>--%>
+<%--                    </div>--%>
+<%--                </form>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
 </div>
 <script>
+    function infoDelete(id, name) {
+    document.getElementById("deleteId").value = id;
+    document.getElementById("deleteName").innerText = name;
+    }
     function sortTable(n) {
         var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
         table = document.getElementById("tableUser");

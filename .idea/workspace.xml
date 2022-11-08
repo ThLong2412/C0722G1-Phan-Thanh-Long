@@ -20,17 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/src/main/java/controller/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/src/main/java/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/src/main/java/repository/IUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/src/main/java/repository/impl/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/src/main/webapp/view/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/src/main/webapp/view/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/src/main/webapp/view/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/customer/customer_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/customer/customer_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/employee/list_employee.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/employee/list_employee.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3/case_study_web/service/service_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case_study_web/service/service_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/customer/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/view_customer/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +122,7 @@
       <workItem from="1667546270920" duration="275000" />
       <workItem from="1667705442824" duration="6712000" />
       <workItem from="1667783252045" duration="1284000" />
+      <workItem from="1667815629571" duration="630000" />
     </task>
     <servers />
   </component>

@@ -18,4 +18,8 @@ public interface IUserRepository {
 
      List<User> findByCountry(String country);
      List<User> sortUser(String name) throws SQLException;
+     User getUserById(int id);
+
+     void insertUserStore(User user) throws SQLException;
+     void addUserTransaction();
 }
