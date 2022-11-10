@@ -20,8 +20,153 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/customer/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/view_customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module1/code.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/model/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/model/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/model/Facility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/repositoy/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/repositoy/ICustomerTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/repositoy/impl/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/repositoy/impl/CustomerTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/service/ICustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/service/impl/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/service/impl/CustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/bootstrap520/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/css/cs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.bootstrap5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.bootstrap5.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.bulma.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.bulma.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.foundation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.foundation.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.jqueryui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.jqueryui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.semanticui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/dataTables.semanticui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/jquery.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/css/jquery.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/images/sort_asc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/images/sort_desc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.bootstrap4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.bootstrap5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.bootstrap5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.bulma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.bulma.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.foundation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.foundation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.jqueryui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.jqueryui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.semanticui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/dataTables.semanticui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/datatables/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/jquery/jquery-3.5.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/view_customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/view_customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/view_customer/search.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/view_facility.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case-study-web/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case-study-web/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case-study-web/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case-study-web/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case-study-web/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case-study-web/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case-study-web/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/build/classes/java/main/customer/config/FilterUTF8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/build/classes/java/main/customer/controller/CustomerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/build/classes/java/main/customer/model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/build/classes/java/main/customer/repositoy/ICustomerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/build/classes/java/main/customer/repositoy/impl/CustomerRepository$BaseRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/build/classes/java/main/customer/repositoy/impl/CustomerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/build/classes/java/main/customer/service/ICustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/build/classes/java/main/customer/service/impl/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/build/libs/case-study-web-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case-study-web/build/libs/case-study-web-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/customer/config/FilterUTF8.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/config/FilterUTF8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/customer/controller/CustomerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/customer/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/customer/repositoy/ICustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/customer/repositoy/impl/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/customer/service/ICustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/src/main/java/customer/service/impl/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/view_customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/case-study-web/src/main/webapp/view_customer/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/classes/java/main/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/classes/java/main/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/classes/java/main/repository/IUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/classes/java/main/repository/IUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/classes/java/main/repository/impl/UserRepository$BaseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/classes/java/main/repository/impl/UserRepository$BaseRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/classes/java/main/repository/impl/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/classes/java/main/repository/impl/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/classes/java/main/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/classes/java/main/service/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/classes/java/main/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/classes/java/main/service/impl/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/libs/user-manager-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/build/libs/user-manager-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/src/main/java/repository/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module3/ss12_jdbc_crud/user-manager/src/main/java/repository/impl/UserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +268,11 @@
       <workItem from="1667705442824" duration="6712000" />
       <workItem from="1667783252045" duration="1284000" />
       <workItem from="1667815629571" duration="630000" />
+      <workItem from="1667963904754" duration="80000" />
+      <workItem from="1667975759796" duration="825000" />
+      <workItem from="1667994080287" duration="1455000" />
+      <workItem from="1667996828112" duration="48000" />
+      <workItem from="1668007229565" duration="1901000" />
     </task>
     <servers />
   </component>

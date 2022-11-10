@@ -164,8 +164,8 @@ public class UserRepository implements IUserRepository {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String email = rs.getString("email");
-                String country2 = rs.getString("country");
-                userList.add(new User(id, name, email, country2));
+                String country_find = rs.getString("country");
+                userList.add(new User(id, name, email, country_find));
             }
         } catch (SQLException e) {
             printSQLException(e);
@@ -181,10 +181,10 @@ public class UserRepository implements IUserRepository {
             preparedStatement.setString(1,name);
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
-                String name2 = resultSet.getString("name2");
+                String name_sort = resultSet.getString("name2");
                 String email = resultSet.getString("email");
-                String country2 = resultSet.getString("country");
-                userList.add(new User(id, name2, email, country2));
+                String country_sort = resultSet.getString("country");
+                userList.add(new User(id, name_sort, email, country_sort));
             }
         }
         return userList;
