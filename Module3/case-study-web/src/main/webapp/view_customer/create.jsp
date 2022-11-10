@@ -59,8 +59,8 @@
             <tr>
                 <th>Gender:</th>
                 <td>
-                    <input type="text" name="gender" id="gender" size="45"
-                    />
+                    <input type="radio" name="gender" size="45" value="true">Nam
+                    <input type="radio" name="gender" size="45" value="false">Nữ
                 </td>
             </tr>
             <tr>

@@ -34,12 +34,12 @@
 <center>
     <div>
         <form action="/customer?action=search" method="post">
-            <input type="text" placeholder="nhập id muốn tìm kiếm" name="id">
-            <span>
+            <div class="form-outline mb-4">
+                <input type="search" class="form-control" name="name" placeholder="Enter nam wan search">
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Tìm kiếm
+                    Search
                 </button>
-            </span>
+            </div>
         </form>
     </div>
 </center>
@@ -47,7 +47,7 @@
     <table class="table table-striped" id="tableCustomer">
         <thead>
         <tr>
-            <th class="col-lg-1">Customer id</th>
+            <th class="col-lg-1">STT</th>
             <th class="col-lg-1">Customer type</th>
             <th class="col-lg-1">Name</th>
             <th class="col-lg-1">Day 0f birth</th>
@@ -56,13 +56,14 @@
             <th class="col-lg-1">Phone number</th>
             <th class="col-lg-1">Email</th>
             <th class="col-lg-1">Address</th>
-            <th class="col-lg-1" colspan="3">Function</th>
+            <th class="col-lg-1"  style="text-align: center">Function</th>
+            <th class="col-lg-1"  style="text-align: center">Function</th>
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="customer" items="${customerList}">
+        <c:forEach var="customer" items="${customerList}" varStatus="stt">
             <tr>
-                <td><c:out value="${customer.getId()}"/></td>
+                <td><c:out value="${stt.count}"/></td>
                 <c:forEach var="cusType" items="${customerTypeList}">
                     <c:if test="${cusType.getId() == customer.getCustomerType()}">
                         <td>${cusType.getName()}</td>
@@ -81,7 +82,9 @@
                 <td><c:out value="${customer.getEmail()}"/></td>
                 <td><c:out value="${customer.getAddress()}"/></td>
                 <td>
-                    <button class="btn btn-check"><a href="/customer?action=edit&id=${customer.getId()}">Edit</a></button>
+                    <button class="btn btn-success" type="button"><a href="/customer?action=edit&id=${customer.getId()}" style="color: white">Edit</a></button>
+                </td>
+                <td>
                     <button type="button" onclick="idRemove('${customer.getId()}','${customer.getName()}')"
                             class="btn btn-danger" data-bs-toggle="modal"
                             data-bs-target="#exampleRemove">
@@ -108,7 +111,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel
                 </button>
-                <form action="/customer?action=customer" method="post">
+                <form action="/customer?action=delete" method="post">
                     <input type="hidden" name="id" id="idInput">
                     <button class="btn btn-primary">Delete</button>
                 </form>
@@ -121,7 +124,7 @@
 <script src="datatables/js/dataTables.bootstrap5.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('#tableStudent').dataTable( {
+        $('#tableCustomer').dataTable( {
             "dom": 'lrtip',
             "lengthChange": false,
             "pageLength": 5
@@ -132,6 +135,9 @@
     function idRemove(id, name) {
         document.getElementById("idInput").value = id;
     }
+    document.getElementById('datatable-search-input').addEventListener('input', (e) => {
+        instance.input-group(e.target.value);
+    });
 </script>
 </body>
 </html>

@@ -13,7 +13,8 @@ public class CustomerRepository implements ICustomerRepository {
     private static final String SELECT_ALL_CUSTOMER = "select * from customer";
     private static final String DELETE_CUSTOMER_SQL = "delete from customer where id = ?";
     private static final String UPDATE_CUSTOMER = "update customer set customer_type_id = ?, name  = ?, day_of_birth = ?, gender = ?, id_card =?, phone_number = ?, email = ?, address = ? where id = ?";
-    private static final String GET_CUSTOMER_BY_ID = "select * from customer where  id = ?";
+    private static final String GET_CUSTOMER_BY_NAME = "select * from customer where  name like ?";
+    private static final String GET_CUSTOMER = "select * from customer where  id =?";
 
     public static class BaseRepository {
         private static final String URL = "jdbc:mysql://localhost:3306/case_study_module3_tables"; // sửa lại tên của csdl
@@ -42,15 +43,15 @@ public class CustomerRepository implements ICustomerRepository {
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("id");
-                int customer_type_id = rs.getInt("customer_type_id");
+                int customerTypeId = rs.getInt("customer_type_id");
                 String name = rs.getString("name");
-                String day_of_birth = rs.getString("day_of_birth");
+                String dayOfBirth = rs.getString("day_of_birth");
                 boolean gender = rs.getBoolean("gender");
-                String id_card = rs.getString("id_card");
-                String phone_number = rs.getString("phone_number");
+                String idCard = rs.getString("id_card");
+                String phoneNumber = rs.getString("phone_number");
                 String email = rs.getString("email");
                 String address = rs.getString("address");
-                customerList.add(new Customer(id, customer_type_id, name, day_of_birth, gender, id_card, phone_number, email, address));
+                customerList.add(new Customer(id, customerTypeId, name, dayOfBirth, gender, idCard, phoneNumber, email, address));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -73,7 +74,6 @@ public class CustomerRepository implements ICustomerRepository {
     @Override
     public boolean update(Customer customer) {
         boolean rowUpdate = false;
-        try {
             try (Connection connection = BaseRepository.getConnectDB(); PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_CUSTOMER)) {
                 preparedStatement.setInt(1, customer.getCustomerType());
                 preparedStatement.setString(2, customer.getName());
@@ -86,7 +86,7 @@ public class CustomerRepository implements ICustomerRepository {
                 preparedStatement.setInt(9, customer.getId());
                 rowUpdate = preparedStatement.executeUpdate() > 0;
             }
-        } catch (SQLException throwables) {
+        catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         return rowUpdate;
@@ -95,19 +95,19 @@ public class CustomerRepository implements ICustomerRepository {
     @Override
     public Customer getCustomerById(int id) {
         Customer customer = null;
-        try (Connection connection = BaseRepository.getConnectDB(); PreparedStatement preparedStatement = connection.prepareStatement(GET_CUSTOMER_BY_ID)) {
+        try (Connection connection = BaseRepository.getConnectDB(); PreparedStatement preparedStatement = connection.prepareStatement(GET_CUSTOMER)) {
             preparedStatement.setInt(1, id);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                int customer_type_id = rs.getInt("customer_type_id");
+                int customerTypeId = rs.getInt("customer_type_id");
                 String name = rs.getString("name");
-                String day_of_birth = rs.getString("day_of_birth");
+                String dayOfBirth = rs.getString("day_of_birth");
                 boolean gender = rs.getBoolean("gender");
-                String id_card = rs.getString("id_card");
-                String phone_number = rs.getString("phone_number");
+                String idCard= rs.getString("id_card");
+                String phoneNumber = rs.getString("phone_number");
                 String email = rs.getString("email");
                 String address = rs.getString("address");
-                customer = new Customer(id, customer_type_id, name, day_of_birth, gender, id_card, phone_number, email, address);
+                customer = new Customer(id, customerTypeId, name, dayOfBirth, gender, idCard, phoneNumber, email, address);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -134,21 +134,22 @@ public class CustomerRepository implements ICustomerRepository {
     }
 
     @Override
-    public List<Customer> search(int id) {
+    public List<Customer> search(String name_search) {
         List<Customer> customerList = new ArrayList<>();
-        try (Connection connection = BaseRepository.getConnectDB(); PreparedStatement preparedStatement = connection.prepareStatement(GET_CUSTOMER_BY_ID)) {
-            preparedStatement.setInt(1, id);
+        try (Connection connection = BaseRepository.getConnectDB(); PreparedStatement preparedStatement = connection.prepareStatement(GET_CUSTOMER_BY_NAME)) {
+            preparedStatement.setString(1,"%" + name_search + "%");
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                int customer_type_id = rs.getInt("customer_type_id");
+                int customerTypeId = rs.getInt("customer_type_id");
+                int id = rs.getInt("id");
                 String name = rs.getString("name");
-                String day_of_birth = rs.getString("day_of_birth");
+                String dayOfBirth = rs.getString("day_of_birth");
                 boolean gender = rs.getBoolean("gender");
-                String id_card = rs.getString("id_card");
-                String phone_number = rs.getString("phone_number");
+                String idCard = rs.getString("id_card");
+                String phoneNumber = rs.getString("phone_number");
                 String email = rs.getString("email");
                 String address = rs.getString("address");
-                Customer customer = new Customer(id, customer_type_id, name, day_of_birth, gender, id_card, phone_number, email, address);
+                Customer customer = new Customer(id, customerTypeId, name, dayOfBirth, gender, idCard, phoneNumber, email, address);
                 customerList.add(customer);
             }
         } catch (SQLException throwables) {

@@ -32,7 +32,7 @@
         <table border="1" cellpadding="5">
             <caption>
                 <h2>
-                    Edit Cusotmer
+                    Edit Customer
                 </h2>
             </caption>
             <c:if test="${customer != null}">
@@ -41,9 +41,11 @@
             <tr>
                 <th>Customer type:</th>
                 <td>
-                    <input type="text" name="customer_type_id" size="45"
-                           value="<c:out value='${customer.getCustomerType()}'/>"
-                    />
+                    <select name="customer_type_id">
+                        <c:forEach var="cusType" items="${customerTypeList}">
+                            <option value="${cusType.getId()}">${cusType.getName()}</option>
+                        </c:forEach>
+                    </select>
                 </td>
             </tr>
             <tr>
@@ -65,9 +67,11 @@
             <tr>
                 <th>Gender:</th>
                 <td>
-                    <input type="text" name="gender" size="45"
-                           value="<c:out value='${customer.isGender()}'/>"
-                    />
+                    <input type="radio" name="gender" size="45" <c:if test="${customer.isGender()}">checked</c:if>>Nam
+                    <input type="radio" name="gender" size="45" <c:if test="${!customer.isGender()}">checked</c:if> >Nữ
+<%--                    <input type="text" name="gender" size="45"--%>
+<%--                           value="<c:out value='${customer.isGender()}'/>"--%>
+<%--                    />--%>
                 </td>
             </tr>
             <tr>

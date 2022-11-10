@@ -41,12 +41,12 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void search(HttpServletRequest request, HttpServletResponse response) {
-            int id = Integer.parseInt(request.getParameter("id"));
-        List<Customer> customerList = customerService.search(id);
+        String name = request.getParameter("name");
+        List<Customer> customerList = customerService.search(name);
         request.setAttribute("customerList", customerList);
         List<CustomerType> customerTypeList = customerTypeService.listCustomerType();
         request.setAttribute("customerTypeList", customerTypeList);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/view_customer/search.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/view_customer/list.jsp");
         try {
             dispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -58,15 +58,15 @@ public class CustomerServlet extends HttpServlet {
 
     private void create(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        int customer_type_id = Integer.parseInt(request.getParameter("customer_type_id"));
+        int customerTypeId= Integer.parseInt(request.getParameter("customer_type_id"));
         String name = request.getParameter("name");
-        String day_of_birth = request.getParameter("day_of_birth");
+        String dayOfBirth = request.getParameter("day_of_birth");
         boolean gender = Boolean.parseBoolean(request.getParameter("gender"));
-        String id_card = request.getParameter("id_card");
-        String phone_number = request.getParameter("phone_number");
+        String idCard = request.getParameter("id_card");
+        String phoneNumber = request.getParameter("phone_number");
         String email = request.getParameter("email");
         String address = request.getParameter("address");
-        Customer customer =  new Customer(id,customer_type_id,name,day_of_birth,gender,id_card,phone_number,email,address);
+        Customer customer =  new Customer(id,customerTypeId,name,dayOfBirth,gender,idCard,phoneNumber,email,address);
         customerService.addCustomer(customer);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/view_customer/create.jsp");
@@ -105,7 +105,7 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void showFormSearch(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/view_customer/search.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/view_customer/list.jsp");
         try {
             dispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -158,6 +158,8 @@ public class CustomerServlet extends HttpServlet {
     private void showFormEdit(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = customerService.getCustomerById(id);
+        List<CustomerType> customerTypeList = customerTypeService.listCustomerType();
+        request.setAttribute("customerTypeList", customerTypeList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/view_customer/edit.jsp");
         request.setAttribute("customer", customer);
         try {
@@ -171,15 +173,15 @@ public class CustomerServlet extends HttpServlet {
 
     private void update(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        int customer_type_id = Integer.parseInt(request.getParameter("customer_type_id"));
+        int customerTypeId = Integer.parseInt(request.getParameter("customer_type_id"));
         String name = request.getParameter("name");
-        String day_of_birth = request.getParameter("day_of_birth");
+        String dayOfBirth = request.getParameter("day_of_birth");
         boolean gender = Boolean.parseBoolean(request.getParameter("gender"));
-        String id_card = request.getParameter("id_card");
-        String phone_number = request.getParameter("phone_number");
+        String idCard = request.getParameter("id_card");
+        String phoneNumber = request.getParameter("phone_number");
         String email = request.getParameter("email");
         String address = request.getParameter("address");
-       Customer customer =  new Customer(id,customer_type_id,name,day_of_birth,gender,id_card,phone_number,email,address);
+       Customer customer =  new Customer(id,customerTypeId,name,dayOfBirth,gender,idCard,phoneNumber,email,address);
             customerService.update(customer);
         RequestDispatcher dispatcher =request.getRequestDispatcher("/view_customer/edit.jsp");
         dispatcher.forward(request,response);
