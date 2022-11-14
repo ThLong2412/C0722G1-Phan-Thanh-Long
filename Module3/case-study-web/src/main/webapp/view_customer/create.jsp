@@ -28,8 +28,11 @@
             <tr>
                 <th>ID:</th>
                 <td>
-                    <input type="text" name="id" id="id" size="45"
+                    <input type="text" name="id" id="id" size="45" placeholder="nhập id"
                     />
+                    <c:if test="${!errorMap.isEmpty()}">
+                        <p style="color:red;">${errorMap.get('errorId')}</p><br>
+                    </c:if>
                 </td>
             </tr>
             <tr>
@@ -45,14 +48,14 @@
             <tr>
                 <th>Name:</th>
                 <td>
-                    <input type="text" name="name" id="name" size="45"
+                    <input placeholder="nhập tên" required pattern="^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$" title="Tên không chưa kí tự số hoặc đặc biệt" type="text" name="name" id="name" size="45"
                     />
                 </td>
             </tr>
             <tr>
                 <th>Day of birth:</th>
                 <td>
-                    <input type="text" name="day_of_birth" id="day_of_birth" size="45"
+                    <input type="date" name="day_of_birth" id="day_of_birth" size="45"
                     />
                 </td>
             </tr>
@@ -66,28 +69,28 @@
             <tr>
                 <th>Id card:</th>
                 <td>
-                    <input type="text" name="id_card" id="id_card" size="45"
+                    <input placeholder="nhập cccd" required pattern="^[0-9]{12}$" title="Số CCCD phải là 12 số" type="text" name="id_card" id="id_card" size="45"
                     />
                 </td>
             </tr>
             <tr>
                 <th>Phone number:</th>
                 <td>
-                    <input type="text" name="phone_number" id="phone_number" size="45"
+                    <input placeholder="nhập số điện thoại" required pattern="^(((\+|)84)|0)(3|5|7|8|9)+([0-9]{8})$" title="Số điện thoại chưa đúng định dạng" type="text" name="phone_number" id="phone_number" size="45"
                     />
                 </td>
             </tr>
             <tr>
                 <th>Email:</th>
                 <td>
-                    <input type="text" name="email" id="email" size="45"
+                    <input placeholder="nhập email" required pattern="^[A-Za-z0-9]*[@][A-Za-z0-9]+[.][A-Za-z0-9]+$" title="Email chưa đúng định dạng" type="text" name="email" id="email" size="45"
                     />
                 </td>
             </tr>
             <tr>
                 <th>Address:</th>
                 <td>
-                    <input type="text" name="address" id="address" size="45"
+                    <input placeholder="nhập địa chỉ" type="text" name="address" id="address" size="45"
                     />
                 </td>
             </tr>
@@ -99,5 +102,10 @@
         </table>
     </form>
 </div>
+<%--<script>--%>
+<%--    <c:if test="${messAdd != null}">--%>
+<%--    alert("${messAdd}");--%>
+<%--    </c:if>--%>
+<%--</script>--%>
 </body>
 </html>

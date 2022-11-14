@@ -43,7 +43,9 @@
                 <td>
                     <select name="customer_type_id">
                         <c:forEach var="cusType" items="${customerTypeList}">
-                            <option value="${cusType.getId()}">${cusType.getName()}</option>
+                            <option value="${cusType.getId()}"
+                                    <c:if test="${cusType.getId() == customer.getCustomerType()}"
+                                    > selected </c:if> >${cusType.getName()}</option>
                         </c:forEach>
                     </select>
                 </td>
@@ -59,7 +61,7 @@
             <tr>
                 <th>Day of birth:</th>
                 <td>
-                    <input type="text" name="day_of_birth" size="45"
+                    <input type="date" name="day_of_birth" size="45"
                            value="<c:out value='${customer.getBirthday()}'/>"
                     />
                 </td>
@@ -108,11 +110,16 @@
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <input type="submit" value="Save"/>
+                    <input type="submit" value="Update"/>
                 </td>
             </tr>
         </table>
     </form>
 </div>
+<script>
+    <c:if test="${messUpdate != null}">
+    alert("${messUpdate}");
+    </c:if>
+</script>
 </body>
 </html>

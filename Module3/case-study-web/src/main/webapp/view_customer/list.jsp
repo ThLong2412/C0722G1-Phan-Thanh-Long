@@ -113,7 +113,7 @@
                 </button>
                 <form action="/customer?action=delete" method="post">
                     <input type="hidden" name="id" id="idInput">
-                    <button class="btn btn-primary">Delete</button>
+                    <button class="btn btn-primary" type="submit">Delete</button>
                 </form>
             </div>
         </div>
@@ -138,6 +138,12 @@
     document.getElementById('datatable-search-input').addEventListener('input', (e) => {
         instance.input-group(e.target.value);
     });
+
+</script>
+<script>
+    <c:if test="${messDelete != null}">
+    alert("${messDelete}");
+    </c:if>
 </script>
 </body>
 </html>

@@ -9,6 +9,6 @@ public interface ICustomerRepository {
     boolean delete(int id) ;
     boolean update(Customer customer) ;
     Customer getCustomerById(int id) ;
-    void addCustomer(Customer customer);
+    boolean addCustomer(Customer customer);
     List<Customer> search(String name);
 }

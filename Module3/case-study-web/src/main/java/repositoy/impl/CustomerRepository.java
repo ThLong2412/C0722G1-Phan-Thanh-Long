@@ -61,14 +61,14 @@ public class CustomerRepository implements ICustomerRepository {
 
     @Override
     public boolean delete(int id) {
-        boolean rowDeleted = false;
-        try (Connection connection = BaseRepository.getConnectDB(); PreparedStatement statement = connection.prepareStatement(DELETE_CUSTOMER_SQL)) {
+        Connection connection = BaseRepository.getConnectDB();
+        try (PreparedStatement statement = connection.prepareStatement(DELETE_CUSTOMER_SQL)) {
             statement.setInt(1, id);
-            rowDeleted = statement.executeUpdate() > 0;
+            return statement.executeUpdate() > 0;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return rowDeleted;
+        return false;
     }
 
     @Override
@@ -116,7 +116,7 @@ public class CustomerRepository implements ICustomerRepository {
     }
 
     @Override
-    public void addCustomer(Customer customer) {
+    public boolean addCustomer(Customer customer) {
         try (Connection connection = BaseRepository.getConnectDB(); PreparedStatement preparedStatement = connection.prepareStatement(INSERT_CUSTOMER)) {
             preparedStatement.setInt(1, customer.getId());
             preparedStatement.setInt(2, customer.getCustomerType());
@@ -127,10 +127,11 @@ public class CustomerRepository implements ICustomerRepository {
             preparedStatement.setString(7, customer.getPhoneNumber());
             preparedStatement.setString(8, customer.getEmail());
             preparedStatement.setString(9, customer.getAddress());
-            preparedStatement.executeUpdate();
+           return preparedStatement.executeUpdate()>0;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        return false;
     }
 
     @Override
