@@ -28,7 +28,7 @@
 </center>
 <center>
     <h2>
-        <a href="/customer?action=create">Thêm mới</a>
+        <a href="/customer?action=create">Add Customer</a>
     </h2>
 </center>
 <center>

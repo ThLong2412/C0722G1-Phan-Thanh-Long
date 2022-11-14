@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "CustomerServlet", urlPatterns = {"/customer"})
 public class CustomerServlet extends HttpServlet {
@@ -58,7 +59,7 @@ public class CustomerServlet extends HttpServlet {
         }
     }
 
-    private void create(HttpServletRequest request, HttpServletResponse response) {
+    private Map<String, String> create(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         int customerTypeId = Integer.parseInt(request.getParameter("customer_type_id"));
         String name = request.getParameter("name");
@@ -69,13 +70,17 @@ public class CustomerServlet extends HttpServlet {
         String email = request.getParameter("email");
         String address = request.getParameter("address");
         Customer customer = new Customer(id, customerTypeId, name, dayOfBirth, gender, idCard, phoneNumber, email, address);
-//        String messAdd = "Thêm mới không thành công";
-//        boolean check = customerService.addCustomer(customer);
-        customerService.addCustomer(customer);
-//        if (check) {
-//            messAdd = "Thêm mới thành công";
-//        }
-//        request.setAttribute("messAdd", messAdd);
+        List<CustomerType> customerTypeList = customerTypeService.listCustomerType();
+        request.setAttribute("customerTypeList", customerTypeList);
+        String messAdd;
+        Map<String, String> checkMap = customerService.addCustomer(customer);
+//        customerService.addCustomer(customer);
+        if (checkMap.size() > 0) {
+            messAdd = "Thêm mới không thành công";
+        } else {
+            messAdd = "Thêm mới thành công";
+        }
+        request.setAttribute("messAdd", messAdd);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/view_customer/create.jsp");
         try {
             dispatcher.forward(request, response);
@@ -84,6 +89,7 @@ public class CustomerServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return checkMap;
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

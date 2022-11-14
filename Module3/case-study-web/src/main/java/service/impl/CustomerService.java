@@ -39,6 +39,9 @@ public class CustomerService implements ICustomerService {
         if (!Validation.checkCode(customer.getId())) {
             errorMap.put("errorId", "Id không được trùng");
         }
+        if (errorMap.size()==0) {
+            customerRepository.addCustomer(customer);
+        }
         return errorMap;
     }
 

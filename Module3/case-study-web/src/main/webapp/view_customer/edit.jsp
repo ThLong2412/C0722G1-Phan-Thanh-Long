@@ -14,18 +14,8 @@
 <body>
 <center>
     <h2>
-        <a href="/customer?action=customer">Quay lại trang danh sách</a>
+        <a href="/customer?action=customer">Back to list customer</a>
     </h2>
-</center>
-<center>
-    <div style="float: right;margin-right: 100px">
-        <form action="/customer?action=search" method="post">
-            <input type="text" placeholder="nhập id muốn tìm kiếm" name="id">
-            <span> <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Tìm kiếm
-    </button></span>
-        </form>
-    </div>
 </center>
 <div align="center">
     <form method="post">

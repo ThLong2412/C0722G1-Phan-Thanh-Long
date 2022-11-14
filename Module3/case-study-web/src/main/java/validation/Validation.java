@@ -14,6 +14,9 @@ public class Validation {
         for (int i = 0; i < customerList.size(); i++) {
             if (code != customerList.get(i).getId()) {
                 check = true;
+            } else {
+                check = false;
+                break;
             }
         }
         return check;

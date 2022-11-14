@@ -14,7 +14,7 @@
 <body>
 <center>
     <h2>
-        <a href="/customer?action=customer">Quay lại trang danh sách</a>
+        <a href="/customer?action=customer">Back to list customer</a>
     </h2>
 </center>
 <div align="center">
@@ -28,10 +28,9 @@
             <tr>
                 <th>ID:</th>
                 <td>
-                    <input type="text" name="id" id="id" size="45" placeholder="nhập id"
-                    />
+                    <input type="text" name="id" id="id" size="45" placeholder="nhập id"/>
                     <c:if test="${!errorMap.isEmpty()}">
-                        <p style="color:red;">${errorMap.get('errorId')}</p><br>
+                        <p style="color:red;">${errorMap.get("errorId")}</p><br>
                     </c:if>
                 </td>
             </tr>
@@ -48,7 +47,7 @@
             <tr>
                 <th>Name:</th>
                 <td>
-                    <input placeholder="nhập tên" required pattern="^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[\s])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$" title="Tên không chưa kí tự số hoặc đặc biệt" type="text" name="name" id="name" size="45"
+                    <input placeholder="nhập tên" required pattern="^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[ ])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$" title="Tên không chưa kí tự số hoặc đặc biệt hoặc chưa đúng định dạng" type="text" name="name" id="name" size="45"
                     />
                 </td>
             </tr>
@@ -102,10 +101,10 @@
         </table>
     </form>
 </div>
-<%--<script>--%>
-<%--    <c:if test="${messAdd != null}">--%>
-<%--    alert("${messAdd}");--%>
-<%--    </c:if>--%>
-<%--</script>--%>
+<script>
+    <c:if test="${messAdd != null}">
+    alert("${messAdd}");
+    </c:if>
+</script>
 </body>
 </html>
