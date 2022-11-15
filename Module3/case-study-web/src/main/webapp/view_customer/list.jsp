@@ -35,7 +35,8 @@
     <div>
         <form action="/customer?action=search" method="post">
             <div class="form-outline mb-4">
-                <input type="search" class="form-control" name="name" placeholder="Enter nam wan search">
+                <input type="search" value="${name}" class="form-control me-2 justify-content-between" name="name" placeholder="Enter name want search">
+                <input type="search" value="${address}" class="form-control me-2 justify-content-between" name="address" placeholder="Enter address want search">
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Search
                 </button>

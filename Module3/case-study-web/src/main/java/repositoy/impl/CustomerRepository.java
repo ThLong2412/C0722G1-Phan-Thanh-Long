@@ -13,7 +13,7 @@ public class CustomerRepository implements ICustomerRepository {
     private static final String SELECT_ALL_CUSTOMER = "select * from customer";
     private static final String DELETE_CUSTOMER_SQL = "delete from customer where id = ?";
     private static final String UPDATE_CUSTOMER = "update customer set customer_type_id = ?, name  = ?, day_of_birth = ?, gender = ?, id_card =?, phone_number = ?, email = ?, address = ? where id = ?";
-    private static final String GET_CUSTOMER_BY_NAME = "select * from customer where  name like ?";
+    private static final String GET_CUSTOMER_BY_NAME = "select * from customer where  name like ? and address like ?";
     private static final String GET_CUSTOMER = "select * from customer where  id =?";
 
     public static class BaseRepository {
@@ -135,10 +135,11 @@ public class CustomerRepository implements ICustomerRepository {
     }
 
     @Override
-    public List<Customer> search(String name_search) {
+    public List<Customer> search(String name_search, String address_search) {
         List<Customer> customerList = new ArrayList<>();
         try (Connection connection = BaseRepository.getConnectDB(); PreparedStatement preparedStatement = connection.prepareStatement(GET_CUSTOMER_BY_NAME)) {
             preparedStatement.setString(1,"%" + name_search + "%");
+            preparedStatement.setString(2,"%" + address_search + "%");
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 int customerTypeId = rs.getInt("customer_type_id");

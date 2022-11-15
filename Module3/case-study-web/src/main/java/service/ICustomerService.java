@@ -11,5 +11,5 @@ public interface ICustomerService {
     boolean update(Customer customer) ;
     Customer getCustomerById(int id);
     Map<String,String> addCustomer(Customer customer);
-    List<Customer> search(String name);
+    List<Customer> search(String name, String address);
 }
