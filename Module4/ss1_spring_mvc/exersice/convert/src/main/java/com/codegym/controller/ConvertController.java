@@ -18,9 +18,12 @@ public class ConvertController {
         return "/list";
     }
     @PostMapping("")
-    public String convert(@RequestParam Double usd, Model model) {
-        Double vnd = convertService.convert(usd);
+    public String convert(@RequestParam(defaultValue = "0") Double usd,@RequestParam(defaultValue = "0") Double vnd ,Model model) {
+        Double vndAfter = convertService.convert(usd);
+        Double usdAfter = convertService.convert2(vnd);
+        model.addAttribute("vndAfter", vndAfter);
         model.addAttribute("vnd", vnd);
+        model.addAttribute("usdAfter", usdAfter);
         model.addAttribute("usd", usd);
         return "/list";
     }
