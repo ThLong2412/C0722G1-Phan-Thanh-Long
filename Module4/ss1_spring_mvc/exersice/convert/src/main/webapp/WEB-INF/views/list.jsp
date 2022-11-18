@@ -18,7 +18,7 @@
 <body>
 <form class="mb-5" action="" method="post" style="text-align: center; background-color: aquamarine">
     <div class="mb-3">
-        <input type="text" name="usd" value="${usd}">
+        <input placeholder="nhập usd" type="text" name="usd" value="${usd}">
     </div>
     <div class="mb-3">
         <input placeholder="nhập vnd" type="text" name="vnd" value="${vnd}">
@@ -26,7 +26,7 @@
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <h1>
-    ${vndAfter}
+        ${vndAfter}
     <br>
     ${usdAfter}
 </h1>

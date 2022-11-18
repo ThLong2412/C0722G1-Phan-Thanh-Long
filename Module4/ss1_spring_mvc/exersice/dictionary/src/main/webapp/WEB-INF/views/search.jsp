@@ -25,7 +25,12 @@
         <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <h1>
-     ${dictionary.get(value)}
+    <c:if test="${value != null}">
+        ${dictionary.get(value)}
+    </c:if>
+    <c:if test="${value.length()==0 or !dictionary.containsKey(value)}">
+        ${notFound}
+    </c:if>
 </h1>
 
 <%--    <c:if test="${value != null}">--%>

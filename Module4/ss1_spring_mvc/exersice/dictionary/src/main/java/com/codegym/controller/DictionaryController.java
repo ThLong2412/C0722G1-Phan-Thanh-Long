@@ -21,6 +21,7 @@ public class DictionaryController {
         Map<String , String> dictionary = dictionaryService.search();
         model.addAttribute("dictionary",dictionary);
         model.addAttribute("value", value);
+        model.addAttribute("notFound", "không tìm thấy");
         return "/search";
     }
 
