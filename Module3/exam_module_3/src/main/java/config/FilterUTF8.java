@@ -1,14 +1,17 @@
-@javax.servlet.annotation.WebFilter(filterName = "FilterUTF*")
-public class FilterUTF implements javax.servlet.Filter {
-    public void destroy() {
-    }
+package config;
 
-    public void doFilter(javax.servlet.ServletRequest req, javax.servlet.ServletResponse resp, javax.servlet.FilterChain chain) throws javax.servlet.ServletException, java.io.IOException {
+import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
+import java.io.IOException;
+
+@WebFilter(filterName = "FilterUTF*")
+public class FilterUTF8 implements Filter {
+
+
+    public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
         chain.doFilter(req, resp);
     }
 
-    public void init(javax.servlet.FilterConfig config) throws javax.servlet.ServletException {
-
-    }
 
 }

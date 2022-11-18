@@ -20,8 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e37b8cac-9b84-4e61-869a-b5d9f76a53ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Module3/case-study-web/src/main/java/validation/Validation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/java/config/FilterUTF8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/java/controller/BenhAnServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/java/model/BenhAn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/java/model/BenhNhan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/java/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/java/repository/IBenhAnRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/java/repository/IBenhNhanRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/java/repository/impl/BenhAnRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/java/service/IBenhAnService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/java/service/IBenhNhanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/java/service/impl/BenhAnService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/java/service/impl/BenhNhanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/webapp/view/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/webapp/view/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module3/exam_module_3/src/main/webapp/view/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module1/code.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module1/code.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -30,19 +47,25 @@
       <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/build/classes/java/main/controller/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/build/classes/java/main/controller/CustomerServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/build/classes/java/main/repositoy/ICustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/build/classes/java/main/repositoy/ICustomerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/build/classes/java/main/repositoy/impl/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/build/classes/java/main/repositoy/impl/CustomerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/build/classes/java/main/service/ICustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/build/classes/java/main/service/ICustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/build/classes/java/main/service/impl/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/build/classes/java/main/service/impl/CustomerService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/build/libs/case-study-web-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/build/libs/case-study-web-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/src/main/java/controller/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/src/main/java/controller/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/src/main/java/repositoy/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/src/main/java/repositoy/ICustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/src/main/java/repositoy/impl/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/src/main/java/repositoy/impl/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/src/main/java/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/src/main/java/service/ICustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/src/main/java/service/impl/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/src/main/java/service/impl/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/src/main/webapp/view_customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/src/main/webapp/view_customer/create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/src/main/webapp/view_customer/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/src/main/webapp/view_customer/edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Module3/case-study-web/src/main/webapp/view_customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/case-study-web/src/main/webapp/view_customer/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/case_study.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/case_study.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/contract/create_contract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/contract/list_contract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/customer/create_customer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/customer/customer_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/customer/edit_customer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/employee/create_employee.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/employee/edit_employee.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/employee/list_employee.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/service/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/service/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/service/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/service/.idea/service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/service/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/service/service_and_edit_create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/case_study_web/service/service_list.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +112,7 @@
       <recent name="D:\Codegym\Module2\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.View (2)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="FuramaController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="case_study.controller.FuramaController" />
       <module name="Module2" />
@@ -157,9 +180,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.View (2)" />
         <item itemvalue="Application.View" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.FuramaController" />
       </list>
@@ -253,6 +276,7 @@
       <workItem from="1665622977791" duration="1771000" />
       <workItem from="1667352101071" duration="48000" />
       <workItem from="1668157555721" duration="821000" />
+      <workItem from="1668756902050" duration="648000" />
     </task>
     <servers />
   </component>
@@ -296,22 +320,22 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1667352147533" />
-    <state width="1493" height="471" key="GridCell.Tab.0.bottom" timestamp="1665625107979">
+    <state width="1493" height="471" key="GridCell.Tab.0.bottom" timestamp="1668757554876">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="471" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1665625107979" />
-    <state width="1493" height="471" key="GridCell.Tab.0.center" timestamp="1665625107979">
+    <state width="1493" height="471" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1668757554876" />
+    <state width="1493" height="471" key="GridCell.Tab.0.center" timestamp="1668757554876">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="471" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1665625107979" />
-    <state width="1493" height="471" key="GridCell.Tab.0.left" timestamp="1665625107979">
+    <state width="1493" height="471" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1668757554876" />
+    <state width="1493" height="471" key="GridCell.Tab.0.left" timestamp="1668757554876">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="471" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1665625107979" />
-    <state width="1493" height="471" key="GridCell.Tab.0.right" timestamp="1665625107979">
+    <state width="1493" height="471" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1668757554876" />
+    <state width="1493" height="471" key="GridCell.Tab.0.right" timestamp="1668757554876">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="471" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1665625107979" />
+    <state width="1493" height="471" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1668757554876" />
     <state width="1493" height="9" key="GridCell.Tab.1.bottom" timestamp="1665137922940">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

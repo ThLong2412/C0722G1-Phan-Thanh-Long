@@ -10,12 +10,11 @@
 <html>
 <head>
     <title>Danh sách khách hàng</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap520/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="datatables/css/dataTables.bootstrap5.min.css"/>
 </head>
@@ -35,8 +34,10 @@
     <div>
         <form action="/customer?action=search" method="post">
             <div class="form-outline mb-4">
-                <input type="search" value="${name}" class="form-control me-2 justify-content-between" name="name" placeholder="Enter name want search">
-                <input type="search" value="${address}" class="form-control me-2 justify-content-between" name="address" placeholder="Enter address want search">
+                <input type="search" value="${name}" class="form-control me-2 justify-content-between" name="name"
+                       placeholder="Enter name want search">
+                <input type="search" value="${address}" class="form-control me-2 justify-content-between" name="address"
+                       placeholder="Enter address want search">
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Search
                 </button>
@@ -57,8 +58,8 @@
             <th class="col-lg-1">Phone number</th>
             <th class="col-lg-1">Email</th>
             <th class="col-lg-1">Address</th>
-            <th class="col-lg-1"  style="text-align: center">Function</th>
-            <th class="col-lg-1"  style="text-align: center">Function</th>
+            <th class="col-lg-1" style="text-align: center">Function</th>
+            <th class="col-lg-1" style="text-align: center">Function</th>
         </tr>
         </thead>
         <tbody>
@@ -83,7 +84,8 @@
                 <td><c:out value="${customer.getEmail()}"/></td>
                 <td><c:out value="${customer.getAddress()}"/></td>
                 <td>
-                    <button class="btn btn-success" type="button"><a href="/customer?action=edit&id=${customer.getId()}" style="color: white">Edit</a></button>
+                    <button class="btn btn-success" type="button"><a href="/customer?action=edit&id=${customer.getId()}"
+                                                                     style="color: white">Edit</a></button>
                 </td>
                 <td>
                     <button type="button" onclick="idRemove('${customer.getId()}','${customer.getName()}')"
@@ -124,20 +126,21 @@
 <script src="datatables/js/jquery.dataTables.min.js"></script>
 <script src="datatables/js/dataTables.bootstrap5.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('#tableCustomer').dataTable( {
+    $(document).ready(function () {
+        $('#tableCustomer').dataTable({
             "dom": 'lrtip',
             "lengthChange": false,
             "pageLength": 5
-        } );
-    } );
+        });
+    });
 </script>
 <script>
     function idRemove(id, name) {
         document.getElementById("idInput").value = id;
     }
+
     document.getElementById('datatable-search-input').addEventListener('input', (e) => {
-        instance.input-group(e.target.value);
+        instance.input - group(e.target.value);
     });
 
 </script>
