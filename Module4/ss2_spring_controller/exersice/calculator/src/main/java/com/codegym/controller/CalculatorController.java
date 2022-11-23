@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("/calculator")
 public class CalculatorController {
-   private ICalculatorService calculatorService = new CalculatorService();
+    @Autowired
+   private ICalculatorService calculatorService;
 
     @GetMapping("")
     public String getIndex() {

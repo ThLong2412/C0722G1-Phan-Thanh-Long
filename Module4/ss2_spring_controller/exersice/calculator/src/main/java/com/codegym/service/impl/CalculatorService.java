@@ -1,7 +1,9 @@
 package com.codegym.service.impl;
 
 import com.codegym.service.ICalculatorService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CalculatorService implements ICalculatorService {
 
 
