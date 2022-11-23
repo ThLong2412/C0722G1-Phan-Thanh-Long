@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.jws.WebParam;
 import java.util.List;
 
 @Controller
@@ -67,5 +68,13 @@ public class ProductController {
     public String view(Model model, @PathVariable int id) {
         model.addAttribute("product", productService.findById(id));
         return "/view";
+    }
+
+    @PostMapping("/search/{id}")
+    public String search(@PathVariable int id, Model model) {
+        productService.search(id);
+        model.addAttribute("product", productService.findById(id));
+        model.addAttribute("id", id);
+        return "redirect:/product";
     }
 }

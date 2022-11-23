@@ -43,5 +43,17 @@ public class ProductService implements IProductService {
         productList.remove(id);
     }
 
+    @Override
+    public Map<Integer,Product> search(int id) {
+        Map<Integer,Product> map = new HashMap<>();
+        for (int i = 0; i < productList.size(); i++) {
+            if (productList.get(i).getId()==id) {
+                map.put(productList.get(i).getId(),productList.get(id));
+                return map;
+            }
+        }
+        return map;
+    }
+
 
 }
