@@ -15,6 +15,7 @@
 <div>
     <button style="text-align: center" class="btn btn-success"><a th:href="@{/product}">Back to list product</a></button>
 </div>
+<p th:text="${messDelete}"></p>
 
 
 <form th:action="@{/product/delete}" th:object="${product}" th:method="post">

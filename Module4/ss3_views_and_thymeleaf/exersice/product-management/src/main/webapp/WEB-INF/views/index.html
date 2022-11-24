@@ -12,6 +12,8 @@
 <body>
 <div th:insert="~{/layout :: header}">
 </div>
+<!--/*@thymesVar id="messDelete" type=""*/-->
+<p th:text="${messDelete}"></p>
 
 <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,9 +26,9 @@
                     <button class="btn btn-success"><a th:href="@{/product/create}">Add new product</a></button>
                 </ul>
                 <!--/*@thymesVar id="product" type="java"*/-->
-                <form class="d-flex" th:action="@{/product/search/(id=${#ids})}" th:method="post">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                <form class="d-flex" th:action="@{/product/search}" th:method="get">
+                    <input name="name" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="btn btn-outline-success" type="submit" value="Search" >
                 </form>
             </div>
         </div>
@@ -44,18 +46,58 @@
     </tr>
     </thead>
     <tbody>
+
     <tr th:each="product, status : ${productList}">
         <td th:text="${product.getId()}"></td>
         <td th:text="${product.getName()}"></td>
         <td th:text="${product.getPrice()}"></td>
         <td th:text="${product.getDescription()}"></td>
         <td th:text="${product.getProducer()}"></td>
-        <td><a th:href="@{/product/{id}/edit(id=${product.getId()})}">edit</a></td>
-        <td><a th:href="@{/product/{id}/delete(id=${product.getId()})}">delete</a></td>
-        <td><a th:href="@{/product/{id}/view(id=${product.getId()})}">view</a></td>
+        <td><button class="btn btn-warning"><a th:href="@{/product/{id}/edit(id=${product.getId()})}">Edit</a></button></td>
+        <td>
+            <form class="d-flex col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-sm-3 ">
+                <button th:onclick="'javascript:idRemove(\''+${product.id}+'\',\''+${product.name}+'\');'"
+                        class="btn btn-danger" type="button" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                    delete
+                </button>
+            </form>
+        </td>
+        <td><button class="btn btn-info"><a th:href="@{/product/{id}/view(id=${product.getId()})}">view</a></button></td>
     </tr>
     </tbody>
 </table>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">DELETE</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <span>Are you sure to delete:  <span style="color: #db365d " id="deleteModal"></span></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                </button>
+                <form th:action="@{/product/delete}" method="post">
+                    <input type="hidden" name="id" id="idInput">
+                    <button class="btn btn-danger">DELETE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:inline="javascript">
+    function idRemove(id, name) {
+        debugger
+        document.getElementById("idInput").value = id;
+        document.getElementById("deleteModal").innerText = name;
+    }
+</script>
 <div th:insert="~{/layout :: footer}"></div>
 </body>
 </html>
