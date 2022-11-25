@@ -23,7 +23,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <button class="btn btn-success"><a th:href="@{/product/create}">Add new product</a></button>
+<!--                    <button class="btn btn-success"><a th:href="@{/product/create}">Add new product</a></button>-->
+                    <button type="button" class="btn btn-primary
+                    col-sm-1 ms-auto mb-4"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalAdd">Add new product</button>
                 </ul>
                 <!--/*@thymesVar id="product" type="java"*/-->
                 <form class="d-flex" th:action="@{/product/search}" th:method="get">
@@ -90,13 +94,63 @@
         </div>
     </div>
 </div>
-
+<div class="modal fade" id="modalAdd" tabindex="-1"
+     aria-labelledby="exampleModalLabel" aria-hidden="true"
+     data-bs-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Add</h1>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form th:action="@{/product/save}" th:object="${product}" th:method="post">
+                <table>
+                    <tr>
+                        <td><label th:for="id">ID</label> </td>
+                        <td><label>
+                            <input th:field="*{id}" th:readonly="readonly">
+                        </label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <lable th:for="name">Name</lable>
+                        </td>
+                        <td><label>
+                            <input th:field="*{name}"/>
+                        </label></td>
+                    </tr>
+                    <tr>
+                        <td> <lable th:for="price">Price</lable></td>
+                        <td> <label>
+                            <input th:field="*{price}"/>
+                        </label></td>
+                    </tr>
+                    <tr>
+                        <td><lable th:for="description">Description</lable></td>
+                        <td><label>
+                            <input th:field="*{description}"/>
+                        </label></td>
+                    </tr>
+                    <tr>
+                        <td> <lable th:for="producer">Producer</lable></td>
+                        <td><label>
+                            <input th:field="*{producer}"/>
+                        </label></td>
+                    </tr>
+                </table>
+                <input type="submit" value="Save"/>
+            </form>
+        </div>
+    </div>
+</div>
 <script th:inline="javascript">
     function idRemove(id, name) {
         debugger
         document.getElementById("idInput").value = id;
         document.getElementById("deleteModal").innerText = name;
     }
+
 </script>
 <div th:insert="~{/layout :: footer}"></div>
 </body>
