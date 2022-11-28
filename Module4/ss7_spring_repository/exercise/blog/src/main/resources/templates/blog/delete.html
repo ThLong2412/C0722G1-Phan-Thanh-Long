@@ -27,10 +27,18 @@
             <td><input type="text" th:field="*{content}"/></td>
         </tr>
         <tr>
+            <td>Blog date:</td>
+            <td><input type="text" th:field="*{date}"/></td>
+        </tr>
+        <tr>
+            <td>Blog category:</td>
+            <td><input type="text" th:field="*{category.name}"/></td>
+        </tr>
+        <tr>
             <td></td>
             <td>
                 <button type="submit" class="btn btn-danger">Delete</button>
-                <button class="btn btn-danger"><a th:href="" </button>
+                <button class="btn btn-danger" type="reset"><a th:href="@{/blog}" ></a>Cancel</button>
             </td>
         </tr>
     </table>

@@ -19,12 +19,16 @@
         <th>STT</th>
         <th>Name</th>
         <th>Content</th>
+        <th>Date</th>
+        <th>Category</th>
     </tr>
     <th:block th:each="blog, stt : ${blog}">
         <tr>
             <td th:text="${stt.count}"></td>
             <td th:text="${blog.name}"></td>
             <td th:text="${blog.content}"></td>
+            <td th:text="${blog.date}"></td>
+            <td th:text="${blog.category.name}"></td>
         </tr>
     </th:block>
 </table>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <button style="text-align: center" class="btn btn-success"><a th:href="@{/blog}">Back to list product</a></button>
+</div>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/save}" th:object="${blog}" th:method="post">
+    <table>
+        <tr>
+            <td><label th:for="id">ID</label> </td>
+            <td><label>
+                <input th:field="*{id}" th:readonly="readonly">
+            </label></td>
+        </tr>
+        <tr>
+            <td>
+                <lable th:for="name">Name</lable>
+            </td>
+            <td><label>
+                <input th:field="*{name}"/>
+            </label></td>
+        </tr>
+        <tr>
+            <td> <lable th:for="content">Content</lable></td>
+            <td> <label>
+                <input th:field="*{content}"/>
+            </label></td>
+        </tr>
+        <tr>
+            <td><lable th:for="date">Date</lable></td>
+            <td><label>
+                <input th:field="*{date}"/>
+            </label></td>
+        </tr>
+        <tr>
+            <td> <lable th:for="category">category</lable></td>
+            <td><select th:field="*{category}">
+                <option th:each="c : ${categoryPage}" th:value="${c.id}" th:text="${c.name}"></option>
+            </select></td>
+        </tr>
+    </table>
+    <input type="submit" value="Save"/>
+</form>
+</body>
+</html>

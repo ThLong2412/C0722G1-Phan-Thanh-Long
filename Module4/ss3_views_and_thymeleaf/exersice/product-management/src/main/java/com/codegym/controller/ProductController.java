@@ -24,18 +24,18 @@ public class ProductController {
         return "/index";
     }
 
-    @GetMapping("/create")
-    public String showCreate(Model model) {
-        model.addAttribute("product", new Product());
-        return "/create";
-    }
+        @GetMapping("/create")
+        public String showCreate(Model model) {
+            model.addAttribute("product", new Product());
+            return "/create";
+        }
 
-    @PostMapping("/save")
-    public String save(Product product, RedirectAttributes redirectAttributes) {
-        productService.save(product);
-        redirectAttributes.addFlashAttribute("messCreate", "Successfully added new");
-        return "redirect:/product";
-    }
+        @PostMapping("/save")
+        public String save(Product product, RedirectAttributes redirectAttributes) {
+            productService.save(product);
+            redirectAttributes.addFlashAttribute("messCreate", "Successfully added new");
+            return "redirect:/product";
+        }
 
     @GetMapping("/{id}/edit")
     public String showUpdate(@PathVariable int id, Model model) {
