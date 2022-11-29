@@ -9,10 +9,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/music")
@@ -29,18 +29,33 @@ public class MusicController {
     }
 
     @GetMapping("/create")
-    public String showFormCreate(Pageable pageable, Model model) {
+    public String showFormCreate(Model model) {
         model.addAttribute("music", new Music());
-        model.addAttribute("message", "Successfully music added new");
         return "/create";
     }
 
     @PostMapping("/save")
-    public String saveMusic(@Validated @ModelAttribute("music") Music music, BindingResult bindingResult) {
+    public String saveMusic(@Validated @ModelAttribute("music") Music music, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
         if (bindingResult.hasFieldErrors()) {
             return "/create";
         }
         musicService.save(music);
+        redirectAttributes.addFlashAttribute("message", "Successfully music added new");
+        return "redirect:/music";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String showFormEdit(@PathVariable Long id, Model model) {
+       Optional<Music> music = musicService.findByTd(id);
+        model.addAttribute("music", music.get());
+        return "/edit";
+    }
+
+    @PostMapping("/edit")
+    public String edit(@ModelAttribute("music") Music music, Model model, RedirectAttributes redirectAttributes) {
+        musicService.save(music);
+        model.addAttribute("music", music);
+        redirectAttributes.addFlashAttribute("message", "Successfully music update");
         return "redirect:/music";
     }
 }

@@ -13,7 +13,7 @@ public class Music {
     private Long id;
     @NotEmpty(message = "Tên bài hát không được rỗng")
     @Size(max = 800, message = "Tên bài hát không được quá 800 ký tự")
-    @Pattern(regexp = "^([A-Z]*[0-9a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[ ])*([A-Z]*[0-9a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$", message = "Tên bài hát không được chứa ký tự đặc biệt")
+    @Pattern(regexp = "^([A-Z]*[0-9a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[ ])*([0-9a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$", message = "Tên bài hát không được chứa ký tự đặc biệt")
     private String name;
     @NotEmpty(message = "Tên nghệ sĩ không được rỗng")
     @Size(max = 300, message = "Tên nghệ sĩ không được quá 300 ký tự")
