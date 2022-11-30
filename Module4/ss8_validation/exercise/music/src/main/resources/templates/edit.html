@@ -8,7 +8,7 @@
 <div>
     <button style="text-align: center" class="btn btn-success"><a th:href="@{/music}">Back to list music</a></button>
 </div>
-<form th:action="@{/music/edit}" th:object="${music}" th:method="post">
+<form th:action="@{/music/edit}" th:object="${musicDto}" th:method="post">
     <table>
         <tr>
             <td><label th:for="id">ID</label></td>
