@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Xác nhận trả sách</h1>
+<form th:action="@{/pay}" th:object="${oder}" th:method="post">
+    <table>
+        <tr>
+            <td><label th:for="book.id">ID Book</label></td>
+            <td><label>
+                <input th:field="*{book.id}">
+            </label></td>
+        </tr>
+        <tr>
+            <td>
+                <lable th:for="book.name">Name book</lable>
+            </td>
+            <td><label>
+                <input th:field="*{book.name}"/>
+            </label></td>
+        </tr>
+        <tr>
+            <td>
+                <lable th:for="book.author">Name Author</lable>
+            </td>
+            <td><label>
+                <input th:field="*{book.author}"/>
+            </label></td>
+        </tr>
+        <tr>
+            <td>
+                <lable th:for="book.count">Count</lable>
+            </td>
+            <td><label>
+                <input th:field="*{book.count}"/>
+            </label></td>
+        </tr>
+        <tr>
+            <td>
+                <lable th:for="id">ID Oder</lable>
+            </td>
+            <td><label>
+                <input th:readonly="readonly" th:field="*{id}" th:value="${id}"/>
+            </label></td>
+        </tr>
+        <tr>
+            <td>
+                <lable th:for="code">Code</lable>
+            </td>
+            <td><label>
+                <input th:field="*{code}"/>
+            </label></td>
+        </tr>
+    </table>
+    <input type="submit" value="Pay"/>
+</form>
+</body>
+</html>

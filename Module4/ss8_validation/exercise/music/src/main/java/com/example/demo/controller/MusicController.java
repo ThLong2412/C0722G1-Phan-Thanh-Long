@@ -23,24 +23,26 @@ public class MusicController {
     private IMusicService musicService;
 
     @GetMapping("")
-    public String home(@ModelAttribute("music") Music music, Pageable pageable, Model model) {
-        Page<Music> musicPage = musicService.findAll(pageable);
-
-        model.addAttribute("musicPage", musicPage);
+    public String home( Pageable pageable, Model model) {
+        model.addAttribute("musicDto", new MusicDto());
+      Page<Music> musicPage =  musicService.findAll(pageable);
+      model.addAttribute("musicPage", musicPage);
         return "/home";
     }
 
-    @GetMapping("/create")
-    public String showFormCreate(@ModelAttribute("musicDto") MusicDto musicDto) {
-        return "/create";
-    }
 
     @PostMapping("/save")
-    public String saveMusic(@Validated @ModelAttribute("musicDto") MusicDto musicDto, BindingResult bindingResult, RedirectAttributes redirectAttributes) {
+    public String saveMusic(@Validated @ModelAttribute("musicDto") MusicDto musicDto, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model, Pageable pageable) {
         new MusicDto().validate(musicDto, bindingResult);
-        if (bindingResult.hasFieldErrors()) {
-            return "/create";
+        Page<Music> musicPage;
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("mess", 1);
+            musicPage = musicService.findAll(pageable);
+            model.addAttribute("musicPage", musicPage);
+            return "/home";
         }
+        musicPage = musicService.findAll(pageable);
+        model.addAttribute("musicPage", musicPage);
         Music music = new Music();
         BeanUtils.copyProperties(musicDto, music);
         musicService.save(music);
