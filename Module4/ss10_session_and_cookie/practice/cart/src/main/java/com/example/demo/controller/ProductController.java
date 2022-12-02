@@ -31,7 +31,7 @@ public class ProductController {
         }
         model.addAttribute("productList", productService.findAll());
         return "/shop";
-    }
+}
 
     @GetMapping("/add/{id}")
     public String addToCart(@PathVariable Long id,Model model, @SessionAttribute("cart") Cart cart) {

@@ -19,6 +19,7 @@
        <th>Price</th>
        <th>Description</th>
        <th>Count</th>
+       <th>Total is Product</th>
        <th colspan="2">Action</th>
    </tr>
    </thead>
@@ -31,6 +32,7 @@
             <td th:text="${cart.key.price}"></td>
             <td th:text="${cart.key.description}"></td>
             <td th:text="${cart.value}"></td>
+            <td th:text="${cart.key.price * cart.value}"></td>
             <td>
                 <a th:href="@{/shop/add/__${cart.key.id}__}">
                     <button class="btn btn-primary"> +1 </button>
@@ -45,7 +47,7 @@
     </tbody>
 </table>
 <div class="alert alert-warning" role="alert" th:if="${cart == null || cart.getProducts().size() == 0}">
-    Cart Empty.
+    Đã thanh toán hết hoặc không có sản phẩm trong giỏ hàng. Hãy mua rồi quay lại giỏ hàng.
 </div>
 <form style="text-align: center">
     <button type="button"
