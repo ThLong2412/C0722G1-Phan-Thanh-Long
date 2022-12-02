@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<a th:href="@{/shop}">Quay lại shop</a>
+<table class="table table-info" th:if="${cart != null && cart.getProducts().size() > 0}">
+   <thead>
+   <tr>
+       <th>Name</th>
+       <th>Image</th>
+       <th>Price</th>
+       <th>Description</th>
+       <th>Count</th>
+       <th colspan="2">Action</th>
+   </tr>
+   </thead>
+    <tbody>
+        <tr th:each="cart : ${cart.products}">
+            <td th:text="${cart.key.name}"></td>
+            <td>
+                <img th:src="${cart.key.img}" style="width: 50px; height: 50px">
+            </td>
+            <td th:text="${cart.key.price}"></td>
+            <td th:text="${cart.key.description}"></td>
+            <td th:text="${cart.value}"></td>
+            <td>
+                <a th:href="@{/shop/add/__${cart.key.id}__}">
+                    <button class="btn btn-primary"> +1 </button>
+                </a>
+            </td>
+            <td>
+                <a th:href="@{/shop/decrease/__${cart.key.id}__}">
+                    <button class="btn btn-warning"> -1 </button>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="alert alert-warning" role="alert" th:if="${cart == null || cart.getProducts().size() == 0}">
+    Cart Empty.
+</div>
+<form style="text-align: center">
+    <button type="button"
+            class="btn btn-outline-success" data-bs-toggle="modal"
+            data-bs-target="#examplePay">
+        Pay
+    </button>
+</form>
+<div class="modal fade" id="examplePay" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Pay</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Payment confirmation!
+                <br>
+                Your total is: <span th:text="${total}"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel
+                </button>
+                <form th:action="@{/shop/pay}" th:method="post">
+                    <button class="btn btn-primary" type="submit">Pay</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
