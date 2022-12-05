@@ -54,7 +54,7 @@
                         data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form th:action="@{/customer/save}" th:object="${customer}"
-                  method="post">
+                  th:method="post">
                 <div class="row" id="form">
                     <div class="col-lg-6">
                         <div class="form-outline mb-4">
@@ -73,13 +73,14 @@
                         <div class="form-outline mb-4">
                             <label class="form-label" th:for="customerType">Customer Type</label>
                             <div class="input-group">
-                                <select style="height: 49px" class="form-select"
-                                        th:field="*{customerType}">
-                                    <option th:each="customerType: ${customerType}"
-                                            th:value="${customerType.id}"
-                                            th:text="${customerType.name}"></option>
-                                </select>
-                                <span class="input-group-text"><i class="fa-solid fa-ranking-star"></i></span>
+                                <label>
+                                    <select style="height: 49px" class="form-select"
+                                            th:field="*{customerType}">
+                                        <option th:each="customerType: ${customerType}"
+                                                th:value="${customerType.id}"
+                                                th:text="${customerType.name}"></option>
+                                    </select>
+                                </label>
                             </div>
                         </div>
                         <div class="form-outline mb-4">

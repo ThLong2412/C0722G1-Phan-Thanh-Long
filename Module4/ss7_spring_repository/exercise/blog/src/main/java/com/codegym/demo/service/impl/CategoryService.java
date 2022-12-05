@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 @Service
 public class CategoryService implements ICategoryService {
@@ -34,7 +35,8 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
-    public Page<Category> search(Pageable pageable, String name) {
-        return categoryRepository.findByNameIsContaining(pageable, name);
+    public List<Category> search(Long id, Pageable pageable) {
+//        return categoryRepository.findByNameIsContaining(id);
+        return null;
     }
 }

@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -22,8 +23,9 @@ public class CustomerController {
     private ICustomerTypeService customerTypeService;
 
     @GetMapping("")
-    public ModelAndView showListBlog(@RequestParam(required = false,value = "") String name, @PageableDefault(page = 0, size = 5) Pageable pageable) {
+    public ModelAndView showListCustomer(@ModelAttribute("customer") Customer customer,@RequestParam( required = false, defaultValue = "") String name, @PageableDefault(page = 0, size = 5) Pageable pageable) {
         Page<Customer> customerPage = customerService.search( pageable, name);
+//        Page<Customer> customerPage = customerService.findAll(pageable);
         ModelAndView modelAndView = new ModelAndView("/customer/list");
         modelAndView.addObject("customerPage", customerPage);
         modelAndView.addObject("customerType", customerTypeService.findAll(pageable));
@@ -31,12 +33,14 @@ public class CustomerController {
     }
 
     @PostMapping("/save")
-    public String save(@ModelAttribute("customer")Customer customer,Model model, RedirectAttributes redirectAttributes, Pageable pageable){
+    public String save(@ModelAttribute("customer")Customer customer ,Model model, RedirectAttributes redirectAttributes, Pageable pageable){
         customerService.save(customer);
         model.addAttribute("mess", 1);
-        model.addAttribute("customerTypeList",customerTypeService.findAll(pageable));
+        model.addAttribute("customerType",customerTypeService.findAll(pageable));
         redirectAttributes.addFlashAttribute("message","Thêm mới thành công");
         return "redirect:/customer";
     }
+
+//    @PostMapping("/update")
 
 }

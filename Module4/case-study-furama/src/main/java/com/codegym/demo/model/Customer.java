@@ -10,7 +10,7 @@ public class Customer {
     private Long id;
     private String name;
     private String birthday;
-    private boolean gender;
+    private String gender;
     private String idCard;
     private String phone;
     private String email;
@@ -22,7 +22,7 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(Long id, String name, String birthday, boolean gender, String idCard, String phone, String email, CustomerType customerType, String address) {
+    public Customer(Long id, String name, String birthday, String gender, String idCard, String phone, String email, CustomerType customerType, String address) {
         this.id = id;
         this.name = name;
         this.birthday = birthday;
@@ -58,11 +58,11 @@ public class Customer {
         this.birthday = birthday;
     }
 
-    public boolean isGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
