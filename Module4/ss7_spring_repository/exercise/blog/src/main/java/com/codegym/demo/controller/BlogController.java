@@ -25,7 +25,7 @@
 //    @Autowired
 //    private ICategoryService categoryService;
 //    @GetMapping("/blog")
-//    public ModelAndView showListBlog(@RequestParam(required = false,value = "") String name, @PageableDefault(page = 0, size = 5) Pageable pageable) {
+//    public ModelAndView showListBlog(@RequestParam(required = false,defaultValue = "") String name, @PageableDefault(page = 0, size = 5) Pageable pageable) {
 ////        Iterable<Blog> blogs = blogService.findAll(pageable);
 //        Page<Blog> blogs = blogService.search( pageable, name);
 ////        Page<Category> categoryPage = categoryService.search(pageable, name);

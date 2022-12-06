@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog list</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../style/bootstrap/bootstrap.min.css">
+
+</head>
+<body>
+<input type="text" id="sname">
+<button id="btnSearch">Tìm kiếm</button>
+<input id="STT" value="1" hidden>
+<table>
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody id="bodyBlog">
+
+    </tbody>
+</table>
+<button id="showMore"> Xem thêm</button>
+<script src="../style/jquery/jquery-3.6.0.min.js"></script>
+<script>
+    // var d = 1;
+    // var size = 5;
+    var pageNumber = 0;
+    // var keyword = "";
+    //
+    // $("#btnSearch").click(function () {
+    //     keyword = $("input").val();
+    //     size = 5;
+    //     getPageBlog(pageNumber, keyword)
+    // })
+    //
+    // $(document).ready(function () {
+    //     getPageBlog(0, "");
+    //     size = 5;
+    // })
+    //
+
+    //
+    // function showMoreBlog() {
+    //     size += d;
+    //     getPageBlog(pageNumber, keyword)
+    // }
+    $(document).ready(function () {
+        getPageBlog(pageNumber);
+        $("#showMore").click(function () {
+            pageNumber++;
+            getPageBlog(pageNumber);
+        })
+        $("#btnSearch").click(function () {
+            $("#bodyBlog").empty();
+            $("#STT").val(1);
+            pageNumber=0;
+            getPageBlog(pageNumber);
+        })
+
+    });
+
+    function getPageBlog(pageNumber) {
+        let sname=$("#sname").val();
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET",
+            url: "http://localhost:8080/blogRest/list?page="+pageNumber+"&name="+sname+"&author="
+            ,
+            success: function (data) {
+                console.log(data);
+                let blogList = data.content;
+                console.log(blogList);
+                let htmlStr = '';
+
+                for (let i = 0; i < blogList.length; i++) {
+                    let stt = $("#STT").val();
+                    $("#STT").val(parseInt(stt) + 1);
+                    htmlStr += `<tr>
+                        <td>${stt}</td>
+                        <td>${blogList[i].id}</td>
+                        <td>${blogList[i].name}</td>
+                        <td>${blogList[i].category.name}</td>
+                        <td>
+                            <a href="#">Update</a>
+                        </td>
+                    </tr>`;
+                }
+                $("#bodyBlog").append(htmlStr);
+                console.log(htmlStr);
+            },
+            error: function (resultError) {
+            }
+        })
+    }
+</script>
+<script src="../style/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<form class="d-flex" style="width: 400px; text-align: right">
+    <input id="nameSearch"  name="nameSearch" class="form-control me-2" type="search" placeholder="Enter id category want search" aria-label="Search">
+    <input id="search" class="btn btn-outline-success" type="submit" value="Search" >
+</form>
+<button class="btn btn-outline-primary" id="backToList">Back to home</button>
+<label hidden for="STT"></label><input id="STT" value="1" hidden>
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Name</th>
+        <th>Content</th>
+        <th>Date</th>
+        <th>Category</th>
+    </tr>
+    </thead>
+    <tbody id="blogBody">
+    </tbody>
+</table>
+<button class="btn btn-outline-primary" id="showMore">Show more</button>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
+<script>
+    let pageNumber = 0;
+            $("#showMore").click(function () {
+                pageNumber++;
+                init(pageNumber);
+            })
+    $("#backToList").click(function () {
+        $("#blogBody").empty(); 
+        pageNumber= 0;
+        init(pageNumber);
+    })
+            $("#search").click(function () {
+                let name = $("#nameSearch").val();
+                    $.ajax({
+                        url: 'http://localhost:8080/blogs/search-name/'+name,
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function (data) {
+                            let myTable = "";
+                            for (let i = 0; i < data.content.length; i++) {
+
+                                myTable +=
+                                    `
+                            <tr>
+                              <th scope="row ">${i + 1}</th>
+                              <td>${data.content[i].name}</td>
+                              <td>${data.content[i].content}</td>
+                              <td>${data.content[i].date}</td>
+                               <td>${data.content[i].category.name}</td>
+                            </tr>
+                            `
+                            }
+                            debugger
+                            $("#blogBody").empty();
+                            $("#blogBody").append(myTable);
+                        }
+                    })
+                    event.preventDefault();
+            })
+
+            function init(pageNumber) {
+                $.ajax({
+                    url: 'http://localhost:8080/blogs?page=' + pageNumber ,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        let myTable = "";
+                        for (let i = 0; i < data.content.length; i++) {
+                            let stt = $("#STT").val();
+                            $("#STT").val(parseInt(stt) + 1);
+                            myTable +=
+                                `
+                            <tr>
+                              <th scope="row ">${stt}</th>
+                              <td>${data.content[i].name}</td>
+                              <td>${data.content[i].content}</td>
+                              <td>${data.content[i].date}</td>
+                               <td>${data.content[i].category.name}</td>
+                            </tr>
+                            `
+                        }
+                        debugger
+                        $("#blogBody").append(myTable);
+                    }
+                })
+            }
+            init(pageNumber);
+</script>
+</body>
+</html>

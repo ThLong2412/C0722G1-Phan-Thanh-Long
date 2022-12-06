@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.Optional;
+
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
@@ -41,6 +43,20 @@ public class CustomerController {
         return "redirect:/customer";
     }
 
-//    @PostMapping("/update")
+    @PostMapping("/update")
+    public String update(@ModelAttribute("id") Integer id ,RedirectAttributes redirectAttributes, Model model, Pageable pageable){
+        Optional<Customer> customer = customerService.findByTd(id);
+        customerService.save(customer.get());
+        model.addAttribute("mess", 1);
+        model.addAttribute("customerType",customerTypeService.findAll(pageable));
+        redirectAttributes.addFlashAttribute("message","Chỉnh sửa thành công");
+        return "redirect:/customer";
+    }
 
+
+    @PostMapping("/delete")
+    public String delete(@ModelAttribute("id") Integer id) {
+        customerService.remove(id);
+        return "redirect:/customer";
+    }
 }

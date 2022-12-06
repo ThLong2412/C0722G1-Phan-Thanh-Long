@@ -19,7 +19,7 @@ public class CustomerService implements ICustomerService {
     }
 
     @Override
-    public Optional<Customer> findByTd(Long id) {
+    public Optional<Customer> findByTd(Integer id) {
         return customerRepository.findById(id);
     }
 
@@ -29,7 +29,7 @@ public class CustomerService implements ICustomerService {
     }
 
     @Override
-    public void remove(Long id) {
+    public void remove(Integer id) {
         customerRepository.deleteById(id);
     }
 
