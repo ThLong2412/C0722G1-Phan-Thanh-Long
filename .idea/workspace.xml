@@ -20,21 +20,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module4/.idea/Module4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module4/ss12_jquery_ajax/exercise/blog_ajax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module4/ss12_jquery_ajax/exercise/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/java/com/example/demospringsecurity/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/java/com/example/demospringsecurity/controller/SecurityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/java/com/example/demospringsecurity/model/AppRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/java/com/example/demospringsecurity/model/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/java/com/example/demospringsecurity/model/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/java/com/example/demospringsecurity/repository/AppUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/java/com/example/demospringsecurity/repository/UserRoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/java/com/example/demospringsecurity/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/java/com/example/demospringsecurity/util/WebUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/resources/templates/403Page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/resources/templates/_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/resources/templates/adminPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/resources/templates/loginPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/resources/templates/logoutSuccessfulPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/resources/templates/userInfoPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss14/exercise/demo-spring-security/src/main/resources/templates/welcomePage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss8_validation/exercise/music/src/main/java/com/example/demo/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss8_validation/exercise/music/src/main/java/com/example/demo/model/MyUserDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss8_validation/exercise/music/src/main/java/com/example/demo/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss8_validation/exercise/music/src/main/java/com/example/demo/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss8_validation/exercise/music/src/main/java/com/example/demo/repository/IUserDetailRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss8_validation/exercise/music/src/main/java/com/example/demo/service/impl/MyUserDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss8_validation/exercise/music/src/main/java/com/example/demo/util/EncrytedPasswordUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module4/ss8_validation/exercise/music/src/main/resources/templates/love.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module1/code.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module1/code.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/repository/ICustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/service/IGeneralService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/service/IGeneralService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/service/impl/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/service/impl/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/dto/CustomerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/dto/CustomerDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/customer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/customer/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module4/ss7_spring_repository/exercise/blog/src/main/java/com/codegym/demo/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/ss7_spring_repository/exercise/blog/src/main/java/com/codegym/demo/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module4/ss12_jquery_ajax/exercise/blog_ajax.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/ss12_jquery_ajax/exercise/blog_ajax.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module4/ss7_spring_repository/exercise/blog/src/main/java/com/codegym/demo/controller/BlogRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/ss7_spring_repository/exercise/blog/src/main/java/com/codegym/demo/controller/BlogRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module4/ss7_spring_repository/exercise/blog/src/main/java/com/codegym/demo/service/IGeneralService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/ss7_spring_repository/exercise/blog/src/main/java/com/codegym/demo/service/IGeneralService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module4/ss7_spring_repository/exercise/blog/src/main/java/com/codegym/demo/controller/CategoryRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/ss7_spring_repository/exercise/blog/src/main/java/com/codegym/demo/controller/CategoryRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module4/ss8_validation/exercise/music/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/ss8_validation/exercise/music/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module4/ss8_validation/exercise/music/src/main/java/com/example/demo/controller/MusicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/ss8_validation/exercise/music/src/main/java/com/example/demo/controller/MusicController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +167,8 @@
       <workItem from="1670298188011" duration="497000" />
       <workItem from="1670298701038" duration="3632000" />
       <workItem from="1670308068355" duration="780000" />
-      <workItem from="1670312896062" duration="7716000" />
+      <workItem from="1670312896062" duration="8399000" />
+      <workItem from="1670397346907" duration="649000" />
     </task>
     <servers />
   </component>

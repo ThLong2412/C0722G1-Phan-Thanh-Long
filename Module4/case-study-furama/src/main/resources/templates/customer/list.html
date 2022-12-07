@@ -42,11 +42,7 @@
             <td th:text="${cus.email}"></td>
             <td th:text="${cus.address}"></td>
             <td>
-                <button type="button" class="btn btn-outline-success"
-                        data-bs-toggle="modal"
-                        data-bs-target="#modalUpdate">Update
-                </button>
-            </td>
+            <button class="btn btn-outline-warning"><a th:href="@{/customer/edit/__${cus.id}__ }">Update</a></button></td>
             <td>
                 <button th:onclick="|idRemove('__${cus.id}__', '__${cus.name}__')|"
                         class="btn btn-outline-danger my-2 my-sm-0" type="button" data-bs-toggle="modal"
@@ -67,15 +63,15 @@
                 <button type="button" class="btn-close"
                         data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form th:action="@{/customer/save}" th:object="${customer}"
+            <form th:action="@{/customer/save}" th:object="${customerDto}"
                   th:method="post">
-                <div class="row" id="form">
+                <div class="row">
                     <div class="col-lg-6">
                         <div class="form-outline mb-4">
                             <div class="d-flex gap-3">
                                 <label class="form-label" th:for="id">ID</label>
                                 <label>
-                                    <input th:field="*{id}" th:readonly="readonly">
+                                    <input type="text" th:field="*{id}" readonly>
                                 </label>
                             </div>
                         </div>
@@ -83,6 +79,8 @@
                             <label class="form-label" th:for="name">Name</label>
                             <input type="text" th:field="*{name}"
                                    class="form-control form-control-lg"/>
+                            <p th:if="${#fields.hasErrors('name')&&mess==1}" th:errors="*{name}">Name
+                                Error</p>
                         </div>
                         <div class="form-outline mb-4">
                             <label class="form-label" th:for="customerType">Customer Type</label>
@@ -98,12 +96,12 @@
                             </div>
                         </div>
                         <div class="form-outline mb-4">
-                            <label class="form-label">Gender</label>
+                            <label class="form-label" th:for="gender">Gender</label>
                             <div class="input-group">
                                 <label>
-                                    <select style="height: 49px" class="form-select"
+                                    <select class="form-select"
                                             th:field="*{gender}">
-                                        <option value="null" selected>SELECT GENDER </option>
+                                        <option value="null" selected>select gender</option>
                                         <option value="Nam">Male</option>
                                         <option value="Nữ">Female</option>
                                     </select>
@@ -115,6 +113,8 @@
                             <input type="text" th:field="*{idCard}"
                                    class="form-control form-control-lg"/>
                         </div>
+                        <p th:if="${#fields.hasErrors('idCard')&&mess==1}" th:errors="*{idCard}">Name
+                            Error</p>
                     </div>
                     <div class="col-lg-6">
                         <label class="form-label" th:for="birthday">Date Of Birth</label>
@@ -127,11 +127,15 @@
                             <input type="text" th:field="*{phone}"
                                    class="form-control form-control-lg"/>
                         </div>
+                        <p th:if="${#fields.hasErrors('phone')&&mess==1}" th:errors="*{phone}">Name
+                            Error</p>
                         <div class="form-outline mb-4">
                             <label class="form-label" th:for="email">Email</label>
                             <input th:field="*{email}" type="text"
                                    class="form-control form-control-lg"/>
                         </div>
+                        <p th:if="${#fields.hasErrors('email')&&mess==1}" th:errors="*{email}">Name
+                            Error</p>
                         <div class="form-outline mb-4">
                             <label class="form-label" th:for="address">Address</label>
                             <input th:field="*{address}" type="text"
@@ -161,9 +165,9 @@
                 <button type="button" class="btn-close"
                         data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form th:action="@{/customer/update}" th:object="${customer}"
+            <form th:action="@{/customer/update}" th:object="${customerDto}"
                   th:method="post">
-                <div class="row" >
+                <div class="row">
                     <div class="col-lg-6">
                         <div class="form-outline mb-4">
                             <div class="d-flex gap-3">
@@ -197,7 +201,7 @@
                                 <label>
                                     <select style="height: 49px" class="form-select"
                                             th:field="*{gender}">
-                                        <option value="null" selected>SELECT GENDER </option>
+                                        <option value="null" selected>SELECT GENDER</option>
                                         <option value="Nam">Male</option>
                                         <option value="Nữ">Female</option>
                                     </select>
@@ -205,29 +209,29 @@
                             </div>
                         </div>
                         <div class="form-outline mb-4">
-                            <label class="form-label" >Id Card</label>
+                            <label class="form-label">Id Card</label>
                             <input type="text" th:field="*{idCard}"
                                    class="form-control form-control-lg"/>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <label class="form-label" >Date Of Birth</label>
+                        <label class="form-label">Date Of Birth</label>
                         <div class="form-outline mb-4">
                             <input type="date" th:field="*{birthday}"
                                    class="form-control form-control-lg"/>
                         </div>
-                        <label class="form-label" >Phone Number</label>
+                        <label class="form-label">Phone Number</label>
                         <div class="form-outline mb-4">
                             <input type="text" th:field="*{phone}"
                                    class="form-control form-control-lg"/>
                         </div>
                         <div class="form-outline mb-4">
-                            <label class="form-label" >Email</label>
+                            <label class="form-label">Email</label>
                             <input th:field="*{email}" type="text"
                                    class="form-control form-control-lg"/>
                         </div>
                         <div class="form-outline mb-4">
-                            <label class="form-label" >Address</label>
+                            <label class="form-label">Address</label>
                             <input th:field="*{address}" type="text"
                                    class="form-control form-control-lg"/>
                         </div>
@@ -273,7 +277,7 @@
     <span th:text="${customerPage.number + 1} + '/' +${customerPage.totalPages}"></span>
     <a th:href="@{/customer(page=${customerPage.number + 1})}" th:if="${customerPage.hasNext()}">Next</a>
 </div>
-<input th:hidden="hidden" id="mess" th:value="${mess}"/>
+<label for="mess"></label><input th:hidden="hidden" id="mess" th:value="${mess}"/>
 <script src="/jquery-3.6.1.min.js"></script>
 <script>
     // Sửa được rồi nhé
@@ -282,11 +286,11 @@
             $('#modalAdd').modal('show');
         }
     })
-    $(document).ready(function () {
-        if ($("#mess").val() == 1) {
-            $('#modalUpdate').modal('show');
-        }
-    })
+    // $(document).ready(function () {
+    //     if ($("#mess").val() == 1) {
+    //         $('#modalUpdate').modal('show');
+    //     }
+    // })
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -298,5 +302,12 @@
         document.getElementById("deleteModal").innerText = name;
     }
 </script>
+<!--<script th:inline="javascript">-->
+<!--    function idUpdate(id, name) {-->
+<!--        debugger-->
+<!--        document.getElementById("idInput").value = id;-->
+<!--        document.getElementById("deleteModal").innerText = name;-->
+<!--    }-->
+<!--</script>-->
 </body>
 </html>

@@ -68,7 +68,7 @@
 //    @PostMapping("/edit")
 //    public ModelAndView update(@ModelAttribute("blog") Blog blog) {
 //        blogService.save(blog);
-//        ModelAndView modelAndView = new ModelAndView("/blog/edit");
+    //        ModelAndView modelAndView = new ModelAndView("/blog/edit");
 //        modelAndView.addObject("blog", blog);
 //        modelAndView.addObject("message", "Blog updated successfully");
 //        return modelAndView;

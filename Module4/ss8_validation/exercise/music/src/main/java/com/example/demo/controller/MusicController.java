@@ -28,6 +28,7 @@ public class MusicController {
       Page<Music> musicPage =  musicService.findAll(pageable);
       model.addAttribute("musicPage", musicPage);
         return "/home";
+//        return "/love";
     }
 
 
@@ -45,7 +46,7 @@ public class MusicController {
         model.addAttribute("musicPage", musicPage);
         Music music = new Music();
         BeanUtils.copyProperties(musicDto, music);
-        musicService.save(music);
+            musicService.save(music);
         redirectAttributes.addFlashAttribute("message", "Successfully music added new");
         return "redirect:/music";
     }

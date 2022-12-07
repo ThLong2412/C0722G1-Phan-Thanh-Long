@@ -5,20 +5,20 @@ import org.hibernate.tuple.CreationTimestampGeneration;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class CustomerDto implements Validator {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotEmpty(message = "Tên không được trống")
     @Pattern(regexp = "^([A-Z]*[a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[ ])*([A-Z]*[a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$", message = "Tên nghệ sĩ không được chứa số hoặc ký tự đặc biệt")
     private String name;
     private String birthday;
-    private boolean gender;
+    private String gender;
     @NotEmpty(message = "Số căn cước không được trống")
     @Pattern(regexp = "^[0-9]{12}$", message = "Số căn cước phải 12 số")
     private String idCard;
@@ -66,11 +66,11 @@ public class CustomerDto implements Validator {
         this.birthday = birthday;
     }
 
-    public boolean isGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 

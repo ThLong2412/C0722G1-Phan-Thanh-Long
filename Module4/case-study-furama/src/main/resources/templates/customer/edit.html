@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+<h1>Edit customer</h1>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/customer/update}" th:object="${customerDto}"
+      th:method="post">
+    <div class="row" id="form">
+        <p>
+            <a class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" th:href="@{/customer}">
+                Back to list
+            </a>
+        </p>
+            <label th:for="id">ID</label>
+            <label>
+                <input th:field="*{id}" th:readonly="readonly">
+            </label>
+        <div class="col-lg-6">
+            <div class="form-outline mb-4">
+                <label class="form-label" th:for="name">Name</label>
+                <input type="text"  th:field="*{name}"
+                       class="form-control form-control-lg"/>
+                <td><p th:errors="*{name}"></p></td>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" th:for="customerType">Customer Type</label>
+                <div class="input-group">
+                    <select style="height: 49px" class="form-select"
+                            th:field="*{customerType}">
+                        <option th:each="customerType: ${customerTypePage}"
+                                th:value="${customerType.id}"
+                                th:text="${customerType.name}"></option>
+                    </select>
+                    <span class="input-group-text"><i class="fa-solid fa-ranking-star"></i></span>
+                </div>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label">Gender</label>
+                <div class="input-group">
+                    <select style="height: 49px" class="form-select"
+                            th:field="*{gender}">
+                        <option value="null" selected>SELECT GENDER *</option>
+                        <option value="Nam">Male</option>
+                        <option value="Nữ">Female</option>
+                    </select>
+                    <span class="input-group-text"><i
+                            class="fa-solid fa-ranking-star"></i></span>
+                </div>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" th:for="idCard">Id Card</label>
+                <input type="text"  th:field="*{idCard}"
+                       class="form-control form-control-lg"/>
+                <td><p th:errors="*{idCard}"></p></td>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <label class="form-label" th:for="birthday">Date Of Birth</label>
+            <div class="form-outline mb-4">
+                <input type="date" th:field="*{birthday}"
+                       class="form-control form-control-lg"/>
+            </div>
+            <label class="form-label" th:for="phone">Phone Number</label>
+            <div class="form-outline mb-4">
+                <input type="text" th:field="*{phone}"
+                       class="form-control form-control-lg"/>
+                <td><p th:errors="*{phone}"></p></td>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" th:for="email">Email</label>
+                <input th:field="*{email}" type="text"
+                       class="form-control form-control-lg"/>
+                <td><p th:errors="*{email}"></p></td>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" th:for="address">Address</label>
+                <input th:field="*{address}" type="text"
+                       class="form-control form-control-lg"/>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="submit"
+                class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+            Edit
+        </button>
+    </div>
+</form>
+</body>
+</html>
