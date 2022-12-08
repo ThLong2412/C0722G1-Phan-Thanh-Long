@@ -1,7 +1,7 @@
-package com.codegym.demo.service.impl;
+package com.codegym.demo.service.impl.customer;
 
-import com.codegym.demo.model.Customer;
-import com.codegym.demo.repository.ICustomerRepository;
+import com.codegym.demo.model.customer.Customer;
+import com.codegym.demo.repository.customer.ICustomerRepository;
 import com.codegym.demo.service.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -19,7 +19,7 @@ public class CustomerService implements ICustomerService {
     }
 
     @Override
-    public Optional<Customer> findByTd(Integer id) {
+    public Optional<Customer> findByTd(Long id) {
         return customerRepository.findById(id);
     }
 
@@ -29,12 +29,12 @@ public class CustomerService implements ICustomerService {
     }
 
     @Override
-    public void remove(Integer id) {
+    public void remove(Long id) {
         customerRepository.deleteById(id);
     }
 
     @Override
-    public Page<Customer> search(Pageable pageable, String name) {
-        return customerRepository.findByNameIsContaining(pageable, name);
+    public Page<Customer> search(Pageable pageable, String name, String email, String customerType) {
+        return customerRepository.search(pageable, name, email, customerType);
     }
 }

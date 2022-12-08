@@ -9,7 +9,14 @@
 </head>
 <body>
 <form class="d-flex">
-    <input class="form-control me-2" name="name" type="search" placeholder="Search" aria-label="Search">
+    <input style="width: 300px" class="form-control me-2" name="name" type="search" placeholder="Search by name" aria-label="Search">
+    <input style="width: 300px" class="form-control me-2" name="email" type="search" placeholder="Search by email " aria-label="Search">
+    <select style="width: 300px" class="form-select" name="customerTypeId">
+        <option th:value="${''}"></option>
+        <option th:each="customerType: ${customerTypeList}"
+                th:value="${customerType.id}"
+                th:text="${customerType.name}"></option>
+    </select>
     <button class="btn btn-outline-success" type="submit">Search</button>
 </form>
 <button type="button" class="btn btn-outline-primary
@@ -42,7 +49,9 @@
             <td th:text="${cus.email}"></td>
             <td th:text="${cus.address}"></td>
             <td>
-            <button class="btn btn-outline-warning"><a th:href="@{/customer/edit/__${cus.id}__ }">Update</a></button></td>
+                <button class="btn btn-outline-warning"><a th:href="@{/customer/edit/__${cus.id}__ }">Update</a>
+                </button>
+            </td>
             <td>
                 <button th:onclick="|idRemove('__${cus.id}__', '__${cus.name}__')|"
                         class="btn btn-outline-danger my-2 my-sm-0" type="button" data-bs-toggle="modal"
@@ -65,16 +74,15 @@
             </div>
             <form th:action="@{/customer/save}" th:object="${customerDto}"
                   th:method="post">
+                <h4 style="text-align: center">Add new Customer</h4>
                 <div class="row">
+                    <div class="form-outline mb-4" hidden>
+                    <label class="form-label" th:for="id">ID</label>
+                    <label>
+                        <input type="text" th:field="*{id}" readonly>
+                    </label>
+                </div>
                     <div class="col-lg-6">
-                        <div class="form-outline mb-4">
-                            <div class="d-flex gap-3">
-                                <label class="form-label" th:for="id">ID</label>
-                                <label>
-                                    <input type="text" th:field="*{id}" readonly>
-                                </label>
-                            </div>
-                        </div>
                         <div class="form-outline mb-4">
                             <label class="form-label" th:for="name">Name</label>
                             <input type="text" th:field="*{name}"
@@ -88,7 +96,8 @@
                                 <label>
                                     <select style="height: 49px" class="form-select"
                                             th:field="*{customerType}">
-                                        <option th:each="customerType: ${customerType}"
+                                        <option th:each="customerType: ${customerTypeList}"
+                                                th:selected="null"
                                                 th:value="${customerType.id}"
                                                 th:text="${customerType.name}"></option>
                                     </select>
@@ -112,30 +121,30 @@
                             <label class="form-label" th:for="idCard">Id Card</label>
                             <input type="text" th:field="*{idCard}"
                                    class="form-control form-control-lg"/>
+                            <p th:if="${#fields.hasErrors('idCard')&&mess==1}" th:errors="*{idCard}">Name
+                                Error</p>
                         </div>
-                        <p th:if="${#fields.hasErrors('idCard')&&mess==1}" th:errors="*{idCard}">Name
-                            Error</p>
                     </div>
                     <div class="col-lg-6">
-                        <label class="form-label" th:for="birthday">Date Of Birth</label>
                         <div class="form-outline mb-4">
+                            <label class="form-label" th:for="birthday">Date Of Birth</label>
                             <input type="date" th:field="*{birthday}"
                                    class="form-control form-control-lg"/>
                         </div>
-                        <label class="form-label" th:for="phone">Phone Number</label>
                         <div class="form-outline mb-4">
+                            <label class="form-label" th:for="phone">Phone Number</label>
                             <input type="text" th:field="*{phone}"
                                    class="form-control form-control-lg"/>
+                            <p th:if="${#fields.hasErrors('phone')&&mess==1}" th:errors="*{phone}">Name
+                                Error</p>
                         </div>
-                        <p th:if="${#fields.hasErrors('phone')&&mess==1}" th:errors="*{phone}">Name
-                            Error</p>
                         <div class="form-outline mb-4">
                             <label class="form-label" th:for="email">Email</label>
                             <input th:field="*{email}" type="text"
                                    class="form-control form-control-lg"/>
+                            <p th:if="${#fields.hasErrors('email')&&mess==1}" th:errors="*{email}">Name
+                                Error</p>
                         </div>
-                        <p th:if="${#fields.hasErrors('email')&&mess==1}" th:errors="*{email}">Name
-                            Error</p>
                         <div class="form-outline mb-4">
                             <label class="form-label" th:for="address">Address</label>
                             <input th:field="*{address}" type="text"
@@ -188,7 +197,7 @@
                                 <label>
                                     <select style="height: 49px" class="form-select"
                                             th:field="*{customerType}">
-                                        <option th:each="customerType: ${customerType}"
+                                        <option th:each="customerType: ${customerTypeList}"
                                                 th:value="${customerType.id}"
                                                 th:text="${customerType.name}"></option>
                                     </select>

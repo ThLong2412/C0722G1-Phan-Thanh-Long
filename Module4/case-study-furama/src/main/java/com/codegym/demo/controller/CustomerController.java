@@ -1,8 +1,8 @@
 package com.codegym.demo.controller;
 
 import com.codegym.demo.dto.CustomerDto;
-import com.codegym.demo.model.Customer;
-import com.codegym.demo.model.CustomerType;
+import com.codegym.demo.model.customer.Customer;
+import com.codegym.demo.model.customer.CustomerType;
 import com.codegym.demo.service.ICustomerService;
 import com.codegym.demo.service.ICustomerTypeService;
 import org.springframework.beans.BeanUtils;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.Optional;
+import java.util.List;
 
 @Controller
 @RequestMapping("/customer")
@@ -29,12 +29,12 @@ public class CustomerController {
     private ICustomerTypeService customerTypeService;
 
     @GetMapping("")
-    public ModelAndView showListCustomer(@ModelAttribute("customerDto") CustomerDto customerDto,@RequestParam( required = false, defaultValue = "") String name, @PageableDefault(page = 0, size = 5) Pageable pageable) {
-        Page<Customer> customerPage = customerService.search( pageable, name);
+    public ModelAndView showListCustomer(@ModelAttribute("customerDto") CustomerDto customerDto,@RequestParam( required = false, defaultValue = "") String name, @RequestParam( required = false, defaultValue = "") String email,@RequestParam( required = false, defaultValue = "") String customerTypeId,@PageableDefault(page = 0, size = 5) Pageable pageable) {
+        Page<Customer> customerPage = customerService.search( pageable, name, email, customerTypeId);
 //        Page<Customer> customerPage = customerService.findAll(pageable);
         ModelAndView modelAndView = new ModelAndView("/customer/list");
         modelAndView.addObject("customerPage", customerPage);
-        modelAndView.addObject("customerType", customerTypeService.findAll(pageable));
+        modelAndView.addObject("customerTypeList", customerTypeService.findAll());
         return modelAndView;
     }
 
@@ -46,33 +46,32 @@ public class CustomerController {
             model.addAttribute("mess", 1);
             customerPage = customerService.findAll(pageable);
             model.addAttribute("customerPage", customerPage);
-            model.addAttribute("customerType",customerTypeService.findAll(pageable));
+            model.addAttribute("customerTypeList",customerTypeService.findAll());
             return "/customer/list";
         }
         Customer customer = new Customer();
         BeanUtils.copyProperties(customerDto, customer);
         customerService.save(customer);
-        model.addAttribute("customerType",customerTypeService.findAll(pageable));
+        model.addAttribute("customerTypeList",customerTypeService.findAll());
         redirectAttributes.addFlashAttribute("message", "Successfully customer added new");
         return "redirect:/customer";
     }
 
 
     @GetMapping("/edit/{id}")
-    public ModelAndView showFormEdit(@PathVariable Integer id, Pageable pageable) {
+    public ModelAndView showFormEdit(@PathVariable("id") Long id, Pageable pageable) {
         Customer customer = customerService.findByTd(id).get();
-        Page<CustomerType> customerTypePage = customerTypeService.findAll(pageable);
+        List<CustomerType> customerTypeList = customerTypeService.findAll();
             ModelAndView modelAndView = new ModelAndView("/customer/edit");
-            CustomerDto customerDto = new CustomerDto();
-            BeanUtils.copyProperties(customer, customerDto);
-            modelAndView.addObject("customerDto", customerDto);
-            modelAndView.addObject("customerTypePage", customerTypePage);
+            modelAndView.addObject("customer", customer);
+            modelAndView.addObject("customerTypeList", customerTypeList);
             return modelAndView;
     }
 
     @PostMapping("/update")
-    public String update(@Validated @ModelAttribute("customerDto") CustomerDto customerDto, BindingResult bindingResult  ,RedirectAttributes redirectAttributes){
+    public String update(@Validated @ModelAttribute("customerDto") CustomerDto customerDto, BindingResult bindingResult  ,RedirectAttributes redirectAttributes, Model model){
         new CustomerDto().validate(customerDto, bindingResult);
+        model.addAttribute("customerTypeList", customerTypeService.findAll());
         if (bindingResult.hasErrors()) {
             return "/customer/edit";
         }
@@ -85,7 +84,7 @@ public class CustomerController {
 
 
     @PostMapping("/delete")
-    public String delete(@ModelAttribute("id") Integer id) {
+    public String delete(@ModelAttribute("id") Long id) {
         customerService.remove(id);
         return "redirect:/customer";
     }

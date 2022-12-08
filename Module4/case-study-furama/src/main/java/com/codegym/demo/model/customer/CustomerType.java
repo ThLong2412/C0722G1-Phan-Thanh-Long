@@ -1,4 +1,6 @@
-package com.codegym.demo.model;
+package com.codegym.demo.model.customer;
+
+import com.codegym.demo.model.customer.Customer;
 
 import javax.persistence.*;
 import java.util.Set;

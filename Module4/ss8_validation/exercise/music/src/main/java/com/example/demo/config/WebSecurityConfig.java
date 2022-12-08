@@ -32,10 +32,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .formLogin()
-                .defaultSuccessUrl("/music")
-                .permitAll()
-                .and()
-                .authorizeRequests()
-                .anyRequest().authenticated();
+//                .loginPage("/login-my")
+                .defaultSuccessUrl("/music", true).permitAll()
+
+                // admin vào tất cả được
+                .and().authorizeRequests().antMatchers("/music/save", "/music/edit", "/music/edit/{id}").hasRole("ADMIN")
+                // user chỉ được xem trang list
+                .and().authorizeRequests().antMatchers("/music").hasRole("USER");
+
+//                .and()
+//                .authorizeRequests()
+//                .anyRequest().authenticated();
     }
 }

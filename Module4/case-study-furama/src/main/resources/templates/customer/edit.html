@@ -15,7 +15,7 @@
 <th:block th:if="${message}">
     <p th:text="${message}"></p>
 </th:block>
-<form th:action="@{/customer/update}" th:object="${customerDto}"
+<form th:action="@{/customer/update}" th:object="${customer}"
       th:method="post">
     <div class="row" id="form">
         <p>
@@ -39,7 +39,7 @@
                 <div class="input-group">
                     <select style="height: 49px" class="form-select"
                             th:field="*{customerType}">
-                        <option th:each="customerType: ${customerTypePage}"
+                        <option th:each="customerType: ${customerTypeList}"
                                 th:value="${customerType.id}"
                                 th:text="${customerType.name}"></option>
                     </select>
@@ -94,7 +94,7 @@
     <div class="d-flex justify-content-center">
         <button type="submit"
                 class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
-            Edit
+           Update
         </button>
     </div>
 </form>

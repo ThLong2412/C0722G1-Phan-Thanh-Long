@@ -1,4 +1,4 @@
-package com.codegym.demo.model;
+package com.codegym.demo.model.customer;
 
 import javax.persistence.*;
 
@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String name;
     private String birthday;
     private String gender;
@@ -22,7 +22,7 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(Integer id, String name, String birthday, String gender, String idCard, String phone, String email, CustomerType customerType, String address) {
+    public Customer(Long id, String name, String birthday, String gender, String idCard, String phone, String email, CustomerType customerType, String address) {
         this.id = id;
         this.name = name;
         this.birthday = birthday;
@@ -34,11 +34,11 @@ public class Customer {
         this.address = address;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

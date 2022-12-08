@@ -1,4 +1,6 @@
-package com.codegym.demo.model;
+package com.codegym.demo.model.facility;
+
+import com.codegym.demo.model.facility.Facility;
 
 import javax.persistence.*;
 import java.util.Set;

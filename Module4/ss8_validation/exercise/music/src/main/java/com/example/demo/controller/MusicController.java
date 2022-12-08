@@ -52,7 +52,7 @@ public class MusicController {
     }
 
     @GetMapping("/edit/{id}")
-    public String showFormEdit(@PathVariable Long id, Model model) {
+    public String showFormEdit(@PathVariable("id") Long id, Model model) {
         Music music = musicService.findByTd(id).get();
         MusicDto musicDto = new MusicDto();
         BeanUtils.copyProperties(music, musicDto);

@@ -1,14 +1,12 @@
 package com.codegym.demo.dto;
 
-import com.codegym.demo.model.CustomerType;
-import org.hibernate.tuple.CreationTimestampGeneration;
+import com.codegym.demo.model.customer.CustomerType;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
 
 public class CustomerDto implements Validator {
     @Id
