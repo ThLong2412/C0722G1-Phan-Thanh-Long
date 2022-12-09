@@ -1,23 +1,17 @@
 package com.codegym.demo.controller;
 
-import com.codegym.demo.dto.CustomerDto;
-import com.codegym.demo.model.customer.Customer;
-import com.codegym.demo.model.customer.CustomerType;
 import com.codegym.demo.model.facility.Facility;
 import com.codegym.demo.model.facility.FacilityType;
 import com.codegym.demo.model.facility.RentType;
-import com.codegym.demo.service.IFacilityService;
-import com.codegym.demo.service.IFacilityTypeService;
-import com.codegym.demo.service.IRentTypeService;
-import org.springframework.beans.BeanUtils;
+import com.codegym.demo.service.inter.facility.IFacilityService;
+import com.codegym.demo.service.inter.facility.IFacilityTypeService;
+import com.codegym.demo.service.inter.facility.IRentTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;

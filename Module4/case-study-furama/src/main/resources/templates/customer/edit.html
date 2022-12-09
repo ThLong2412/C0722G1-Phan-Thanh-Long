@@ -15,88 +15,91 @@
 <th:block th:if="${message}">
     <p th:text="${message}"></p>
 </th:block>
-<form th:action="@{/customer/update}" th:object="${customer}"
-      th:method="post">
-    <div class="row" id="form">
-        <p>
-            <a class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" th:href="@{/customer}">
-                Back to list
-            </a>
-        </p>
+<div style="text-align: center">
+    <form th:action="@{/customer/update}" th:object="${customer}"
+          th:method="post" >
+        <div class="row" id="form">
+            <p>
+                <a class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" th:href="@{/customer}">
+                    Back to list
+                </a>
+            </p>
             <label th:for="id">ID</label>
             <label>
                 <input th:field="*{id}" th:readonly="readonly">
             </label>
-        <div class="col-lg-6">
-            <div class="form-outline mb-4">
-                <label class="form-label" th:for="name">Name</label>
-                <input type="text"  th:field="*{name}"
-                       class="form-control form-control-lg"/>
-                <td><p th:errors="*{name}"></p></td>
-            </div>
-            <div class="form-outline mb-4">
-                <label class="form-label" th:for="customerType">Customer Type</label>
-                <div class="input-group">
-                    <select style="height: 49px" class="form-select"
-                            th:field="*{customerType}">
-                        <option th:each="customerType: ${customerTypeList}"
-                                th:value="${customerType.id}"
-                                th:text="${customerType.name}"></option>
-                    </select>
-                    <span class="input-group-text"><i class="fa-solid fa-ranking-star"></i></span>
+            <div class="col-lg-6">
+                <div class="form-outline mb-4">
+                    <label class="form-label" th:for="name">Name</label>
+                    <input type="text"  th:field="*{name}"
+                           class="form-control form-control-lg"/>
+                    <td><p th:errors="*{name}"></p></td>
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" th:for="customerType">Customer Type</label>
+                    <div class="input-group">
+                        <select style="height: 49px" class="form-select"
+                                th:field="*{customerType}">
+                            <option th:each="customerType: ${customerTypeList}"
+                                    th:value="${customerType.id}"
+                                    th:text="${customerType.name}"></option>
+                        </select>
+                        <span class="input-group-text"><i class="fa-solid fa-ranking-star"></i></span>
+                    </div>
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label">Gender</label>
+                    <div class="input-group">
+                        <select style="height: 49px" class="form-select"
+                                th:field="*{gender}">
+                            <option value="null" selected>SELECT GENDER *</option>
+                            <option value="Nam">Male</option>
+                            <option value="Nữ">Female</option>
+                        </select>
+                        <span class="input-group-text"><i
+                                class="fa-solid fa-ranking-star"></i></span>
+                    </div>
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" th:for="idCard">Id Card</label>
+                    <input type="text"  th:field="*{idCard}"
+                           class="form-control form-control-lg"/>
+                    <td><p th:errors="*{idCard}"></p></td>
                 </div>
             </div>
-            <div class="form-outline mb-4">
-                <label class="form-label">Gender</label>
-                <div class="input-group">
-                    <select style="height: 49px" class="form-select"
-                            th:field="*{gender}">
-                        <option value="null" selected>SELECT GENDER *</option>
-                        <option value="Nam">Male</option>
-                        <option value="Nữ">Female</option>
-                    </select>
-                    <span class="input-group-text"><i
-                            class="fa-solid fa-ranking-star"></i></span>
+            <div class="col-lg-6">
+                <label class="form-label" th:for="birthday">Date Of Birth</label>
+                <div class="form-outline mb-4">
+                    <input type="date" th:field="*{birthday}"
+                           class="form-control form-control-lg"/>
+                </div>
+                <label class="form-label" th:for="phone">Phone Number</label>
+                <div class="form-outline mb-4">
+                    <input type="text" th:field="*{phone}"
+                           class="form-control form-control-lg"/>
+                    <td><p th:errors="*{phone}"></p></td>
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" th:for="email">Email</label>
+                    <input th:field="*{email}" type="text"
+                           class="form-control form-control-lg"/>
+                    <td><p th:errors="*{email}"></p></td>
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" th:for="address">Address</label>
+                    <input th:field="*{address}" type="text"
+                           class="form-control form-control-lg"/>
                 </div>
             </div>
-            <div class="form-outline mb-4">
-                <label class="form-label" th:for="idCard">Id Card</label>
-                <input type="text"  th:field="*{idCard}"
-                       class="form-control form-control-lg"/>
-                <td><p th:errors="*{idCard}"></p></td>
-            </div>
         </div>
-        <div class="col-lg-6">
-            <label class="form-label" th:for="birthday">Date Of Birth</label>
-            <div class="form-outline mb-4">
-                <input type="date" th:field="*{birthday}"
-                       class="form-control form-control-lg"/>
-            </div>
-            <label class="form-label" th:for="phone">Phone Number</label>
-            <div class="form-outline mb-4">
-                <input type="text" th:field="*{phone}"
-                       class="form-control form-control-lg"/>
-                <td><p th:errors="*{phone}"></p></td>
-            </div>
-            <div class="form-outline mb-4">
-                <label class="form-label" th:for="email">Email</label>
-                <input th:field="*{email}" type="text"
-                       class="form-control form-control-lg"/>
-                <td><p th:errors="*{email}"></p></td>
-            </div>
-            <div class="form-outline mb-4">
-                <label class="form-label" th:for="address">Address</label>
-                <input th:field="*{address}" type="text"
-                       class="form-control form-control-lg"/>
-            </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                Update
+            </button>
         </div>
-    </div>
-    <div class="d-flex justify-content-center">
-        <button type="submit"
-                class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
-           Update
-        </button>
-    </div>
-</form>
+    </form>
+</div>
+
 </body>
 </html>

@@ -2,7 +2,7 @@ package com.codegym.demo.service.impl.facility;
 
 import com.codegym.demo.model.facility.Facility;
 import com.codegym.demo.repository.facility.IFacilityRepository;
-import com.codegym.demo.service.IFacilityService;
+import com.codegym.demo.service.inter.facility.IFacilityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -2,7 +2,7 @@ package com.codegym.demo.service.impl.customer;
 
 import com.codegym.demo.model.customer.Customer;
 import com.codegym.demo.repository.customer.ICustomerRepository;
-import com.codegym.demo.service.ICustomerService;
+import com.codegym.demo.service.inter.customer.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
