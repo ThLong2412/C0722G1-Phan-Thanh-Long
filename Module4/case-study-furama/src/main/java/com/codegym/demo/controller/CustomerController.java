@@ -35,6 +35,7 @@ public class CustomerController {
         ModelAndView modelAndView = new ModelAndView("/customer/list");
         modelAndView.addObject("customerPage", customerPage);
         modelAndView.addObject("customerTypeList", customerTypeService.findAll());
+//        modelAndView.addObject("a", customerDto.getCustomerType().getId());
         return modelAndView;
     }
 
@@ -58,22 +59,17 @@ public class CustomerController {
     }
 
 
-    @GetMapping("/edit/{id}")
-    public ModelAndView showFormEdit(@PathVariable("id") Long id, Pageable pageable) {
-        Customer customer = customerService.findByTd(id).get();
-        List<CustomerType> customerTypeList = customerTypeService.findAll();
-            ModelAndView modelAndView = new ModelAndView("/customer/edit");
-            modelAndView.addObject("customer", customer);
-            modelAndView.addObject("customerTypeList", customerTypeList);
-            return modelAndView;
-    }
-
     @PostMapping("/update")
-    public String update(@Validated @ModelAttribute("customerDto") CustomerDto customerDto, BindingResult bindingResult  ,RedirectAttributes redirectAttributes, Model model){
+    public String update(@Validated @ModelAttribute("customerDto") CustomerDto customerDto, BindingResult bindingResult  ,RedirectAttributes redirectAttributes, Model model, Pageable pageable){
         new CustomerDto().validate(customerDto, bindingResult);
         model.addAttribute("customerTypeList", customerTypeService.findAll());
+        Page<Customer> customerPage;
         if (bindingResult.hasErrors()) {
-            return "/customer/edit";
+            customerPage = customerService.findAll(pageable);
+            model.addAttribute("customerPage", customerPage);
+            model.addAttribute("customerTypeList",customerTypeService.findAll());
+            model.addAttribute("messUpdate", 1);
+            return "/customer/list";
         }
         Customer customer = new Customer();
         BeanUtils.copyProperties(customerDto, customer);

@@ -1,6 +1,8 @@
 package com.codegym.demo.service.impl.contract;
 
 import com.codegym.demo.model.contract.Contract;
+import com.codegym.demo.model.contract.ContractDetail;
+import com.codegym.demo.repository.contract.IContractDetailRepository;
 import com.codegym.demo.repository.contract.IContractRepository;
 import com.codegym.demo.service.inter.contract.IContractService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,12 +10,15 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class ContractService implements IContractService {
     @Autowired
     private IContractRepository contractRepository;
+    @Autowired
+    private IContractDetailRepository contractDetailRepository;
     @Override
     public Page<Contract> findAll(Pageable pageable) {
         return contractRepository.findAll(pageable);
@@ -38,4 +43,5 @@ public class ContractService implements IContractService {
     public Page<Contract> search(Pageable pageable, String name, String email, String customerType) {
         return null;
     }
+
 }

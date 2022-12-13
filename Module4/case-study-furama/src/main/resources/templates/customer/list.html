@@ -90,7 +90,10 @@
             <td th:text="${cus.email}"></td>
             <td th:text="${cus.address}"></td>
             <td>
-                <button class="btn btn-outline-warning"><a th:href="@{/customer/edit/__${cus.id}__ }">Update</a>
+                <button th:onclick="|idUpdate('__${cus.id}__', '__${cus.name}__', '__${cus.customerType.name}__', '__${cus.gender}__', '__${cus.birthday}__', '__${cus.idCard}__', '__${cus.email}__', '__${cus.phone}__', '__${cus.address}__')|"
+                        class="btn btn-outline-warning my-2 my-sm-0" type="button" data-bs-toggle="modal"
+                        data-bs-target="#modalUpdate">
+                    Update
                 </button>
             </td>
             <td>
@@ -223,20 +226,21 @@
                             <div class="d-flex gap-3">
                                 <label class="form-label">ID</label>
                                 <label>
-                                    <input th:field="*{id}" th:readonly="readonly">
+                                    <input id="idUpdate" th:field="*{id}" th:readonly="readonly">
                                 </label>
                             </div>
                         </div>
                         <div class="form-outline mb-4">
                             <label class="form-label">Name</label>
-                            <input type="text" th:field="*{name}"
+                            <input id="cusName" type="text" th:field="*{name}"
                                    class="form-control form-control-lg"/>
+                            <p th:errors="*{name}"></p>
                         </div>
                         <div class="form-outline mb-4">
                             <label class="form-label">Customer Type</label>
-                            <div class="input-group">
+                            <div  class="input-group">
                                 <label>
-                                    <select style="height: 49px" class="form-select"
+                                    <select id="cusType1" style="height: 49px" class="form-select"
                                             th:field="*{customerType}">
                                         <option th:each="customerType: ${customerTypeList}"
                                                 th:value="${customerType.id}"
@@ -249,7 +253,7 @@
                             <label class="form-label">Gender</label>
                             <div class="input-group">
                                 <label>
-                                    <select style="height: 49px" class="form-select"
+                                    <select id="gender1"  style="height: 49px" class="form-select"
                                             th:field="*{gender}">
                                         <option value="null" selected>SELECT GENDER</option>
                                         <option value="Nam">Male</option>
@@ -260,29 +264,32 @@
                         </div>
                         <div class="form-outline mb-4">
                             <label class="form-label">Id Card</label>
-                            <input type="text" th:field="*{idCard}"
+                            <input id="idCard1" type="text" th:field="*{idCard}"
                                    class="form-control form-control-lg"/>
+                            <p th:errors="*{idCard}">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <label class="form-label">Date Of Birth</label>
                         <div class="form-outline mb-4">
-                            <input type="date" th:field="*{birthday}"
+                            <input id="dayOfBirth1" type="date" th:field="*{birthday}"
                                    class="form-control form-control-lg"/>
                         </div>
                         <label class="form-label">Phone Number</label>
                         <div class="form-outline mb-4">
-                            <input type="text" th:field="*{phone}"
-                                   class="form-control form-control-lg"/>
+                            <input id="phone1" type="text" th:field ="*{phone}"
+                                   class="form-control form-control-lg">
+                            <p th:errors="*{phone}"></p>
                         </div>
                         <div class="form-outline mb-4">
                             <label class="form-label">Email</label>
-                            <input th:field="*{email}" type="text"
+                            <input id="email1" th:field="*{email}" type="text"
                                    class="form-control form-control-lg"/>
+                            <p th:errors="*{email}"></p>
                         </div>
                         <div class="form-outline mb-4">
                             <label class="form-label">Address</label>
-                            <input th:field="*{address}" type="text"
+                            <input id="address1" th:field="*{address}" type="text"
                                    class="form-control form-control-lg"/>
                         </div>
                     </div>
@@ -477,12 +484,18 @@ justify-content: center; align-items: center">
     </div>
 </div>
 <label for="mess"></label><input th:hidden="hidden" id="mess" th:value="${mess}"/>
+<label for="mess1"></label><input th:hidden="hidden" id="mess1" th:value="${messUpdate}"/>
 <script src="/jquery-3.6.1.min.js"></script>
 <script>
     // Sửa được rồi nhé
     $(document).ready(function () {
         if ($("#mess").val() == 1) {
             $('#modalAdd').modal('show');
+        }
+    })
+    $(document).ready(function () {
+        if ($("#mess1").val() == 1) {
+            $('#modalUpdate').modal('show');
         }
     })
 </script>
@@ -495,13 +508,18 @@ justify-content: center; align-items: center">
         document.getElementById("idInput").value = id;
         document.getElementById("deleteModal").innerText = name;
     }
+    function idUpdate(id, name, cusType, gender, dayOfBirth, idCard, email, phone, address) {
+        debugger
+        document.getElementById("idUpdate").value = id;
+        document.getElementById("cusName").value = name;
+        document.getElementById("cusType1").value = cusType;
+        document.getElementById("gender1").value = gender;
+        document.getElementById("dayOfBirth1").value = dayOfBirth;
+        document.getElementById("idCard1").value = idCard;
+        document.getElementById("email1").value = email;
+        document.getElementById("phone1").value = phone;
+        document.getElementById("address1").value = address;
+    }
 </script>
-<!--<script th:inline="javascript">-->
-<!--    function idUpdate(id, name) {-->
-<!--        debugger-->
-<!--        document.getElementById("idInput").value = id;-->
-<!--        document.getElementById("deleteModal").innerText = name;-->
-<!--    }-->
-<!--</script>-->
 </body>
 </html>

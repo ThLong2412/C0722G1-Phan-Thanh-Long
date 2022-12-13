@@ -78,15 +78,20 @@
             <td th:text="${con.deposit}"></td>
             <td th:text="${con.totalMoney}"></td>
             <td>
-                <button class="btn btn-outline-primary"
-                        data-bs-toggle="modal"
-                        data-bs-target="#modalAdd2"> +
+                <button th:onclick="|idContractDetail('__${con.id}__')|"
+                        class="btn btn-outline-primary my-2 my-sm-0" type="button" data-bs-toggle="modal"
+                        data-bs-target="#modalAdd2">
+                    +
                 </button>
             </td>
             <td>
-                <button class="btn btn-outline-primary"><a>Attach facility</a>
+                <button class="btn btn-outline-primary my-2 my-sm-0 "
+                        th:attr="onclick=|showAttachDetail('${con.id}')|" data-bs-toggle="modal"
+                        data-bs-target="#showAttachDetail">
+                    <span class="text-light m-auto">Attach Facility List</span>
                 </button>
             </td>
+
         </tr>
     </th:block>
 </table>
@@ -133,7 +138,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5">Add new Facility?</h1>
+                <h1 class="modal-title fs-5">Add new Contract?</h1>
                 <button type="button" class="btn-close"
                         data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -197,9 +202,9 @@
                         Save <i class="fa-solid fa-floppy-disk"></i>
                     </button>
                 </div>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
 </div>
 <div class="modal fade" id="modalAdd2" tabindex="-1"
      aria-labelledby="exampleModalLabel" aria-hidden="true"
@@ -213,7 +218,15 @@
             </div>
             <form th:action="@{/contract/attach}"
                   th:object="${contractDetail}" th:method="post">
-                <table>
+                <table class="table table-view">
+                    <tr hidden>
+                        <th>
+                            <lable th:for="id">Id:</lable>
+                        </th>
+                        <td>
+                            <input readonly type="text" th:field="*{id}">
+                        </td>
+                    </tr>
                     <tr>
                         <th>
                             <label for="nameAtt">Tên dịch vụ đi kèm:</label>
@@ -231,39 +244,65 @@
                             <lable for="quantity">Số lượng:</lable>
                         </th>
                         <td>
-                            <input type="text" id="quantity" th:field="*{quantity}">
+                            <input type="number" id="quantity" th:field="*{quantity}">
                         </td>
                     </tr>
-                    <tr hidden>
+                    <tr>
                         <th>
-                            <label for="contractId">Mã hợp đồng</label>
+                            <label th:for="contract">Mã hợp đồng</label>
                         </th>
                         <td>
-                            <input type="text" id="contractId" th:value="${contract.id}" th:field="*{contract}">
+                            <input readonly type="text" id="idInput" th:field="*{contract}">
                         </td>
                     </tr>
-<!--                    <tr>-->
-<!--                        <th>-->
-<!--                            Tổng tiền dịch vụ đi kèm:-->
-<!--                        </th>-->
-<!--                        <td>-->
-<!--                            <label>-->
-<!--                                <input type="text" th:value="${contractDetail * Double.parseDouble(contractDetail.quantity)}">-->
-<!--                            </label>-->
-<!--                        </td>-->
-<!--                    </tr>-->
                 </table>
                 <div class="mb-4 text-center">
                     <button class="btn btn-info btn-outline-success btn-sm border border-2 border-success text-dark">
                         Save
                     </button>
                 </div>
-        </form>
+            </form>
+        </div>
     </div>
 </div>
+<div class="modal fade" id="showAttachDetail" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modalCSS">
+            <div class="modal-header">
+                <h4 class="modal-title text-center" id="exampleModalLabel2">List attach facility</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <table id="showSlow"></table>
+
+                <div class="h5 text-danger text-center" id="note">
+                   --EMPTY--
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade " id="view" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+     style="color: darkgray">
+    <div class="modal-dialog ">
+        <div class="modal-content bg-white">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel1">Attach Facility</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="listAttachFacility" class="modal-body">
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
 </div>
 <input hidden id="mess" th:value="${mess}">
-<input hidden id="mess2" th:value="${mess2}">
 <div class="footer" style="background-color: aqua; display: flex;
 justify-content: center; align-items: center">
     <div class="container">
@@ -392,14 +431,53 @@ justify-content: center; align-items: center">
         if ($("#mess").val() == 1) {
             $('#modalAdd').modal('show');
         }
-        // $('#modalAdd').modal('show');
-        if ($("#mess2").val() == 1) {
-            $('#modalAdd2').modal('show');
-        }
     })
+</script>
+<script>
+    function showAttachDetail(id) {
+        $("#showSlow").empty();
+        $("#note").show();
+        $.ajax({
+            url: "http://localhost:8080/api/contract/v1/" + id,
+            type: "GET",
+            dataType: "json",
+            success: function (data) {
+                if (data.length > 0) {
+                    $("#note").hide();
+                    let tr = [];
+
+                    tr.push("<tr>");
+                    tr.push("<th>" + "Tên dịch vụ đi kèm" + "</th>");
+                    tr.push("<th class='px-5'>" + "Đơn vị" + "</th>");
+                    tr.push("<th class='text-center'>" + "Số lượng" + "</th>");
+                    // tr.push("<th class='text-center'>" + "Tổng tiền dịch vụ đi kèm" + "</th>");
+                    tr.push("</tr>");
+
+                    for (let i = 0; i < data.length; i++) {
+                        tr.push("<tr>");
+                        tr.push("<td class='text-primary h6'>" + data[i].nameDto + "</td>");
+                        tr.push("<td class='text-primary px-5'>" + data[i].unitDto + "</td>");
+                        tr.push("<td class='text-primary text-center'>" + data[i].quantityDto + "</td>");
+                        // tr.push("<td class='text-primary text-center'>" + data[i].totalDto + "</td>");
+                        tr.push("</tr>");
+                    }
+                    $("#showSlow").append(tr.join(""));
+                    $("#showSlow").hide();
+                    $("#showSlow").fadeIn(4000);
+                }
+            }
+        })
+    }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+<script th:inline="javascript">
+    function idContractDetail(id) {
+        debugger
+        document.getElementById("idInput").value = id;
+    }
+
+</script>
 </body>
 </html>

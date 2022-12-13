@@ -8,7 +8,6 @@ import com.codegym.demo.service.inter.contract.IContractDetailService;
 import com.codegym.demo.service.inter.contract.IContractService;
 import com.codegym.demo.service.inter.customer.ICustomerService;
 import com.codegym.demo.service.inter.facility.IFacilityService;
-import com.codegym.demo.service.inter.facility.IRentTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -42,7 +41,9 @@ public class ContractController {
         model.addAttribute("contract", new Contract());
         model.addAttribute("customerPage", customerService.findAll(pageable));
         model.addAttribute("facilityPage", facilityService.findAll(pageable));
+        model.addAttribute("attachFacility", attachFacilityList);
         model.addAttribute("contractDetail", new ContractDetail());
+        model.addAttribute("contractDetailList", contractDetailService.findAll());
         return "/contract/list";
     }
 
@@ -54,10 +55,15 @@ public class ContractController {
     }
 
     @PostMapping("/attach")
-    public String saveAttach(@ModelAttribute("contractDetail") ContractDetail contractDetail, Model model){
-        model.addAttribute("mess2", 1);
+    public String saveAttach( @ModelAttribute("contractDetail") ContractDetail contractDetail){
         contractDetailService.save(contractDetail);
         return "redirect:/contract";
     }
 
+    @GetMapping("/{id}")
+    public String showAttachFacility(@PathVariable Long id, Model model) {
+        model.addAttribute("contractDetails", contractDetailService.showAll(id));
+
+        return "contract/attachFacilityList";
+    }
 }

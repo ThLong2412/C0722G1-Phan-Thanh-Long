@@ -1,5 +1,6 @@
 package com.codegym.demo.service.impl.contract;
 
+import com.codegym.demo.dto.IContractDetailDto;
 import com.codegym.demo.model.contract.AttachFacility;
 import com.codegym.demo.model.contract.ContractDetail;
 import com.codegym.demo.repository.contract.IContractDetailRepository;
@@ -17,6 +18,13 @@ public class ContractDetailService implements IContractDetailService {
     public void save(ContractDetail contractDetail) {
         contractDetailRepository.save(contractDetail);
     }
+
+    @Override
+    public List<IContractDetailDto> showAll(Long id) {
+        return contractDetailRepository.showAll(id);
+    }
+
+
 
     @Override
     public List<ContractDetail> findAll() {

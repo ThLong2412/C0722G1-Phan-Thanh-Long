@@ -1,6 +1,7 @@
 package com.codegym.demo.model.contract;
 
 import com.codegym.demo.model.customer.Customer;
+import com.codegym.demo.model.employee.Employee;
 import com.codegym.demo.model.facility.Facility;
 import javax.persistence.Entity;
 import javax.persistence.*;
@@ -13,6 +14,9 @@ public class Contract {
     private String dateEnd;
     private Double deposit;
     private Double totalMoney;
+    @ManyToOne
+    @JoinColumn(name = "employee_id", referencedColumnName = "employeeId")
+    private Employee employee;
 
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
@@ -32,6 +36,15 @@ public class Contract {
         this.totalMoney = totalMoney;
         this.customer = customer;
         this.facility = facility;
+    }
+
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     public Long getId() {
