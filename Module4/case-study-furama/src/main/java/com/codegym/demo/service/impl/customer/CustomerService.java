@@ -30,11 +30,11 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public void remove(Long id) {
-        customerRepository.deleteById(id);
+        customerRepository.removeFlag(id);
     }
 
     @Override
     public Page<Customer> search(Pageable pageable, String name, String email, String customerType) {
-        return customerRepository.search(pageable, name, email, customerType);
+        return customerRepository.searchView(pageable, name, email, customerType);
     }
 }

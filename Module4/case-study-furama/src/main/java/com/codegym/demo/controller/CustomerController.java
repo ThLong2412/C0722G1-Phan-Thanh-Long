@@ -31,11 +31,9 @@ public class CustomerController {
     @GetMapping("")
     public ModelAndView showListCustomer(@ModelAttribute("customerDto") CustomerDto customerDto,@RequestParam( required = false, defaultValue = "") String name, @RequestParam( required = false, defaultValue = "") String email,@RequestParam( required = false, defaultValue = "") String customerTypeId,@PageableDefault(page = 0, size = 5) Pageable pageable) {
         Page<Customer> customerPage = customerService.search( pageable, name, email, customerTypeId);
-//        Page<Customer> customerPage = customerService.findAll(pageable);
         ModelAndView modelAndView = new ModelAndView("/customer/list");
         modelAndView.addObject("customerPage", customerPage);
         modelAndView.addObject("customerTypeList", customerTypeService.findAll());
-//        modelAndView.addObject("a", customerDto.getCustomerType().getId());
         return modelAndView;
     }
 

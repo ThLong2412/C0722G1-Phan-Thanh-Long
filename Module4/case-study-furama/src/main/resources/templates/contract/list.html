@@ -71,14 +71,14 @@
     <th:block th:each="con, stt : ${contractPage}">
         <tr>
             <td th:text="${stt.count}+${contractPage.number}*${contractPage.size}"></td>
-            <td th:text="${con.facility.name}"></td>
-            <td th:text="${con.customer.name}"></td>
-            <td th:text="${con.dateStart}"></td>
-            <td th:text="${con.dateEnd}"></td>
-            <td th:text="${con.deposit}"></td>
-            <td th:text="${con.totalMoney}"></td>
+            <td th:text="${con.getNameFacility()}"></td>
+            <td th:text="${con.getNameCustomer()}"></td>
+            <td th:text="${con.getStartDate()}"></td>
+            <td th:text="${con.getEndDate()}"></td>
+            <td th:text="${con.getDeposit()}"></td>
+            <td th:text="${con.getTotalValue()}"></td>
             <td>
-                <button th:onclick="|idContractDetail('__${con.id}__')|"
+                <button th:onclick="|idContractDetail('__${con.getId()}__')|"
                         class="btn btn-outline-primary my-2 my-sm-0" type="button" data-bs-toggle="modal"
                         data-bs-target="#modalAdd2">
                     +
@@ -86,7 +86,7 @@
             </td>
             <td>
                 <button class="btn btn-outline-primary my-2 my-sm-0 "
-                        th:attr="onclick=|showAttachDetail('${con.id}')|" data-bs-toggle="modal"
+                        th:attr="onclick=|showAttachDetail('${con.getId()}')|" data-bs-toggle="modal"
                         data-bs-target="#showAttachDetail">
                     <span class="text-light m-auto">Attach Facility List</span>
                 </button>
@@ -168,7 +168,7 @@
                     <div class="mb-4 ">
                         <label for="dateStart">Ngày bắt đầu</label>
                         <div>
-                            <input type="date" id="dateStart" class="form-control" placeholder="Nhập chi phí thuê.."
+                            <input type="date" id="dateStart" class="form-control"
                                    th:field="*{dateStart}"/>
                         </div>
                     </div>
@@ -177,22 +177,15 @@
                     <div class="mb-4 ">
                         <label for="dateEnd">Ngày kết thúc</label>
                         <div>
-                            <input type="date" id="dateEnd" class="form-control" placeholder="Nhập chi phí thuê.."
+                            <input type="date" id="dateEnd" class="form-control"
                                    th:field="*{dateEnd}"/>
                         </div>
                     </div>
                     <div class="mb-4 ">
                         <label for="deposit">Tiền đặt cọc</label>
                         <div>
-                            <input type="text" id="deposit" class="form-control" placeholder="Nhập chi phí thuê.."
+                            <input type="text" id="deposit" class="form-control" placeholder="Nhập tiền đặt cọc.."
                                    th:field="*{deposit}"/>
-                        </div>
-                    </div>
-                    <div class="mb-4 ">
-                        <label for="total">Tổng tiền</label>
-                        <div>
-                            <input type="text" id="total" class="form-control" placeholder="Nhập chi phí thuê.."
-                                   th:field="*{totalMoney}"/>
                         </div>
                     </div>
                 </div>
@@ -247,7 +240,7 @@
                             <input type="number" id="quantity" th:field="*{quantity}">
                         </td>
                     </tr>
-                    <tr>
+                    <tr hidden>
                         <th>
                             <label th:for="contract">Mã hợp đồng</label>
                         </th>
@@ -272,7 +265,6 @@
                 <h4 class="modal-title text-center" id="exampleModalLabel2">List attach facility</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-
             <div class="modal-body">
                 <table id="showSlow"></table>
 
@@ -280,26 +272,10 @@
                    --EMPTY--
                 </div>
             </div>
-
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
-    </div>
-</div>
-<div class="modal fade " id="view" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-     style="color: darkgray">
-    <div class="modal-dialog ">
-        <div class="modal-content bg-white">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel1">Attach Facility</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div id="listAttachFacility" class="modal-body">
-            </div>
-        </div>
-    </div>
-    <div>
     </div>
 </div>
 <input hidden id="mess" th:value="${mess}">
@@ -455,9 +431,9 @@ justify-content: center; align-items: center">
 
                     for (let i = 0; i < data.length; i++) {
                         tr.push("<tr>");
-                        tr.push("<td class='text-primary h6'>" + data[i].nameDto + "</td>");
-                        tr.push("<td class='text-primary px-5'>" + data[i].unitDto + "</td>");
-                        tr.push("<td class='text-primary text-center'>" + data[i].quantityDto + "</td>");
+                        tr.push("<td class='h6'>" + data[i].nameDto + "</td>");
+                        tr.push("<td class='px-5'>" + data[i].unitDto + "</td>");
+                        tr.push("<td class='text-center'>" + data[i].quantityDto + "</td>");
                         // tr.push("<td class='text-primary text-center'>" + data[i].totalDto + "</td>");
                         tr.push("</tr>");
                     }

@@ -31,7 +31,7 @@ public class FacilityService implements IFacilityService {
 
     @Override
     public void remove(Long id) {
-        facilityRepository.deleteById(id);
+        facilityRepository.removeFlag(id);
     }
 
     @Override

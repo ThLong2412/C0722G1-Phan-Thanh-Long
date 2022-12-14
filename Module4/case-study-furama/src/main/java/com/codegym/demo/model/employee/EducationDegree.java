@@ -7,7 +7,7 @@ import java.util.Set;
 public class EducationDegree {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer educationDegreeId;
+    private Long educationDegreeId;
     private String educationDegreeName;
 
     @OneToMany(mappedBy = "educationDegree")
@@ -16,11 +16,11 @@ public class EducationDegree {
     public EducationDegree() {
     }
 
-    public Integer getEducationDegreeId() {
+    public Long getEducationDegreeId() {
         return educationDegreeId;
     }
 
-    public void setEducationDegreeId(Integer educationDegreeId) {
+    public void setEducationDegreeId(Long educationDegreeId) {
         this.educationDegreeId = educationDegreeId;
     }
 

@@ -9,7 +9,7 @@ import java.util.Set;
 public class Divisions {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer divisionId;
+    private Long divisionId;
     private String divisionName;
 
     @OneToMany(mappedBy = "divisions")
@@ -18,11 +18,11 @@ public class Divisions {
     public Divisions() {
     }
 
-    public Integer getDivisionId() {
+    public Long getDivisionId() {
         return divisionId;
     }
 
-    public void setDivisionId(Integer divisionId) {
+    public void setDivisionId(Long divisionId) {
         this.divisionId = divisionId;
     }
 

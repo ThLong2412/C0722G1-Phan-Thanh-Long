@@ -18,6 +18,8 @@ public class Facility {
     private String poolArea;
     private String numberOfFloors;
     private String facilityFree;
+    @Column(columnDefinition = "bit default false")
+    private boolean flagDelete;
 
     @ManyToOne
     @JoinColumn(name = "rent_type_id", referencedColumnName = "id")
@@ -31,7 +33,7 @@ public class Facility {
     public Facility() {
     }
 
-    public Facility(Long id, String name, String area, String cost, String maxPeople, String standardRoom, String descriptionOtherConvenience, String poolArea, String numberOfFloors, String facilityFree,  RentType rentType, FacilityType facilityType) {
+    public Facility(Long id, String name, String area, String cost, String maxPeople, String standardRoom, String descriptionOtherConvenience, String poolArea, String numberOfFloors, String facilityFree,  RentType rentType, FacilityType facilityType, boolean flagDelete) {
         this.id = id;
         this.name = name;
         this.area = area;
@@ -44,6 +46,7 @@ public class Facility {
         this.facilityFree = facilityFree;
         this.rentType = rentType;
         this.facilityType = facilityType;
+        this.flagDelete = flagDelete;
     }
 
     public Long getId() {
@@ -140,5 +143,13 @@ public class Facility {
 
     public void setFacilityType(FacilityType facilityType) {
         this.facilityType = facilityType;
+    }
+
+    public boolean isFlagDelete() {
+        return flagDelete;
+    }
+
+    public void setFlagDelete(boolean flagDelete) {
+        this.flagDelete = flagDelete;
     }
 }

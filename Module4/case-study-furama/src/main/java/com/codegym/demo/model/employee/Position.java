@@ -7,7 +7,7 @@ import java.util.Set;
 public class Position {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer positionId;
+    private Long positionId;
     private String positionName;
 
     @OneToMany(mappedBy = "position")
@@ -16,11 +16,11 @@ public class Position {
     public Position() {
     }
 
-    public Integer getPositionId() {
+    public Long getPositionId() {
         return positionId;
     }
 
-    public void setPositionId(Integer positionId) {
+    public void setPositionId(Long positionId) {
         this.positionId = positionId;
     }
 

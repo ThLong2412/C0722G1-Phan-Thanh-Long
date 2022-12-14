@@ -1,7 +1,7 @@
 package com.codegym.demo.service.impl.contract;
 
+import com.codegym.demo.dto.ContractDto;
 import com.codegym.demo.model.contract.Contract;
-import com.codegym.demo.model.contract.ContractDetail;
 import com.codegym.demo.repository.contract.IContractDetailRepository;
 import com.codegym.demo.repository.contract.IContractRepository;
 import com.codegym.demo.service.inter.contract.IContractService;
@@ -10,7 +10,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -44,4 +43,8 @@ public class ContractService implements IContractService {
         return null;
     }
 
+    @Override
+    public Page<ContractDto> findAllContractView(Pageable pageable) {
+        return contractRepository.findAllContractView(pageable);
+    }
 }

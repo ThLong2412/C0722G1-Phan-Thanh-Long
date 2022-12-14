@@ -1,5 +1,6 @@
 package com.codegym.demo.controller;
 
+import com.codegym.demo.dto.ContractDto;
 import com.codegym.demo.model.contract.AttachFacility;
 import com.codegym.demo.model.contract.Contract;
 import com.codegym.demo.model.contract.ContractDetail;
@@ -34,7 +35,7 @@ public class ContractController {
 
     @GetMapping("")
     public String showList(@PageableDefault(value = 0, size = 5) Pageable pageable, Model model) {
-        Page<Contract> contractPage = contractService.findAll(pageable);
+        Page<ContractDto> contractPage = contractService.findAllContractView(pageable);
         List<AttachFacility> attachFacilityList = attachFacilityService.findAll();
         model.addAttribute("contractPage", contractPage);
         model.addAttribute("attachFacilityList", attachFacilityList);

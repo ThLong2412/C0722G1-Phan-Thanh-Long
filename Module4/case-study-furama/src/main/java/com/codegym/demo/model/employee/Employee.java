@@ -9,7 +9,7 @@ import java.util.Set;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer employeeId;
+    private Long employeeId;
     private String employeeName;
     private String employeeBirthday;
     private String employeeIdCard;
@@ -34,14 +34,15 @@ public class Employee {
     @OneToMany(mappedBy = "employee")
     private Set<Contract> contract;
 
+
     public Employee() {
     }
 
-    public Integer getEmployeeId() {
+    public Long getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(Integer employeeId) {
+    public void setEmployeeId(Long employeeId) {
         this.employeeId = employeeId;
     }
 

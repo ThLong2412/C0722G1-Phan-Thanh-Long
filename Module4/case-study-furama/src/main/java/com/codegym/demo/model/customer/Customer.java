@@ -18,11 +18,13 @@ public class Customer {
     @JoinColumn(name = "customer_type_id", referencedColumnName = "id")
     private CustomerType customerType;
     private String address;
+    @Column(columnDefinition = "bit default false")
+    private boolean flagDelete;
 
     public Customer() {
     }
 
-    public Customer(Long id, String name, String birthday, String gender, String idCard, String phone, String email, CustomerType customerType, String address) {
+    public Customer(Long id, String name, String birthday, String gender, String idCard, String phone, String email, CustomerType customerType, String address, boolean flagDelete) {
         this.id = id;
         this.name = name;
         this.birthday = birthday;
@@ -32,6 +34,7 @@ public class Customer {
         this.email = email;
         this.customerType = customerType;
         this.address = address;
+        this.flagDelete = flagDelete;
     }
 
     public Long getId() {
@@ -104,5 +107,13 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public boolean isFlagDelete() {
+        return flagDelete;
+    }
+
+    public void setFlagDelete(boolean flagDelete) {
+        this.flagDelete = flagDelete;
     }
 }
