@@ -30,7 +30,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
                     <a class="btn btn-primary" th:href="@{/}" role="button">Home</a>
                     <div>
-                        <a class="btn btn-primary"  role="button">Employee</a>
+                        <a class="btn btn-primary" th:href="@{/employee}" role="button">Employee</a>
                     </div>
                     <div>
                         <a class="btn btn-primary" th:href="@{/customer}"  role="button">Customer</a>
@@ -65,8 +65,8 @@
         data-bs-target="#modalAdd">Add new
 </button>
 </div>
-<table class="table table-dark">
-    <tr>
+<table class="table">
+    <tr class="table-dark">
         <th>STT</th>
         <th>Name</th>
         <th>Customer Type</th>
@@ -79,7 +79,7 @@
         <th colspan="2">Action</th>
     </tr>
     <th:block th:each="cus, stt : ${customerPage}">
-        <tr>
+        <tr class="table-view">
             <td th:text="${stt.count}+${customerPage.number}*${customerPage.size}"></td>
             <td th:text="${cus.name}"></td>
             <td th:text="${cus.customerType.name}"></td>

@@ -29,7 +29,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <a class="btn btn-primary" th:href="@{/}" role="button">Home</a>
                     <div>
-                        <a class="btn btn-primary" role="button">Employee</a>
+                        <a class="btn btn-primary" th:href="@{/employee}"a role="button">Employee</a>
                     </div>
                     <div>
                         <a class="btn btn-primary" th:href="@{/customer}" role="button">Customer</a>
@@ -57,8 +57,8 @@
             data-bs-target="#modalAdd">Add new
     </button>
 </div>
-<table class="table table-dark">
-    <tr>
+<table class="table">
+    <tr class="table-dark">
         <th>STT</th>
         <th>Name Facility</th>
         <th>Customer</th>
@@ -69,7 +69,7 @@
         <th colspan="2">Attach Facility</th>
     </tr>
     <th:block th:each="con, stt : ${contractPage}">
-        <tr>
+        <tr class="table-view">
             <td th:text="${stt.count}+${contractPage.number}*${contractPage.size}"></td>
             <td th:text="${con.getNameFacility()}"></td>
             <td th:text="${con.getNameCustomer()}"></td>
@@ -81,14 +81,14 @@
                 <button th:onclick="|idContractDetail('__${con.getId()}__')|"
                         class="btn btn-outline-primary my-2 my-sm-0" type="button" data-bs-toggle="modal"
                         data-bs-target="#modalAdd2">
-                    +
+                    <span style="color: black">+</span>
                 </button>
             </td>
             <td>
                 <button class="btn btn-outline-primary my-2 my-sm-0 "
                         th:attr="onclick=|showAttachDetail('${con.getId()}')|" data-bs-toggle="modal"
                         data-bs-target="#showAttachDetail">
-                    <span class="text-light m-auto">Attach Facility List</span>
+                    <span class="text-light m-auto" style="color: black">Attach Facility List</span>
                 </button>
             </td>
 
@@ -186,6 +186,16 @@
                         <div>
                             <input type="text" id="deposit" class="form-control" placeholder="Nhập tiền đặt cọc.."
                                    th:field="*{deposit}"/>
+                        </div>
+                    </div>
+                    <div class="mb-4 ">
+                        <label for="employee">Tên nhân viên</label>
+                        <div>
+                            <select id="employee" th:field="*{employee.employeeId}">
+                                <option th:value="${''}"></option>
+                                <option th:each="item : ${employeePage}" th:value="${item.employeeId}"
+                                        th:text="${item.employeeName}"></option>
+                            </select>
                         </div>
                     </div>
                 </div>

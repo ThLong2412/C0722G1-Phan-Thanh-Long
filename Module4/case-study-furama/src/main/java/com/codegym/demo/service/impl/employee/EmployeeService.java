@@ -31,11 +31,16 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void remove(Long id) {
-        employeeRepository.deleteById(id);
+        employeeRepository.removeFlag(id);
     }
 
     @Override
     public Page<Employee> search(Pageable pageable, String name, String email, String customerType) {
         return null;
+    }
+
+    @Override
+    public Page<Employee> findAllEmployee(Pageable pageable, String name) {
+        return employeeRepository.findEmployee(pageable, name);
     }
 }

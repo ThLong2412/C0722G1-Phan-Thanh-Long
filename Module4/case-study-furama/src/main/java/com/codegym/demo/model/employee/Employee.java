@@ -18,6 +18,9 @@ public class Employee {
     private String employeeEmail;
     private String employeeAddress;
 
+    @Column(columnDefinition = "bit default false")
+    private boolean flagDelete;
+
 
     @ManyToOne
     @JoinColumn(name = "position_id", referencedColumnName = "positionId")
@@ -36,6 +39,30 @@ public class Employee {
 
 
     public Employee() {
+    }
+
+    public Employee(Long employeeId, String employeeName, String employeeBirthday, String employeeIdCard, String employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, boolean flagDelete, Position position, EducationDegree educationDegree, Divisions divisions, Set<Contract> contract) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.employeeBirthday = employeeBirthday;
+        this.employeeIdCard = employeeIdCard;
+        this.employeeSalary = employeeSalary;
+        this.employeePhone = employeePhone;
+        this.employeeEmail = employeeEmail;
+        this.employeeAddress = employeeAddress;
+        this.flagDelete = flagDelete;
+        this.position = position;
+        this.educationDegree = educationDegree;
+        this.divisions = divisions;
+        this.contract = contract;
+    }
+
+    public boolean isFlagDelete() {
+        return flagDelete;
+    }
+
+    public void setFlagDelete(boolean flagDelete) {
+        this.flagDelete = flagDelete;
     }
 
     public Long getEmployeeId() {

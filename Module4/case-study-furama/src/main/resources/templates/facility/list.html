@@ -28,7 +28,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
                     <a class="btn btn-primary" th:href="@{/}" role="button">Home</a>
                     <div>
-                        <a class="btn btn-primary"  role="button">Employee</a>
+                        <a class="btn btn-primary" th:href="@{/employee}" role="button">Employee</a>
                     </div>
                     <div>
                         <a class="btn btn-primary" th:href="@{/customer}"  role="button">Customer</a>
@@ -62,8 +62,8 @@
             data-bs-target="#modalAdd">Add new
     </button>
 </div>
-<table class="table table-dark">
-    <tr>
+<table class="table">
+    <tr class="table-dark">
         <th>STT</th>
         <th>Facility Type</th>
         <th>Name</th>
@@ -79,7 +79,7 @@
         <th colspan="2">Action</th>
     </tr>
     <th:block th:each="fac, stt : ${facilityPage}">
-        <tr>
+        <tr class="table-view">
             <td th:text="${stt.count}+${facilityPage.number}*${facilityPage.size}"></td>
             <td th:text="${fac.facilityType.name}"></td>
             <td th:text="${fac.name}"></td>

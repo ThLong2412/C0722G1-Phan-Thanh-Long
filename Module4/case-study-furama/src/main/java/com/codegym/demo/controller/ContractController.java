@@ -8,6 +8,7 @@ import com.codegym.demo.service.inter.contract.IAttachFacilityService;
 import com.codegym.demo.service.inter.contract.IContractDetailService;
 import com.codegym.demo.service.inter.contract.IContractService;
 import com.codegym.demo.service.inter.customer.ICustomerService;
+import com.codegym.demo.service.inter.employee.IEmployeeService;
 import com.codegym.demo.service.inter.facility.IFacilityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -32,6 +33,8 @@ public class ContractController {
     private IFacilityService facilityService;
     @Autowired
     private IContractDetailService contractDetailService;
+    @Autowired
+    private IEmployeeService employeeService;
 
     @GetMapping("")
     public String showList(@PageableDefault(value = 0, size = 5) Pageable pageable, Model model) {
@@ -42,9 +45,10 @@ public class ContractController {
         model.addAttribute("contract", new Contract());
         model.addAttribute("customerPage", customerService.findAll(pageable));
         model.addAttribute("facilityPage", facilityService.findAll(pageable));
-        model.addAttribute("attachFacility", attachFacilityList);
+//        model.addAttribute("attachFacility", attachFacilityList);
         model.addAttribute("contractDetail", new ContractDetail());
         model.addAttribute("contractDetailList", contractDetailService.findAll());
+        model.addAttribute("employeePage", employeeService.findAll(pageable));
         return "/contract/list";
     }
 

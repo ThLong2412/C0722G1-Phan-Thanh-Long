@@ -20,19 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14f4151e-6c1e-44c9-8dfb-bff2bc826946" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/controller/ContractController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/model/contract/AttachFacility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/model/contract/Contract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/model/contract/ContractDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/repository/contract/IContractRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/service/IContractService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/java/com/codegym/demo/service/impl/contract/ContractService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/contract/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/customer/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/customer/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/contract/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/contract/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/customer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/customer/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/facility/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/facility/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/facility/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/facility/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Module4/case-study-furama/src/main/resources/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +140,10 @@
       <workItem from="1670312896062" duration="8399000" />
       <workItem from="1670397346907" duration="649000" />
       <workItem from="1670556813251" duration="677000" />
+      <workItem from="1671010910838" duration="23000" />
+      <workItem from="1671010948794" duration="9000" />
+      <workItem from="1671011003345" duration="240000" />
+      <workItem from="1671011265909" duration="1225000" />
     </task>
     <servers />
   </component>
@@ -168,6 +163,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1671011233120">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1671011233120" />
     <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1668520466524">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
