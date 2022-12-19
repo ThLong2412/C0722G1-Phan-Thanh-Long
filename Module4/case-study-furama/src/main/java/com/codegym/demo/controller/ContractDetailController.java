@@ -25,6 +25,6 @@ public class ContractDetailController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
-        return new ResponseEntity<>(list, HttpStatus.OK);
+            return new ResponseEntity<>(list, HttpStatus.OK);
     }
 }
